@@ -1,0 +1,616 @@
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-13 15:39:04 [1983] [INFO] Starting gunicorn 18.0
+2014-01-13 15:39:04 [1983] [INFO] Listening at: http://127.0.0.1:9997 (1983)
+2014-01-13 15:39:04 [1983] [INFO] Using worker: sync
+2014-01-13 15:39:04 [1988] [INFO] Booting worker with pid: 1988
+2014-01-13 15:39:04 [1989] [INFO] Booting worker with pid: 1989
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:51: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:51: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:59: UserWarning: TIME_ZONE setting is not set, using closest match: Asia/Chongqing
+  warn("TIME_ZONE setting is not set, using closest match: %s" % tz)
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:59: UserWarning: TIME_ZONE setting is not set, using closest match: Asia/Chongqing
+  warn("TIME_ZONE setting is not set, using closest match: %s" % tz)
+2014-01-13 15:46:01 [1989] [INFO] Worker exiting (pid: 1989)
+2014-01-13 15:46:01 [1988] [INFO] Worker exiting (pid: 1988)
+2014-01-13 15:46:01 [1983] [INFO] Handling signal: term
+2014-01-13 15:46:01 [1983] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-13 20:45:22 [7445] [INFO] Starting gunicorn 18.0
+2014-01-13 20:45:22 [7445] [INFO] Listening at: http://127.0.0.1:9997 (7445)
+2014-01-13 20:45:22 [7445] [INFO] Using worker: sync
+2014-01-13 20:45:22 [7450] [INFO] Booting worker with pid: 7450
+2014-01-13 20:45:22 [7451] [INFO] Booting worker with pid: 7451
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:51: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:51: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:59: UserWarning: TIME_ZONE setting is not set, using closest match: Asia/Chongqing
+  warn("TIME_ZONE setting is not set, using closest match: %s" % tz)
+/usr/lib/python2.6/site-packages/Mezzanine-3.0.5-py2.6.egg/mezzanine/utils/conf.py:59: UserWarning: TIME_ZONE setting is not set, using closest match: Asia/Chongqing
+  warn("TIME_ZONE setting is not set, using closest match: %s" % tz)
+2014-01-13 20:50:38 [7445] [INFO] Handling signal: term
+2014-01-13 20:50:39 [7445] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:27:55 [2639] [INFO] Starting gunicorn 18.0
+2014-01-29 17:27:55 [2639] [INFO] Listening at: http://127.0.0.1:9997 (2639)
+2014-01-29 17:27:55 [2639] [INFO] Using worker: sync
+2014-01-29 17:27:55 [2644] [INFO] Booting worker with pid: 2644
+2014-01-29 17:27:55 [2645] [INFO] Booting worker with pid: 2645
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:28:36 [2639] [INFO] Handling signal: term
+2014-01-29 17:28:36 [2639] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:28:37 [2662] [INFO] Starting gunicorn 18.0
+2014-01-29 17:28:37 [2662] [INFO] Listening at: http://127.0.0.1:9997 (2662)
+2014-01-29 17:28:37 [2662] [INFO] Using worker: sync
+2014-01-29 17:28:37 [2667] [INFO] Booting worker with pid: 2667
+2014-01-29 17:28:37 [2668] [INFO] Booting worker with pid: 2668
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:29:30 [2667] [INFO] Worker exiting (pid: 2667)
+2014-01-29 17:29:30 [2662] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1216743744,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 17:29:30 [2668] [INFO] Worker exiting (pid: 2668)
+2014-01-29 17:29:30 [2662] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:29:31 [2688] [INFO] Starting gunicorn 18.0
+2014-01-29 17:29:31 [2688] [INFO] Listening at: http://127.0.0.1:9997 (2688)
+2014-01-29 17:29:31 [2688] [INFO] Using worker: sync
+2014-01-29 17:29:31 [2693] [INFO] Booting worker with pid: 2693
+2014-01-29 17:29:31 [2694] [INFO] Booting worker with pid: 2694
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:34:28 [2694] [INFO] Worker exiting (pid: 2694)
+2014-01-29 17:34:28 [2688] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 17:34:28 [2693] [INFO] Worker exiting (pid: 2693)
+2014-01-29 17:34:28 [2688] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:34:29 [2816] [INFO] Starting gunicorn 18.0
+2014-01-29 17:34:29 [2816] [INFO] Listening at: http://127.0.0.1:9997 (2816)
+2014-01-29 17:34:29 [2816] [INFO] Using worker: sync
+2014-01-29 17:34:29 [2821] [INFO] Booting worker with pid: 2821
+2014-01-29 17:34:29 [2822] [INFO] Booting worker with pid: 2822
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:54:58 [2821] [INFO] Worker exiting (pid: 2821)
+2014-01-29 17:54:58 [2816] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1216756032,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 17:54:58 [2822] [INFO] Worker exiting (pid: 2822)
+2014-01-29 17:54:58 [2816] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:54:59 [3050] [INFO] Starting gunicorn 18.0
+2014-01-29 17:54:59 [3050] [INFO] Listening at: http://127.0.0.1:9997 (3050)
+2014-01-29 17:54:59 [3050] [INFO] Using worker: sync
+2014-01-29 17:54:59 [3055] [INFO] Booting worker with pid: 3055
+2014-01-29 17:55:00 [3056] [INFO] Booting worker with pid: 3056
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:55:36 [3056] [INFO] Worker exiting (pid: 3056)
+2014-01-29 17:55:36 [3050] [INFO] Handling signal: term
+2014-01-29 17:55:36 [3055] [INFO] Worker exiting (pid: 3055)
+2014-01-29 17:55:36 [3050] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:55:37 [3108] [INFO] Starting gunicorn 18.0
+2014-01-29 17:55:37 [3108] [INFO] Listening at: http://127.0.0.1:9997 (3108)
+2014-01-29 17:55:37 [3108] [INFO] Using worker: sync
+2014-01-29 17:55:37 [3113] [INFO] Booting worker with pid: 3113
+2014-01-29 17:55:37 [3114] [INFO] Booting worker with pid: 3114
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:58:40 [3113] [INFO] Worker exiting (pid: 3113)
+2014-01-29 17:58:40 [3108] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 17:58:40 [3108] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:58:41 [3196] [INFO] Starting gunicorn 18.0
+2014-01-29 17:58:41 [3196] [INFO] Listening at: http://127.0.0.1:9997 (3196)
+2014-01-29 17:58:41 [3196] [INFO] Using worker: sync
+2014-01-29 17:58:41 [3201] [INFO] Booting worker with pid: 3201
+2014-01-29 17:58:42 [3202] [INFO] Booting worker with pid: 3202
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 17:59:43 [3196] [INFO] Handling signal: term
+2014-01-29 17:59:43 [3202] [INFO] Worker exiting (pid: 3202)
+2014-01-29 17:59:43 [3196] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 17:59:44 [3233] [INFO] Starting gunicorn 18.0
+2014-01-29 17:59:44 [3233] [INFO] Listening at: http://127.0.0.1:9997 (3233)
+2014-01-29 17:59:44 [3233] [INFO] Using worker: sync
+2014-01-29 17:59:44 [3238] [INFO] Booting worker with pid: 3238
+2014-01-29 17:59:44 [3239] [INFO] Booting worker with pid: 3239
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:00:07 [3238] [INFO] Worker exiting (pid: 3238)
+2014-01-29 18:00:07 [3233] [INFO] Handling signal: term
+Exception SystemExit: SystemExit(0,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:00:07 [3233] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:00:08 [3264] [INFO] Starting gunicorn 18.0
+2014-01-29 18:00:08 [3264] [INFO] Listening at: http://127.0.0.1:9997 (3264)
+2014-01-29 18:00:08 [3264] [INFO] Using worker: sync
+2014-01-29 18:00:08 [3269] [INFO] Booting worker with pid: 3269
+2014-01-29 18:00:08 [3270] [INFO] Booting worker with pid: 3270
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:01:12 [3269] [INFO] Worker exiting (pid: 3269)
+2014-01-29 18:01:12 [3264] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1217407296,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:01:12 [3270] [INFO] Worker exiting (pid: 3270)
+2014-01-29 18:01:12 [3264] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:01:13 [3326] [INFO] Starting gunicorn 18.0
+2014-01-29 18:01:13 [3326] [INFO] Listening at: http://127.0.0.1:9997 (3326)
+2014-01-29 18:01:13 [3326] [INFO] Using worker: sync
+2014-01-29 18:01:13 [3336] [INFO] Booting worker with pid: 3336
+2014-01-29 18:01:13 [3337] [INFO] Booting worker with pid: 3337
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:02:02 [3336] [INFO] Worker exiting (pid: 3336)
+2014-01-29 18:02:02 [3337] [INFO] Worker exiting (pid: 3337)
+2014-01-29 18:02:02 [3326] [INFO] Handling signal: term
+2014-01-29 18:02:02 [3326] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:02:03 [3355] [INFO] Starting gunicorn 18.0
+2014-01-29 18:02:03 [3355] [INFO] Listening at: http://127.0.0.1:9997 (3355)
+2014-01-29 18:02:03 [3355] [INFO] Using worker: sync
+2014-01-29 18:02:03 [3360] [INFO] Booting worker with pid: 3360
+2014-01-29 18:02:03 [3361] [INFO] Booting worker with pid: 3361
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:02:35 [3361] [INFO] Worker exiting (pid: 3361)
+2014-01-29 18:02:35 [3360] [INFO] Worker exiting (pid: 3360)
+2014-01-29 18:02:35 [3355] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1215584576,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:02:35 [3355] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:02:40 [3378] [INFO] Starting gunicorn 18.0
+2014-01-29 18:02:40 [3378] [INFO] Listening at: http://127.0.0.1:9997 (3378)
+2014-01-29 18:02:40 [3378] [INFO] Using worker: sync
+2014-01-29 18:02:40 [3383] [INFO] Booting worker with pid: 3383
+2014-01-29 18:02:40 [3384] [INFO] Booting worker with pid: 3384
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:03:15 [3384] [INFO] Worker exiting (pid: 3384)
+2014-01-29 18:03:15 [3383] [INFO] Worker exiting (pid: 3383)
+2014-01-29 18:03:15 [3378] [INFO] Handling signal: term
+2014-01-29 18:03:15 [3378] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:07:11 [3496] [INFO] Starting gunicorn 18.0
+2014-01-29 18:07:11 [3496] [INFO] Listening at: http://127.0.0.1:9997 (3496)
+2014-01-29 18:07:11 [3496] [INFO] Using worker: sync
+2014-01-29 18:07:11 [3501] [INFO] Booting worker with pid: 3501
+2014-01-29 18:07:11 [3502] [INFO] Booting worker with pid: 3502
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:17:21 [3501] [INFO] Worker exiting (pid: 3501)
+2014-01-29 18:17:21 [3496] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:17:21 [3502] [INFO] Worker exiting (pid: 3502)
+2014-01-29 18:17:21 [3496] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:17:22 [3626] [INFO] Starting gunicorn 18.0
+2014-01-29 18:17:22 [3626] [INFO] Listening at: http://127.0.0.1:9997 (3626)
+2014-01-29 18:17:22 [3626] [INFO] Using worker: sync
+2014-01-29 18:17:22 [3631] [INFO] Booting worker with pid: 3631
+2014-01-29 18:17:22 [3632] [INFO] Booting worker with pid: 3632
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:25:49 [3631] [INFO] Worker exiting (pid: 3631)
+2014-01-29 18:25:49 [3626] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1216190784,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:25:49 [3632] [INFO] Worker exiting (pid: 3632)
+2014-01-29 18:25:49 [3626] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:26:45 [3808] [INFO] Starting gunicorn 18.0
+2014-01-29 18:26:45 [3808] [INFO] Listening at: http://127.0.0.1:9997 (3808)
+2014-01-29 18:26:45 [3808] [INFO] Using worker: sync
+2014-01-29 18:26:45 [3813] [INFO] Booting worker with pid: 3813
+2014-01-29 18:26:45 [3814] [INFO] Booting worker with pid: 3814
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 18:43:46 [3813] [INFO] Worker exiting (pid: 3813)
+2014-01-29 18:43:46 [3808] [INFO] Handling signal: term
+2014-01-29 18:43:46 [3814] [INFO] Worker exiting (pid: 3814)
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-29 18:43:47 [3808] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:44:33 [4159] [INFO] Starting gunicorn 18.0
+2014-01-29 18:44:33 [4159] [INFO] Listening at: http://127.0.0.1:9997 (4159)
+2014-01-29 18:44:33 [4159] [INFO] Using worker: sync
+2014-01-29 18:44:33 [4164] [INFO] Booting worker with pid: 4164
+2014-01-29 18:44:33 [4165] [INFO] Booting worker with pid: 4165
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/django/template/defaulttags.py:1237: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+  @register.tag
+2014-01-29 18:51:56 [4159] [INFO] Handling signal: term
+2014-01-29 18:51:56 [4164] [INFO] Worker exiting (pid: 4164)
+2014-01-29 18:51:56 [4159] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 18:51:57 [4298] [INFO] Starting gunicorn 18.0
+2014-01-29 18:51:57 [4298] [INFO] Listening at: http://127.0.0.1:9997 (4298)
+2014-01-29 18:51:57 [4298] [INFO] Using worker: sync
+2014-01-29 18:51:57 [4303] [INFO] Booting worker with pid: 4303
+2014-01-29 18:51:57 [4304] [INFO] Booting worker with pid: 4304
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-29 19:23:05 [4298] [INFO] Handling signal: term
+2014-01-29 19:23:05 [4303] [INFO] Worker exiting (pid: 4303)
+2014-01-29 19:23:05 [4298] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-29 19:23:23 [5340] [INFO] Starting gunicorn 18.0
+2014-01-29 19:23:23 [5340] [INFO] Listening at: http://127.0.0.1:9997 (5340)
+2014-01-29 19:23:23 [5340] [INFO] Using worker: sync
+2014-01-29 19:23:23 [5345] [INFO] Booting worker with pid: 5345
+2014-01-29 19:23:23 [5346] [INFO] Booting worker with pid: 5346
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-30 00:35:49 [5345] [INFO] Worker exiting (pid: 5345)
+2014-01-30 00:35:49 [5340] [INFO] Handling signal: term
+2014-01-30 00:35:49 [5346] [INFO] Worker exiting (pid: 5346)
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-30 00:35:49 [5340] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 00:35:50 [11353] [INFO] Starting gunicorn 18.0
+2014-01-30 00:35:50 [11353] [INFO] Listening at: http://127.0.0.1:9997 (11353)
+2014-01-30 00:35:50 [11353] [INFO] Using worker: sync
+2014-01-30 00:35:50 [11359] [INFO] Booting worker with pid: 11359
+2014-01-30 00:35:50 [11361] [INFO] Booting worker with pid: 11361
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:397: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-01-30 00:40:28 [11353] [INFO] Handling signal: term
+2014-01-30 00:40:28 [11353] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 00:40:29 [11808] [INFO] Starting gunicorn 18.0
+2014-01-30 00:40:29 [11808] [INFO] Listening at: http://127.0.0.1:9997 (11808)
+2014-01-30 00:40:29 [11808] [INFO] Using worker: sync
+2014-01-30 00:40:29 [11815] [INFO] Booting worker with pid: 11815
+2014-01-30 00:40:29 [11816] [INFO] Booting worker with pid: 11816
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:397: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:397: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-01-30 00:41:06 [11808] [INFO] Handling signal: term
+2014-01-30 00:41:06 [11815] [INFO] Worker exiting (pid: 11815)
+2014-01-30 00:41:06 [11816] [INFO] Worker exiting (pid: 11816)
+2014-01-30 00:41:06 [11808] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 00:41:07 [11868] [INFO] Starting gunicorn 18.0
+2014-01-30 00:41:07 [11868] [INFO] Listening at: http://127.0.0.1:9997 (11868)
+2014-01-30 00:41:07 [11868] [INFO] Using worker: sync
+2014-01-30 00:41:07 [11875] [INFO] Booting worker with pid: 11875
+2014-01-30 00:41:07 [11876] [INFO] Booting worker with pid: 11876
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:397: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:397: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-01-30 00:41:39 [11875] [INFO] Worker exiting (pid: 11875)
+2014-01-30 00:41:39 [11876] [INFO] Worker exiting (pid: 11876)
+2014-01-30 00:41:39 [11868] [INFO] Handling signal: term
+2014-01-30 00:41:39 [11868] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 00:41:40 [11935] [INFO] Starting gunicorn 18.0
+2014-01-30 00:41:40 [11935] [INFO] Listening at: http://127.0.0.1:9997 (11935)
+2014-01-30 00:41:40 [11935] [INFO] Using worker: sync
+2014-01-30 00:41:40 [11941] [INFO] Booting worker with pid: 11941
+2014-01-30 00:41:40 [11942] [INFO] Booting worker with pid: 11942
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
