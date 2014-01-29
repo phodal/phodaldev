@@ -614,3 +614,123 @@ Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threadin
   warn("You haven't defined the ALLOWED_HOSTS settings, which "
 /usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
   warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-30 01:17:02 [11941] [INFO] Worker exiting (pid: 11941)
+2014-01-30 01:17:02 [11935] [INFO] Handling signal: term
+2014-01-30 01:17:02 [11942] [INFO] Worker exiting (pid: 11942)
+Exception KeyError: KeyError(-1215719744,) in Exception <module 'threading' from '/usr/lib/python2.6/threading.pyc'>KeyError ignored
+: KeyError(-1215719744,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-30 01:17:02 [11935] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 01:17:04 [12578] [INFO] Starting gunicorn 18.0
+2014-01-30 01:17:04 [12578] [INFO] Listening at: http://127.0.0.1:9997 (12578)
+2014-01-30 01:17:04 [12578] [INFO] Using worker: sync
+2014-01-30 01:17:04 [12583] [INFO] Booting worker with pid: 12583
+2014-01-30 01:17:04 [12584] [INFO] Booting worker with pid: 12584
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+2014-01-30 01:19:29 [12584] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    class WSGIHandler(base.BaseHandler):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 196, in get_response
+    def handle_uncaught_exception(self, request, resolver, exc_info):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 231, in handle_uncaught_exception
+    """
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 69, in technical_500_response
+    # Cache for the default exception reporter filter instance.
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 323, in get_traceback_html
+    'message': message,
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 281, in get_traceback_data
+    return c
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 431, in get_traceback_frames
+    return empty_urlconf(request)
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 412, in _get_lines_from_file
+    """
+IndexError: list index out of range
+2014-01-30 01:19:45 [12584] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    class WSGIHandler(base.BaseHandler):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 196, in get_response
+    def handle_uncaught_exception(self, request, resolver, exc_info):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 231, in handle_uncaught_exception
+    """
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 69, in technical_500_response
+    # Cache for the default exception reporter filter instance.
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 323, in get_traceback_html
+    'message': message,
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 281, in get_traceback_data
+    return c
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 431, in get_traceback_frames
+    return empty_urlconf(request)
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 412, in _get_lines_from_file
+    """
+IndexError: list index out of range
+2014-01-30 01:19:52 [12583] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 206, in __call__
+    class WSGIHandler(base.BaseHandler):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 196, in get_response
+    def handle_uncaught_exception(self, request, resolver, exc_info):
+  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 231, in handle_uncaught_exception
+    """
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 69, in technical_500_response
+    # Cache for the default exception reporter filter instance.
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 323, in get_traceback_html
+    'message': message,
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 281, in get_traceback_data
+    return c
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 431, in get_traceback_frames
+    return empty_urlconf(request)
+  File "/usr/lib/python2.6/site-packages/django/views/debug.py", line 412, in _get_lines_from_file
+    """
+IndexError: list index out of range
+2014-01-30 01:19:58 [12578] [INFO] Handling signal: term
+2014-01-30 01:19:58 [12583] [INFO] Worker exiting (pid: 12583)
+Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-01-30 01:19:58 [12584] [INFO] Worker exiting (pid: 12584)
+2014-01-30 01:19:58 [12578] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-01-30 01:19:59 [12650] [INFO] Starting gunicorn 18.0
+2014-01-30 01:19:59 [12650] [INFO] Listening at: http://127.0.0.1:9997 (12650)
+2014-01-30 01:19:59 [12650] [INFO] Using worker: sync
+2014-01-30 01:19:59 [12655] [INFO] Booting worker with pid: 12655
+2014-01-30 01:19:59 [12656] [INFO] Booting worker with pid: 12656
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/mezzanine/utils/conf.py:49: UserWarning: You haven't defined the ALLOWED_HOSTS settings, which Django 1.5 requires. Will fall back to the domains configured as sites.
+  warn("You haven't defined the ALLOWED_HOSTS settings, which "
+/usr/lib/python2.6/site-packages/django/template/defaulttags.py:1237: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+  category=DeprecationWarning)
+/usr/lib/python2.6/site-packages/django/template/defaulttags.py:1237: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+  category=DeprecationWarning)
