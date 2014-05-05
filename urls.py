@@ -6,7 +6,6 @@ from django.contrib import admin
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
-import mezzanine_pagedown.urls
 
 
 admin.autodiscover()
@@ -42,7 +41,6 @@ urlpatterns += patterns('',
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
-    url("^pagedown/", include(mezzanine_pagedown.urls)),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -58,7 +56,8 @@ urlpatterns += patterns('',
     # should be used if you want to customize the homepage's template.
 
     # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
-
+    url("^all/$", direct_to_template, {"template": "pages/all.html"},name="all"),
+		
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
     # This pattern points the homepage to the blog post listing page,

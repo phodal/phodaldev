@@ -1,17 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
 <head>
+<meta http-equiv="content-language" content="zh-CN" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
-<meta name="baidu-site-verification" content="kQB3mNo6cpjee6eE" />
+<meta name="baidu-site-verification" content="dZvx5Cg1jt" />
 <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
 <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
 <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
 <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+<meta name="sogou_site_verification" content="46iR0w9xzJ"/>
 <meta name="bitly-verification" content="b4cdaf394c9f"/>
 <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
 <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
@@ -23,143 +26,140 @@
 {% endifinstalled %}
 
 {% compress css %}
-<link rel="stylesheet" href="{% static "phodal/css/metro-bootstrap.css" %}">
-<link rel="stylesheet" href="{% static "phodal/css/metro-bootstrap-responsive.css" %}">
-<link rel="stylesheet" href="{% static "phodal/css/prettify.css" %}">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
 {% block extra_css %}{% endblock %}
 {% endcompress %}
 
 {% compress js %}
-<script src="{% static "phodal/js/jquery.min.js" %}"></script>
-<script src="{% static "phodal/js/jquery.widget.min.js" %}"></script>
-<script src="{% static "phodal/js/metro.min.js" %}"></script>
-<script src="{% static "phodal/js/prettify.js" %}"></script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
 {% block extra_head %}{% endblock %}
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="metro">
-<nav class="navigation-bar">
-    <nav class="navigation-bar-content">
-        <a href="/" class="element"><span class="icon-home"></span>
-    {% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}{% endif %}
-    {% if settings.SITE_TAGLINE %}<sup>{{ settings.SITE_TAGLINE }}</sup>{% endif %}</a>
-        <span class="element-divider"></span>
-        <nav class="horizontal-menu">
-        {% page_menu "pages/menus/dropdown_metro.html" %}
-	</nav>
-        <span class="element-divider"></span>
-        {% include "includes/search_metro.html" %}
-    </nav>
-</nav>
-
-	<div class="container">
-		<div class="grid fluid">
-			<div class="row">
-				<div class="span4 bg-amber padding20 text-center">
-					<h2 class="fg-white">Create</h2>
-				</div>
-				<div class="span4 bg-pink padding20 text-center">
-					<h2 class="fg-white">Design</h2>
-				</div>
-				<div class="span4 bg-green padding20 text-center">
-					<h2 class="fg-white">Think</h2>
-				</div>
-			</div>
-		</div>
-	</div>
+<body itemscope itemtype="http://schema.org/WebPage">
 
 <div class="container">
-		<div class="grid fluid">
-			<div class="row">
-				<div class="span4">
-					<div class="bg-cyan padding20 text-center">
-						<h2 class="fg-white">青玉案</h2>
-						<p class="fg-white">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
-						<p class="fg-white">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
-					</div>
-					<br>
-					<div class="bg-cyan padding20 text-center">
-						<h2 class="fg-white">鹧鸪天</h2>
-						<p class="fg-white">昔誓昔盟或可期，东风恨恨卷青丝。相思忍对新醅酒，寂寞怕开却月门。</p>
-						<p class="fg-white">情缱绻，梦依稀。忽惊三月燕归迟。天涯何必歌长恨，为有君心似旧时。</p>
-					</div>
-				</div>
 
-				<div class="span4">
-					<div class="carousel" id="carousel1">
-						<div class="slide">
-							<img src="{% static "phodal/images/keyboard.jpg" %}" class="cover1" />
-						</div>
-						<div class="slide">
-							<img src="{% static "phodal/images/angel.jpg" %}" class="cover1" />
-						</div>
-						<div class="slide">
-							<img src="{% static "phodal/images/dc.jpg" %}" class="cover1" />
-						</div>
-						<a class="controls left"><i class="icon-arrow-left-3"></i></a>
-						<a class="controls right"><i class="icon-arrow-right-3"></i></a>
-					</div>
+{% nevercache %}
+{% if messages %}
+<div class="messages">
+{% for message in messages %}
+<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+{{ message }}
+</div>
+{% endfor %}
+</div>
+{% endif %}
+{% endnevercache %}
 
-					<br>
-					<div class="carousel">
-					<img src="{% static "phodal/images/style.jpg" %}" class="cover1" />
-					</div>
-
-					<script>
-					$(function(){
-						$("#carousel1").carousel({
-							height: 200
-						});
-					})
-					</script>
+</div>
 
 
-				</div>
-				<div class="span4 ">
-					<pre class="prettyprint linenums lang-cpp">
-int ledPort=13;
+<div id="layout">
+<div class="pure-g-r content">
 
-void setup() {
-  Serial.begin(9600);
-  pinMode(ledPort,OUTPUT);
-}
+<div class="pure-u-1-4">
 
-int serialData;
-void loop() {
-  String inString = "";
-  while (Serial.available()> 0)
-  {
-    int inChar = Serial.read();
-    if (isDigit(inChar)) {
-      inString += (char)inChar; 
-    }
-    serialData=inString.toInt();
-    Serial.print(serialData);
-  }
-  if(serialData==1){
-    digitalWrite(ledPort,HIGH);
-  }else{
-    digitalWrite(ledPort,LOW);
-  }
-}</pre>
-				</div>
+</div>
 
-			</div>
-		</div>
-	</div>
+<div class="pure-u-3-4">
+<div id="window">
+<div id="toolbar">
+<div class="top">
+<div id="bubble">
+<div class="shine"></div>
+<div class="glow"></div>
+</div>
+</div>
+</div>
+<div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
+<p>Last login: Thu May 24 12:18:16 on ttyACM0
+<br />Welcome,<span itemprop="name"> Phodal</span><span itermprop="familyName"> Huang </span></p>
 
-	<script type="text/javascript">
-	(function(jQuery){
-		jQuery( document ).ready( function() {
-			prettyPrint();
-		} );
-	}(jQuery))
-	</script>
+<p>fdHuang$ <span > python -v </span>
+<br /><span itemprop="affiliation">Python 2.7.5 </span></p>
 
-{% include "includes/footer_scripts.html" %}
+<p>fdHuang$ <span >  pwd</span>
+<br /><span itemprop="jobTitle">Programmer</span><span> 2002</span>
+<br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
+<br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
+</p>
 
+<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > pwd !</span>
+<br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
+</p>
+
+<p>fdHuang$ <span>more phodal</span>
+<br /> <span>写过点诗,赚过稿费。</span>
+<br /> <span>设计过Logo,换个实习机会。</span>
+<br /> <span>画过pcb,搞过各种开发板。</span>
+<br /> <span>今天,一个</span><span itemprop="jobTitle">前端设计师</span><span>,又一个``Full Stack``...</span>
+</p>
+
+<p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
+
+
+<div class="cursor"></div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="footer">
+<div class="legal">
+
+<div class="pcb">
+<div class="pure-g-r">
+<div class="pure-u-1-4">
+<div class="l-box"></div>
+</div>
+<div class="pure-u-3-4">
+<div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
+{% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+{% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
+<ul class="breadcrumb" itemprop="breadcrumb">
+<li class="pure-menu-selected"><a href="/">Home</a>
+</li>
+<li class="pure-menu-selected"><a href="/blog">Blog</a>
+</li>
+<li class="pure-menu-selected"><a href="/phodal">More</a>
+</li>
+</ul>
+</div>
+<br />
+<br />
+<code class="poem" itemscope itemtype="http://schema.org/Article">
+<h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
+<p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
+<p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+</code>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<script>
+
+var _gaq = _gaq || [['_trackPageview']];
+_gaq.unshift(['_setAccount', 'UA-30127328-1']);
+(function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+})(document, 'script');
+
+</script>
+</footer>
 </body>
 </html>

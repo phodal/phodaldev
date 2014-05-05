@@ -1,8 +1,8 @@
 {% load mezzanine_tags i18n future %}
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search">
 
-<div class="form-group">
-    <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
+<div class="form-group searchform input">
+      <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
 </div>
 
 {% if search_model_choices %}

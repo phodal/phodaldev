@@ -1,10 +1,10 @@
 {% load mezzanine_tags rating_tags i18n future %}
 
-<span id="rating-{{ rating_object.id }}">
+<span id="rating-{{ rating_object.id }}" itemscope itemtype="http://schema.org/AggregateRating">
     {% if rating_average %}
-    {% trans "Current rating" %}:<span itemprop="ratingValue"> {{ rating_average|floatformat }}</span> {% trans "Rating count" %} <span itemprop="reviewCount"> {{ rating_count|floatformat }}</span>
+    {% trans "当前评分" %}:<span itemprop="ratingValue"> {{ rating_average|floatformat }}</span> {% trans "评分数" %} <span itemprop="ratingCount"> {{ rating_count|floatformat }}</span>
     {% else %}
-    {% trans "Currently unrated" %}
+    {% trans "未评分" %}
     {% endif %}
 </span>
 

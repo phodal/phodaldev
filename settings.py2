@@ -77,7 +77,7 @@ from __future__ import absolute_import, unicode_literals
 
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
-USE_SOUTH = False
+USE_SOUTH = True
 
 
 ########################
@@ -89,16 +89,15 @@ USE_SOUTH = False
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
-    ('Phodal Huang' 'h@phodal.com'),
 )
-
 MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'www.phodal.com',
+	'.phodal.com',
+	'www.phodal.com',
+	'.phodal.com.',
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -108,7 +107,7 @@ ALLOWED_HOSTS = [
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'Asia/Chongqing'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
@@ -251,15 +250,13 @@ INSTALLED_APPS = (
     "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
-    "mezzanine.galleries",
-    "mezzanine.twitter",
     #"mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.mobile",
     "mezzanine_pagedown",
 )
 
-RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
-RICHTEXT_FILTER = 'mezzanine_pagedown.filters.codehilite'
+RICHTEXT_WIDGET_CLASS='mezzanine_pagedown.widgets.PlainWidget'
+RICHTEXT_FILTER='mezzanine_pagedown.filters.plain'
 RICHTEXT_FILTER_LEVEL = 3
 
 # List of processors used by RequestContext to populate the context.
@@ -376,4 +373,3 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
-#RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
