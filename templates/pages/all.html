@@ -28,17 +28,17 @@ blogposts.config(function($interpolateProvider) {
   $interpolateProvider.endSymbol('}]}');
 });
  blogposts.controller('blogController', function($scope, $http) {
-     $http.get('http://api.phodal.net/blog/page/1').success(function(data) {
+     $http.get('http://api.phodal.net/blog').success(function(data) {
          $scope.posts = data;
          console.log($scope.posts);
     });
  });
 </script>
 <div ng-app="blogposts">
-<div  ng-controller="blogController">
-    <ul>
-        <li ng-repeat="post in posts"><a href="/blog/{[{post.slug}]}">{[{post.title}]}</a></li>
-    </ul>
+<div class="posts"  ng-controller="blogController">
+<ul>
+<li ng-repeat="post in posts"><a href="/blog/{[{post.slug}]}">{[{post.title}]}</a></li>
+</ul>
 </div>
 </div>
 {% endblock %}
