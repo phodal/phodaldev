@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="Phodal">
+	<meta name="description" content="New Homepage">
+	<title>Phodal's New Homepage</title>
+	<link rel="stylesheet" href="css/metro-bootstrap.css">
+	<link rel="stylesheet" href="css/metro-bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/prettify.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.widget.min.js"></script>
+	<script src="js/metro.min.js"></script>
+	<script src="js/prettify.js"></script>
+</head>
+<body class="metro">
+<nav class="navigation-bar">
+    <nav class="navigation-bar-content">
+        <a href="/" class="element"><span class="icon-home"></span>Phodal-Geek's Life <sup>Simple & Stupid</sup></a>
+
+ 
+        <span class="element-divider"></span>
+
+        <span class="element-divider place-right"></span>
+        <a class="element place-right" href="#"><span class="icon-cog"></span></a>
+        <span class="element-divider place-right"></span>
+    </nav>
+</nav>
+
+	<div class="container">
+		<div class="grid fluid">
+			<div class="row">
+				<div class="span4 bg-amber padding20 text-center">
+					<h2 class="fg-white">Create</h2>
+				</div>
+				<div class="span4 bg-pink padding20 text-center">
+					<h2 class="fg-white">Design</h2>
+				</div>
+				<div class="span4 bg-green padding20 text-center">
+					<h2 class="fg-white">Think</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="grid fluid">
+			<div class="row">
+				<div class="span4">
+					<div class="bg-cyan padding20 text-center">
+						<h2 class="fg-white">青玉案</h2>
+						<p class="fg-white">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
+						<p class="fg-white">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+					</div>
+					<br>
+					<div class="bg-cyan padding20 text-center">
+						<h2 class="fg-white">鹧鸪天</h2>
+						<p class="fg-white">昔誓昔盟或可期，东风恨恨卷青丝。相思忍对新醅酒，寂寞怕开却月门。</p>
+						<p class="fg-white">情缱绻，梦依稀。忽惊三月燕归迟。天涯何必歌长恨，为有君心似旧时。</p>
+					</div>
+					<br>
+					<div class="bg-cyan padding20 text-left">
+						<h2 class="fg-white">望涯曲</h2>
+						<p class="fg-white">床头叠伞，丝涵色淡</p><p class="fg-white">
+						倾情诉笔，墨汁弯错记折扇</p><p class="fg-white">
+						邂逅那年，眼帘醉言雅娴</p><p class="fg-white">
+						如雪素颜，马尾悠扬青丝吻脸</p><p class="fg-white">
+						望唇沿，初蕾凝苞嫣语间</p><p class="fg-white">
+						玉声含，酥芳泛腮边</p><p class="fg-white">
+						莲倚馨甜，绯裙微摆贴栏</p><p class="fg-white">
+						涟漪心田，游鱼叶梢叼蜿蜒</p><p class="fg-white">
+						问亭珠还，滴身呢喃翩翩</p><p class="fg-white">
+						风怜湖卿，卿音窈窕吹醒红絮缠绵</p><p class="fg-white">
+						夕阳轻藏，月光银雨桂树淋满</p><p class="fg-white">
+						长卷书韵，鸳鸯画圆</p><p class="fg-white">
+						婵娟舒云，旖旎来姗</p><p class="fg-white">
+						韶夜景，萤星蓝</p><p class="fg-white">
+						缕缕眷恋转角夜来香</p><p class="fg-white">
+						花开声，声声摇曳蝴蝶缘</p><p class="fg-white">
+						道是流年，倒似留念，多少薰衣醒瑶愿</p>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="carousel" id="carousel1">
+						<div class="slide">
+							<img src="images/keyboard.jpg" class="cover1" />
+						</div>
+						<div class="slide">
+							<img src="images/angel.jpg" class="cover1" />
+						</div>
+						<div class="slide">
+							<img src="images/dc.jpg" class="cover1" />
+						</div>
+						<a class="controls left"><i class="icon-arrow-left-3"></i></a>
+						<a class="controls right"><i class="icon-arrow-right-3"></i></a>
+					</div>
+
+					<br>
+					<div class="carousel">
+					<img src="images/style.jpg" class="cover1" />
+					</div>
+
+					<script>
+					$(function(){
+						$("#carousel1").carousel({
+							height: 200
+						});
+					})
+					</script>
+
+
+				</div>
+				<div class="span4 ">
+					<pre class="prettyprint linenums lang-cpp">
+int ledPort=13;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledPort,OUTPUT);
+}
+
+int serialData;
+void loop() {
+  String inString = "";
+  while (Serial.available()> 0)
+  {
+    int inChar = Serial.read();
+    if (isDigit(inChar)) {
+      inString += (char)inChar; 
+    }
+    serialData=inString.toInt();
+    Serial.print(serialData);
+  }
+  if(serialData==1){
+    digitalWrite(ledPort,HIGH);
+  }else{
+    digitalWrite(ledPort,LOW);
+  }
+}</pre>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	(function(jQuery){
+		jQuery( document ).ready( function() {
+			prettyPrint();
+		} );
+	}(jQuery))
+	</script>
+
+</body>
+</html>

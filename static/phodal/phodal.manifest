@@ -1,0 +1,60 @@
+CACHE MANIFEST
+
+# VERSION 0.3
+
+# 直接缓存的文件
+CACHE:
+/static/mezzanine/js/jquery-1.7.1.min.js
+/static/js/bootstrap.min.js
+/static/phodal/js/jquery.tagcanvas.min.js
+/static/mezzanine/js/jquery.form.js
+/static/phodal/js/jquery.reject.js
+/static/phodal/js/blur.min.js
+/static/js/bootstrap.min.js
+/static/mezzanine/js/editable.js
+/static/filebrowser/js/filebrowser-popup.js
+/static/mezzanine/js/jquery-ui-1.9.1.custom.min.js
+/static/mezzanine/js/jquery.ba-resize.js
+/static/mezzanine/js/jquery.form.js
+/static/phodal/js/jquery.reject.js
+/static/phodal/js/jquery.shuffleLetters.js
+/static/mezzanine/js/jquery.tools.overlay.js
+/static/mezzanine/js/jquery.tools.toolbox.expose.js
+/static/mezzanine_pagedown/pagedown/Markdown.Converter.js
+/static/mezzanine_pagedown/pagedown/Markdown.Editor.js
+/static/mezzanine_pagedown/pagedown/Markdown.Sanitizer.js
+
+
+/static/phodal/images/djangopowered126x54_grey.gif
+/static/phodal/images/python-powered-w-223x54.png
+/static/mezzanine/img/loadingAnimation.gif
+
+/static/css/bootstrap.css
+/static/css/bootstrap.responsive.css
+/static/mezzanine/css/editable.css
+/static/mezzanine/css/smoothness/jquery-ui-1.9.1.custom.min.css
+/static/css/mezzanine.css
+/static/mezzanine_pagedown/css/pagedown.css
+
+/static/phodal/cursor/left_ptr.cur
+/static/phodal/cursor/pointing_hand.cur
+/static/phodal/cursor/Text.cur
+/static/mezzanine/js/editable.js
+/static/mezzanine/css/smoothness/images/ui-icons_222222_256x240.png
+
+/static/phodal/images/scroll_thumb.png
+/static/phodal/images/scroll_gutter_top.png
+/static/phodal/images/scroll_gutter_mid.png
+/static/phodal/images/scroll_cntrl_up.png
+/static/phodal/images/scroll_gutter_btm.png
+/static/phodal/images/scroll_cntrl_dwn.png
+/static/phodal/images/bg.png
+
+/static/mezzanine/img/loadingAnimation.gif
+
+# 需要在时间在线的文件
+NETWORK:
+
+
+# 替代方案
+FALLBACK:
