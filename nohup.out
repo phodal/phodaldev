@@ -10,81 +10,22 @@
 !!!     for more info.
 !!!
 
-2014-04-14 20:44:33 [23740] [INFO] Starting gunicorn 18.0
-2014-04-14 20:44:33 [23740] [INFO] Listening at: http://127.0.0.1:9997 (23740)
-2014-04-14 20:44:33 [23740] [INFO] Using worker: sync
-2014-04-14 20:44:33 [23745] [INFO] Booting worker with pid: 23745
-2014-04-14 20:44:33 [23746] [INFO] Booting worker with pid: 23746
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
+2014-05-13 21:06:14 [18887] [INFO] Starting gunicorn 18.0
+2014-05-13 21:06:14 [18887] [INFO] Listening at: http://127.0.0.1:9997 (18887)
+2014-05-13 21:06:14 [18887] [INFO] Using worker: sync
+2014-05-13 21:06:14 [18901] [INFO] Booting worker with pid: 18901
+2014-05-13 21:06:14 [18902] [INFO] Booting worker with pid: 18902
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-2014-04-17 17:48:50 [23740] [CRITICAL] WORKER TIMEOUT (pid:23745)
-2014-04-17 17:48:50 [23740] [CRITICAL] WORKER TIMEOUT (pid:23746)
-2014-04-17 17:48:50 [23740] [CRITICAL] WORKER TIMEOUT (pid:23745)
-2014-04-17 17:48:50 [23740] [CRITICAL] WORKER TIMEOUT (pid:23746)
-2014-04-17 17:48:50 [15672] [INFO] Booting worker with pid: 15672
-2014-04-17 17:48:50 [15673] [INFO] Booting worker with pid: 15673
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-04-20 05:46:50 [15672] [ERROR] Error processing request.
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 93, in handle
-    self.handle_request(listener, req, client, addr)
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
-    resp.write(item)
-  File "/usr/lib/python2.6/site-packages/gunicorn/http/wsgi.py", line 313, in write
-    util.write(self.sock, arg, self.chunked)
-  File "/usr/lib/python2.6/site-packages/gunicorn/util.py", line 298, in write
-    sock.sendall(data)
-  File "<string>", line 1, in sendall
-error: [Errno 104] Connection reset by peer
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-2014-05-07 02:42:12 [15672] [ERROR] Error processing request.
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 93, in handle
-    self.handle_request(listener, req, client, addr)
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
-    resp.write(item)
-  File "/usr/lib/python2.6/site-packages/gunicorn/http/wsgi.py", line 313, in write
-    util.write(self.sock, arg, self.chunked)
-  File "/usr/lib/python2.6/site-packages/gunicorn/util.py", line 298, in write
-    sock.sendall(data)
-  File "<string>", line 1, in sendall
-error: [Errno 104] Connection reset by peer
-2014-05-08 13:34:24 [23740] [CRITICAL] WORKER TIMEOUT (pid:15672)
-2014-05-08 13:34:24 [23740] [CRITICAL] WORKER TIMEOUT (pid:15673)
-2014-05-08 13:34:24 [23740] [CRITICAL] WORKER TIMEOUT (pid:15672)
-2014-05-08 13:34:24 [23740] [CRITICAL] WORKER TIMEOUT (pid:15673)
-2014-05-08 13:34:24 [10344] [INFO] Booting worker with pid: 10344
-2014-05-08 13:34:24 [10345] [INFO] Booting worker with pid: 10345
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-08 14:56:03 [23740] [CRITICAL] WORKER TIMEOUT (pid:10344)
-2014-05-08 14:56:04 [23740] [CRITICAL] WORKER TIMEOUT (pid:10345)
-2014-05-08 14:56:04 [23740] [CRITICAL] WORKER TIMEOUT (pid:10345)
-2014-05-08 14:56:04 [30913] [INFO] Booting worker with pid: 30913
-2014-05-08 14:56:04 [30914] [INFO] Booting worker with pid: 30914
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-08 15:31:01 [30913] [INFO] Worker exiting (pid: 30913)
-2014-05-08 15:31:01 [30914] [INFO] Worker exiting (pid: 30914)
-2014-05-08 15:31:01 [23740] [INFO] Handling signal: term
-Exception KeyError: KeyError(-1215400256,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
-2014-05-08 15:31:01 [23740] [INFO] Shutting down: Master
+2014-05-13 21:08:05 [18901] [INFO] Worker exiting (pid: 18901)
+2014-05-13 21:08:05 [18887] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1216973120,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-05-13 21:08:05 [18902] [INFO] Worker exiting (pid: 18902)
+2014-05-13 21:08:05 [18887] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -97,50 +38,23 @@ Exception KeyError: KeyError(-1215400256,) in <module 'threading' from '/usr/lib
 !!!     for more info.
 !!!
 
-2014-05-08 15:31:02 [31569] [INFO] Starting gunicorn 18.0
-2014-05-08 15:31:02 [31569] [INFO] Listening at: http://127.0.0.1:9997 (31569)
-2014-05-08 15:31:02 [31569] [INFO] Using worker: sync
-2014-05-08 15:31:02 [31574] [INFO] Booting worker with pid: 31574
-2014-05-08 15:31:02 [31575] [INFO] Booting worker with pid: 31575
+2014-05-13 21:08:08 [18925] [INFO] Starting gunicorn 18.0
+2014-05-13 21:08:08 [18925] [INFO] Listening at: http://127.0.0.1:9997 (18925)
+2014-05-13 21:08:08 [18925] [INFO] Using worker: sync
+2014-05-13 21:08:08 [18939] [INFO] Booting worker with pid: 18939
+2014-05-13 21:08:08 [18940] [INFO] Booting worker with pid: 18940
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-2014-05-08 17:13:46 [31569] [CRITICAL] WORKER TIMEOUT (pid:31574)
-2014-05-08 17:13:46 [31569] [CRITICAL] WORKER TIMEOUT (pid:31575)
-2014-05-08 17:13:46 [31569] [CRITICAL] WORKER TIMEOUT (pid:31574)
-2014-05-08 17:13:46 [31569] [CRITICAL] WORKER TIMEOUT (pid:31575)
-2014-05-08 17:13:46 [691] [INFO] Booting worker with pid: 691
-2014-05-08 17:13:46 [692] [INFO] Booting worker with pid: 692
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-08 17:26:25 [31569] [CRITICAL] WORKER TIMEOUT (pid:691)
-2014-05-08 17:26:26 [31569] [CRITICAL] WORKER TIMEOUT (pid:692)
-2014-05-08 17:26:26 [31569] [CRITICAL] WORKER TIMEOUT (pid:691)
-2014-05-08 17:26:26 [31569] [CRITICAL] WORKER TIMEOUT (pid:692)
-2014-05-08 17:26:26 [31569] [CRITICAL] WORKER TIMEOUT (pid:692)
-2014-05-08 17:26:26 [766] [INFO] Booting worker with pid: 766
-2014-05-08 17:26:26 [767] [INFO] Booting worker with pid: 767
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
-  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-09 13:45:33 [766] [ERROR] Error processing request.
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 93, in handle
-    self.handle_request(listener, req, client, addr)
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
-    resp.write(item)
-  File "/usr/lib/python2.6/site-packages/gunicorn/http/wsgi.py", line 313, in write
-    util.write(self.sock, arg, self.chunked)
-  File "/usr/lib/python2.6/site-packages/gunicorn/util.py", line 298, in write
-    sock.sendall(data)
-  File "<string>", line 1, in sendall
-error: [Errno 104] Connection reset by peer
+2014-05-13 21:11:52 [18925] [INFO] Handling signal: term
+2014-05-13 21:11:52 [18940] [INFO] Worker exiting (pid: 18940)
+2014-05-13 21:11:52 [18939] [INFO] Worker exiting (pid: 18939)
+2014-05-13 21:11:52 [18925] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -153,23 +67,22 @@ error: [Errno 104] Connection reset by peer
 !!!     for more info.
 !!!
 
-2014-05-09 15:42:47 [2312] [INFO] Starting gunicorn 18.0
-2014-05-09 15:42:47 [2312] [INFO] Listening at: http://127.0.0.1:9997 (2312)
-2014-05-09 15:42:47 [2312] [INFO] Using worker: sync
-2014-05-09 15:42:47 [2317] [INFO] Booting worker with pid: 2317
-2014-05-09 15:42:47 [2318] [INFO] Booting worker with pid: 2318
+2014-05-13 21:11:55 [18992] [INFO] Starting gunicorn 18.0
+2014-05-13 21:11:55 [18992] [INFO] Listening at: http://127.0.0.1:9997 (18992)
+2014-05-13 21:11:55 [18992] [INFO] Using worker: sync
+2014-05-13 21:11:55 [19005] [INFO] Booting worker with pid: 19005
+2014-05-13 21:11:56 [19006] [INFO] Booting worker with pid: 19006
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-/usr/lib/python2.6/site-packages/django/http/response.py:330: DeprecationWarning: Using mimetype keyword argument is deprecated, use content_type instead
-  super(HttpResponse, self).__init__(*args, **kwargs)
-2014-05-11 13:59:22 [2318] [INFO] Worker exiting (pid: 2318)
-2014-05-11 13:59:22 [2317] [INFO] Worker exiting (pid: 2317)
-2014-05-11 13:59:22 [2312] [INFO] Handling signal: term
-2014-05-11 13:59:22 [2312] [INFO] Shutting down: Master
+2014-05-13 21:15:19 [18992] [INFO] Handling signal: term
+2014-05-13 21:15:19 [19006] [INFO] Worker exiting (pid: 19006)
+2014-05-13 21:15:19 [18992] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -182,117 +95,24 @@ error: [Errno 104] Connection reset by peer
 !!!     for more info.
 !!!
 
-2014-05-11 13:59:23 [25506] [INFO] Starting gunicorn 18.0
-2014-05-11 13:59:23 [25506] [INFO] Listening at: http://127.0.0.1:9997 (25506)
-2014-05-11 13:59:23 [25506] [INFO] Using worker: sync
-2014-05-11 13:59:23 [25511] [INFO] Booting worker with pid: 25511
-2014-05-11 13:59:23 [25512] [INFO] Booting worker with pid: 25512
-2014-05-11 13:59:37 [25511] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/allarticle.html",name="all"},
-                                                                                ^
- SyntaxError: invalid syntax
-2014-05-11 13:59:38 [25511] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/allarticle.html",name="all"},
-                                                                                ^
- SyntaxError: invalid syntax
-2014-05-11 13:59:41 [25511] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/allarticle.html",name="all"},
-                                                                                ^
- SyntaxError: invalid syntax
-2014-05-11 13:59:56 [25512] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/allarticle.html",name="all"},
-                                                                                ^
- SyntaxError: invalid syntax
-2014-05-11 14:00:02 [25512] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/allarticle.html",name="all"},
-                                                                                ^
- SyntaxError: invalid syntax
-2014-05-11 14:00:21 [25506] [INFO] Handling signal: term
-2014-05-11 14:00:21 [25511] [INFO] Worker exiting (pid: 25511)
-2014-05-11 14:00:21 [25512] [INFO] Worker exiting (pid: 25512)
-Exception KeyError: KeyError(-1215859008,) in Exception <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
-KeyError: KeyError(-1215859008,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
-2014-05-11 14:00:21 [25506] [INFO] Shutting down: Master
+2014-05-13 21:15:24 [19031] [INFO] Starting gunicorn 18.0
+2014-05-13 21:15:24 [19031] [INFO] Listening at: http://127.0.0.1:9997 (19031)
+2014-05-13 21:15:24 [19031] [INFO] Using worker: sync
+2014-05-13 21:15:24 [19046] [INFO] Booting worker with pid: 19046
+2014-05-13 21:15:24 [19047] [INFO] Booting worker with pid: 19047
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 21:20:05 [19046] [INFO] Worker exiting (pid: 19046)
+2014-05-13 21:20:05 [19031] [INFO] Handling signal: term
+2014-05-13 21:20:05 [19047] [INFO] Worker exiting (pid: 19047)
+Exception KeyError: KeyError(-1215486272,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-05-13 21:20:05 [19031] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -305,21 +125,23 @@ KeyError: KeyError(-1215859008,) in <module 'threading' from '/usr/lib/python2.6
 !!!     for more info.
 !!!
 
-2014-05-11 14:00:22 [25544] [INFO] Starting gunicorn 18.0
-2014-05-11 14:00:22 [25544] [INFO] Listening at: http://127.0.0.1:9997 (25544)
-2014-05-11 14:00:22 [25544] [INFO] Using worker: sync
-2014-05-11 14:00:22 [25549] [INFO] Booting worker with pid: 25549
-2014-05-11 14:00:22 [25550] [INFO] Booting worker with pid: 25550
+2014-05-13 21:20:08 [19098] [INFO] Starting gunicorn 18.0
+2014-05-13 21:20:08 [19098] [INFO] Listening at: http://127.0.0.1:9997 (19098)
+2014-05-13 21:20:08 [19098] [INFO] Using worker: sync
+2014-05-13 21:20:08 [19111] [INFO] Booting worker with pid: 19111
+2014-05-13 21:20:08 [19112] [INFO] Booting worker with pid: 19112
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
 /usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-11 14:03:16 [25550] [INFO] Worker exiting (pid: 25550)
-2014-05-11 14:03:16 [25549] [INFO] Worker exiting (pid: 25549)
-2014-05-11 14:03:16 [25544] [INFO] Handling signal: term
-Exception SystemExit: 0 in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
-Exception KeyError: KeyError(-1217444160,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
-2014-05-11 14:03:16 [25544] [INFO] Shutting down: Master
+2014-05-13 21:31:48 [19098] [INFO] Handling signal: term
+2014-05-13 21:31:48 [19112] [INFO] Worker exiting (pid: 19112)
+2014-05-13 21:31:48 [19111] [INFO] Worker exiting (pid: 19111)
+2014-05-13 21:31:48 [19098] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -332,59 +154,27 @@ Exception KeyError: KeyError(-1217444160,) in <module 'threading' from '/usr/lib
 !!!     for more info.
 !!!
 
-2014-05-11 14:03:17 [25596] [INFO] Starting gunicorn 18.0
-2014-05-11 14:03:17 [25596] [INFO] Listening at: http://127.0.0.1:9997 (25596)
-2014-05-11 14:03:17 [25596] [INFO] Using worker: sync
-2014-05-11 14:03:17 [25601] [INFO] Booting worker with pid: 25601
-2014-05-11 14:03:17 [25602] [INFO] Booting worker with pid: 25602
-2014-05-11 14:03:20 [25601] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/all.html",name="all"},
-                                                                         ^
- SyntaxError: invalid syntax
-2014-05-11 14:03:21 [25601] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/all.html",name="all"},
-                                                                         ^
- SyntaxError: invalid syntax
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+2014-05-13 21:31:52 [19417] [INFO] Starting gunicorn 18.0
+2014-05-13 21:31:52 [19417] [INFO] Listening at: http://127.0.0.1:9997 (19417)
+2014-05-13 21:31:52 [19417] [INFO] Using worker: sync
+2014-05-13 21:31:52 [19430] [INFO] Booting worker with pid: 19430
+2014-05-13 21:31:52 [19431] [INFO] Booting worker with pid: 19431
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/utils/conf.py:92: UserWarning: mezzanine.pages.context_processors.page is required in the TEMPLATE_CONTEXT_PROCESSORS setting. Adding it now, but you should update settings.py to explicitly include it.
+  "explicitly include it." % cp)
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/utils/conf.py:92: UserWarning: mezzanine.pages.context_processors.page is required in the TEMPLATE_CONTEXT_PROCESSORS setting. Adding it now, but you should update settings.py to explicitly include it.
+  "explicitly include it." % cp)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-2014-05-11 14:05:11 [25596] [INFO] Handling signal: term
-2014-05-11 14:05:11 [25601] [INFO] Worker exiting (pid: 25601)
-2014-05-11 14:05:11 [25602] [INFO] Worker exiting (pid: 25602)
-2014-05-11 14:05:11 [25596] [INFO] Shutting down: Master
+2014-05-13 21:41:19 [19417] [INFO] Handling signal: term
+2014-05-13 21:41:19 [19430] [INFO] Worker exiting (pid: 19430)
+2014-05-13 21:41:19 [19431] [INFO] Worker exiting (pid: 19431)
+2014-05-13 21:41:19 [19417] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -397,52 +187,42 @@ Traceback (most recent call last):
 !!!     for more info.
 !!!
 
-2014-05-11 14:05:12 [25625] [INFO] Starting gunicorn 18.0
-2014-05-11 14:05:12 [25625] [INFO] Listening at: http://127.0.0.1:9997 (25625)
-2014-05-11 14:05:12 [25625] [INFO] Using worker: sync
-2014-05-11 14:05:12 [25630] [INFO] Booting worker with pid: 25630
-2014-05-11 14:05:12 [25631] [INFO] Booting worker with pid: 25631
-2014-05-11 14:05:14 [25631] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/all.html",name="all"),
-                                                                         ^
- SyntaxError: invalid syntax
-2014-05-11 14:05:17 [25630] [ERROR] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
-    respiter = self.wsgi(environ, resp.start_response)
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
-    self.load_middleware()
-  File "/usr/lib/python2.6/site-packages/django/core/handlers/base.py", line 49, in load_middleware
-    mw_instance = mw_class()
-  File "/usr/lib/python2.6/site-packages/django/middleware/locale.py", line 24, in __init__
-    for url_pattern in get_resolver(None).url_patterns:
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 346, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/lib/python2.6/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/www/MK_dream/urls.py", line 59
-     url("^all/$", direct_to_template, {"template": "pages/all.html",name="all"),
-                                                                         ^
- SyntaxError: invalid syntax
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+2014-05-13 21:41:24 [19584] [INFO] Starting gunicorn 18.0
+2014-05-13 21:41:24 [19584] [INFO] Listening at: http://127.0.0.1:9997 (19584)
+2014-05-13 21:41:24 [19584] [INFO] Using worker: sync
+2014-05-13 21:41:24 [19598] [INFO] Booting worker with pid: 19598
+2014-05-13 21:41:24 [19599] [INFO] Booting worker with pid: 19599
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/debug_toolbar/settings.py:134: DeprecationWarning: INTERCEPT_REDIRECTS is deprecated. Please use the DISABLE_PANELS config in theDEBUG_TOOLBAR_CONFIG setting.
+  "DEBUG_TOOLBAR_CONFIG setting.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
-/usr/lib/python2.6/site-packages/mezzanine/core/templatetags/mezzanine_tags.py:398: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 21:45:44 [19598] [INFO] Worker exiting (pid: 19598)
+2014-05-13 21:45:44 [19584] [INFO] Handling signal: term
+Exception SystemExit: 0 in <bound method StringIO.__del__ of <io.StringIO object at 0xa0656ac>> ignored
+2014-05-13 21:45:44 [19599] [INFO] Worker exiting (pid: 19599)
+2014-05-13 21:45:44 [19584] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 21:45:48 [19657] [INFO] Starting gunicorn 18.0
+2014-05-13 21:45:48 [19657] [INFO] Listening at: http://127.0.0.1:9997 (19657)
+2014-05-13 21:45:48 [19657] [INFO] Using worker: sync
+2014-05-13 21:45:48 [19672] [INFO] Booting worker with pid: 19672
+2014-05-13 21:45:48 [19673] [INFO] Booting worker with pid: 19673
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
