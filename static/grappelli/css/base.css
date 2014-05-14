@@ -286,11 +286,14 @@ ul.messagelist li {
     border-bottom: 1px solid #ddd;
     background: #fcfce7 url('../img/icons/icon-yes.png') 15px 50% no-repeat;
 }
-ul.messagelist.success li {
+ul.messagelist li.success {
 	background: #C0E1C0 url('../img/icons/icon-yes.png') 15px 50% no-repeat;
 }
-ul.messagelist.error li {
-	background: #E1C0C0 url('../img/icons/icon-yes.png') 15px 50% no-repeat;
+ul.messagelist li.error {
+	background: #d00; color:#fff; padding-left:16px;
+}
+ul.messagelist li.error a {
+    color:#fcc;
 }
 body.popup .breadcrumbs + ul.messagelist {
     top: 24px;

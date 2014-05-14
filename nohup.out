@@ -226,3 +226,246 @@ Exception SystemExit: 0 in <bound method StringIO.__del__ of <io.StringIO object
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
 /usr/lib/python2.6/site-packages/Mezzanine-3.1.3-py2.6.egg/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 21:57:50 [19657] [INFO] Handling signal: term
+2014-05-13 21:57:50 [19657] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 21:57:56 [19846] [INFO] Starting gunicorn 18.0
+2014-05-13 21:57:56 [19846] [INFO] Listening at: http://127.0.0.1:9997 (19846)
+2014-05-13 21:57:56 [19846] [INFO] Using worker: sync
+2014-05-13 21:57:56 [19860] [INFO] Booting worker with pid: 19860
+2014-05-13 21:57:56 [19861] [INFO] Booting worker with pid: 19861
+/home/www/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 21:59:46 [19860] [INFO] Worker exiting (pid: 19860)
+2014-05-13 21:59:46 [19861] [INFO] Worker exiting (pid: 19861)
+2014-05-13 21:59:46 [19846] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1215740224,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+Exception KeyError: KeyError(-1215740224,) in <module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+2014-05-13 21:59:46 [19846] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 21:59:51 [19883] [INFO] Starting gunicorn 18.0
+2014-05-13 21:59:51 [19883] [INFO] Listening at: http://127.0.0.1:9997 (19883)
+2014-05-13 21:59:51 [19883] [INFO] Using worker: sync
+2014-05-13 21:59:51 [19898] [INFO] Booting worker with pid: 19898
+2014-05-13 21:59:51 [19899] [INFO] Booting worker with pid: 19899
+2014-05-13 21:59:52 [19898] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.6/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/usr/lib/python2.6/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 75, in _populate
+    self.load_app(app_name, True)
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 97, in load_app
+    app_module = import_module(app_name)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/mezzanine/conf/__init__.py", line 198, in <module>
+    module = import_module(app)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named compressor
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.6/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/usr/lib/python2.6/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 75, in _populate
+    self.load_app(app_name, True)
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 97, in load_app
+    app_module = import_module(app_name)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/mezzanine/conf/__init__.py", line 198, in <module>
+    module = import_module(app)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named compressor
+2014-05-13 21:59:52 [19898] [INFO] Worker exiting (pid: 19898)
+2014-05-13 21:59:52 [19899] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.6/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/usr/lib/python2.6/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 75, in _populate
+    self.load_app(app_name, True)
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 97, in load_app
+    app_module = import_module(app_name)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/mezzanine/conf/__init__.py", line 198, in <module>
+    module = import_module(app)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named compressor
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.6/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.6/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/usr/lib/python2.6/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/usr/lib/python2.6/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 75, in _populate
+    self.load_app(app_name, True)
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 97, in load_app
+    app_module = import_module(app_name)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/mezzanine/conf/__init__.py", line 198, in <module>
+    module = import_module(app)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named compressor
+2014-05-13 21:59:52 [19899] [INFO] Worker exiting (pid: 19899)
+2014-05-13 21:59:53 [19883] [INFO] Shutting down: Master
+2014-05-13 21:59:53 [19883] [INFO] Reason: Worker failed to boot.
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 22:00:50 [19941] [INFO] Starting gunicorn 18.0
+2014-05-13 22:00:50 [19941] [INFO] Listening at: http://127.0.0.1:9997 (19941)
+2014-05-13 22:00:50 [19941] [INFO] Using worker: sync
+2014-05-13 22:00:50 [19955] [INFO] Booting worker with pid: 19955
+2014-05-13 22:00:50 [19956] [INFO] Booting worker with pid: 19956
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+/home/www/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+/home/www/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 22:04:08 [19941] [INFO] Handling signal: term
+2014-05-13 22:04:08 [19956] [INFO] Worker exiting (pid: 19956)
+2014-05-13 22:04:08 [19955] [INFO] Worker exiting (pid: 19955)
+2014-05-13 22:04:08 [19941] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 22:04:12 [20045] [INFO] Starting gunicorn 18.0
+2014-05-13 22:04:12 [20045] [INFO] Listening at: http://127.0.0.1:9997 (20045)
+2014-05-13 22:04:12 [20045] [INFO] Using worker: sync
+2014-05-13 22:04:12 [20059] [INFO] Booting worker with pid: 20059
+2014-05-13 22:04:12 [20060] [INFO] Booting worker with pid: 20060
+/home/www/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+/home/www/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+2014-05-13 22:08:20 [20060] [INFO] Worker exiting (pid: 20060)
+2014-05-13 22:08:20 [20059] [INFO] Worker exiting (pid: 20059)
+2014-05-13 22:08:20 [20045] [INFO] Handling signal: term
+Exception Exception SystemExitSystemExit: : 00 in  in <module 'threading' from '/usr/lib/python2.6/threading.pyc'><module 'threading' from '/usr/lib/python2.6/threading.pyc'> ignored
+ ignored
+2014-05-13 22:08:20 [20045] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-13 22:08:25 [20135] [INFO] Starting gunicorn 18.0
+2014-05-13 22:08:25 [20135] [INFO] Listening at: http://127.0.0.1:9997 (20135)
+2014-05-13 22:08:25 [20135] [INFO] Using worker: sync
+2014-05-13 22:08:25 [20149] [INFO] Booting worker with pid: 20149
+2014-05-13 22:08:25 [20150] [INFO] Booting worker with pid: 20150
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+/usr/lib/python2.6/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
