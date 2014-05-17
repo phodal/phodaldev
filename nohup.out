@@ -1618,3 +1618,143 @@ AttributeError: 'Settings' object has no attribute 'GRAPPELLI_INSTALLED'
 /home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
   from django.utils import simplejson
 
+2014-05-16 12:56:49 [5206] [INFO] Worker exiting (pid: 5206)
+2014-05-16 12:56:49 [5207] [INFO] Worker exiting (pid: 5207)
+2014-05-16 12:56:49 [5197] [INFO] Handling signal: term
+2014-05-16 12:56:49 [5197] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-16 12:56:51 [25154] [INFO] Starting gunicorn 18.0
+2014-05-16 12:56:51 [25154] [INFO] Listening at: http://127.0.0.1:9997 (25154)
+2014-05-16 12:56:51 [25154] [INFO] Using worker: sync
+2014-05-16 12:56:51 [25163] [INFO] Booting worker with pid: 25163
+2014-05-16 12:56:51 [25164] [INFO] Booting worker with pid: 25164
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-16 17:04:18 [25164] [INFO] Worker exiting (pid: 25164)
+2014-05-16 17:04:18 [25163] [INFO] Worker exiting (pid: 25163)
+2014-05-16 17:04:18 [25154] [INFO] Handling signal: term
+2014-05-16 17:04:18 [25154] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-16 17:04:19 [26472] [INFO] Starting gunicorn 18.0
+2014-05-16 17:04:19 [26472] [INFO] Listening at: http://127.0.0.1:9997 (26472)
+2014-05-16 17:04:19 [26472] [INFO] Using worker: sync
+2014-05-16 17:04:19 [26477] [INFO] Booting worker with pid: 26477
+2014-05-16 17:04:19 [26478] [INFO] Booting worker with pid: 26478
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-16 17:06:35 [26472] [INFO] Handling signal: term
+2014-05-16 17:06:35 [26472] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-16 17:06:37 [26517] [INFO] Starting gunicorn 18.0
+2014-05-16 17:06:37 [26517] [INFO] Listening at: http://127.0.0.1:9997 (26517)
+2014-05-16 17:06:37 [26517] [INFO] Using worker: sync
+2014-05-16 17:06:37 [26526] [INFO] Booting worker with pid: 26526
+2014-05-16 17:06:38 [26527] [INFO] Booting worker with pid: 26527
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-17 21:11:40 [26527] [INFO] Worker exiting (pid: 26527)
+2014-05-17 21:11:40 [26526] [INFO] Worker exiting (pid: 26526)
+2014-05-17 21:11:40 [26517] [INFO] Handling signal: term
+2014-05-17 21:11:40 [26517] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-17 21:11:42 [27462] [INFO] Starting gunicorn 18.0
+2014-05-17 21:11:42 [27462] [INFO] Listening at: http://127.0.0.1:9997 (27462)
+2014-05-17 21:11:42 [27462] [INFO] Using worker: sync
+2014-05-17 21:11:42 [27471] [INFO] Booting worker with pid: 27471
+2014-05-17 21:11:42 [27472] [INFO] Booting worker with pid: 27472
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-17 21:13:15 [27462] [INFO] Handling signal: term
+2014-05-17 21:13:15 [27472] [INFO] Worker exiting (pid: 27472)
+2014-05-17 21:13:15 [27471] [INFO] Worker exiting (pid: 27471)
+Exception SystemExit: 0 in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-17 21:13:15 [27462] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-17 21:13:17 [27519] [INFO] Starting gunicorn 18.0
+2014-05-17 21:13:17 [27519] [INFO] Listening at: http://127.0.0.1:9997 (27519)
+2014-05-17 21:13:17 [27519] [INFO] Using worker: sync
+2014-05-17 21:13:17 [27528] [INFO] Booting worker with pid: 27528
+2014-05-17 21:13:17 [27529] [INFO] Booting worker with pid: 27529
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:848: RuntimeWarning: DateTimeField Visitor.start_time received a naive datetime (2014-05-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:848: RuntimeWarning: DateTimeField Visitor.start_time received a naive datetime (2014-05-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+

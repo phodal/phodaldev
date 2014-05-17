@@ -259,6 +259,8 @@ INSTALLED_APPS = (
     "debug_toolbar",
     "django_extensions",
     "compressor",
+    "tastypie",
+    "tracking",
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
@@ -286,6 +288,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.UpdateCacheMiddleware",
+    "tracking.middleware.VisitorTrackingMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
