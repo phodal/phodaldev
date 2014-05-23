@@ -77,7 +77,7 @@ from __future__ import absolute_import, unicode_literals
 
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
-USE_SOUTH = True
+USE_SOUTH = False
 
 
 ########################
@@ -140,7 +140,7 @@ USE_I18N = False
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("127.0.0.1","113.140.23.185",)
+INTERNAL_IPS = ("127.0.0.1","113.140.23.185","113.140.23.166",)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -260,7 +260,6 @@ INSTALLED_APPS = (
     "django_extensions",
     "compressor",
     "tastypie",
-    "tracking",
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
@@ -288,7 +287,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.UpdateCacheMiddleware",
-    "tracking.middleware.VisitorTrackingMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -380,3 +378,16 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+
+CACHES = {
+    "default": {
+        "BACKEND": "redis_cache.cache.RedisCache",
+        "LOCATION": "unix:/tmp/redis.sock:1",
+        "OPTIONS": {
+            "PASSWORD": "",
+            "PICKLE_VERSION": -1,   # default
+            "PARSER_CLASS": "redis.connection.HiredisParser",
+            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
+        },
+    },
+}

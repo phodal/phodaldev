@@ -32,7 +32,6 @@ urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     ("^pagedown/", include(mezzanine_pagedown.urls)),
     (r"^api/", include(apiv1.urls)),
-    url(r'^tracking/', include('tracking.urls')),
     url("^all/$", direct_to_template, {"template": "pages/all.html"},name="all"),
     ("^", include("mezzanine.urls")),
 )
