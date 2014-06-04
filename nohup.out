@@ -2041,3 +2041,803 @@ Exception KeyError: KeyError(-1217296704,) in <module 'threading' from '/usr/loc
 /home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
   from django.utils import simplejson
 
+2014-05-23 11:51:55 [26611] [INFO] Worker exiting (pid: 26611)
+2014-05-23 11:51:55 [26601] [INFO] Handling signal: term
+2014-05-23 11:51:55 [26610] [INFO] Worker exiting (pid: 26610)
+2014-05-23 11:51:56 [26601] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 11:51:58 [26766] [INFO] Starting gunicorn 18.0
+2014-05-23 11:51:58 [26766] [INFO] Listening at: http://127.0.0.1:9997 (26766)
+2014-05-23 11:51:58 [26766] [INFO] Using worker: sync
+2014-05-23 11:51:58 [26775] [INFO] Booting worker with pid: 26775
+2014-05-23 11:51:58 [26776] [INFO] Booting worker with pid: 26776
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-23 11:56:37 [26775] [INFO] Worker exiting (pid: 26775)
+2014-05-23 11:56:37 [26766] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-23 11:56:37 [26776] [INFO] Worker exiting (pid: 26776)
+2014-05-23 11:56:37 [26766] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 11:56:39 [26846] [INFO] Starting gunicorn 18.0
+2014-05-23 11:56:40 [26846] [INFO] Listening at: http://127.0.0.1:9997 (26846)
+2014-05-23 11:56:40 [26846] [INFO] Using worker: sync
+2014-05-23 11:56:40 [26856] [INFO] Booting worker with pid: 26856
+2014-05-23 11:56:40 [26857] [INFO] Booting worker with pid: 26857
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-23 11:57:21 [26856] [INFO] Worker exiting (pid: 26856)
+2014-05-23 11:57:21 [26846] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1217448256,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-23 11:57:21 [26857] [INFO] Worker exiting (pid: 26857)
+2014-05-23 11:57:21 [26846] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 11:57:23 [26878] [INFO] Starting gunicorn 18.0
+2014-05-23 11:57:23 [26878] [INFO] Listening at: http://127.0.0.1:9997 (26878)
+2014-05-23 11:57:23 [26878] [INFO] Using worker: sync
+2014-05-23 11:57:23 [26887] [INFO] Booting worker with pid: 26887
+2014-05-23 11:57:23 [26888] [INFO] Booting worker with pid: 26888
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-23 13:12:28 [26887] [INFO] Worker exiting (pid: 26887)
+2014-05-23 13:12:28 [26888] [INFO] Worker exiting (pid: 26888)
+2014-05-23 13:12:28 [26878] [INFO] Handling signal: term
+2014-05-23 13:12:28 [26878] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 13:12:31 [28283] [INFO] Starting gunicorn 18.0
+2014-05-23 13:12:31 [28283] [INFO] Listening at: http://127.0.0.1:9997 (28283)
+2014-05-23 13:12:31 [28283] [INFO] Using worker: sync
+2014-05-23 13:12:31 [28292] [INFO] Booting worker with pid: 28292
+2014-05-23 13:12:31 [28293] [INFO] Booting worker with pid: 28293
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-23 13:17:44 [28293] [INFO] Worker exiting (pid: 28293)
+2014-05-23 13:17:44 [28283] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-23 13:17:44 [28283] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 13:17:46 [28523] [INFO] Starting gunicorn 18.0
+2014-05-23 13:17:46 [28523] [INFO] Listening at: http://127.0.0.1:9997 (28523)
+2014-05-23 13:17:46 [28523] [INFO] Using worker: sync
+2014-05-23 13:17:46 [28532] [INFO] Booting worker with pid: 28532
+2014-05-23 13:17:47 [28533] [INFO] Booting worker with pid: 28533
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-23 13:22:46 [28533] [INFO] Worker exiting (pid: 28533)
+2014-05-23 13:22:46 [28523] [INFO] Handling signal: term
+2014-05-23 13:22:46 [28532] [INFO] Worker exiting (pid: 28532)
+2014-05-23 13:22:46 [28523] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 13:22:48 [28610] [INFO] Starting gunicorn 18.0
+2014-05-23 13:22:48 [28610] [INFO] Listening at: http://127.0.0.1:9997 (28610)
+2014-05-23 13:22:48 [28610] [INFO] Using worker: sync
+2014-05-23 13:22:48 [28619] [INFO] Booting worker with pid: 28619
+2014-05-23 13:22:49 [28620] [INFO] Booting worker with pid: 28620
+2014-05-23 13:24:27 [28619] [INFO] Worker exiting (pid: 28619)
+2014-05-23 13:24:27 [28620] [INFO] Worker exiting (pid: 28620)
+2014-05-23 13:24:27 [28610] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1216973120,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-23 13:24:27 [28610] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-23 13:24:29 [28650] [INFO] Starting gunicorn 18.0
+2014-05-23 13:24:29 [28650] [INFO] Listening at: http://127.0.0.1:9997 (28650)
+2014-05-23 13:24:29 [28650] [INFO] Using worker: sync
+2014-05-23 13:24:29 [28659] [INFO] Booting worker with pid: 28659
+2014-05-23 13:24:29 [28660] [INFO] Booting worker with pid: 28660
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-25 11:07:50 [28659] [INFO] Worker exiting (pid: 28659)
+2014-05-25 11:07:50 [28660] [INFO] Worker exiting (pid: 28660)
+2014-05-25 11:07:51 [28650] [INFO] Handling signal: term
+2014-05-25 11:07:51 [28650] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-25 11:07:53 [1716] [INFO] Starting gunicorn 18.0
+2014-05-25 11:07:53 [1716] [INFO] Listening at: http://127.0.0.1:9997 (1716)
+2014-05-25 11:07:53 [1716] [INFO] Using worker: sync
+2014-05-25 11:07:53 [1944] [INFO] Booting worker with pid: 1944
+2014-05-25 11:07:53 [1945] [INFO] Booting worker with pid: 1945
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-25 11:09:45 [1944] [INFO] Worker exiting (pid: 1944)
+2014-05-25 11:09:45 [1945] [INFO] Worker exiting (pid: 1945)
+2014-05-25 11:09:45 [1716] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-05-25 11:09:45 [1716] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-05-25 11:09:48 [2160] [INFO] Starting gunicorn 18.0
+2014-05-25 11:09:48 [2160] [INFO] Listening at: http://127.0.0.1:9997 (2160)
+2014-05-25 11:09:48 [2160] [INFO] Using worker: sync
+2014-05-25 11:09:48 [2233] [INFO] Booting worker with pid: 2233
+2014-05-25 11:09:48 [2234] [INFO] Booting worker with pid: 2234
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-25 16:57:42 [2160] [CRITICAL] WORKER TIMEOUT (pid:2233)
+2014-05-25 16:57:42 [2160] [CRITICAL] WORKER TIMEOUT (pid:2233)
+2014-05-25 16:57:42 [7771] [INFO] Booting worker with pid: 7771
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-05-29 14:45:34 [7771] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 93, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
+    resp.write(item)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 313, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+2014-06-04 11:15:08 [2234] [INFO] Worker exiting (pid: 2234)
+2014-06-04 11:15:08 [7771] [INFO] Worker exiting (pid: 7771)
+2014-06-04 11:15:08 [2160] [INFO] Handling signal: term
+2014-06-04 11:15:08 [2160] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:15:11 [16953] [INFO] Starting gunicorn 18.0
+2014-06-04 11:15:11 [16953] [INFO] Listening at: http://127.0.0.1:9997 (16953)
+2014-06-04 11:15:11 [16953] [INFO] Using worker: sync
+2014-06-04 11:15:11 [17218] [INFO] Booting worker with pid: 17218
+2014-06-04 11:15:11 [17219] [INFO] Booting worker with pid: 17219
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-06-04 11:17:09 [16953] [INFO] Handling signal: term
+2014-06-04 11:17:09 [16953] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:17:12 [17459] [INFO] Starting gunicorn 18.0
+2014-06-04 11:17:12 [17459] [INFO] Listening at: http://127.0.0.1:9997 (17459)
+2014-06-04 11:17:12 [17459] [INFO] Using worker: sync
+2014-06-04 11:17:12 [17596] [INFO] Booting worker with pid: 17596
+2014-06-04 11:17:12 [17597] [INFO] Booting worker with pid: 17597
+2014-06-04 11:17:13 [17597] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+2014-06-04 11:17:13 [17597] [INFO] Worker exiting (pid: 17597)
+2014-06-04 11:17:13 [17596] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+2014-06-04 11:17:13 [17596] [INFO] Worker exiting (pid: 17596)
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/bin/gunicorn_django", line 8, in <module>
+    load_entry_point('gunicorn==18.0', 'console_scripts', 'gunicorn_django')()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 160, in run
+    DjangoApplication("%(prog)s [OPTIONS] [SETTINGS_PATH]").run()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 143, in run
+    Arbiter(self).run()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 203, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 298, in halt
+    self.stop()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 341, in stop
+    self.reap_workers()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 452, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:17:36 [17667] [INFO] Starting gunicorn 18.0
+2014-06-04 11:17:36 [17667] [INFO] Listening at: http://127.0.0.1:9997 (17667)
+2014-06-04 11:17:36 [17667] [INFO] Using worker: sync
+2014-06-04 11:17:36 [17932] [INFO] Booting worker with pid: 17932
+2014-06-04 11:17:36 [17933] [INFO] Booting worker with pid: 17933
+2014-06-04 11:17:36 [17932] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+2014-06-04 11:17:36 [17932] [INFO] Worker exiting (pid: 17932)
+2014-06-04 11:17:36 [17933] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 28, in get_validation_errors
+    from django.db import models, connection
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/__init__.py", line 5, in <module>
+    from django.db.models.query import Q
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/query.py", line 17, in <module>
+    from django.db.models.deletion import Collector
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/deletion.py", line 4, in <module>
+    from django.db.models import signals, sql
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/__init__.py", line 4, in <module>
+    from django.db.models.sql.subqueries import *
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/subqueries.py", line 12, in <module>
+    from django.db.models.sql.query import Query
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/query.py", line 22, in <module>
+    from django.db.models.sql import aggregates as base_aggregates_module
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/sql/aggregates.py", line 9, in <module>
+    ordinal_aggregate_field = IntegerField()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 116, in __init__
+    self.db_tablespace = db_tablespace or settings.DEFAULT_INDEX_TABLESPACE
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+    self._setup(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/conf/__init__.py", line 128, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/settings.py", line 379, in <module>
+    RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+NameError: name 'RICHTEXT_FILTER' is not defined
+2014-06-04 11:17:36 [17933] [INFO] Worker exiting (pid: 17933)
+2014-06-04 11:17:36 [17667] [INFO] Shutting down: Master
+2014-06-04 11:17:36 [17667] [INFO] Reason: Worker failed to boot.
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:18:19 [18151] [INFO] Starting gunicorn 18.0
+2014-06-04 11:18:19 [18151] [INFO] Listening at: http://127.0.0.1:9997 (18151)
+2014-06-04 11:18:19 [18151] [INFO] Using worker: sync
+2014-06-04 11:18:19 [18352] [INFO] Booting worker with pid: 18352
+2014-06-04 11:18:19 [18353] [INFO] Booting worker with pid: 18353
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-06-04 11:19:37 [18151] [INFO] Handling signal: term
+2014-06-04 11:19:37 [18352] [INFO] Worker exiting (pid: 18352)
+2014-06-04 11:19:37 [18353] [INFO] Worker exiting (pid: 18353)
+Exception KeyError: KeyError(-1217100096,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-06-04 11:19:37 [18151] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:19:40 [18508] [INFO] Starting gunicorn 18.0
+2014-06-04 11:19:40 [18508] [INFO] Listening at: http://127.0.0.1:9997 (18508)
+2014-06-04 11:19:40 [18508] [INFO] Using worker: sync
+2014-06-04 11:19:40 [18709] [INFO] Booting worker with pid: 18709
+2014-06-04 11:19:40 [18710] [INFO] Booting worker with pid: 18710
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-06-04 11:21:28 [18508] [INFO] Handling signal: term
+2014-06-04 11:21:28 [18709] [INFO] Worker exiting (pid: 18709)
+2014-06-04 11:21:28 [18710] [INFO] Worker exiting (pid: 18710)
+2014-06-04 11:21:29 [18508] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:21:31 [18889] [INFO] Starting gunicorn 18.0
+2014-06-04 11:21:31 [18889] [INFO] Listening at: http://127.0.0.1:9997 (18889)
+2014-06-04 11:21:31 [18889] [INFO] Using worker: sync
+2014-06-04 11:21:31 [19090] [INFO] Booting worker with pid: 19090
+2014-06-04 11:21:31 [19091] [INFO] Booting worker with pid: 19091
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-06-04 11:22:19 [18889] [INFO] Handling signal: term
+2014-06-04 11:22:19 [19090] [INFO] Worker exiting (pid: 19090)
+2014-06-04 11:22:19 [19091] [INFO] Worker exiting (pid: 19091)
+Exception KeyError: KeyError(-1217276224,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-06-04 11:22:19 [18889] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-04 11:22:21 [19246] [INFO] Starting gunicorn 18.0
+2014-06-04 11:22:21 [19246] [INFO] Listening at: http://127.0.0.1:9997 (19246)
+2014-06-04 11:22:21 [19246] [INFO] Using worker: sync
+2014-06-04 11:22:21 [19384] [INFO] Booting worker with pid: 19384
+2014-06-04 11:22:21 [19385] [INFO] Booting worker with pid: 19385
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+

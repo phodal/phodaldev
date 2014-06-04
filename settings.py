@@ -77,7 +77,7 @@ from __future__ import absolute_import, unicode_literals
 
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
-USE_SOUTH = False
+USE_SOUTH = True
 
 
 ########################
@@ -253,7 +253,7 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    #"mezzanine.accounts",
+    "mezzanine.accounts",
     #"mezzanine.mobile",
     "mezzanine_pagedown",
     "debug_toolbar",
@@ -263,8 +263,10 @@ INSTALLED_APPS = (
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
-RICHTEXT_FILTER = 'mezzanine_pagedown.filters.codehilite'
+RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite','toc')
 RICHTEXT_FILTER_LEVEL = 3
+PAGEDOWN_SERVER_SIDE_PREVIEW = True
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its
@@ -310,7 +312,6 @@ MIDDLEWARE_CLASSES = (
 # at the moment we are using custom forks of them.
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
-PAGEDOWN_SERVER_SIDE_PREVIEW = True
 
 #########################
 # OPTIONAL APPLICATIONS #
@@ -377,7 +378,6 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
-RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
 
 CACHES = {
     "default": {

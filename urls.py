@@ -27,8 +27,6 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
     )
 
 urlpatterns += patterns('',
-
-
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     ("^pagedown/", include(mezzanine_pagedown.urls)),
     (r"^api/", include(apiv1.urls)),
