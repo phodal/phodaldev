@@ -2841,3 +2841,1010 @@ Exception KeyError: KeyError(-1217276224,) in <module 'threading' from '/usr/loc
 /home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
   warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
 
+2014-06-08 13:51:26 [19384] [INFO] Worker exiting (pid: 19384)
+2014-06-08 13:51:26 [19385] [INFO] Worker exiting (pid: 19385)
+2014-06-08 13:51:26 [19246] [INFO] Handling signal: term
+2014-06-08 13:51:26 [19246] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-08 13:51:30 [23524] [INFO] Starting gunicorn 18.0
+2014-06-08 13:51:30 [23524] [INFO] Listening at: http://127.0.0.1:9997 (23524)
+2014-06-08 13:51:30 [23524] [INFO] Using worker: sync
+2014-06-08 13:51:30 [23591] [INFO] Booting worker with pid: 23591
+2014-06-08 13:51:30 [23592] [INFO] Booting worker with pid: 23592
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-19 10:19:03 [4394] [INFO] Starting gunicorn 18.0
+2014-06-19 10:19:03 [4394] [INFO] Listening at: http://127.0.0.1:9997 (4394)
+2014-06-19 10:19:03 [4394] [INFO] Using worker: sync
+2014-06-19 10:19:03 [4469] [INFO] Booting worker with pid: 4469
+2014-06-19 10:19:03 [4470] [INFO] Booting worker with pid: 4470
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-06-20 14:52:21 [4470] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 93, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
+    resp.write(item)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 313, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+2014-06-21 12:18:25 [4394] [CRITICAL] WORKER TIMEOUT (pid:4469)
+2014-06-21 12:18:25 [4394] [CRITICAL] WORKER TIMEOUT (pid:4470)
+2014-06-21 12:18:25 [4394] [CRITICAL] WORKER TIMEOUT (pid:4469)
+2014-06-21 12:18:25 [4394] [CRITICAL] WORKER TIMEOUT (pid:4470)
+2014-06-21 12:18:25 [14665] [INFO] Booting worker with pid: 14665
+2014-06-21 12:18:25 [14666] [INFO] Booting worker with pid: 14666
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-27 10:12:29 [4804] [INFO] Starting gunicorn 18.0
+2014-06-27 10:12:29 [4804] [INFO] Listening at: http://127.0.0.1:9997 (4804)
+2014-06-27 10:12:29 [4804] [INFO] Using worker: sync
+2014-06-27 10:12:29 [4877] [INFO] Booting worker with pid: 4877
+2014-06-27 10:12:29 [4878] [INFO] Booting worker with pid: 4878
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-06-30 23:09:07 [3408] [INFO] Starting gunicorn 18.0
+2014-06-30 23:09:07 [3408] [INFO] Listening at: http://127.0.0.1:9997 (3408)
+2014-06-30 23:09:07 [3408] [INFO] Using worker: sync
+2014-06-30 23:09:07 [3609] [INFO] Booting worker with pid: 3609
+2014-06-30 23:09:07 [3610] [INFO] Booting worker with pid: 3610
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-08 10:19:00 [3610] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 93, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
+    resp.write(item)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 313, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-10 07:24:09 [3458] [INFO] Starting gunicorn 18.0
+2014-07-10 07:24:09 [3458] [INFO] Listening at: http://127.0.0.1:9997 (3458)
+2014-07-10 07:24:09 [3458] [INFO] Using worker: sync
+2014-07-10 07:24:09 [3531] [INFO] Booting worker with pid: 3531
+2014-07-10 07:24:09 [3532] [INFO] Booting worker with pid: 3532
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-10 09:07:25 [3532] [INFO] Worker exiting (pid: 3532)
+2014-07-10 09:07:25 [3531] [INFO] Worker exiting (pid: 3531)
+2014-07-10 09:07:26 [3458] [INFO] Handling signal: term
+2014-07-10 09:07:26 [3458] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-10 09:16:21 [3130] [INFO] Starting gunicorn 18.0
+2014-07-10 09:16:21 [3130] [INFO] Listening at: http://127.0.0.1:9997 (3130)
+2014-07-10 09:16:21 [3130] [INFO] Using worker: sync
+2014-07-10 09:16:21 [3150] [INFO] Booting worker with pid: 3150
+2014-07-10 09:16:21 [3151] [INFO] Booting worker with pid: 3151
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-10 09:18:02 [3150] [INFO] Worker exiting (pid: 3150)
+2014-07-10 09:18:02 [3130] [INFO] Handling signal: term
+Exception KeyError: KeyError(-1215867200,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-07-10 09:18:02 [3151] [INFO] Worker exiting (pid: 3151)
+2014-07-10 09:18:02 [3130] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-10 09:18:04 [3610] [INFO] Starting gunicorn 18.0
+2014-07-10 09:18:04 [3610] [INFO] Listening at: http://127.0.0.1:9997 (3610)
+2014-07-10 09:18:04 [3610] [INFO] Using worker: sync
+2014-07-10 09:18:04 [3683] [INFO] Booting worker with pid: 3683
+2014-07-10 09:18:04 [3684] [INFO] Booting worker with pid: 3684
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-07-10 09:19:08 [3610] [INFO] Handling signal: term
+2014-07-10 09:19:08 [3684] [INFO] Worker exiting (pid: 3684)
+2014-07-10 09:19:08 [3683] [INFO] Worker exiting (pid: 3683)
+2014-07-10 09:19:08 [3610] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-10 09:20:43 [1840] [INFO] Starting gunicorn 18.0
+2014-07-10 09:20:43 [1840] [INFO] Listening at: http://127.0.0.1:9997 (1840)
+2014-07-10 09:20:43 [1840] [INFO] Using worker: sync
+2014-07-10 09:20:43 [1928] [INFO] Booting worker with pid: 1928
+2014-07-10 09:20:43 [1932] [INFO] Booting worker with pid: 1932
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-07-10 09:22:01 [1928] [INFO] Worker exiting (pid: 1928)
+2014-07-10 09:22:01 [1932] [INFO] Worker exiting (pid: 1932)
+2014-07-10 09:22:01 [1840] [INFO] Handling signal: term
+2014-07-10 09:22:01 [1840] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-10 09:22:03 [3198] [INFO] Starting gunicorn 18.0
+2014-07-10 09:22:03 [3198] [INFO] Listening at: http://127.0.0.1:9997 (3198)
+2014-07-10 09:22:03 [3198] [INFO] Using worker: sync
+2014-07-10 09:22:03 [3218] [INFO] Booting worker with pid: 3218
+2014-07-10 09:22:03 [3219] [INFO] Booting worker with pid: 3219
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-11 16:07:02 [1898] [INFO] Starting gunicorn 18.0
+2014-07-11 16:07:02 [1898] [INFO] Listening at: http://127.0.0.1:9997 (1898)
+2014-07-11 16:07:02 [1898] [INFO] Using worker: sync
+2014-07-11 16:07:02 [2011] [INFO] Booting worker with pid: 2011
+2014-07-11 16:07:02 [2010] [INFO] Booting worker with pid: 2010
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-11 17:49:02 [1881] [INFO] Starting gunicorn 18.0
+2014-07-11 17:49:02 [1881] [INFO] Listening at: http://127.0.0.1:9997 (1881)
+2014-07-11 17:49:02 [1881] [INFO] Using worker: sync
+2014-07-11 17:49:02 [1987] [INFO] Booting worker with pid: 1987
+2014-07-11 17:49:02 [1988] [INFO] Booting worker with pid: 1988
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-12 08:55:39 [1922] [INFO] Starting gunicorn 18.0
+2014-07-12 08:55:39 [1922] [INFO] Listening at: http://127.0.0.1:9997 (1922)
+2014-07-12 08:55:39 [1922] [INFO] Using worker: sync
+2014-07-12 08:55:39 [2015] [INFO] Booting worker with pid: 2015
+2014-07-12 08:55:40 [2016] [INFO] Booting worker with pid: 2016
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-14 12:06:06 [1980] [INFO] Starting gunicorn 18.0
+2014-07-14 12:06:06 [1980] [INFO] Listening at: http://127.0.0.1:9997 (1980)
+2014-07-14 12:06:06 [1980] [INFO] Using worker: sync
+2014-07-14 12:06:06 [2063] [INFO] Booting worker with pid: 2063
+2014-07-14 12:06:06 [2064] [INFO] Booting worker with pid: 2064
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-21 17:24:59 [2064] [INFO] Worker exiting (pid: 2064)
+2014-07-21 17:24:59 [2063] [INFO] Worker exiting (pid: 2063)
+2014-07-21 17:24:59 [1980] [INFO] Handling signal: term
+2014-07-21 17:25:00 [1980] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:25:02 [25008] [INFO] Starting gunicorn 18.0
+2014-07-21 17:25:02 [25008] [INFO] Listening at: http://127.0.0.1:9997 (25008)
+2014-07-21 17:25:02 [25008] [INFO] Using worker: sync
+2014-07-21 17:25:02 [25081] [INFO] Booting worker with pid: 25081
+2014-07-21 17:25:02 [25082] [INFO] Booting worker with pid: 25082
+2014-07-21 17:25:05 [25082] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 3, in <module>
+    from tastytools.resources import Resource, ModelResource
+ImportError: No module named tastytools.resources
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 3, in <module>
+    from tastytools.resources import Resource, ModelResource
+ImportError: No module named tastytools.resources
+2014-07-21 17:25:05 [25081] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 3, in <module>
+    from tastytools.resources import Resource, ModelResource
+ImportError: No module named tastytools.resources
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 3, in <module>
+    from tastytools.resources import Resource, ModelResource
+ImportError: No module named tastytools.resources
+2014-07-21 17:25:05 [25081] [INFO] Worker exiting (pid: 25081)
+2014-07-21 17:25:05 [25082] [INFO] Worker exiting (pid: 25082)
+2014-07-21 17:25:05 [25008] [INFO] Shutting down: Master
+2014-07-21 17:25:05 [25008] [INFO] Reason: Worker failed to boot.
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:26:08 [25664] [INFO] Starting gunicorn 18.0
+2014-07-21 17:26:08 [25664] [INFO] Listening at: http://127.0.0.1:9997 (25664)
+2014-07-21 17:26:08 [25664] [INFO] Using worker: sync
+2014-07-21 17:26:08 [25737] [INFO] Booting worker with pid: 25737
+2014-07-21 17:26:08 [25738] [INFO] Booting worker with pid: 25738
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+2014-07-21 17:28:51 [25737] [INFO] Worker exiting (pid: 25737)
+2014-07-21 17:28:51 [25664] [INFO] Handling signal: term
+Exception 2014-07-21 17:28:51 [25738] [INFO] Worker exiting (pid: 25738)
+KeyError: KeyError(-1217415488,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-07-21 17:28:51 [25664] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:28:53 [26013] [INFO] Starting gunicorn 18.0
+2014-07-21 17:28:53 [26013] [INFO] Listening at: http://127.0.0.1:9997 (26013)
+2014-07-21 17:28:53 [26013] [INFO] Using worker: sync
+2014-07-21 17:28:53 [26086] [INFO] Booting worker with pid: 26086
+2014-07-21 17:28:53 [26087] [INFO] Booting worker with pid: 26087
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-21 17:33:46 [26013] [INFO] Handling signal: term
+2014-07-21 17:33:46 [26086] [INFO] Worker exiting (pid: 26086)
+2014-07-21 17:33:46 [26087] [INFO] Worker exiting (pid: 26087)
+Exception KeyError: KeyError(-1216842048,) in <module 'threading' from '/usr/local/lib/python2.7/threading.pyc'> ignored
+2014-07-21 17:33:46 [26013] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:33:48 [26181] [INFO] Starting gunicorn 18.0
+2014-07-21 17:33:48 [26181] [INFO] Listening at: http://127.0.0.1:9997 (26181)
+2014-07-21 17:33:48 [26181] [INFO] Using worker: sync
+2014-07-21 17:33:48 [26254] [INFO] Booting worker with pid: 26254
+2014-07-21 17:33:48 [26255] [INFO] Booting worker with pid: 26255
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+2014-07-21 17:43:18 [26254] [INFO] Worker exiting (pid: 26254)
+2014-07-21 17:43:18 [26255] [INFO] Worker exiting (pid: 26255)
+2014-07-21 17:43:18 [26181] [INFO] Handling signal: term
+2014-07-21 17:43:18 [26181] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:43:20 [26358] [INFO] Starting gunicorn 18.0
+2014-07-21 17:43:20 [26358] [INFO] Listening at: http://127.0.0.1:9997 (26358)
+2014-07-21 17:43:20 [26358] [INFO] Using worker: sync
+2014-07-21 17:43:20 [26431] [INFO] Booting worker with pid: 26431
+2014-07-21 17:43:21 [26432] [INFO] Booting worker with pid: 26432
+2014-07-21 17:43:22 [26432] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 7, in <module>
+    import html2text
+ImportError: No module named html2text
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 7, in <module>
+    import html2text
+ImportError: No module named html2text
+2014-07-21 17:43:22 [26431] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 7, in <module>
+    import html2text
+ImportError: No module named html2text
+Traceback (most recent call last):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+    worker.init_process()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/common/object_wrapper.py", line 323, in _wrapper
+    return function(wrapped(*args, **kwargs))
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+    self.callable = self.load()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/djangoapp.py", line 106, in load
+    return mod.make_wsgi_application()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/gunicorn/app/django_wsgi.py", line 36, in make_wsgi_application
+    if get_validation_errors(s):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/management/validation.py", line 34, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 196, in get_app_errors
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 78, in _populate
+    self.load_app(app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/db/models/loading.py", line 99, in load_app
+    models = import_module('%s.models' % app_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/models.py", line 9, in <module>
+    dt_settings.patch_all()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 215, in patch_all
+    patch_root_urlconf()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/debug_toolbar/settings.py", line 203, in patch_root_urlconf
+    reverse('djdt:render_panel')
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 586, in wrapper
+    return execute(*args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/newrelic-2.18.1.15/newrelic/hooks/framework_django.py", line 585, in execute
+    return wrapped(viewname, *args, **kwargs)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 503, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 329, in app_dict
+    self._populate()
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 267, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/www/MK_dream/env/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/home/www/MK_dream/MK_dream/urls.py", line 11, in <module>
+    from blogapi.api import AllBlogSlugResource, BlogResource
+  File "/home/www/MK_dream/MK_dream/blogapi/api.py", line 7, in <module>
+    import html2text
+ImportError: No module named html2text
+2014-07-21 17:43:22 [26432] [INFO] Worker exiting (pid: 26432)
+2014-07-21 17:43:22 [26431] [INFO] Worker exiting (pid: 26431)
+2014-07-21 17:43:22 [26358] [INFO] Shutting down: Master
+2014-07-21 17:43:22 [26358] [INFO] Reason: Worker failed to boot.
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2014-07-21 17:43:56 [26576] [INFO] Starting gunicorn 18.0
+2014-07-21 17:43:56 [26576] [INFO] Listening at: http://127.0.0.1:9997 (26576)
+2014-07-21 17:43:56 [26576] [INFO] Using worker: sync
+2014-07-21 17:43:56 [26649] [INFO] Booting worker with pid: 26649
+2014-07-21 17:43:56 [26650] [INFO] Booting worker with pid: 26650
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/env/lib/python2.7/site-packages/compressor/cache.py:8: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+  from django.utils import simplejson
+
+/home/www/MK_dream/MK_dream/mezzanine/core/templatetags/mezzanine_tags.py:424: UserWarning: The `RICHTEXT_FILTER` setting is deprecated in favor of the new plural setting `RICHTEXT_FILTERS`.
+  warn("The `RICHTEXT_FILTER` setting is deprecated in favor of "
+
