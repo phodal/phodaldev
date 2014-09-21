@@ -35,13 +35,9 @@ body {
 }
 body {
     margin: 0;
-    font-family:'inconsolata', "微软雅黑", "Microsoft Yahei", "WenQuanYi Micro Hei";
+    font-family:"Source Han Sans CN","noto sans",'inconsolata', "微软雅黑", "Microsoft Yahei", "WenQuanYi Micro Hei";
     background: url(../images/bg_body.jpg);
 }
-p{
-   font-family:"Source Han Sans CN","noto sans";
-}
-
 h1, h2, h3, h4 {
     font-family:'Futura', 'mypriad';
 }

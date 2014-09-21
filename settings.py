@@ -98,6 +98,7 @@ MANAGERS = ADMINS
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '0.0.0.0',
     'www.phodal.com',
 ]
 
@@ -140,7 +141,7 @@ USE_I18N = False
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("127.0.0.1","113.140.23.185","113.140.23.166",)
+INTERNAL_IPS = ("0.0.0.0","127.0.0.1")
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -378,16 +379,3 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
-
-CACHES = {
-    "default": {
-        "BACKEND": "redis_cache.cache.RedisCache",
-        "LOCATION": "unix:/tmp/redis.sock:1",
-        "OPTIONS": {
-            "PASSWORD": "",
-            "PICKLE_VERSION": -1,   # default
-            "PARSER_CLASS": "redis.connection.HiredisParser",
-            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
-        },
-    },
-}

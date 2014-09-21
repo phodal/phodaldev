@@ -1,165 +1,167 @@
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
-{% load pages_tags mezzanine_tags i18n future staticfiles %}
+  {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-<head>
-<meta http-equiv="content-language" content="zh-CN" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
-<meta name="description" content="{% block meta_description %}{% endblock %}">
-<link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
-<meta name="baidu-site-verification" content="dZvx5Cg1jt" />
-<meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
-<meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
-<meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
-<meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
-<meta name='yandex-verification' content='7c80fea3c6548a5a' />
-<meta name="sogou_site_verification" content="46iR0w9xzJ"/>
-<meta name="bitly-verification" content="b4cdaf394c9f"/>
-<link rel="author" href="https://plus.google.com/108569130336274162470/posts">
-<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+  <head>
+    <meta http-equiv="content-language" content="zh-CN" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
+    <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
+    <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
+    <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
+    <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+    <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
+    <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+    <meta name='yandex-verification' content='7c80fea3c6548a5a' />
+    <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
+    <meta name="bitly-verification" content="b4cdaf394c9f"/>
+    <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
+    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
-{% ifinstalled mezzanine.blog %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
-{% endifinstalled %}
+    {% ifinstalled mezzanine.blog %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+    {% endifinstalled %}
 
-{% compress css %}
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
-{% block extra_css %}{% endblock %}
-{% endcompress %}
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
+    {% block extra_css %}{% endblock %}
+    {% endcompress %}
 
-{% compress js %}
-{% block extra_js %}{% endblock %}
-{% endcompress %}
+    {% compress js %}
+    {% block extra_js %}{% endblock %}
+    {% endcompress %}
 
-{% block extra_head %}{% endblock %}
-</head>
+    {% block extra_head %}{% endblock %}
+  </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+  <body itemscope itemtype="http://schema.org/WebPage">
 
-<div class="container">
+    <div class="container">
 
-{% nevercache %}
-{% if messages %}
-<div class="messages">
-{% for message in messages %}
-<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-{{ message }}
-</div>
-{% endfor %}
-</div>
-{% endif %}
-{% endnevercache %}
+      {% nevercache %}
+      {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+        <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{ message }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endnevercache %}
 
-</div>
-
-
-<div id="layout">
-<div class="pure-g-r content">
-
-<div class="pure-u-1-4">
-
-</div>
-
-<div class="pure-u-3-4">
-<div id="window">
-<div id="toolbar">
-<div class="top">
-<div id="bubble">
-<div class="shine"></div>
-<div class="glow"></div>
-</div>
-</div>
-</div>
-<div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
-<p>Last login: Thu May 24 12:18:16 on ttyACM0
-<br />Welcome,<span itemprop="name"> Phodal</span><span itermprop="familyName"> Huang </span></p>
-
-<p>fdHuang$ <span > python -v </span>
-<br /><span itemprop="affiliation">Python 2.7.5 </span></p>
-
-<p>fdHuang$ <span >  pwd</span>
-<br /><span itemprop="jobTitle">Programmer</span><span> 2002</span>
-<br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
-<br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
-</p>
-
-<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > pwd !</span>
-<br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
-</p>
-
-<p>fdHuang$ <span>more phodal</span>
-<br /> <span>写过点诗,赚过稿费。</span>
-<br /> <span>设计过Logo,换个实习机会。</span>
-<br /> <span>画过pcb,搞过各种开发板。</span>
-<br /> <span>今天,一个</span>擅长前端兼SEO的设计师<span>,又一个``Full Stack``...</span>
-</p>
-
-<p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
+    </div>
 
 
-<div class="cursor"></div>
-</div>
-</div>
-</div>
+    <div id="layout">
+      <div class="pure-g-r content">
 
-</div>
-<div class="footer">
-<div class="legal">
+        <div class="pure-u-1-4">
 
-<div class="pcb">
-<div class="pure-g-r">
-<div class="pure-u-1-4">
-<div class="l-box"></div>
-</div>
-<div class="pure-u-3-4">
-<div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
-{% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-{% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
-<ul class="breadcrumb" itemprop="breadcrumb">
-<li class="pure-menu-selected"><a href="/">Home</a>
-</li>
-<li class="pure-menu-selected"><a href="/blog/">Blog</a>
-</li>
-<li class="pure-menu-selected"><a href="/about/">About</a>
-</li>
-</ul>
-</div>
-<br />
-<br />
-<code class="poem" itemscope itemtype="http://schema.org/Article">
-<h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
-<p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
-<p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
-</code>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        </div>
+
+        <div class="pure-u-3-4">
+          <div id="window">
+            <div id="toolbar">
+              <div class="top">
+                <div id="bubble">
+                  <div class="shine"></div>
+                  <div class="glow"></div>
+                </div>
+              </div>
+            </div>
+            <div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
+              <p>The only fair is - It is not fair</p>
+              <p>Last login: Thu May 24 12:18:16 on ttyACM0
+              <br />Welcome,<span itemprop="name"> Phodal</span><span itermprop="familyName"> Huang </span></p>
+
+              <p>fdHuang$ <span > python -v </span>
+              <br /><span itemprop="affiliation">Python 2.7.5 </span></p>
+
+              <p>fdHuang$ <span >  pwd</span>
+              <br /><span itemprop="jobTitle">Program</span><span> 2002</span>
+              <br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
+              <br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
+              </p>
+
+              <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > pwd !</span>
+              <br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
+              </p>
+
+              <p>fdHuang$ <span>more phodal</span>
+              <br /> <span>写过点诗,赚过稿费。</span>
+              <br /> <span>设计过Logo。</span>
+              <br /> <span>画过pcb,搞过各种开发板。</span>
+              <br /> <span>今天,一个</span>擅长前端兼SEO的设计师<span>,一个``Full Stack``...</span>
+              </p>
+              <p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
+              <div class="cursor"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer">
+        <div class="legal">
+
+          <div class="pcb">
+            <div class="pure-g-r">
+              <div class="pure-u-1-4">
+                <div class="l-box"></div>
+              </div>
+              <div class="pure-u-3-4">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
+                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+                  {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
+                  <ul class="breadcrumb" itemprop="breadcrumb">
+                    <li class="pure-menu-selected"><a href="/blog/">Blog</a>
+                    </li>
+                    <li class="pure-menu-selected"><a href="/about/">About</a>
+                    </li>
+                  </ul>
+                </div>
+                <br />
+                <br />
+                <code class="poem" itemscope itemtype="http://schema.org/Article">
+                  <h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
+                  <p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
+                  <p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer>
 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-var _gaq = _gaq || [['_trackPageview']];
-_gaq.unshift(['_setAccount', 'UA-30127328-1']);
-(function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-})(document, 'script');
-
-</script>
-</footer>
-</body>
+      ga('create', 'UA-30127328-1', 'auto');
+      ga('send', 'pageview');
+      ga('send', 'event', 'category', 'action', 'opt_label', opt_value, {'nonInteraction': 1});
+      ga('send', 'timing', 'timingCategory', 'timingVariable', timingValue, 'optLabel');
+    </script>
+    <script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5e0c2916786cd655772b8e3cae632c05' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    window.document.onload = document.addEventListener("keydown",function(a){13==a.keyCode&&(window.location.href="/blog")});
+  </script>
+    </footer>
+  </body>
 </html>
