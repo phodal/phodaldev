@@ -10,15 +10,15 @@
 !!!     for more info.
 !!!
 
-2014-09-21 14:02:13 [4645] [INFO] Starting gunicorn 18.0
-2014-09-21 14:02:13 [4645] [INFO] Listening at: http://127.0.0.1:9997 (4645)
-2014-09-21 14:02:13 [4645] [INFO] Using worker: sync
-2014-09-21 14:02:13 [4657] [INFO] Booting worker with pid: 4657
-2014-09-21 14:02:13 [4658] [INFO] Booting worker with pid: 4658
-2014-09-21 14:10:17 [4645] [INFO] Handling signal: term
-2014-09-21 14:10:17 [4657] [INFO] Worker exiting (pid: 4657)
-2014-09-21 14:10:17 [4658] [INFO] Worker exiting (pid: 4658)
-2014-09-21 14:10:17 [4645] [INFO] Shutting down: Master
+2014-09-21 18:09:00 [24888] [INFO] Starting gunicorn 18.0
+2014-09-21 18:09:00 [24888] [INFO] Listening at: http://0.0.0.0:9997 (24888)
+2014-09-21 18:09:00 [24888] [INFO] Using worker: sync
+2014-09-21 18:09:00 [24908] [INFO] Booting worker with pid: 24908
+2014-09-21 18:09:00 [24909] [INFO] Booting worker with pid: 24909
+2014-09-21 18:25:06 [24888] [INFO] Handling signal: term
+2014-09-21 18:25:06 [24908] [INFO] Worker exiting (pid: 24908)
+2014-09-21 18:25:06 [24909] [INFO] Worker exiting (pid: 24909)
+2014-09-21 18:25:06 [24888] [INFO] Shutting down: Master
 !!!
 !!! WARNING: This command is deprecated.
 !!! 
@@ -31,92 +31,8 @@
 !!!     for more info.
 !!!
 
-2014-09-21 14:10:17 [4892] [INFO] Starting gunicorn 18.0
-2014-09-21 14:10:17 [4892] [INFO] Listening at: http://0.0.0.0:9997 (4892)
-2014-09-21 14:10:17 [4892] [INFO] Using worker: sync
-2014-09-21 14:10:17 [4904] [INFO] Booting worker with pid: 4904
-2014-09-21 14:10:17 [4905] [INFO] Booting worker with pid: 4905
-2014-09-21 14:11:54 [4892] [INFO] Handling signal: term
-2014-09-21 14:11:54 [4904] [INFO] Worker exiting (pid: 4904)
-2014-09-21 14:11:54 [4905] [INFO] Worker exiting (pid: 4905)
-2014-09-21 14:11:54 [4892] [INFO] Shutting down: Master
-!!!
-!!! WARNING: This command is deprecated.
-!!! 
-!!!     You should now run your application with the WSGI interface
-!!!     installed with your project. Ex.:
-!!! 
-!!!         gunicorn myproject.wsgi:application
-!!! 
-!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
-!!!     for more info.
-!!!
-
-2014-09-21 14:12:42 [5042] [INFO] Starting gunicorn 18.0
-2014-09-21 14:12:42 [5042] [INFO] Listening at: http://0.0.0.0:9997 (5042)
-2014-09-21 14:12:42 [5042] [INFO] Using worker: sync
-2014-09-21 14:12:42 [5054] [INFO] Booting worker with pid: 5054
-2014-09-21 14:12:42 [5055] [INFO] Booting worker with pid: 5055
-2014-09-21 14:15:08 [5042] [INFO] Handling signal: term
-2014-09-21 14:15:08 [5054] [INFO] Worker exiting (pid: 5054)
-2014-09-21 14:15:08 [5055] [INFO] Worker exiting (pid: 5055)
-2014-09-21 14:15:08 [5042] [INFO] Shutting down: Master
-!!!
-!!! WARNING: This command is deprecated.
-!!! 
-!!!     You should now run your application with the WSGI interface
-!!!     installed with your project. Ex.:
-!!! 
-!!!         gunicorn myproject.wsgi:application
-!!! 
-!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
-!!!     for more info.
-!!!
-
-2014-09-21 14:22:25 [5692] [INFO] Starting gunicorn 18.0
-2014-09-21 14:22:25 [5692] [INFO] Listening at: http://0.0.0.0:9997 (5692)
-2014-09-21 14:22:25 [5692] [INFO] Using worker: sync
-2014-09-21 14:22:25 [5704] [INFO] Booting worker with pid: 5704
-2014-09-21 14:22:25 [5705] [INFO] Booting worker with pid: 5705
-2014-09-21 14:25:37 [5692] [INFO] Handling signal: term
-2014-09-21 14:25:37 [5704] [INFO] Worker exiting (pid: 5704)
-2014-09-21 14:25:37 [5705] [INFO] Worker exiting (pid: 5705)
-2014-09-21 14:25:37 [5692] [INFO] Shutting down: Master
-!!!
-!!! WARNING: This command is deprecated.
-!!! 
-!!!     You should now run your application with the WSGI interface
-!!!     installed with your project. Ex.:
-!!! 
-!!!         gunicorn myproject.wsgi:application
-!!! 
-!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
-!!!     for more info.
-!!!
-
-2014-09-21 14:28:45 [6109] [INFO] Starting gunicorn 18.0
-2014-09-21 14:28:45 [6109] [INFO] Listening at: http://0.0.0.0:9997 (6109)
-2014-09-21 14:28:45 [6109] [INFO] Using worker: sync
-2014-09-21 14:28:45 [6121] [INFO] Booting worker with pid: 6121
-2014-09-21 14:28:45 [6122] [INFO] Booting worker with pid: 6122
-2014-09-21 14:42:34 [6109] [INFO] Handling signal: term
-2014-09-21 14:42:34 [6121] [INFO] Worker exiting (pid: 6121)
-2014-09-21 14:42:34 [6122] [INFO] Worker exiting (pid: 6122)
-2014-09-21 14:42:34 [6109] [INFO] Shutting down: Master
-!!!
-!!! WARNING: This command is deprecated.
-!!! 
-!!!     You should now run your application with the WSGI interface
-!!!     installed with your project. Ex.:
-!!! 
-!!!         gunicorn myproject.wsgi:application
-!!! 
-!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
-!!!     for more info.
-!!!
-
-2014-09-21 14:42:34 [6532] [INFO] Starting gunicorn 18.0
-2014-09-21 14:42:34 [6532] [INFO] Listening at: http://0.0.0.0:9997 (6532)
-2014-09-21 14:42:34 [6532] [INFO] Using worker: sync
-2014-09-21 14:42:34 [6544] [INFO] Booting worker with pid: 6544
-2014-09-21 14:42:34 [6545] [INFO] Booting worker with pid: 6545
+2014-09-21 18:25:06 [25042] [INFO] Starting gunicorn 18.0
+2014-09-21 18:25:06 [25042] [INFO] Listening at: http://0.0.0.0:9997 (25042)
+2014-09-21 18:25:06 [25042] [INFO] Using worker: sync
+2014-09-21 18:25:06 [25069] [INFO] Booting worker with pid: 25069
+2014-09-21 18:25:06 [25070] [INFO] Booting worker with pid: 25070

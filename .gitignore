@@ -3,4 +3,5 @@
 *.db
 .DS_Store
 .coverage
+nohup.out
 local_settings.py
