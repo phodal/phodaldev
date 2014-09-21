@@ -1,9 +1,9 @@
-Mezzanine==3.0.5
-Django==1.4.10
+Mezzanine==3.1.10
 django-tastypie
 django-debug-toolbar
 django-extensions
 django-compressor
 mezzanine-pagedown
 redis
-
+newrelic
+gunicorn==18
