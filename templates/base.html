@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+<html lang="zh-cmn-Hans" xmlns:wb="http://open.weibo.com/wb">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
 <head>
 <meta http-equiv="content-language" content="zh-CN" />
-<html xmlns:wb="http://open.weibo.com/wb">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
+<link rel="alternate" hreflang="zh-cn" href="http://www.phodal.com{{ request.get_full_path }}"/>
 <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
 <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
 <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />

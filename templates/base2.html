@@ -12,6 +12,7 @@
     <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
     <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
     <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
+    <link rel="alternate" hreflang="zh-cn" href="http://www.phodal.com">
     <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
     <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
     <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
@@ -118,7 +119,7 @@
               </div>
               <div class="pure-u-3-4">
                 <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
-                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading " href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
                   {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
                   <ul class="breadcrumb" itemprop="breadcrumb">
                     <li class="pure-menu-selected"><a href="/blog/">Blog</a>
@@ -142,26 +143,6 @@
     </div>
   </div>
 </div>
-
-<footer>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-30127328-1', 'auto');
-      ga('send', 'pageview');
-      ga('send', 'event', 'category', 'action', 'opt_label', opt_value, {'nonInteraction': 1});
-      ga('send', 'timing', 'timingCategory', 'timingVariable', timingValue, 'optLabel');
-    </script>
-    <script type="text/javascript">
-      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5e0c2916786cd655772b8e3cae632c05' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    window.document.onload = document.addEventListener("keydown",function(a){13==a.keyCode&&(window.location.href="/blog")});
-  </script>
     </footer>
   </body>
 </html>
