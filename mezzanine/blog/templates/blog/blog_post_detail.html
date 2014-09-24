@@ -109,7 +109,7 @@
 {% block blog_post_detail_related_posts %}
 {% if blog_post.related_posts.all %}
 <div id="related-posts">
-<h3>{% trans 'Related posts' %}</h3>
+<h3>{% trans '或许您还喜欢' %}</h3>
 <ul class="list-unstyled">
 {% for post in blog_post.related_posts.all %}
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>

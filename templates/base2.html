@@ -21,7 +21,7 @@
     <meta name="bitly-verification" content="b4cdaf394c9f"/>
     <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
     <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+    <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
     {% ifinstalled mezzanine.blog %}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
@@ -119,7 +119,7 @@
               </div>
               <div class="pure-u-3-4">
                 <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
-                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading " href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
                   {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
                   <ul class="breadcrumb" itemprop="breadcrumb">
                     <li class="pure-menu-selected"><a href="/blog/">Blog</a>

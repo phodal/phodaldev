@@ -19,7 +19,7 @@
 <meta name="bitly-verification" content="b4cdaf394c9f"/>
 <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
 <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
@@ -121,7 +121,7 @@
     <div class="panel-body">
     {% block right_panel %}
     <div itemscope itemtype="http://schema.org/Person">
-         <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="https://1.gravatar.com/avatar/3f7d7184e4a363bfddfd11d3ab1af304?d=https%3A%2F%2Fidenticons.github.com%2Fdc183c71d625aa2c083399b83e6bee5e.png&r=x&s=440">
+         <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="{% static "phodal/images/phodal.jpg" %}">
            <p><span itemprop="name"><a href="https://plus.google.com/108569130336274162470" rel="publisher">Phodal Huang</a></span></p>
            <span itemprop="jobTitle">Writer & Hacker & Designer</span><br />
            <span itemprop="affiliation">ThoughtWorks Dev</span><br />
