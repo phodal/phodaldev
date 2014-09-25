@@ -1,3 +1,4 @@
+pygeocoder
 Mezzanine==3.1.10
 django-tastypie
 django-debug-toolbar

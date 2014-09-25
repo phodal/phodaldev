@@ -1,6 +1,7 @@
 *.pyc
 *.pyo
 *.db
+.idea/*
 .DS_Store
 .coverage
 nohup.out

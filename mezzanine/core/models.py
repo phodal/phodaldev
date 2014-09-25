@@ -1,8 +1,9 @@
 from __future__ import unicode_literals
+from json import loads
+
 from future.builtins import str
 from future.utils import with_metaclass
 
-from json import loads
 try:
     from urllib.request import urlopen
     from urllib.parse import urlencode
