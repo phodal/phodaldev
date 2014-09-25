@@ -22,10 +22,6 @@ body {
     src: url(Marcsc.ttf) format('truetype');
 }
 @font-face {
-    font-family:'Rio';
-    src: url(Rio.ttf) format('truetype');
-}
-@font-face {
     font-family:'inconsolata';
     src:url(Inconsolata.otf) format('opentype');
 }
@@ -76,7 +72,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     font-size: 12pt;
 }
 .brand {
-    font-family: Rio;
+    font-family: sans-serif;
     font-size: 20px;
 }
 blockquote {

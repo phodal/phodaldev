@@ -15,18 +15,6 @@ body {
     height: 100%;
     width: auto;
 }
-@font-face {
-    font-family:'Marcsc';
-    src: url(Marcsc.ttf) format('truetype');
-}
-@font-face {
-    font-family:'Rio';
-    src: url(Rio.ttf) format('truetype');
-}
-@font-face {
-    font-family:'mypriad';
-    src: url(MyriadPro.otf) format('opentype');
-}
 body {
     margin: 0;
     font-family:"微软雅黑", "Microsoft Yahei", "WenQuanYi Micro Hei";
@@ -204,7 +192,6 @@ span.brand {
 	font-size: 14px;
 }
 .rio {
-	font-family:Rio;
 }
 .pure-menu a, .pure-menu .pure-menu-heading
 {
