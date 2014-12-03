@@ -8,3 +8,4 @@ mezzanine-pagedown
 redis
 newrelic
 gunicorn==18
+requests
