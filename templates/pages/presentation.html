@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags %}
+
+{% block meta_title %}{{ page.meta_title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block main %}
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+<script type="text/javascript">
+ var blogposts = angular.module('blogposts',[]);
+blogposts.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('{[{');
+  $interpolateProvider.endSymbol('}]}');
+});
+ blogposts.controller('blogController', function($scope, $http) {
+     $http.get('/api/v1/url/?limit=400&format=json').success(function(data) {
+         $scope.posts = data["objects"];
+         console.log($scope.posts);
+    });
+ });
+</script>
+<div ng-app="blogposts">
+<div class="posts"  ng-controller="blogController">
+<ul>
+<li ng-repeat="post in posts"><a href="/blog/{[{post.slug}]}">{[{post.title}]}</a></li>
+</ul>
+</div>
+</div>
+{% endblock %}

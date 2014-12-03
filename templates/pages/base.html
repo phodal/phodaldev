@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-cmn-Hans" xmlns:wb="http://open.weibo.com/wb">
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+
+<head>
+<meta http-equiv="content-language" content="zh-CN" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
+<link rel="alternate" hreflang="zh-cn" href="http://www.phodal.com{{ request.get_full_path }}"/>
+<meta name="baidu-site-verification" content="dZvx5Cg1jt" />
+<meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
+<meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+<meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
+<meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+<meta name="sogou_site_verification" content="46iR0w9xzJ"/>
+<meta name="bitly-verification" content="b4cdaf394c9f"/>
+<link rel="author" href="https://plus.google.com/108569130336274162470/posts">
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
+
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+{% endifinstalled %}
+
+{% compress css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/mezzanine.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-theme.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/main.css" %}">
+{% block extra_css %}
+{% endblock %}
+{% endcompress %}
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/rainbow.min.css" rel="stylesheet" type="text/css" />
+
+{% compress js %}
+{% block extra_js %}
+{% endblock %}
+{% endcompress %}
+<script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-1.7.1.min.js"></script>
+<script async type="text/javascript" src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script async type="text/javascript" src="{% static "js/bootstrap-extras.js" %}"></script>
+<script async type="text/javascript" src="{% static "phodal/js/jquery.githubRepoWidget.min.js" %}"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>  
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<script src="{% static "js/respond.min.js" %}"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" id="{% block body_id %}body{% endblock %}">
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    {% if settings.SITE_TITLE %}<a class="navbar-brand brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+    {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg tagline">{{ settings.SITE_TAGLINE }}</p>{% endif %}
+</div>
+<div class="navbar-collapse collapse">
+    {% search_form "all" %}
+    {% page_menu "pages/menus/dropdown.html" %}
+</div>
+</div>
+</div>
+
+<div class="container">
+
+{% nevercache %}
+{% if messages %}
+<div class="messages">
+{% for message in messages %}
+<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ message }}
+</div>
+{% endfor %}
+</div>
+{% endif %}
+{% endnevercache %}
+
+<h1>{% block title %}{% endblock %}</h1>
+
+<ul class="breadcrumb" itemprop="breadcrumb"> 
+{% spaceless %}
+{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+{% endspaceless %}
+</ul>
+
+</div>
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-2 left">
+    {% block left_panel %}
+    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
+    {% endblock %}
+</div>
+
+<div class="col-md-7 middle" itemscope itemtype="http://schema.org/Article">
+    {% block main %}{% endblock %}
+</div>
+
+<div class="col-md-3 right">
+    {% nevercache %}
+    {% include "includes/user_panel.html" %}
+    {% endnevercache %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+    {% block right_panel %}
+    <div itemscope itemtype="http://schema.org/Person">
+         <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="{% static "phodal/images/phodal.jpg" %}">
+           <p><span itemprop="name"><a href="https://plus.google.com/108569130336274162470" rel="publisher">Phodal Huang</a></span></p>
+           <span itemprop="jobTitle">Writer & Hacker & Designer</span><br />
+           <span itemprop="affiliation">ThoughtWorks Dev</span><br />
+	   <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a> 
+        </div>
+<iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=2&ptype=0&speed=300&skin=5&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=1533917471&verifier=daf319e2&dpc=1"></iframe>
+    {% endblock %}
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<footer>
+<div class="container">
+{% page_menu "pages/menus/footer.html" %}
+
+<div class="row">
+<p class="site-info text-center">
+    {% trans "Powered by" %}
+    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
+    {% trans "and" %}
+    <a href="http://www.djangoproject.com">Django</a>
+    {% ifinstalled mezzanine.mobile %}
+    <span class="separator">|</span>
+    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+    {% endifinstalled %}
+</p>
+</div>
+</div>
+</footer>
+
+{% include "includes/footer_scripts.html" %}
+<script type="text/javascript">
+  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5e0c2916786cd655772b8e3cae632c05' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

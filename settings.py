@@ -78,7 +78,7 @@ from __future__ import absolute_import, unicode_literals
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
 USE_SOUTH = True
-
+BLOG_RSS_LIMIT = 1
 
 ########################
 # MAIN DJANGO SETTINGS #
