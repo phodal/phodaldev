@@ -262,10 +262,14 @@ INSTALLED_APPS = (
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
-RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
-PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite','toc')
+# RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
+# PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite','toc')
 RICHTEXT_FILTER_LEVEL = 3
 PAGEDOWN_SERVER_SIDE_PREVIEW = True
+RICHTEXT_FILTERS = (
+    "mezzanine.utils.html.thumbnails",
+    "mezzanine_pagedown.filters.extra",
+    "mezzanine_pagedown.filters.plain")
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its
