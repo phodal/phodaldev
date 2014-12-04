@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# legendri <legendri@gmail.com>, 2013
+# legendri <legendri@gmail.com>, 2013
+# Milorad Pop-Tosic <poptosic@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 07:19-0430\n"
+"PO-Revision-Date: 2013-11-09 20:20+0000\n"
+"Last-Translator: legendri <legendri@gmail.com>\n"
+"Language-Team: Croatian (Croatia) (http://www.transifex.com/projects/p/mezzanine/language/hr_HR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hr_HR\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: admin.py:20 models.py:69
+msgid "User"
+msgstr "Korisnik"
+
+#: defaults.py:24
+msgid "Accounts required for commenting"
+msgstr "Računi potrebni za komentiranje"
+
+#: defaults.py:25
+msgid "If ``True``, users must log in to comment."
+msgstr "Ukoliko je uključeno, korisnici se moraju prijaviti da bi ostavili komentar."
+
+#: defaults.py:32
+msgid "Disqus shortname"
+msgstr "Disqus kratko ime"
+
+#: defaults.py:33
+msgid "Shortname for the http://disqus.com comments service."
+msgstr "Kratko ime (shortname) za http://disqus.com servis za komentiranje."
+
+#: defaults.py:41
+msgid "Disqus public key"
+msgstr "Disqus javni ključ"
+
+#: defaults.py:42
+msgid "Public key for http://disqus.com developer API"
+msgstr "Javni ključ za http://disqus.com razvojni API"
+
+#: defaults.py:49
+msgid "Disqus secret key"
+msgstr "Disqus tajni ključ"
+
+#: defaults.py:50
+msgid "Secret key for http://disqus.com developer API"
+msgstr "Tajni ključ za http://disqus.com razvojni API"
+
+#: defaults.py:57
+msgid "Auto-approve comments"
+msgstr "Automatski potvrdi komentare"
+
+#: defaults.py:58
+msgid "If ``True``, built-in comments are approved by default."
+msgstr "Ukoliko je uključeno, ugrađeni komentari se automatski odobravaju."
+
+#: defaults.py:66
+msgid ""
+"Dotted path to the function to call on a comment's value before it is "
+"rendered to the template."
+msgstr ""
+
+#: defaults.py:74
+msgid "Comment notification email addresses"
+msgstr "Potvrda komentara email adrese"
+
+#: defaults.py:75
+msgid ""
+"A comma separated list of email addresses that will receive an email "
+"notification each time a new comment is posted on the site."
+msgstr ""
+
+#: defaults.py:84
+msgid "Admin comments"
+msgstr "Admin komentari"
+
+#: defaults.py:85
+msgid "Number of latest comments shown in the admin dashboard."
+msgstr "Broj poslijednjih komentara koji su prikazani na upravljačkoj ploči."
+
+#: defaults.py:93
+msgid "Show unapproved comments"
+msgstr "Prikaži neodobrene komentare"
+
+#: defaults.py:94
+msgid ""
+"If ``True``, comments that have ``is_public`` unchecked will still be "
+"displayed, but replaced with a ``waiting to be approved`` message."
+msgstr "Ako je uključeno, komentari kojima je polje ``is_public`` označeno ipak će biti prikazani, ali će sadržavati poruku ``čekanje na odobrenje``."
+
+#: defaults.py:103
+msgid "Show removed comments"
+msgstr "Prikaži obrisane komentare"
+
+#: defaults.py:104
+msgid ""
+"If ``True``, comments that have ``removed`` checked will still be displayed,"
+" but replaced with a ``removed`` message."
+msgstr "Ako je uključeno, komentari kojima je ``uklonjen`` potvrđeno će se ipak prikazivati, ali zamijenjeni sa porukom ``uklonjen``."
+
+#: defaults.py:113
+msgid "If ``True``, comments can be rated."
+msgstr "If ``True``, komentari mogu biti ocijenjeni"
+
+#: defaults.py:120
+msgid "Accounts required for rating"
+msgstr "Račun je potreban za komentiranje"
+
+#: defaults.py:121
+msgid ""
+"If ``True``, users must log in to rate content such as blog posts and "
+"comments."
+msgstr ""
+
+#: defaults.py:129
+msgid "A sequence of integers that are valid ratings."
+msgstr ""
+
+#: forms.py:83
+msgid "Name"
+msgstr "Ime"
+
+#: forms.py:83
+msgid "required"
+msgstr "obavezno"
+
+#: forms.py:85
+msgid "Email"
+msgstr "Email"
+
+#: forms.py:86
+msgid "required (not published)"
+msgstr "obavezno (nije objavljeno)"
+
+#: forms.py:87
+msgid "Website"
+msgstr "Web stranica"
+
+#: forms.py:87
+msgid "optional"
+msgstr "opcionalno"
+
+#: forms.py:138
+msgid "New comment for: "
+msgstr "Novi komentar za:"
+
+#: forms.py:174
+msgid "Already rated."
+msgstr "Već ocjenjeno"
+
+#: models.py:26
+msgid "By the blog author"
+msgstr "Od autora"
+
+#: models.py:29 models.py:130
+msgid "Rating"
+msgstr "Ocjena"
+
+#: models.py:34 models.py:61 templates/generic/includes/comments.html:25
+msgid "Comment"
+msgstr "Komentar"
+
+#: models.py:35 templates/generic/includes/comments.html:3
+msgid "Comments"
+msgstr "Komentari"
+
+#: models.py:73
+msgid "View on site"
+msgstr "Prikaži na web stranici"
+
+#: models.py:93 models.py:102
+msgid "Keyword"
+msgstr "Ključna riječ"
+
+#: models.py:94
+msgid "Keywords"
+msgstr "Ključne riječi"
+
+#: models.py:120
+msgid "Value"
+msgstr "Vrijednost"
+
+#: models.py:121
+msgid "Rating date"
+msgstr "Datum ocijene"
+
+#: models.py:126
+msgid "Rater"
+msgstr "Ocjenjivač"
+
+#: models.py:131
+msgid "Ratings"
+msgstr "Ocjene"
+
+#: views.py:62
+msgid "You must logged in. Please log in or sign up to complete this action."
+msgstr ""
+
+#: templates/admin/includes/recent_comments.html:4
+msgid "Recent Comments"
+msgstr "Recentni komentari"
+
+#: templates/admin/includes/recent_comments.html:22
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:53
+#: templates/generic/includes/comment.html:63
+msgid "ago"
+msgstr "ranije"
+
+#: templates/email/comment_notification.html:6
+msgid "A new comment has been posted on"
+msgstr "Novi komentar je postavljen na"
+
+#: templates/email/comment_notification.html:10
+#, python-format
+msgid ""
+"\n"
+"    At %(submit_date)s %(user_name)s wrote:\n"
+"    "
+msgstr "\n    Dana %(submit_date)s %(user_name)s je napisao:\n    "
+
+#: templates/email/comment_notification.txt:7
+#, python-format
+msgid ""
+"\n"
+"At %(submit_date)s %(user_name)s wrote:\n"
+msgstr "\nDana %(submit_date)s %(user_name)s je napisao:\n"
+
+#: templates/generic/includes/comment.html:25
+msgid "Link"
+msgstr "Veza"
+
+#: templates/generic/includes/comment.html:26
+#: templates/generic/includes/comment.html:36
+msgid "Reply"
+msgstr "Odgovori"
+
+#: templates/generic/includes/comment.html:59
+msgid "Comment deleted"
+msgstr "Komentar je izbrisan"
+
+#: templates/generic/includes/comment.html:61
+msgid "Comment awaiting approval"
+msgstr "Komentar čeka na odobrenje"
+
+#: templates/generic/includes/comment.html:75
+msgid "There are currently no comments"
+msgstr "Trenutno nema komentara"
+
+#: templates/generic/includes/comments.html:17
+msgid "New Comment"
+msgstr "Novi komentar"
+
+#: templates/generic/includes/rating.html:7
+msgid "Current rating"
+msgstr "Trenutna ocijena"
+
+#: templates/generic/includes/rating.html:9
+msgid "Currently unrated"
+msgstr "Trenutno neocjenjeni"
+
+#: templates/generic/includes/rating.html:19
+msgid "Rate"
+msgstr "Ocijeni"

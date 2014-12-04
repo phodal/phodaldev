@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Tzu-ping Chung <uranusjr@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-09 10:33-0430\n"
+"PO-Revision-Date: 2013-06-14 11:49+0000\n"
+"Last-Translator: Tzu-ping Chung <uranusjr@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
+"mezzanine/language/zh_TW/)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: models.py:38
+msgid "Zip import"
+msgstr "從 zip 匯入"
+
+#: models.py:40
+msgid ""
+"Upload a zip file containing images, and they'll be imported into this "
+"gallery."
+msgstr "上傳一個包含影像的 zip 檔，則它們會被匯入至相片庫。"
+
+#: models.py:44
+msgid "Gallery"
+msgstr "相片庫"
+
+#: models.py:45
+msgid "Galleries"
+msgstr "相片庫"
+
+#: models.py:92
+msgid "File"
+msgstr "檔案"
+
+#: models.py:94
+msgid "Description"
+msgstr "描述"
+
+#: models.py:98
+msgid "Image"
+msgstr "影像"
+
+#: models.py:99
+msgid "Images"
+msgstr "影像"

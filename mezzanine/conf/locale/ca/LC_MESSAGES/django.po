@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Sergi Almacellas Abellana <pokoli@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mezzanine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 07:21-0430\n"
+"PO-Revision-Date: 2012-08-26 13:23+0000\n"
+"Last-Translator: Sebastián Ramírez Magrí <sebasmagri@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/projects/p/mezzanine/"
+"language/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin.py:38
+msgid "Settings were successfully updated."
+msgstr ""
+
+#: admin.py:42
+msgid "Change"
+msgstr "Canviar"
+
+#: forms.py:53
+msgid "Miscellaneous"
+msgstr "Miscel·lànea"
+
+#: models.py:17
+msgid "Setting"
+msgstr "Ajustament"
+
+#: models.py:18
+msgid "Settings"
+msgstr "Ajustaments"
+
+#: templates/admin/conf/setting/change_list.html:8
+msgid "Please correct the errors below."
+msgstr "Corregiu els errors"
+
+#: templates/admin/conf/setting/change_list.html:31
+msgid "Save"
+msgstr "Desa"
