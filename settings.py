@@ -256,14 +256,12 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "mezzanine.accounts",
     "mezzanine.mobile",
-    "mezzanine_pagedown",
-    "debug_toolbar",
-    "tastypie",
+    "mezzanine_pagedown"
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
 # RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
-# PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite','toc')
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','toc')
 RICHTEXT_FILTER_LEVEL = 3
 PAGEDOWN_SERVER_SIDE_PREVIEW = True
 RICHTEXT_FILTERS = (

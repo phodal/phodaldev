@@ -7,14 +7,6 @@ from django.contrib import admin
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 import mezzanine_pagedown.urls
-from tastypie.api import Api
-from blogapi.api import AllBlogSlugResource, BlogResource, GeoResource
-
-apiv1 = Api(api_name='v1')
-apiv1.register(BlogResource())
-apiv1.register(AllBlogSlugResource())
-geoApi = GeoResource()
-
 admin.autodiscover()
 
 urlpatterns = i18n_patterns("",
@@ -30,8 +22,6 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
 urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     ("^pagedown/", include(mezzanine_pagedown.urls)),
-    (r"^api/", include(apiv1.urls)),
-    (r"^location/", include(geoApi.urls)),
     url("^all/$", direct_to_template, {"template": "pages/all.html"},name="all"),
     ("^", include("mezzanine.urls")),
 )
