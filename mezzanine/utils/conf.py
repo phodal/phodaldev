@@ -4,6 +4,7 @@ import os
 import sys
 from warnings import warn
 
+from django import VERSION
 from django.conf import global_settings as defaults
 from django.template.base import add_to_builtins
 
@@ -113,6 +114,7 @@ def set_dynamic_settings(s):
     else:
         # Setup for optional apps.
         optional = list(s.get("OPTIONAL_APPS", []))
+        s["USE_SOUTH"] = s.get("USE_SOUTH") and VERSION < (1, 7)
         if s.get("USE_SOUTH"):
             optional.append("south")
         elif not s.get("USE_SOUTH", True) and "south" in s["INSTALLED_APPS"]:
@@ -128,6 +130,7 @@ def set_dynamic_settings(s):
     if "debug_toolbar" in s["INSTALLED_APPS"]:
         debug_mw = "debug_toolbar.middleware.DebugToolbarMiddleware"
         append("MIDDLEWARE_CLASSES", debug_mw)
+
     # If compressor installed, ensure it's configured and make
     # Mezzanine's settings available to its offline context,
     # since jQuery is configured via a setting.
@@ -169,9 +172,17 @@ def set_dynamic_settings(s):
     else:
         s["GRAPPELLI_INSTALLED"] = True
 
-    # Ensure admin is last in the app order so that admin templates
-    # are loaded in the correct order.
-    move("INSTALLED_APPS", "django.contrib.admin", len(s["INSTALLED_APPS"]))
+    # Ensure admin is at the bottom of the app order so that admin
+    # templates are loaded in the correct order, and that staticfiles
+    # is also at the end so its runserver can be overridden.
+    apps = ["django.contrib.admin"]
+    if VERSION >= (1, 7):
+        apps += ["django.contrib.staticfiles"]
+    for app in apps:
+        try:
+            move("INSTALLED_APPS", app, len(s["INSTALLED_APPS"]))
+        except ValueError:
+            pass
 
     # Ensure we have a test runner (removed in Django 1.6)
     s.setdefault("TEST_RUNNER", "django.test.simple.DjangoTestSuiteRunner")

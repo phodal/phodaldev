@@ -244,8 +244,11 @@ def search_form(context, search_model_names=None):
         search_model_names = search_model_names.split(" ")
     search_model_choices = []
     for model_name in search_model_names:
-        model = get_model(*model_name.split(".", 1))
-        if model:  # Might not be installed.
+        try:
+            model = get_model(*model_name.split(".", 1))
+        except LookupError:
+            pass
+        else:
             verbose_name = model._meta.verbose_name_plural.capitalize()
             search_model_choices.append((verbose_name, model_name))
     context["search_model_choices"] = sorted(search_model_choices)
@@ -329,9 +332,6 @@ def thumbnail(image_url, width, height, quality=95, left=.5, top=.5,
     from_width = image.size[0]
     from_height = image.size[1]
 
-    # If already right size, don't do anything.
-    if to_width == from_width and to_height == from_height:
-        return image_url
     # Set dimensions.
     if to_width == 0:
         to_width = from_width * to_height // from_height
@@ -659,12 +659,15 @@ def translate_url(context, language):
     current_language = translation.get_language()
     translation.activate(language)
     try:
-        url_name = (view.url_name if not view.namespace
-                    else '%s:%s' % (view.namespace, view.url_name))
-        url = reverse(url_name, args=view.args, kwargs=view.kwargs)
+        url = reverse(view.func, args=view.args, kwargs=view.kwargs)
     except NoReverseMatch:
-        url_name = "admin:" + view.url_name
-        url = reverse(url_name, args=view.args, kwargs=view.kwargs)
+        try:
+            url_name = (view.url_name if not view.namespace
+                        else '%s:%s' % (view.namespace, view.url_name))
+            url = reverse(url_name, args=view.args, kwargs=view.kwargs)
+        except NoReverseMatch:
+            url_name = "admin:" + view.url_name
+            url = reverse(url_name, args=view.args, kwargs=view.kwargs)
     translation.activate(current_language)
     if context['request'].META["QUERY_STRING"]:
         url += "?" + context['request'].META["QUERY_STRING"]

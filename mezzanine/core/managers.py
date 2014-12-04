@@ -5,8 +5,8 @@ from functools import reduce
 from operator import ior, iand
 from string import punctuation
 
-from django.db.models import (Manager, Q, CharField, TextField,
-                              get_models, get_model)
+from django.core.exceptions import ImproperlyConfigured
+from django.db.models import Manager, Q, CharField, TextField, get_models
 from django.db.models.manager import ManagerDescriptor
 from django.db.models.query import QuerySet
 from django.contrib.sites.managers import CurrentSiteManager as DjangoCSM
@@ -14,6 +14,7 @@ from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 
 from mezzanine.conf import settings
+from mezzanine.utils.models import get_model
 from mezzanine.utils.sites import current_site_id
 from mezzanine.utils.urls import home_slug
 
@@ -271,10 +272,22 @@ class SearchableManager(Manager):
             # as ``Page``, so we check the parent class list of each
             # model when determining whether a model falls within the
             # ``SEARCH_MODEL_CHOICES`` setting.
-            search_choices = set([get_model(*name.split(".", 1)) for name in
-                                  settings.SEARCH_MODEL_CHOICES])
+            search_choices = set()
             models = set()
             parents = set()
+            errors = []
+            for name in settings.SEARCH_MODEL_CHOICES:
+                try:
+                    model = get_model(*name.split(".", 1))
+                except LookupError:
+                    errors.append(name)
+                else:
+                    search_choices.add(model)
+            if errors:
+                raise ImproperlyConfigured("Could not load the model(s) "
+                        "%s defined in the 'SEARCH_MODEL_CHOICES' setting."
+                        % ", ".join(errors))
+
             for model in get_models():
                 # Model is actually a subclasses of what we're
                 # searching (eg Displayabale)
@@ -331,7 +344,8 @@ class CurrentSiteManager(DjangoCSM):
                 # Django <= 1.6
                 self._validate_field_name()
             except AttributeError:
-                pass
+                # Django >= 1.7: will populate "self.__field_name".
+                self._get_field_name()
         lookup = {self.__field_name + "__id__exact": current_site_id()}
         return super(DjangoCSM, self).get_query_set().filter(**lookup)
 

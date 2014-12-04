@@ -10,6 +10,10 @@ from mezzanine.core.request import current_request
 from mezzanine.pages.models import Page, RichTextPage
 from mezzanine.urls import PAGES_SLUG
 from mezzanine.utils.tests import TestCase
+from mezzanine.utils.models import get_user_model
+from django.contrib.auth.models import AnonymousUser
+
+User = get_user_model()
 
 
 class PagesTests(TestCase):
@@ -66,8 +70,8 @@ class PagesTests(TestCase):
     def test_set_parent(self):
         old_parent, _ = RichTextPage.objects.get_or_create(title="Old parent")
         new_parent, _ = RichTextPage.objects.get_or_create(title="New parent")
-        child, _ = RichTextPage.objects.get_or_create(title="Child",
-                                                      slug="kid")
+        child, _ = RichTextPage.objects.get_or_create(
+            title="Child", slug="kid")
         self.assertTrue(child.parent is None)
         self.assertTrue(child.slug == "kid")
 
@@ -115,11 +119,10 @@ class PagesTests(TestCase):
             p1.set_parent(p2c)
 
     def test_set_slug(self):
-        parent, _ = RichTextPage.objects.get_or_create(title="Parent",
-                                                       slug="parent")
-        child, _ = RichTextPage.objects.get_or_create(title="Child",
-                                                      slug="parent/child",
-                                                      parent_id=parent.id)
+        parent, _ = RichTextPage.objects.get_or_create(
+            title="Parent", slug="parent")
+        child, _ = RichTextPage.objects.get_or_create(
+            title="Child", slug="parent/child", parent_id=parent.id)
         parent.set_slug("new-parent-slug")
         parent.save()
         self.assertTrue(parent.slug == "new-parent-slug")
@@ -129,6 +132,32 @@ class PagesTests(TestCase):
 
         child = RichTextPage.objects.get(id=child.id)
         self.assertTrue(child.slug == "new-parent-slug/child")
+
+    def test_login_required(self):
+
+        public, _ = RichTextPage.objects.get_or_create(
+            title="Public", slug="public", login_required=False)
+        private, _ = RichTextPage.objects.get_or_create(
+            title="Private", slug="private", login_required=True)
+
+        args = {"for_user": AnonymousUser()}
+        self.assertTrue(public in RichTextPage.objects.published(**args))
+        self.assertTrue(not private in RichTextPage.objects.published(**args))
+        args = {"for_user": User.objects.get(username=self._username)}
+        self.assertTrue(public in RichTextPage.objects.published(**args))
+        self.assertTrue(private in RichTextPage.objects.published(**args))
+        self.client.logout()
+
+        response = self.client.get(private.get_absolute_url(), follow=True)
+        login = "%s?next=%s" % (settings.LOGIN_URL, private.get_absolute_url())
+        self.assertRedirects(response, login)
+        response = self.client.get(public.get_absolute_url(), follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.client.login(username=self._username, password=self._password)
+        response = self.client.get(private.get_absolute_url(), follow=True)
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(public.get_absolute_url(), follow=True)
+        self.assertEqual(response.status_code, 200)
 
     def test_page_menu_queries(self):
         """

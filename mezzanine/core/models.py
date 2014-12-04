@@ -1,9 +1,8 @@
 from __future__ import unicode_literals
-from json import loads
-
 from future.builtins import str
 from future.utils import with_metaclass
 
+from json import loads
 try:
     from urllib.request import urlopen
     from urllib.parse import urlencode
@@ -466,7 +465,7 @@ class SitePermission(models.Model):
     """
 
     user = models.ForeignKey(user_model_name, verbose_name=_("Author"),
-        related_name="%(class)ss")
+        related_name="%(class)ss", unique=True)
     sites = models.ManyToManyField("sites.Site", blank=True,
                                    verbose_name=_("Sites"))
 

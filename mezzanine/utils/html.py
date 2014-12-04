@@ -1,5 +1,5 @@
 from __future__ import absolute_import, unicode_literals
-from future.builtins import chr, int
+from future.builtins import chr, int, str
 
 try:
     from html.parser import HTMLParser, HTMLParseError
@@ -12,6 +12,7 @@ import re
 
 
 SELF_CLOSING_TAGS = ['br', 'img']
+NON_SELF_CLOSING_TAGS = ['script', 'iframe']
 
 
 def decode_entities(html):
@@ -36,6 +37,32 @@ def decode_entities(html):
                 pass
         return html
     return re.sub("&#?\w+;", decode, html.replace("&amp;", "&"))
+
+
+def thumbnails(html):
+    """
+    Given a HTML string, converts paths in img tags to thumbnail
+    paths, using Mezzanine's ``thumbnail`` template tag. Used as
+    one of the default values in the ``RICHTEXT_FILTERS`` setting.
+    """
+    from django.conf import settings
+    from bs4 import BeautifulSoup
+    from mezzanine.core.templatetags.mezzanine_tags import thumbnail
+
+    # If MEDIA_URL isn't in the HTML string, there aren't any
+    # images to replace, so bail early.
+    if settings.MEDIA_URL.lower() not in html.lower():
+        return html
+
+    dom = BeautifulSoup(html, "html.parser")
+    for img in dom.findAll("img"):
+        src = img.get("src", "")
+        src_in_media = src.lower().startswith(settings.MEDIA_URL.lower())
+        width = img.get("width")
+        height = img.get("height")
+        if src_in_media and width and height:
+            img["src"] = settings.MEDIA_URL + thumbnail(src, width, height)
+    return str(dom)
 
 
 class TagCloser(HTMLParser):
