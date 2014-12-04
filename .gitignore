@@ -6,3 +6,4 @@
 .coverage
 nohup.out
 local_settings.py
+mezzanine/.idea/
