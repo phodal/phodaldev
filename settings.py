@@ -255,11 +255,9 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     "mezzanine.twitter",
     "mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.mobile",
     "mezzanine_pagedown",
     "debug_toolbar",
-    "django_extensions",
-    "compressor",
     "tastypie",
 )
 

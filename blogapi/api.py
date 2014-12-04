@@ -69,7 +69,6 @@ class BaseCorsResource(Resource):
 class AllBlogSlugResource(BaseCorsResource, ModelResource):
     class Meta:
         queryset = BlogPost.objects.published()
-        print queryset
         resource_name = "url"
         fields = ['keywords_string', 'slug', 'title']
         allowed_methods = ['get']
