@@ -4,6 +4,9 @@
 
 {% block meta_title %}{% trans "Search Results" %}{% endblock %}
 {% block title %}{% trans "Search Results" %}{% endblock %}
+{% block extra_head %}
+<meta name="robots" content="noindex">
+{% endblock %}
 
 {% block breadcrumb_menu %}
 <li>
@@ -14,8 +17,8 @@
 
 {% block main %}
 
-{% if results.paginator.count == 0 %}
 <p>
+{% if results.paginator.count == 0 %}
 {% blocktrans %}
 No results were found in {{ search_type }} matching your query: {{ query }}
 {% endblocktrans %}
