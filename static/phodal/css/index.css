@@ -1,6 +1,6 @@
 body {
     margin:0 auto;
-
+    background: url(../images/pcb_background.jpg);
 }
 .footer {
     position: relative;
@@ -203,4 +203,7 @@ span.brand {
 .poem a{
 	color:#fff;
 	text-decoration:none;
+}
+.white{
+    background:#fff;
 }

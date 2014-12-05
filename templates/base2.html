@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
-  {% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-  <head>
+<head>
     <meta http-equiv="content-language" content="zh-CN" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,112 +39,112 @@
     {% endcompress %}
 
     {% block extra_head %}{% endblock %}
-  </head>
+</head>
 
-  <body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage">
 
-    <div class="container">
+<div class="container">
 
-      {% nevercache %}
-      {% if messages %}
-      <div class="messages">
+    {% nevercache %}
+    {% if messages %}
+    <div class="messages">
         {% for message in messages %}
         <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ message }}
         </div>
         {% endfor %}
-      </div>
-      {% endif %}
-      {% endnevercache %}
-
     </div>
+    {% endif %}
+    {% endnevercache %}
+
+</div>
 
 
-    <div id="layout">
-      <div class="pure-g-r content">
+<div id="layout">
+    <div class="pure-g-r content">
 
-        <div class="pure-u-1-4">
+        <div class="pure-u-1-4 white">
 
         </div>
 
         <div class="pure-u-3-4">
-          <div id="window">
-            <div id="toolbar">
-              <div class="top">
-                <div id="bubble">
-                  <div class="shine"></div>
-                  <div class="glow"></div>
+            <div id="window">
+                <div id="toolbar">
+                    <div class="top">
+                        <div id="bubble">
+                            <div class="shine"></div>
+                            <div class="glow"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
+                    <p>The only fair is - It is not fair</p>
+                    <p>Last login: Thu May 24 12:18:16 on ttyACM0
+                        <br />Welcome,<span itemprop="name"> Phodal</span><span itermprop="familyName"> Huang </span></p>
+
+                    <p>fdHuang$ <span > python -v </span>
+                        <br /><span itemprop="affiliation">Python 2.7.5 </span></p>
+
+                    <p>fdHuang$ <span >  pwd</span>
+                        <br /><span itemprop="jobTitle">Program</span><span> 2002</span>
+                        <br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
+                        <br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
+                    </p>
+
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > pwd !</span>
+                        <br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
+                    </p>
+
+                    <p>fdHuang$ <span>more phodal</span>
+                        <br /> <span>写过点诗,赚过稿费。</span>
+                        <br /> <span>设计过Logo。</span>
+                        <br /> <span>画过pcb,搞过各种开发板。</span>
+                        <br /> <span>今天,一个</span>擅长前端兼SEO的设计师<span>,一个``Full Stack``...</span>
+                    </p>
+                    <p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
+                    <div class="cursor"></div>
+                </div>
             </div>
-            <div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
-              <p>The only fair is - It is not fair</p>
-              <p>Last login: Thu May 24 12:18:16 on ttyACM0
-              <br />Welcome,<span itemprop="name"> Phodal</span><span itermprop="familyName"> Huang </span></p>
-
-              <p>fdHuang$ <span > python -v </span>
-              <br /><span itemprop="affiliation">Python 2.7.5 </span></p>
-
-              <p>fdHuang$ <span >  pwd</span>
-              <br /><span itemprop="jobTitle">Program</span><span> 2002</span>
-              <br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
-              <br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
-              </p>
-
-              <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > pwd !</span>
-              <br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
-              </p>
-
-              <p>fdHuang$ <span>more phodal</span>
-              <br /> <span>写过点诗,赚过稿费。</span>
-              <br /> <span>设计过Logo。</span>
-              <br /> <span>画过pcb,搞过各种开发板。</span>
-              <br /> <span>今天,一个</span>擅长前端兼SEO的设计师<span>,一个``Full Stack``...</span>
-              </p>
-              <p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
-              <div class="cursor"></div>
-            </div>
-          </div>
         </div>
 
-      </div>
-      <div class="footer">
+    </div>
+    <div class="footer">
         <div class="legal">
 
-          <div class="pcb">
-            <div class="pure-g-r">
-              <div class="pure-u-1-4">
-                <div class="l-box"></div>
-              </div>
-              <div class="pure-u-3-4">
-                <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
-                  {% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-                  {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
-                  <ul class="breadcrumb" itemprop="breadcrumb">
-                    <li class="pure-menu-selected"><a href="/blog/">Blog</a>
-                    </li>
-                    <li class="pure-menu-selected"><a href="/about/">About</a>
-                    </li>
-                    <li class="pure-menu-selected"><a href="/works/">Works  & Code</a>
-                    </li>
-                  </ul>
+            <div class="pcb">
+                <div class="pure-g-r">
+                    <div class="pure-u-1-4">
+                        <div class="l-box"></div>
+                    </div>
+                    <div class="pure-u-3-4">
+                        <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
+                            {% if settings.SITE_TITLE %}<a class="pure-menu-heading rio" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+                            {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}{% endif %}
+                            <ul class="breadcrumb" itemprop="breadcrumb">
+                                <li class="pure-menu-selected"><a href="/blog/">Blog</a>
+                                </li>
+                                <li class="pure-menu-selected"><a href="/about/">About</a>
+                                </li>
+                                <li class="pure-menu-selected"><a href="/works/">Works  & Code</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <br />
+                        <br />
+                        <code class="poem" itemscope itemtype="http://schema.org/Article">
+                            <h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
+                            <p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
+                            <p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+                        </code>
+                    </div>
                 </div>
-                <br />
-                <br />
-                <code class="poem" itemscope itemtype="http://schema.org/Article">
-                  <h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
-                  <p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
-                  <p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
-                </code>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-    </footer>
-  </body>
+</div>
+</div>
+</footer>
+</body>
 </html>
