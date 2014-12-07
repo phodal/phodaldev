@@ -1,11 +1,6 @@
-pygeocoder
 Mezzanine==3.1.10
 django==16..8
 django-tastypie
-django-debug-toolbar
-django-extensions
-django-compressor
 mezzanine-pagedown
-redis
 newrelic
 gunicorn==18
