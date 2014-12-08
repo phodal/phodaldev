@@ -28,17 +28,10 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
 
 urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
-    ("^pagedown/", include(mezzanine_pagedown.urls)),
-    (r"^api/", include(apiv1.urls)),
-    url("^all/$", direct_to_template, {"template": "pages/all.html"},name="all"),
-    ("^", include("mezzanine.urls")),
+    url("^pagedown/", include(mezzanine_pagedown.urls)),
+    url(r"^api/", include(apiv1.urls)),
+    url("^", include("mezzanine.urls")),
 )
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns += patterns('',
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    )
 
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
