@@ -1,15 +1,9 @@
-import json
-import ast
-
 from tastypie.resources import Resource, ModelResource
 from django.http.response import HttpResponse
 from tastypie.exceptions import ImmediateHttpResponse
 from tastypie.cache import SimpleCache
 from tastypie import http
 from tastypie.serializers import Serializer
-from django.conf.urls import url
-from tastypie.utils import trailing_slash
-from pygeocoder import Geocoder
 
 from mezzanine.blog.models import BlogPost
 
@@ -84,29 +78,3 @@ class BlogResource(BaseCorsResource, ModelResource):
         allowed_methods = ['get']
         serializer = Serializer()
         cache = SimpleCache(timeout=10)
-
-
-class GeoResource(ModelResource):
-    class Meta:
-        queryset = BlogPost.objects.published()
-        resource_name = 'geo'
-
-    def prepend_urls(self):
-        return [
-            url(r"^(?P<resource_name>%s)/search%s$" % (self._meta.resource_name, trailing_slash()),
-                self.wrap_view('get_search'), name="api_get_search"),
-        ]
-
-    def get_search(self, request, **kwargs):
-        self.method_check(request, allowed=['get'])
-        self.is_authenticated(request)
-        self.throttle_check(request)
-
-        location = ast.literal_eval(json.dumps(dict(request.GET)["location"]))
-        objects = {
-            "location": (Geocoder.geocode(location).__str__()),
-            "coordinates": Geocoder.geocode(location)[0].coordinates
-        }
-
-        self.log_throttled_access(request)
-        return self.create_response(request, objects)

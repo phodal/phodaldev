@@ -8,12 +8,11 @@ from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 import mezzanine_pagedown.urls
 from tastypie.api import Api
-from blogapi.api import AllBlogSlugResource, BlogResource, GeoResource
+from blogapi.api import AllBlogSlugResource, BlogResource
 
 apiv1 = Api(api_name='v1')
 apiv1.register(BlogResource())
 apiv1.register(AllBlogSlugResource())
-geoApi = GeoResource()
 
 admin.autodiscover()
 
@@ -31,7 +30,6 @@ urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     ("^pagedown/", include(mezzanine_pagedown.urls)),
     (r"^api/", include(apiv1.urls)),
-    (r"^location/", include(geoApi.urls)),
     url("^all/$", direct_to_template, {"template": "pages/all.html"},name="all"),
     ("^", include("mezzanine.urls")),
 )
