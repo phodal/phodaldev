@@ -56,9 +56,11 @@
 {% endif %}
 
 {% block blog_post_detail_content %}
+<div  itemprop="articleBody">
 {% editable blog_post.content %}
 {{ blog_post.content|richtext_filters|safe }}
 {% endeditable %}
+</div>
 {% endblock %}
 
 {% block blog_post_detail_keywords %}
