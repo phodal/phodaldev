@@ -157,12 +157,22 @@
 </div>
 </div>
 </footer>
-
-{% include "includes/footer_scripts.html" %}
 <script type="text/javascript">
   var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
   document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5e0c2916786cd655772b8e3cae632c05' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
+{% include "includes/footer_scripts.html" %}
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://www.phodal.com/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://www.phodal.com/search/?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+}
+</script>
 </body>
 </html>
