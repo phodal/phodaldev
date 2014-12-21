@@ -1,8 +1,10 @@
 {% load mezzanine_tags i18n future %}
+<div itemscope itemtype="http://schema.org/WebSite">
+ <meta itemprop="url" content="https://www.phodal.com/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction"/>
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search">
-
+<meta itemprop="target" content="https://www.phodal.com/search/?q={search_term_string}"/>
 <div class="form-group">
-    <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}">
+    <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
 </div>
 
 {% if search_model_choices %}
@@ -26,3 +28,4 @@
 <input type="submit" class="btn btn-default" value="{% trans "Go" %}">
 
 </form>
+</div>
