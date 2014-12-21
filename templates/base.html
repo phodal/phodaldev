@@ -95,7 +95,7 @@
 
 <h1>{% block title %}{% endblock %}</h1>
 
-<ul class="breadcrumb">
+<ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/Breadcrumb">
 {% spaceless %}
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
 {% endspaceless %}
@@ -112,7 +112,7 @@
     {% endblock %}
 </div>
 
-<div class="col-md-7 middle">
+<div class="col-md-7 middle"  itemscope itemtype="http://schema.org/Article">
     {% block main %}{% endblock %}
 </div>
 

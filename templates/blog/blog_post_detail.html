@@ -18,7 +18,7 @@
 
 {% block breadcrumb_menu %}
 {{ block.super }}
-<li class="active">{{ blog_post.title }}</li>
+<li class="active" itemprop="name">{{ blog_post.title }}</li>
 {% endblock %}
 
 {% block main %}
@@ -28,9 +28,9 @@
 <h6 class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
-    <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
+    <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
-    {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
+    <span itemprop="datePublished" >{% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</span>
 </h6>
 {% endeditable %}
 {% endblock %}
