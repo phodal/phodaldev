@@ -116,38 +116,40 @@
     {% block main %}{% endblock %}
 </div>
 
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
-    <div class="panel panel-default">
-        <div class="panel-body">
-            {% block right_panel %}
+    <div class="col-md-3 right">
+        {% nevercache %}
+        {% include "includes/user_panel.html" %}
+        {% endnevercache %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {% block right_panel %}
 
-            <div itemscope itemtype="http://schema.org/Person">
-                <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="{% static "phodal/images/phodal.jpg" %}">
-                <p><span itemprop="name"><a href="https://plus.google.com/108569130336274162470" rel="publisher">Phodal Huang</a></span></p>
-                <span itemprop="jobTitle">Writer & Hacker & Designer</span><br />
-                <span itemprop="affiliation">ThoughtWorks Dev</span><br />
-                <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a>
+                <div itemscope itemtype="http://schema.org/Person">
+                    <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="{% static "phodal/images/phodal.jpg" %}">
+                    <p><span itemprop="name"><a href="https://plus.google.com/108569130336274162470" rel="publisher">Phodal
+                        Huang</a></span></p>
+                    <span itemprop="jobTitle">Writer & Hacker & Designer</span><br/>
+                    <span itemprop="affiliation">ThoughtWorks Dev</span><br/>
+                    <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <h3>Follow Me</h3>
+                        <ul class="list-unstyled">
+                            <li><a rel="nofollow" href="https://github.com/phodal" target="_blank">Github</a></li>
+                            <li><a rel="nofollow" href="http://weibo.com/phodal" target="_blank">Weibo</a></li>
+                            <li><a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">Zhihu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <iframe width="100%" height="400" class="share_self" frameborder="0" scrolling="no"
+                        src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=2&ptype=0&speed=300&skin=5&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=1533917471&verifier=daf319e2&dpc=1"></iframe>
+                {% endblock %}
             </div>
-
-            <h3>Follow Me</h3>
-            <ul class="list-unstyled">
-                <li><a rel="nofollow" href="https://github.com/phodal" target="_blank">Github</a></li>
-                <li><a rel="nofollow" href="http://weibo.com/phodal" target="_blank">Weibo</a></li>
-                <li><a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">Zhihu</a></li>
-            </ul>
-            {% endblock %}
         </div>
     </div>
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=2&ptype=0&speed=300&skin=5&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=1533917471&verifier=daf319e2&dpc=1"></iframe>
-        </div>
-    </div>
-</div>
 
 </div>
 </div>
