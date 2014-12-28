@@ -9,6 +9,7 @@ from mezzanine.conf import settings
 import mezzanine_pagedown.urls
 from tastypie.api import Api
 from blogapi.api import AllBlogSlugResource, BlogResource
+from sitemaps.sitemaps import DisplayableSitemap
 
 apiv1 = Api(api_name='v1')
 apiv1.register(BlogResource())
@@ -25,6 +26,11 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
         ("^admin/media-library/", include("%s.urls" %
                                         settings.PACKAGE_NAME_FILEBROWSER)),
     )
+
+sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
+urlpatterns += patterns("django.contrib.sitemaps.views",
+    ("^sitemap\.xml$", "sitemap", sitemaps)
+)
 
 urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),

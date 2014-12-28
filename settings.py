@@ -258,6 +258,7 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
     "mezzanine_pagedown",
     "tastypie",
+    "sitemaps"
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
