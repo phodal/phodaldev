@@ -4,7 +4,7 @@ from django.contrib.sitemaps import Sitemap
 from django.contrib.sites.models import Site
 
 from mezzanine.core.models import Displayable
-from mezzanine.pages.models import Page, RichTextPage
+from mezzanine.pages.models import Page
 from mezzanine.utils.sites import current_site_id
 
 from mezzanine.blog.models import BlogPost, BlogCategory
@@ -21,13 +21,17 @@ class DisplayableSitemap(Sitemap):
         Return all published items for models that subclass
         ``Displayable``, excluding those that point to external sites.
         """
-        return list(Displayable.objects.url_map(in_sitemap=True).values())
+        blogpost_with_page = list(Displayable.objects.url_map(in_sitemap=True).values())
+        category = list(BlogCategory.objects.all())
+        return blogpost_with_page + category
 
-    def lastmod(self, obj):
+    @staticmethod
+    def lastmod(obj):
         if isinstance(obj, BlogPost):
             return obj.updated or obj.publish_date
 
-    def changefreq(self, obj):
+    @staticmethod
+    def changefreq(obj):
         if isinstance(obj, BlogPost):
             return "Monthly"
         if isinstance(obj, BlogCategory):
@@ -36,7 +40,8 @@ class DisplayableSitemap(Sitemap):
             return "Weekly"
         return "Daily"
 
-    def priority(self, obj):
+    @staticmethod
+    def priority(obj):
         if isinstance(obj, BlogPost):
             return "0.2"
         if isinstance(obj, BlogCategory):
