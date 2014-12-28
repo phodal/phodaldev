@@ -41,7 +41,7 @@ class DisplayableSitemap(Sitemap):
             return "0.2"
         if isinstance(obj, BlogCategory):
             return "0.3"
-        if isinstance(obj, RichTextPage):
+        if isinstance(obj, Page):
             return "0.6"
         return "1.0"
 
