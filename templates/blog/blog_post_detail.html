@@ -117,7 +117,7 @@
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-最近我在写一个前端框架——<a href="http://lettuce.phodal.com/" alt="Lettuce" title="Lettuce">http://lettuce.phodal.com/</a>，不妨看看，或提提意见，或Star，或Fork。
+看看我的<a href="https://github.com/phodal" >Github</a>，有哪些你觉得有意思的项目。
 </div>
 {% endif %}
 {% endblock %}
@@ -126,4 +126,8 @@
 {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
 {% endblock %}
 
+{% endblock %}
+
+{% block right_panel %}
+{% include "blog/includes/filter_panel_without_month.html" %}
 {% endblock %}
