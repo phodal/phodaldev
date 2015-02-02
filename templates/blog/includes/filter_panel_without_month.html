@@ -27,8 +27,10 @@
 <h3>{% trans "分类" %}</h3>
 <ul class="list-unstyled">
 {% for category in categories %}
+{% if category.post_count >= 5 %}
 <li><a href="{% url "blog_post_list_category" category.slug %}"
     >{{ category }}</a> ({{ category.post_count }})</li>
+{% endif %}
 {% endfor %}
 </ul>
 {% endif %}
