@@ -52,10 +52,6 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     color: black;
     font-size: 12pt;
 }
-.brand {
-    font-family: Rio;
-    font-size: 20px;
-}
 blockquote {
     background: #f9f9f9;
     border-left: 10px solid #ccc;

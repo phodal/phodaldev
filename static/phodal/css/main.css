@@ -17,16 +17,8 @@ body {
     background-size: 25%;
 }
 @font-face {
-    font-family: 'Marcsc';
-    src: url(Marcsc.ttf) format('truetype');
-}
-@font-face {
     font-family: 'inconsolata';
     src: url(Inconsolata.otf) format('opentype');
-}
-@font-face {
-    font-family: 'mypriad';
-    src: url(MyriadPro.otf) format('opentype');
 }
 body {
     margin: 0;
@@ -40,14 +32,9 @@ p {
 .h1, .h2, .h3, .h4, .h5, .h6, code, kbd, pre, samp {
     font-family: 'inconsolata', "Source Han Sans CN", "noto sans";
 }
-#phfont {
-    font-family: 'Tangerine', serif;
-    font-size: 48px;
-    text-shadow: 4px 4px 4px #aaa;
-}
 
 .tagline {
-    font-family: Marcsc;
+    font-family: 'inconsolata', "Source Han Sans CN", "noto sans";;
     color: black;
     font-size: 12pt;
 }
