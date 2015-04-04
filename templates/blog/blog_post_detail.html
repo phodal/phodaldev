@@ -1,5 +1,5 @@
 {% extends "blog/blog_post_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags %}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -117,9 +117,9 @@
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-<h3>Github</h3>
-<div class="github-card" data-user="phodal" data-width="58.3%" data-width="200"></div>
-<script src="{% static "phodal/js/widget.js" %}"></script>
+欢迎访问我的<a href="https://github.com/phodal" >Github</a>，也许，你会遇到你也心仪的项目。<br/>
+如果我的博客能给你些许帮助，不妨给我博客源码一个star:
+    <a href="https://github.com/phodal/phodaldev">Phodal Dev</a>，3Q。
 </div>
 {% endif %}
 {% endblock %}
