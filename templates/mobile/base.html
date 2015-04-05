@@ -33,7 +33,7 @@
 
     <div data-role="header">
         <h1>{% block title %}{% endblock %}</h1>
-        <a class="home" data-role="button" data-icon="star" href="{% url "home" %}">{% trans "Home" %}</a>
+        <a class="home" data-role="button" data-icon="star" href="{% url "home" %}">{% trans "首页" %}</a>
     </div>
 
     {% page_menu "pages/menus/mobile.html" %}
@@ -45,8 +45,7 @@
     <div data-role="footer">
         <div data-role="content" align="center">
         	{% include "mobile/includes/search.html" %}
-            <p>{% trans "Powered by" %} <a href="http://mezzanine.jupo.org" rel="external">Mezzanine</a></p>
-            <p><a href="{% url "set_device" "default" %}?next={{ request.path }}" rel="external">{% trans "View Full Site" %}</a></p>
+            <p><a href="{% url "set_device" "default" %}?next={{ request.path }}" rel="external">{% trans "桌面版" %}</a></p>
         </div>
     </div>
 
