@@ -39,6 +39,7 @@ urlpatterns += patterns("feed.view",
 
 
 urlpatterns += patterns('',
+    url(r'^haystack/', include('haystack.urls')),
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),

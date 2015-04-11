@@ -245,6 +245,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    'haystack',
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -259,6 +260,14 @@ INSTALLED_APPS = (
     "mezzanine_pagedown",
     "tastypie"
 )
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'haystack',
+    },
+}
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
 # RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
