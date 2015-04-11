@@ -78,7 +78,6 @@ class PostsRSS(Feed):
         return blog_posts
 
     def item_description(self, item):
-        print item.content
         copy_info = "\n原文:[" + \
                     super(PostsRSS, self).item_title(item) + "](" + \
                     super(PostsRSS, self).item_link(item) + ")"
