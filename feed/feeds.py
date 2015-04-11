@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.contrib.syndication.views import Feed
@@ -77,8 +78,11 @@ class PostsRSS(Feed):
         return blog_posts
 
     def item_description(self, item):
-        copy_info = "\nCopyright Information:"
-        return richtext_filters(item.content[0:100] + copy_info)
+        print item.content
+        copy_info = "\n原文:[" + \
+                    super(PostsRSS, self).item_title(item) + "](" + \
+                    super(PostsRSS, self).item_link(item) + ")"
+        return richtext_filters(item.content[0:300]) + richtext_filters(copy_info)
 
     def categories(self):
         if not self._public:
