@@ -32,6 +32,12 @@ urlpatterns += patterns("django.contrib.sitemaps.views",
     ("^sitemap\.xml$", "sitemap", sitemaps)
 )
 
+urlpatterns += patterns("feed.view",
+   url("^blog/feeds/(?P<format>.*)%s$" % "/",
+       "blog_post_feed", name="blog_post_feed")
+)
+
+
 urlpatterns += patterns('',
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
