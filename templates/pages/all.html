@@ -28,7 +28,7 @@ blogposts.config(function($interpolateProvider) {
   $interpolateProvider.endSymbol('}]}');
 });
  blogposts.controller('blogController', function($scope, $http) {
-     $http.get('/api/v1/url/?limit=400&format=json').success(function(data) {
+     $http.get('/api/v1/url/?limit=600&format=json').success(function(data) {
          $scope.posts = data["objects"];
          console.log($scope.posts);
     });
