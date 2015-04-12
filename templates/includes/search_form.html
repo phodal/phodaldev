@@ -24,8 +24,7 @@ $('#autocomplete').autocomplete({
         });
     },
     onSelect: function (suggestion) {
-    console.log(suggestion)
-        
+        window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
     }
 });
 </script>
