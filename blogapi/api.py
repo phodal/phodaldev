@@ -1,4 +1,4 @@
-from tastypie.resources import Resource, ModelResource
+from tastypie.resources import Resource, ModelResource, ALL, ALL_WITH_RELATIONS
 from django.http.response import HttpResponse
 from tastypie.exceptions import ImmediateHttpResponse
 from tastypie.cache import SimpleCache
@@ -67,8 +67,11 @@ class AllBlogSlugResource(BaseCorsResource, ModelResource):
         fields = ['keywords_string', 'slug', 'title']
         allowed_methods = ['get']
         serializer = Serializer()
-        cache = SimpleCache(timeout=10)
-
+        cache = SimpleCache(timeout=100)
+        filtering = {
+            'slug': ALL_WITH_RELATIONS,
+            'title': ALL_WITH_RELATIONS
+        }
 
 class BlogResource(BaseCorsResource, ModelResource):
     class Meta:

@@ -9,19 +9,16 @@
 
  <script>
 $('#autocomplete').autocomplete({
-    lookup: function (query, done) {
-        // Do ajax call or lookup locally, when done,
-        // call the callback and pass your results:
-        $.getJSON('/api/v1/url/?limit=600&format=json', function(data) {
-            var titles = [];
-            $.each(data.objects, function(index, object) {
-                 titles.push({value: object.title, data: object.slug});
-            });
-            var results =  {
-                suggestions: titles
-            }
-            done(results);
+    width: 350,
+    serviceUrl: '/api/v1/url/?limit=20&format=json&',
+    paramName: 'title__contains',
+    transformResult: function(response) {
+        var result = [];
+        $.each(JSON.parse(response).objects, function(index, dataItem) {
+            result.push({value: dataItem.title, data: dataItem.slug});
         });
+
+        return { suggestions: result }
     },
     onSelect: function (suggestion) {
         window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
