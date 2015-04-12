@@ -10,10 +10,12 @@ class BlogPostIndex(indexes.SearchIndex, indexes.Indexable):
     title = indexes.CharField(model_attr='title')
     body = indexes.CharField(model_attr='body')
 
+    model = BlogPost
+    haystack_use_for_indexing = True
+
     def get_model(self):
         return BlogPost
 
     def index_queryset(self, using=None):
         """Used when the entire index for model is updated."""
-        print "----"
-        return self.get_model().objects.filter(timestamp__lte=timezone.now())
+        return self.get_model().objects.published().filter(timestamp__lte=timezone.now())
