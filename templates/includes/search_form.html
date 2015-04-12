@@ -4,28 +4,51 @@
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
 <meta itemprop="target" content="http://www.phodal.com/search/?q={search_term_string}"/>
 <div class="form-group">
-    <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+    <input class="form-control" id="autocomplete" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
 </div>
+
+ <script>
+$('#autocomplete').autocomplete({
+    lookup: function (query, done) {
+        // Do ajax call or lookup locally, when done,
+        // call the callback and pass your results:
+        $.getJSON('/api/v1/url/?limit=600&format=json', function(data) {
+            var titles = [];
+            $.each(data.objects, function(index, object) {
+                 titles.push({value: object.title, data: object.slug});
+            });
+            var results =  {
+                suggestions: titles
+            }
+            done(results);
+        });
+    },
+    onSelect: function (suggestion) {
+    console.log(suggestion)
+        
+    }
+});
+</script>
 
 {% if search_model_choices %}
     {% if search_model_choices|length == 1 %}
     <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
     {% else %}
     <div class="form-group">
-    <select class="form-control" name="type">
-        <option value="">{% trans "Everything" %}</option>
-        {% for verbose_name, model in search_model_choices %}
-        <option value="{{ model }}"
-            {% if model == request.REQUEST.type  %}selected{% endif %}>
+        <select class="form-control" name="type">
+            <option value="">{% trans "Everything" %}</option>
+            {% for verbose_name, model in search_model_choices %}
+            <option value="{{ model }}"
+            {% if model == request.REQUEST.type %}selected{% endif %}>
             {{ verbose_name }}
-        </option>
-        {% endfor %}
-    </select>
+            </option>
+            {% endfor %}
+        </select>
     </div>
     {% endif %}
-{% endif %}
+    {% endif %}
 
-<input type="submit" class="btn btn-default" value="{% trans "Go" %}">
+    <input type="submit" class="btn btn-default" value="{% trans " Go" %}">
 
-</form>
+    </form>
 </div>
