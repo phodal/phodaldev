@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
-{% block meta_title %}{% if tag %}{{ tag }}
-{% elif page %}{{ page.meta_title }}{% else %}
-{% trans "博客" %}
+{% block meta_title %}{% if tag %}{{ tag }}{% elif month %}{{ month }}'s Blog {% elif page %}{{ page.meta_title }}{% else %}{% trans "博客" %}
 {% endif %}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
@@ -13,10 +11,13 @@
     {{ keyword }}
 {% endfor %}
 {% if tag %}
-{{ tag }}
+{{ tag }}, tag
 {% endif %}
 {% if category %}
-{{ category }}
+{{ category }}, category
+{% endif %}
+{% if month %}
+{{ month }}, month
 {% endif %}
 {% endmetablock %}{% endblock %}
 
