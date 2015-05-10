@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
-{% block meta_title %}{% if tag %}{{ tag }}{% elif month %}{{ month }}'s Blog {% elif page %}{{ page.meta_title }}{% else %}{% trans "博客" %}
+{% block meta_title %}{% if tag %}{{ tag }}{% elif month %}{{ month }}'s Blog{% elif author %} {{ author.get_full_name|default:author.username }}{% elif page %}{{ page.meta_title }}
+{% else %}{% trans "博客" %}
 {% endif %}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
@@ -18,6 +19,8 @@
 {% endif %}
 {% if month %}
 {{ month }}, month
+{% endif %}
+{% if author %} {{ author.get_full_name|default:author.username }}
 {% endif %}
 {% endmetablock %}{% endblock %}
 
@@ -46,7 +49,7 @@
 {% else %}{% if year or month %}
     {% if month %}{{ month }}, {% endif %}{{ year }}
 {% else %}{% if author %}
-    {% trans "Author:" %} {{ author.get_full_name|default:author.username }}
+    {% trans "作者:" %} {{ author.get_full_name|default:author.username }}
 {% endif %}{% endif %}{% endif %}{% endif %}
 {% endspaceless %}
 </li>
