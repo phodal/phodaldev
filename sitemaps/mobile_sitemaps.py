@@ -13,7 +13,7 @@ from mezzanine.utils.sites import current_site_id
 
 from mezzanine.blog.models import BlogPost, BlogCategory
 import six
-from sitemaps import Sitemap
+from django.contrib.sitemaps import Sitemap
 
 
 class DisplayableSitemap(Sitemap):
