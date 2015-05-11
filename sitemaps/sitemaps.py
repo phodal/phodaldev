@@ -4,6 +4,7 @@ from django.contrib.sitemaps import Sitemap
 from django.contrib.sites.models import Site
 
 from mezzanine.core.models import Displayable
+from mezzanine.generic.models import Keyword
 from mezzanine.pages.models import Page
 from mezzanine.utils.sites import current_site_id
 
@@ -23,6 +24,7 @@ class DisplayableSitemap(Sitemap):
         """
         blogpost_with_page = list(Displayable.objects.url_map(in_sitemap=True).values())
         category = list(BlogCategory.objects.all())
+        keyword = list(Keyword.objects.all())
         return blogpost_with_page + category
 
     @staticmethod
