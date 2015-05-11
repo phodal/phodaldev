@@ -31,8 +31,8 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
 sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
 mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
 
-urlpatterns += patterns("django.contrib.sitemaps.views",
-    ("^sitemap\.xml$", "sitemap", sitemaps),
+urlpatterns += patterns("sitemaps.views",
+    ("^sitemap\.xml$", "index", sitemaps),
     ("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
 )
 
