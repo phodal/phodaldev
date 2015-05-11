@@ -9,6 +9,7 @@ from mezzanine.conf import settings
 import mezzanine_pagedown.urls
 from tastypie.api import Api
 from blogapi.api import AllBlogSlugResource, BlogResource
+from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
 
 apiv1 = Api(api_name='v1')
@@ -28,8 +29,11 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
     )
 
 sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
+mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
+
 urlpatterns += patterns("django.contrib.sitemaps.views",
-    ("^sitemap\.xml$", "sitemap", sitemaps)
+    ("^sitemap\.xml$", "sitemap", sitemaps),
+    ("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
 )
 
 urlpatterns += patterns("feed.view",
