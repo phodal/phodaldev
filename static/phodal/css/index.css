@@ -25,28 +25,7 @@ h1, h2, h3, h4 {
 .h1, .h2, .h3, .h4, .h5, .h6, code, kbd, pre, samp {
     font-family:'inconsolata';
 }
-#phfont {
-    font-family:'Tangerine', serif;
-    font-size: 48px;
-    text-shadow: 4px 4px 4px #aaa;
-}
-/*mouse chnage*/
-body, .btn.disabled, .btn[disabled], .nav-tabs>.active>a .nav-tabs>.active>a:hover {
-    cursor: url(../cursor/left_ptr.cur), auto;
-}
-input {
-    cursor: url(../cursor/Text.cur), text;
-}
-button, input[type="button"], input[type="reset"], input[type="submit"], .editable-form, .btn, a:hover, li, input[type="image"], input[type="checkbox"], input[type="radio"], .close, .nav>.dropdown.active>a:hover {
-    cursor: url(../cursor/pointing_hand.cur), pointer;
-}
-abbr[title] {
-    cursor: url(../cursor/help.cur), help;
-}
-input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly], .uneditable-input {
-    cursor: url(../cursor/forbidden.cur), not-allowed;
-}
-/* end mouse change */
+
 .tagline {
     font-family: Marcsc;
     color: black;
