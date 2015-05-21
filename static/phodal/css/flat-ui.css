@@ -714,7 +714,12 @@ fieldset[disabled] .btn-link:focus {
   font-style: normal;
   font-weight: normal;
   color: #16a085;
-  content: "\e61a";
+  content: "\e236";
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color .25s linear;
           transition: color .25s linear;
 
