@@ -81,7 +81,7 @@ class PostsRSS(Feed):
         copy_info = "\n原文:[" + \
                     super(PostsRSS, self).item_title(item) + "](" + \
                     super(PostsRSS, self).item_link(item) + ")"
-        return richtext_filters(item.content[0:300]) + richtext_filters(copy_info)
+        return richtext_filters(item.content[0:600]) + richtext_filters(copy_info)
 
     def categories(self):
         if not self._public:
