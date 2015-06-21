@@ -37,6 +37,8 @@ urlpatterns += patterns("sitemaps.views",
 )
 
 urlpatterns += patterns("feed.view",
+   url("feeds/(?P<format>.*)%s$" % "/",
+       "blog_post_feed", name="blog_post_feed"),
    url("^blog/feeds/(?P<format>.*)%s$" % "/",
        "blog_post_feed", name="blog_post_feed")
 )
