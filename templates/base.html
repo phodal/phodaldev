@@ -135,13 +135,9 @@
 <div class="row">
 <p class="site-info text-center">
     {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
+    <a rel="nofollow" href="http://mezzanine.jupo.org">Mezzanine</a>
+    &
+    <a href="https://github.com/phodal/phodaldev">博客源码(github)</a>
 </p>
 </div>
 </div>
