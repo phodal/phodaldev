@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-cmn-Hans" xmlns:wb="http://open.weibo.com/wb">
+<html lang="zh-cmn-Hans">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
 <head>
@@ -45,7 +45,7 @@
 <script async type="text/javascript" src="{% static "js/bootstrap-extras.js" %}"></script>
 <script async type="text/javascript" src="{% static "phodal/js/jquery.githubRepoWidget.min.js" %}"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js" type="text/javascript"></script>
-<script type="text/javascript">hljs.initHighlightingOnLoad();</script>  
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>
 <script src="{% static "js/respond.min.js" %}"></script>
@@ -120,22 +120,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
             {% block right_panel %}
-            <div itemscope itemtype="http://schema.org/Person">
-                <img style="border-radius: 3px;" itemprop="image" width="178" height="178" lt="" src="{% static "phodal/images/phodal.jpg" %}">
-                <p><span itemprop="name"><a href="https://plus.google.com/108569130336274162470" rel="publisher">Phodal
-                    Huang</a></span></p>
-                <span itemprop="jobTitle">Writer & Hacker & Designer</span><br/>
-                <span itemprop="affiliation">ThoughtWorks Consult</span><br/>
-                <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a>
-            </div>
-            <h3>Follow Me</h3>
-            <ul class="list-unstyled">
-                <li><a rel="nofollow" href="https://github.com/phodal" target="_blank">Github</a></li>
-                <li><a rel="nofollow" href="http://weibo.com/phodal" target="_blank">Weibo</a></li>
-                <li><a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">Zhihu</a>
-                <li><a rel="nofollow" href="http://segmentfault.com/u/phodal" target="_blank">SegmenFault</a>
-                </li>
-            </ul>
+            {% include "includes/user_info.html" %}
             {% endblock %}
     </div>
     </div>
