@@ -543,6 +543,13 @@ blockquote:before {
 blockquote p {
     display: inline;
 }
+.middle {
+   background-color: #fff;
+   border-radius: 5px;
+}
+.middle img {
+    max-width: 600px;
+}
 .middle .posts ul {
     counter-reset: li;
     list-style: none;
