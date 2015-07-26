@@ -84,14 +84,6 @@
     </div>
 </div>
 
-{% block blog_post_detail_rating %}
-<div class="panel panel-default rating">
-    <div class="panel-body">
-    {% rating_for blog_post %}
-    </div>
-</div>
-{% endblock %}
-
 {% block blog_post_previous_next %}
 <ul class="pager">
 {% with blog_post.get_previous_by_publish_date as previous %}
