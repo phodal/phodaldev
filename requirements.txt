@@ -1,6 +1,5 @@
-Mezzanine==3.1.10
-django==1.6.8
-django-tastypie
+Mezzanine==4.0.1
+django-tastypie==0.12.2
 mezzanine-pagedown
 newrelic==2.50.0.39
 gunicorn==19.3
