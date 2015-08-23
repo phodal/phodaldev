@@ -1,6 +1,6 @@
 #Person's Blog
 
-For more see in: [http://www.phodal.com/](http://www.phodal.com/)
+For more see in: [https://www.phodal.com/](https://www.phodal.com/)
 
 Basis On Mezzanine CMS
 
