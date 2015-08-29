@@ -52,7 +52,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-<div class="mdl-layout__header mdl-layout__header--waterfall is-casting-shadow">
+<div class="mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout mdl-js-layout">
         <div class="mdl-layout__header-row">
             <!--<div class="mdl-layout mdl-js-layout">-->
@@ -81,27 +81,26 @@
 </div>
 
 <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
-{% nevercache %}
-{% if messages %}
-<div class="messages">
-{% for message in messages %}
-<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    {{ message }}
-</div>
-{% endfor %}
-</div>
-{% endif %}
-{% endnevercache %}
+    {% nevercache %}
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endnevercache %}
 
-<h1>{% block title %}{% endblock %}</h1>
+    <h1>{% block title %}{% endblock %}</h1>
 
-<ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/Breadcrumb">
-{% spaceless %}
-{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-{% endspaceless %}
-</ul>
-
+    <ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/Breadcrumb">
+        {% spaceless %}
+        {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+        {% endspaceless %}
+    </ul>
 </div>
 
 <div class="mdl-components__page mdl-grid">
@@ -109,7 +108,7 @@
         {% block main %}{% endblock %}
     </div>
 
-    <div class="mdl-cell mdl-cell--3-col right">
+    <div class="mdl-cell mdl-layout__content mdl-cell--3-col right">
         {% nevercache %}
         {% include "includes/user_panel.html" %}
         {% endnevercache %}
