@@ -88,12 +88,17 @@
 
 {% for blog_post in blog_posts.object_list %}
 {% block blog_post_list_post_title %}
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 {% editable blog_post.title %}
-<h2>
-    <a href="{{ blog_post.get_absolute_url }}"  itemprop="name">{{ blog_post.title }}</a>
-</h2>
+<div class="mdl-card__title mdl-card--border">
+    <h2 class="mdl-card__title-text">
+        <a href="{{ blog_post.get_absolute_url }}"  itemprop="name">{{ blog_post.title }}</a>
+    </h2>
+</div>
 {% endeditable %}
 {% endblock %}
+
+<div class="mdl-card__supporting-text">
 {% block blog_post_list_post_metainfo %}
 {% editable blog_post.publish_date %}
 <h6 class="post-meta">
@@ -123,7 +128,7 @@
 {% endif %}
 
 {% block blog_post_list_post_content %}
-<div  itemprop="articleSection">
+<div  itemprop="articleBody">
 {% editable blog_post.content %}
 {{ blog_post.description_from_content|safe }}
 {% endeditable %}
@@ -131,32 +136,38 @@
 {% endblock %}
 
 {% block blog_post_list_post_links %}
-<div class="blog-list-detail" itemprop="articleBody">
-    {% keywords_for blog_post as tags %}
-    {% if tags %}
-    <ul class="list-inline tags">
-    {% trans "Tags" %}:
-    {% spaceless %}
-    {% for tag in tags %}
-    <li><a href="{% url "blog_post_list_tag" tag.slug %}" class="tag">{{ tag }}</a></li>
-    {% endfor %}
-    {% endspaceless %}
-    </ul>
-    {% endif %}
-    <p>
-    <a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>
-    {% if blog_post.allow_comments %}
-    /
-    {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-    {% else %}
-    <a href="{{ blog_post.get_absolute_url }}#comments">
-        {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-    </a>
-    {% endif %}
-    {% endif %}
-    </p>
+    <div itemprop="articleSection">
+        {% keywords_for blog_post as tags %}
+        {% if tags %}
+        <ul class="list-inline tags">
+        {% trans "Tags" %}:
+        {% spaceless %}
+        {% for tag in tags %}
+        <li><a href="{% url "blog_post_list_tag" tag.slug %}" class="tag">{{ tag }}</a></li>
+        {% endfor %}
+        {% endspaceless %}
+        </ul>
+        {% endif %}
+    </div>
 </div>
+    <div class="mdl-card__actions mdl-card--border">
+    <a href="{{ blog_post.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{% trans "read more" %}</a>
+        {% if blog_post.allow_comments %}
+        /
+            {% if settings.COMMENTS_DISQUS_SHORTNAME %}
+            <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
+            data-disqus-identifier="{% disqus_id_for blog_post %}">
+            {% trans "Comments" %}
+            </a>
+            {% else %}
+            <a href="{{ blog_post.get_absolute_url }}#comments">
+                {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
+            </a>
+            {% endif %}
+        {% endif %}
+    </div>
 {% endblock %}
+</section>
 {% endfor %}
 
 {% pagination_for blog_posts %}

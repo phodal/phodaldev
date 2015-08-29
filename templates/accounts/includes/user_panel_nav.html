@@ -7,12 +7,12 @@
     <p class="navbar-text">
         <a class="navbar-link" href="{{ profile_url }}">
             <span class="glyphicon glyphicon-user"></span> {{ request.user|username_or:"email" }}</a></p>
-    <a href="{% url "logout" %}?next={{ request.path }}" class="btn btn-default navbar-btn">
+    <a href="{% url "logout" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         <span class="glyphicon glyphicon-log-out"></span> {% trans "Log out" %}</a>
     {% else %}
-    <a href="{% url "login" %}?next={{ request.path }}" class="btn btn-default navbar-btn">
+    <a href="{% url "login" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
         <span class="glyphicon glyphicon-log-in"></span> {% trans "Log in" %}</a>
-    <a href="{% url "signup" %}?next={{ request.path }}" class="btn btn-default navbar-btn">
+    <a href="{% url "signup" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
         <span class="glyphicon glyphicon-edit"></span> {% trans "Sign up" %}</a>
     {% endif %}
 </div>

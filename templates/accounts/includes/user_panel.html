@@ -13,12 +13,12 @@
         <a href="{% url "profile_update" %}">{{ request.user|username_or:"email" }}</a>
     </p>
     {% endif %}
-    <a href="{% url "logout" %}?next={{ request.path }}" class="btn btn-sm btn-danger btn-account">
+    <a href="{% url "logout" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         <span class="glyphicon glyphicon-log-out"></span> {% trans "Log out" %}</a>
 {% else %}
-    <a href="{% url "login" %}?next={{ request.path }}" class="btn btn-default btn-sm btn-account">
+    <a href="{% url "login" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
         <span class="glyphicon glyphicon-log-in"></span> {% trans "Log in" %}</a>
     &nbsp;{% trans "or" %}&nbsp;
-    <a href="{% url "signup" %}?next={{ request.path }}" class="btn btn-default btn-sm btn-account">
+    <a href="{% url "signup" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
         <span class="glyphicon glyphicon-edit"></span> {% trans "Sign up" %}</a>
 {% endif %}
