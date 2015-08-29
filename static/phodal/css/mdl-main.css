@@ -1,9 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'inconsolata', "微软雅黑", "Microsoft Yahei", "WenQuanYi Micro Hei";
+    background: url(../images/bg_body.jpg);
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.recent-post {
+  background: #fff;
+}
+
+.recent-post ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.recent-post li a,
+ {
+  font-size: 16px;
+  line-height: 165%;
+  text-decoration: none;
+}
+
 .middle section {
   background-color: #fff;
   position: relative;
   margin-bottom: 48px;
 }
-
 
 table{
     margin-bottom: 10px;
@@ -94,6 +121,7 @@ pre {
    background-color: transparent;
    border-radius: 5px;
 }
+
 .middle img {
     max-width: 600px;
 }
@@ -260,6 +288,10 @@ pre {
   -webkit-font-smoothing: antialiased;
 }
 
+.android-logo-image .mdl-card__title-text {
+  color: #fff;
+}
+
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -276,29 +308,13 @@ pre {
  * limitations under the License.
  */
 
-@font-face {
-  font-family: "And Black";
-  src: url("myfont-webfont.eot?#iefix") format('embedded-opentype'),
-       url("fonts/and_black.woff") format('woff'),
-       url("fonts/and_black.ttf") format('truetype');
-}
-
-body {
-  margin: 0;
-}
-
-/* Disable ugly boxes around images in IE10 */
-a img{
-  border: 0px;
-}
-
 ::-moz-selection {
-  background-color: #6ab344;
+  background-color: rgb(33,150,243);
   color: #fff;
 }
 
 ::selection {
-  background-color: #6ab344;
+  background-color: rgb(33,150,243);
   color: #fff;
 }
 
@@ -338,7 +354,6 @@ a img{
 
 .android-header {
   overflow: visible;
-  background-color: white;
 }
 
   .android-header .material-icons {
@@ -351,7 +366,6 @@ a img{
   }
 
   .android-header .mdl-navigation__link {
-    color: #757575;
     font-weight: 700;
     font-size: 14px;
   }
@@ -705,7 +719,6 @@ a img{
   }
 
 .android-footer {
-  background-color: #fafafa;
   position: relative;
 }
 

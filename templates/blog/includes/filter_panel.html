@@ -3,8 +3,12 @@
 {% block blog_recent_posts %}
 {% blog_recent_posts 10 as recent_posts %}
 {% if recent_posts %}
-<h3>{% trans "最近文章" %}</h3>
-<ul class="list-unstyled recent-posts">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "最近文章" %}</h3>
+    </div>
+<div class="mdl-card__supporting-text">
+<ul class="list-unstyled">
 {% for recent_post in recent_posts %}
 <li>
     {% spaceless %}
@@ -17,16 +21,21 @@
     {% endspaceless %}
 </li>
 {% endfor %}
-</ul>
+</ul></div>
+</section>
 {% endif %}
 {% endblock %}
 
 {% include "includes/user_info.html" %}
 
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
 {% block blog_months %}
 {% blog_months as months %}
 {% if months %}
-<h3>{% trans "存档" %}</h3>
+<div class="mdl-card__title mdl-card--border">
+    <h3 class="mdl-card__title-text">{% trans "存档" %}</h3>
+</div>
+<ul class="mdl-card__supporting-text list-unstyled">
 {% for month in months %}
     {% ifchanged month.date.year %}
         {% if not forloop.first %}</ul>{% endif %}
@@ -38,6 +47,7 @@
 </ul>
 {% endif %}
 {% endblock %}
+</section>
 
 {% block blog_categories %}
 {% blog_categories as categories %}

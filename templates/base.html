@@ -27,8 +27,8 @@
 {% endifinstalled %}
 
 {% compress css %}
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
 {% block extra_css %}
 {% endblock %}
 {% endcompress %}
@@ -51,7 +51,7 @@
     <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
             <span class="android-title mdl-layout-title">
-              <span class="android-logo-image">PHODAL</span>
+              <span class="android-logo-image">{% block title %}{% endblock %}</span>
             </span>
             <!-- Add spacer, to align navigation to the right in desktop -->
             <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -101,15 +101,6 @@
         </div>
         {% endif %}
         {% endnevercache %}
-
-        <div class="docs-text-styling component-title">
-            <h2>{% block title %}{% endblock %}</h2>
-        </div>
-        <ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/Breadcrumb">
-            {% spaceless %}
-            {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-            {% endspaceless %}
-        </ul>
 
         <div class="mdl-grid mdl-cell--12-col">
             <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope
