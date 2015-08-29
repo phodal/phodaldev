@@ -51,32 +51,25 @@
 {% block extra_head %}{% endblock %}
 </head>
 
-<body id="{% block body_id %}body{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage">
 
 
 <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
+  <header class="mdl-layout__header mdl-layout__header--waterfall.is-casting-shadow">
     <div class="mdl-layout__header-row">
-      <!-- Title -->
       <span class="mdl-layout-title">PHODAL</span>
-      <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">About</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        {% page_menu "pages/menus/nav_menu.html" %}
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">{% if settings.SITE_TITLE %}<a class="navbar-brand brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      {% spaceless %}
+        {% page_menu "pages/menus/tree.html" %}
+    {% endspaceless %}
     </nav>
   </div>
 </div>

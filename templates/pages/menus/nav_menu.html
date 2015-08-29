@@ -1,0 +1,18 @@
+{% load pages_tags i18n future %}
+
+{% spaceless %}
+    {% for page in page_branch %}
+    {% if not has_home and page.is_primary and forloop.first %}
+    <li id="primary-menu-home" class="first{% if on_home %} active{% endif %}">
+        <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase">{% trans "Home" %}</a>
+    </li>
+    {% endif %}
+    {% if page.in_menu %}
+    <li id="primary-menu-{{ page.html_id }}"
+        class="{% if page.is_current_or_ascendant %}active{% endif %}{% if forloop.last %} last{% endif %} ">
+        <a href="{{ page.get_absolute_url }}" class="mdl-navigation__link mdl-typography--text-uppercase">{{ page.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endspaceless %}
