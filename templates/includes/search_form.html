@@ -1,15 +1,11 @@
 {% load mezzanine_tags i18n future %}
 <div itemscope itemtype="http://schema.org/WebSite">
-    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-        <i class="material-icons">search</i>
-    </label>
-
  <meta itemprop="url" content="http://www.phodal.com/" />
-<form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-<meta itemprop="target" content="http://www.phodal.com/search/?q={search_term_string}"/>
-<div class="mdl-textfield__expandable-holder">
-    <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
-</div>
+    <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+    <meta itemprop="target" content="http://www.phodal.com/search/?q={search_term_string}"/>
+    <div class="mdl-textfield__expandable-holder">
+        <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+    </div>
 
  <script>
 $('.autocomplete').autocomplete({
