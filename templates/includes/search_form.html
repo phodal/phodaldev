@@ -1,14 +1,18 @@
 {% load mezzanine_tags i18n future %}
 <div itemscope itemtype="http://schema.org/WebSite">
+    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+        <i class="material-icons">search</i>
+    </label>
+
  <meta itemprop="url" content="http://www.phodal.com/" />
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
 <meta itemprop="target" content="http://www.phodal.com/search/?q={search_term_string}"/>
-<div class="form-group">
-    <input class="form-control" id="autocomplete" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+<div class="mdl-textfield__expandable-holder">
+    <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
 </div>
 
  <script>
-$('#autocomplete').autocomplete({
+$('.autocomplete').autocomplete({
     minChars: 2,
     width: 350,
     serviceUrl: '/api/v1/url/?limit=20&format=json&',
@@ -28,7 +32,5 @@ $('#autocomplete').autocomplete({
 </script>
 
     <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
-    <input type="submit" class="btn btn-default" value="{% trans " Go" %}">
-
     </form>
 </div>

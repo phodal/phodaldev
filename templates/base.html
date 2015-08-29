@@ -52,27 +52,40 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-
-
-<div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--waterfall.is-casting-shadow">
+<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">PHODAL</span>
-      <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation">
-        {% page_menu "pages/menus/nav_menu.html" %}
-      </nav>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="android-header-spacer mdl-layout-spacer"></div>
+        <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            {% search_form "all" %}
+        </div>
+        <!-- Navigation -->
+        <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+                {% page_menu "pages/menus/nav_menu.html" %}
+            </nav>
+        </div>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">{% if settings.SITE_TITLE %}<a class="navbar-brand brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}</span>
-    <nav class="mdl-navigation">
-      {% spaceless %}
-        {% page_menu "pages/menus/tree.html" %}
-    {% endspaceless %}
-    </nav>
-  </div>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">{% if settings.SITE_TITLE %}<a class="navbar-brand brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}</span>
+        <nav class="mdl-navigation">
+            {% spaceless %}
+            {% page_menu "pages/menus/tree.html" %}
+            {% endspaceless %}
+        </nav>
+    </div>
+
 </div>
+
+<!--<div class="mdl-layout mdl-js-layout">-->
+    <!--<div class="mdl-layout__header-row">-->
+      <!--<span class="mdl-layout-title">PHODAL</span>-->
+      <!--<div class="mdl-layout-spacer"></div>-->
+      <!--<nav class="mdl-navigation">-->
+        <!--{% page_menu "pages/menus/nav_menu.html" %}-->
+      <!--</nav>-->
+    <!--</div>-->
+<!--</div>-->
 
 <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
 {% nevercache %}
