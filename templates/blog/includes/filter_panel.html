@@ -110,7 +110,7 @@
     <div class="mdl-card__title mdl-card--border">
         <h3 class="mdl-card__title-text">{% trans "Feeds" %}</h3>
     </div>
-    <div class="mdl-card__supporting-text list-unstyled tag-cloud"></div>
+    <div class="mdl-card__supporting-text list-unstyled tag-cloud">
     {% if tag %}
         <a href="{% url "blog_post_feed_tag" tag.slug "rss" %}">{% trans "RSS" %}</a> /
         <a href="{% url "blog_post_feed_tag" tag.slug "atom" %}">{% trans "Atom" %}</a>

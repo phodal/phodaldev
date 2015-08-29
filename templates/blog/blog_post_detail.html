@@ -87,29 +87,10 @@
     <img src="{% static "phodal/images/github.png" %} " alt="" width="32" />
     围观<a href="https://github.com/phodal/ideas" alt="phodal's ideas">我的 Idea</a>墙, 也许，你会遇到心仪的项目
 
-{% block blog_post_previous_next %}
-<ul class="pager">
-{% with blog_post.get_previous_by_publish_date as previous %}
-{% if previous %}
-<li class="previous">
-    <a href="{{ previous.get_absolute_url }}">&larr; {{ previous }}</a>
-</li>
-{% endif %}
-{% endwith %}
-{% with blog_post.get_next_by_publish_date as next %}
-{% if next %}
-<li class="next">
-    <a href="{{ next.get_absolute_url }}">{{ next }} &rarr;</a>
-</li>
-{% endif %}
-{% endwith %}
-</ul>
-{% endblock %}
-
 {% block blog_post_detail_related_posts %}
 {% if blog_post.related_posts.all %}
 <div id="related-posts">
-<h4>{% trans '或许您还喜欢' %}</h4>
+<h4>{% trans '或许您还需要' %}</h4>
 <ul class="list-unstyled">
 {% for post in blog_post.related_posts.all %}
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
