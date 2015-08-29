@@ -6,7 +6,13 @@ body {
 
 h1 {
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-    margin-bottom: 20px
+    margin-bottom: 20px;
+}
+
+.android-content h1 {
+    font-size: 2em;
+    text-shadow: none;
+    margin: 0;
 }
 
 h2 {
@@ -17,6 +23,46 @@ h2 {
 h3 {
     margin-bottom: 10px
 }
+
+.right {
+  margin-top: 9px;
+}
+.gallery .thumbnail {
+  margin: 15px 0;
+}
+.gallery .thumbnail > img {
+  width: 100%;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.thumbnail>img,.thumbnail a>img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active {
+    border-color: #428bca
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #333
+}
+
 
 .list-unstyled {
   padding-left: 0;
@@ -835,7 +881,7 @@ pre {
   }
 
   .android-search-box .mdl-textfield__expandable-holder {
-    width: 100%;
+    width: 200%;
   }
 
   .android-be-together-section {

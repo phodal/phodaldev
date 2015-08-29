@@ -1,5 +1,6 @@
 {% load disqus_tags %}
-<div id="disqus_thread"></div>
+<div class="mdl-grid mdl-shadow--2dp post_detail">
+<div id="disqus_thread" class="mdl-layout__content "></div>
 {% disqus_sso_script %}
 <script>
     var disqus_developer = '{{ settings.DEV_SERVER }}' == 'True';
@@ -12,6 +13,7 @@
    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
+</div>
 <!--
 <div class="ds-thread" data-thread-key="{% disqus_id_for object_for_comments %}" data-title="{{ object_for_comments|escapejs }}" data-url="http{% if request.is_secure %}s{% endif %}://{{ request.META.HTTP_HOST }}{{ object_for_comments.get_absolute_url }}"></div>
 <script type="text/javascript">

@@ -81,6 +81,9 @@
     <span class="mdl-layout-title">
       <span class="android-logo-image">PHODAL</span>
     </span>
+        {% nevercache %}
+            {% include "includes/user_panel.html" %}
+        {% endnevercache %}
         <nav class="mdl-navigation">
             {% spaceless %}
             {% page_menu "pages/menus/tree.html" %}
@@ -103,22 +106,14 @@
         {% endnevercache %}
 
         <div class="mdl-grid mdl-cell--12-col">
-            <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope
-                 itemtype="http://schema.org/Article">
+            <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope itemtype="http://schema.org/Article">
                 {% block main %}{% endblock %}
             </div>
 
             <div class="mdl-cell--3-col right">
-                {% nevercache %}
-                {% include "includes/user_panel.html" %}
-                {% endnevercache %}
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        {% block right_panel %}
-                        {% include "includes/user_info.html" %}
-                        {% endblock %}
-                    </div>
-                </div>
+                {% block right_panel %}
+                {% include "includes/user_info.html" %}
+                {% endblock %}
             </div>
         </div>
 

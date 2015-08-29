@@ -2,10 +2,12 @@
 
 {% load mezzanine_tags %}
 
-{% block main %}{{ block.super }}
+{% block main %}
 
+<div class="mdl-card__supporting-text mdl-shadow--2dp post_detail">
+{{ block.super }}
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filters|safe }}
 {% endeditable %}
-
+</div>
 {% endblock %}

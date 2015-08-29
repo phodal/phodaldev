@@ -18,7 +18,5 @@
 {% else %}
     <a href="{% url "login" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
         <span class="glyphicon glyphicon-log-in"></span> {% trans "Log in" %}</a>
-    &nbsp;{% trans "or" %}&nbsp;
-    <a href="{% url "signup" %}?next={{ request.path }}" class="btn mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-        <span class="glyphicon glyphicon-edit"></span> {% trans "Sign up" %}</a>
+    &nbsp;
 {% endif %}

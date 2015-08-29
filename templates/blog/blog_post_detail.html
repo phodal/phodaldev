@@ -84,12 +84,8 @@
 {% endblock %}
 
 <div class="mdl-card__actions mdl-card--border">
-<div class="ideas panel panel-default">
-    <div class="panel-body">
     <img src="{% static "phodal/images/github.png" %} " alt="" width="32" />
     围观<a href="https://github.com/phodal/ideas" alt="phodal's ideas">我的 Idea</a>墙, 也许，你会遇到心仪的项目
-    </div>
-</div>
 
 {% block blog_post_previous_next %}
 <ul class="pager">
@@ -124,12 +120,15 @@
 </div>
 </section>
 
-<h4>?沒有找到想要的,试试站内搜索吧</h4>
-<form action="{% url "search" %}" class="autocomplete2">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">?沒有找到想要的,试试站内搜索吧</h3>
+    </div>
+
+<form action="{% url "search" %}" class="autocomplete2 mdl-card__supporting-text">
 <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
 </form>
-<br/>
-<p>QQ技术交流群: 321689806</p>
+<p class="mdl-card__actions mdl-card--border">QQ技术交流群: 321689806</p>
 <script>
 $('#autocomplete2').autocomplete({
     minChars: 2,
@@ -149,6 +148,7 @@ $('#autocomplete2').autocomplete({
 });
 </script>
 {% endblock %}
+</section>
 
 {% block blog_post_detail_comments %}
 {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
