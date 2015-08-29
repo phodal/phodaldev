@@ -24,6 +24,11 @@ h3 {
     margin-bottom: 10px
 }
 
+.mdl-card__supporting-text p,
+{
+    color: #000;
+}
+
 .right {
   margin-top: 9px;
 }
@@ -63,16 +68,49 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active {
     color: #333
 }
 
+.list-unstyled li a {
+  color: rgb(0, 118, 213);
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer ul li {
+  color: #fff;
+  list-style: none;
+}
+
+footer .center {
+  margin: 0 auto;
+}
+
+footer .mdl-logo {
+  margin: 0 auto;
+}
 
 .list-unstyled {
   padding-left: 0;
   list-style: none;
-  text-decoration: none;
   font-size: 16px;
   line-height: 165%;
   text-decoration: none;
 }
 
+.list-inline {
+    padding-left: 0;
+    list-style: none
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px
+}
+
+.list-inline>li:first-child {
+    padding-left: 0
+}
 
 *,*:before,*:after {
     -webkit-box-sizing: border-box;
@@ -522,257 +560,6 @@ pre {
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
-  }
-
-
-.android-drawer {
-  border-right: none;
-}
-
-  .android-drawer-separator {
-    height: 1px;
-    background-color: #dcdcdc;
-    margin: 8px 0;
-  }
-
-  .android-drawer .mdl-navigation__link.mdl-navigation__link {
-    font-size: 14px;
-    color: #757575;
-  }
-
-  .android-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
-  }
-
-  .android-drawer .mdl-layout-title {
-    position: relative;
-    color: #fff;
-    background: rgb(33,150,243);
-    height: 160px;
-  }
-
-    .android-drawer .android-logo-image {
-      position: absolute;
-      bottom: 16px;
-    }
-
-.android-be-together-section {
-  position: relative;
-  height: 800px;
-  width: auto;
-  background-color: #f3f3f3;
-  background: url('images/slide01.jpg') center 30% no-repeat;
-  background-size: cover;
-}
-
-.android-font {
-  font-family: 'And Black', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1;
-  color: #767777;
-  font-weight: 300;
-}
-
-.android-slogan {
-  font-size: 60px;
-  padding-top: 160px;
-}
-
-.android-sub-slogan {
-  font-size: 21px;
-  padding-top: 24px;
-}
-
-.android-create-character {
-  font-size: 21px;
-  padding-top: 400px;
-}
-
-  .android-create-character a {
-    text-decoration: none;
-    color: #767777;
-    font-weight: 300;
-  }
-
-.android-screen-section {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
-
-.android-screens {
-  text-align: right;
-  width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-.android-screen {
-  text-align: center;
-}
-
-.android-screen .android-link {
-  margin-top: 16px;
-  display: block;
-  z-index: 2;
-}
-
-.android-image-link {
-  text-decoration: none;
-}
-
-.android-wear {
-  display: inline-block;
-  width: 160px;
-  margin-right: 32px;
-}
-
-  .android-wear .android-screen-image {
-    width: 40%;
-    z-index: 1;
-  }
-
-
-.android-phone {
-  display: inline-block;
-  width: 64px;
-  margin-right: 48px;
-}
-
-  .android-phone .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-
-.android-tablet {
-  display: inline-block;
-  width: 110px;
-  margin-right: 64px;
-}
-
-  .android-tablet .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-  .android-tablet .android-link {
-    display: block;
-    z-index: 2;
-  }
-
-
-.android-tv {
-  display: inline-block;
-  width: 300px;
-  margin-right: 80px;
-}
-
-  .android-tv .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-
-.android-auto {
-  display: inline-block;
-  width: 300px;
-  overflow: hidden;
-}
-
-  .android-auto .android-screen-image {
-    display: block;
-    height: 300px;
-    z-index: 1;
-  }
-
-
-.android-wear-section {
-  position: relative;
-  background: url('images/wear.png') center top no-repeat;
-  background-size: cover;
-  height: 800px;
-}
-
-.android-wear-band {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #37474f;
-}
-
-.android-wear-band-text {
-  max-width: 800px;
-  margin-left: 25%;
-  padding: 24px;
-  text-align: left;
-  color: white;
-}
-
-  .android-wear-band-text p {
-    padding-top: 8px;
-  }
-
-.android-link {
-  text-decoration: none;
-  color: #8bc34a !important;
-}
-
-  .android-link:hover {
-    color: #7cb342 !important;
-  }
-
-  .android-link .material-icons {
-    position: relative;
-    top: 6px;
-  }
-
-.android-alt-link {
-  text-decoration: none;
-  color: #64ffda !important;
-  font-size: 16px;
-}
-
-  .android-alt-link:hover {
-    color: #00bfa5 !important;
-  }
-
-  .android-alt-link .material-icons {
-    position: relative;
-    top: 6px;
-  }
-
-.android-customized-section {
-  text-align: center;
-}
-
-.android-customized-section-text {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 80px 16px 0 16px;
-}
-
-  .android-customized-section-text p {
-    padding-top: 16px;
-  }
-
-.android-customized-section-image {
-  background: url('images/devices.jpg') center top no-repeat;
-  background-size: cover;
-  height: 400px;
-}
-
-.android-more-section {
-  padding: 80px 0;
-  max-width: 1044px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-  .android-more-section .android-section-title {
-    margin-left: 12px;
-    padding-bottom: 24px;
   }
 
 .android-card-container {
