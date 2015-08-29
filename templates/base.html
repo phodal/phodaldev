@@ -102,14 +102,16 @@
         {% endif %}
         {% endnevercache %}
 
-        <h1>{% block title %}{% endblock %}</h1>
+        <div class="docs-text-styling component-title">
+            <h2>{% block title %}{% endblock %}</h2>
+        </div>
         <ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/Breadcrumb">
             {% spaceless %}
             {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
             {% endspaceless %}
         </ul>
 
-        <div class="mdl-grid">
+        <div class="mdl-grid mdl-cell--12-col">
             <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope
                  itemtype="http://schema.org/Article">
                 {% block main %}{% endblock %}
