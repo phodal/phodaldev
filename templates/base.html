@@ -53,11 +53,12 @@
 
 <body id="{% block body_id %}body{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
 
+
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">{% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg tagline">{{ settings.SITE_TAGLINE }}</p>{% endif %}</span>
+      <span class="mdl-layout-title">PHODAL</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
@@ -78,11 +79,9 @@
       <a class="mdl-navigation__link" href="">Link</a>
     </nav>
   </div>
-  <main class="mdl-layout__content">
-  </main>
 </div>
 
- <div class="container">
+<div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
 {% nevercache %}
 {% if messages %}
 <div class="messages">
@@ -107,7 +106,7 @@
 </div>
 
 <div class="mdl-components__page mdl-grid">
-    <div class="middle mdl-cell mdl-cell--9-col"  itemscope itemtype="http://schema.org/Article">
+    <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col"  itemscope itemtype="http://schema.org/Article">
         {% block main %}{% endblock %}
     </div>
 
@@ -125,19 +124,15 @@
     </div>
 </div>
 
-<footer>
-<div class="container">
-{% page_menu "pages/menus/footer.html" %}
-
-<div class="row">
-<p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a rel="nofollow" href="http://mezzanine.jupo.org">Mezzanine</a>
-    &
-    <a href="https://github.com/phodal/phodaldev">博客源码(github)</a>
-</p>
-</div>
-</div>
+<footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer--middle-section">
+        {% page_menu "pages/menus/footer.html" %}
+    </div>
+<div class="mdl-mega-footer--bottom-section">
+    <div class="mdl-logo">
+        Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
+    </div>
+  </div>
 </footer>
 {% include "includes/footer_scripts.html" %}
 <script type="application/ld+json">
