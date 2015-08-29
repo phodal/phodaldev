@@ -28,8 +28,8 @@
 
 {% compress css %}
 <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/flat-ui.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "phodal/css/main.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
 {% block extra_css %}
 {% endblock %}
 {% endcompress %}
@@ -40,6 +40,7 @@
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 <script src="{% static "phodal/js/highlight.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
+<script src="{% static "js/material.min.js" %}"></script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
