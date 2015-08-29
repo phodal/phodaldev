@@ -3,8 +3,12 @@
 {% block blog_recent_posts %}
 {% blog_recent_posts 10 as recent_posts %}
 {% if recent_posts %}
-<h3>{% trans "最近文章" %}</h3>
-<ul class="list-unstyled recent-posts">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "最近文章" %}</h3>
+    </div>
+<div class="mdl-card__supporting-text">
+<ul class="list-unstyled">
 {% for recent_post in recent_posts %}
 <li>
     {% spaceless %}
@@ -17,7 +21,8 @@
     {% endspaceless %}
 </li>
 {% endfor %}
-</ul>
+</ul></div>
+</section>
 {% endif %}
 {% endblock %}
 
@@ -26,25 +31,31 @@
 {% block blog_categories %}
 {% blog_categories as categories %}
 {% if categories %}
-<h3>{% trans "分类" %}</h3>
-<ul class="list-unstyled">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "分类" %}</h3>
+    </div>
+<ul class="mdl-card__supporting-text list-unstyled">
 {% for category in categories %}
-{% if category.post_count >= 5 %}
+    {% if category.post_count >= 10 %}
 <li><a href="{% url "blog_post_list_category" category.slug %}"
     >{{ category }}</a> ({{ category.post_count }})</li>
-{% endif %}
+    {% endif %}
 {% endfor %}
-</ul>
+</ul></section>
 {% endif %}
 {% endblock %}
 
 {% block blog_keywords %}
 {% keywords_for blog.blogpost as tags %}
 {% if tags %}
-<h3>{% trans "标签" %}</h3>
-<ul class="list-inline tag-cloud">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "标签" %}</h3>
+    </div>
+<ul class="mdl-card__supporting-text list-unstyled tag-cloud">
 {% for tag in tags %}
-{% if tag.item_count >= 5 %}
+{% if tag.item_count >= 8 %}
 <li>
     <a href="{% url "blog_post_list_tag" tag.slug %}"
         class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
@@ -52,26 +63,33 @@
 </li>
 {% endif %}
 {% endfor %}
-</ul>
+</ul></section>
 {% endif %}
 {% endblock %}
 
 {% block blog_authors %}
 {% blog_authors as authors %}
 {% if authors %}
-<h3>{% trans "作者" %}</h3>
-<ul class="list-unstyled">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "作者" %}</h3>
+    </div>
+<ul class="mdl-card__supporting-text list-unstyled tag-cloud">
 {% for author in authors %}
     <li><a href="{% url "blog_post_list_author" author.username %}"
         >{{ author.get_full_name|default:author.username }}</a>
         ({{ author.post_count }})</li>
 {% endfor %}
-</ul>
+</ul></section>
 {% endif %}
 {% endblock %}
 
 {% block blog_feeds %}
-<h3>{% trans "Feeds" %}</h3>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border">
+        <h3 class="mdl-card__title-text">{% trans "Feeds" %}</h3>
+    </div>
+    <div class="mdl-card__supporting-text list-unstyled">
 {% if tag %}
     <a href="{% url "blog_post_feed_tag" tag.slug "rss" %}">{% trans "RSS" %}</a> /
     <a href="{% url "blog_post_feed_tag" tag.slug "atom" %}">{% trans "Atom" %}</a>
@@ -88,4 +106,6 @@
     <a href="{% url "blog_post_feed" "rss" %}">{% trans "RSS" %}</a> /
     <a href="{% url "blog_post_feed" "atom" %}">{% trans "Atom" %}</a>
 {% endif %}
+    </section>
+</section>
 {% endblock %}

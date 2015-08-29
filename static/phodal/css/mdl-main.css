@@ -8,6 +8,15 @@ body {
   padding-left: 0;
   list-style: none;
   text-decoration: none;
+  font-size: 16px;
+  line-height: 165%;
+  text-decoration: none;
+}
+
+.list-unstyled li a{
+  padding-left: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 .recent-post {
@@ -16,14 +25,7 @@ body {
 
 .recent-post ul {
   margin-bottom: 15px;
-  padding-left: 20px;
-}
-
-.recent-post li a,
- {
-  font-size: 16px;
-  line-height: 165%;
-  text-decoration: none;
+  padding-left: 10px;
 }
 
 .middle section {
