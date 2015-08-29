@@ -4,6 +4,20 @@ body {
     background: url(../images/bg_body.jpg);
 }
 
+h1 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    margin-bottom: 20px
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: bold
+}
+
+h3 {
+    margin-bottom: 10px
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -13,6 +27,41 @@ body {
   text-decoration: none;
 }
 
+
+*,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: .5em 10px;
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: .25em;
+    vertical-align: -.4em
+}
+
+blockquote p {
+    display: inline
+}
+
+blockquote:before,blockquote:after {
+    content: ""
+}
+
+.post_detail {
+  background-color: #fff;
+}
 .list-unstyled li a{
   padding-left: 0;
   list-style: none;
@@ -121,7 +170,6 @@ pre {
 
 .middle {
    background-color: transparent;
-   border-radius: 5px;
 }
 
 .middle img {
