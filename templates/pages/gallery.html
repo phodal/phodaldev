@@ -13,10 +13,11 @@
 {{ page.gallery.content|richtext_filters|safe }}
 {% endeditable %}
 
-<div class="gallery mdl-card__supporting-text mdl-shadow--2dp post_detail">
+<div class="gallery mdl-card__supporting-text mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col mdl-grid post_detail">
+
 {% with page.gallery.images.all as images %}
 {% for image in images %}
-<div class="mdl-cell--3-col">
+<div class="mdl-cell--4-col">
     <a class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}" href="{{ image.file.url }}">
         <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail image.file 131 75 %}">
     </a>
