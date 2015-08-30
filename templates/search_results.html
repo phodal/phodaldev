@@ -16,28 +16,42 @@
 {% endblock %}
 
 {% block main %}
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
+<div class="mdl-card__title mdl-card--border">
+    <p class="mdl-card__title-text">
+    {% if results.paginator.count == 0 %}
+    {% blocktrans %}
+    No results were found in {{ search_type }} matching your query: {{ query }}
+    {% endblocktrans %}
+    {% else %}
+    {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
+    Showing {{ start }} to {{ end }} of {{ total }} results in {{ search_type }} matching your query: {{ query }}
+    {% endblocktrans %}
+    {% endif %}
+    </p>
+</div>
 
-<p>
-{% if results.paginator.count == 0 %}
-{% blocktrans %}
-No results were found in {{ search_type }} matching your query: {{ query }}
-{% endblocktrans %}
-{% else %}
-{% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
-Showing {{ start }} to {{ end }} of {{ total }} results in {{ search_type }} matching your query: {{ query }}
-{% endblocktrans %}
-{% endif %}
-</p>
 
-<div id="search-results">
+<div id="search-results mdl-card__supporting-text">
     {% for result in results.object_list %}
     <h5>{{ forloop.counter0|add:results.start_index }})
-        <a href="{{ result.get_absolute_url }}">{{ result }}</a></h5>
+        <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{ result }}</a></h5>
     <p>{{ result.description|truncatewords_html:20|safe }}</p>
-    <a href="{{ result.get_absolute_url }}">{% trans "read more" %}</a>
+    <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{% trans "read more" %}</a>
+    <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon right" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons" role="presentation">arrow_forward</i>
+            <span class="mdl-button__ripple-container">
+              <span class="mdl-ripple is-animating" style="width: 92.5096679918781px; height: 92.5096679918781px; -webkit-transform: translate(-50%, -50%) translate(22px, 23px); transform: translate(-50%, -50%) translate(22px, 23px);">
+
+              </span>
+          </span>
+    </a>
     {% endfor %}
 </div>
 
+<div class="mdl-card__actions mdl-card--border">
 {% pagination_for results %}
+</div>
 
+</section>
 {% endblock %}
