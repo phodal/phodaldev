@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
-<link rel="canonical" href="http://www.phodal.com{{ blog_post.get_absolute_url }}" />
-<link rel="alternate" hreflang="zh-cn" href="http://www.phodal.com{{ request.get_full_path }}"/>
+<link rel="canonical" href="https://www.phodal.com{{ request.get_full_path }}" />
+<link rel="alternate" hreflang="x-default" href="https://www.phodal.com{{ request.get_full_path }}"/>
 <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
 <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
 <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
@@ -18,7 +18,7 @@
 <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
 <meta name="bitly-verification" content="b4cdaf394c9f"/>
 <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
-<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<title>{% block meta_title %}{% endblock %}  - 手工艺人 {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
 {% ifinstalled mezzanine.blog %}
@@ -27,130 +27,123 @@
 {% endifinstalled %}
 
 {% compress css %}
-<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/flat-ui.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/main.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
 {% block extra_css %}
 {% endblock %}
 {% endcompress %}
 
 {% compress js %}
-{% block extra_js %}
-{% endblock %}
-{% endcompress %}
-<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-<script src="{% static "js/bootstrap.js" %}"></script>
-<script src="{% static "js/bootstrap-extras.js" %}"></script>
-<script src="{% static "phodal/js/highlight.min.js" %}"></script>
+<script src="{% static "mdl/material.min.js" %}"></script>
+<script src="{% static "mdl/jquery.2.1.4.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
 <script async type="text/javascript" src="{% static "phodal/js/jquery.githubRepoWidget.min.js" %}"></script>
-<!--[if lt IE 9]>
-<script src="{% static "js/html5shiv.js" %}"></script>
-<script src="{% static "js/respond.min.js" %}"></script>
-<![endif]-->
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
 {% block extra_head %}{% endblock %}
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" id="{% block body_id %}body{% endblock %}">
+<body itemscope itemtype="http://schema.org/WebPage">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+            <span class="android-title mdl-layout-title">
+              <span class="android-logo-image">{% block title %}{% endblock %}</span>
+            </span>
+            <!-- Add spacer, to align navigation to the right in desktop -->
+            <div class="android-header-spacer mdl-layout-spacer"></div>
+            <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                    <i class="material-icons">search</i>
+                </label>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-    {% if settings.SITE_TITLE %}<a class="navbar-brand brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-    {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg tagline">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-</div>
-<div class="navbar-collapse collapse">
-    {% search_form "all" %}
-    {% page_menu "pages/menus/dropdown.html" %}
-</div>
-</div>
-</div>
-
-<div class="container">
-
-{% nevercache %}
-{% if messages %}
-<div class="messages">
-{% for message in messages %}
-<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    {{ message }}
-</div>
-{% endfor %}
-</div>
-{% endif %}
-{% endnevercache %}
-
-<h1>{% block title %}{% endblock %}</h1>
-
-<ul class="breadcrumb" itemprop="breadcrumb">
-{% spaceless %}
-{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-{% endspaceless %}
-</ul>
-
-</div>
-
-<div class="container">
-<div class="row">
-
-<div class="col-md-2 left">
-    {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
-    {% endblock %}
-</div>
-
-<div class="col-md-7 middle" itemscope itemtype="http://schema.org/Article">
-    {% block main %}{% endblock %}
-</div>
-
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
-    <div class="panel panel-default">
-        <div class="panel-body">
-            {% block right_panel %}
-            {% include "includes/user_info.html" %}
-            {% endblock %}
+                <div class="mdl-textfield__expandable-holder">
+                    {% search_form "all" %}
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="android-navigation-container">
+                <nav class="android-navigation mdl-navigation">
+                    {% page_menu "pages/menus/nav_menu.html" %}
+                </nav>
+            </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <span class="android-logo-image">PHODAL</span>
+          </span>
+        </div>
     </div>
+
+
+    <div class="android-drawer mdl-layout__drawer">
+    <span class="mdl-layout-title">
+      <span class="android-logo-image">PHODAL</span>
+    </span>
+        {% nevercache %}
+            {% include "includes/user_panel.html" %}
+        {% endnevercache %}
+        <nav class="mdl-navigation">
+            {% spaceless %}
+            {% page_menu "pages/menus/tree.html" %}
+            {% endspaceless %}
+        </nav>
+    </div>
+
+    <div class="android-content mdl-layout__content">
+        {% nevercache %}
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endnevercache %}
+
+        <div class="mdl-grid mdl-cell--12-col">
+            <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope itemtype="http://schema.org/Article">
+                {% block main %}{% endblock %}
+            </div>
+
+            <div class="mdl-cell--3-col right">
+                {% block right_panel %}
+                {% include "includes/user_info.html" %}
+                {% endblock %}
+            </div>
+        </div>
+        <div style="overflow: auto;"></div>
+        <footer class="android-footer mdl-mega-footer">
+            <div class="mdl-mega-footer--middle-section mdl-cell--8-col center">
+                {% page_menu "pages/menus/footer.html" %}
+            </div>
+            <div class="mdl-mega-footer--bottom-section mdl-cell--8-col center">
+                <div class="mdl-logo">
+                    Powered by Mezzanine & Django & Material Design Lite
+                    <br />
+                    Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
-
-</div>
-</div>
-
-<footer>
-<div class="container">
-{% page_menu "pages/menus/footer.html" %}
-
-<div class="row">
-<p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
-</p>
-</div>
-</div>
-</footer>
 
 {% include "includes/footer_scripts.html" %}
-<script type="text/javascript">
-  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5e0c2916786cd655772b8e3cae632c05' type='text/javascript'%3E%3C/script%3E"));
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://www.phodal.com/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://www.phodal.com/search/?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+}
 </script>
-
 </body>
 </html>
