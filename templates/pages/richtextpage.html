@@ -4,10 +4,12 @@
 
 {% block main %}
 
-<div class="mdl-card__supporting-text mdl-shadow--2dp post_detail">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
 {{ block.super }}
+<div class="mdl-card__supporting-text post_detail">
 {% editable page.richtextpage.content %}
 {{ page.richtextpage.content|richtext_filters|safe }}
 {% endeditable %}
 </div>
 {% endblock %}
+</section>
