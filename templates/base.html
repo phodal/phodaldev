@@ -29,8 +29,6 @@
 {% compress css %}
 <link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
-{% block extra_css %}
-{% endblock %}
 {% endcompress %}
 
 {% compress js %}
@@ -38,10 +36,10 @@
 <script src="{% static "mdl/jquery.2.1.4.min.js" %}"></script>
 <script src="{% static "phodal/js/highlight.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
-{% block extra_js %}{% endblock %}
-{% endcompress %}
-
+{% block extra_js %}
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+{% endcompress %}
 
 {% block extra_head %}{% endblock %}
 </head>
