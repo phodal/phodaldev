@@ -411,11 +411,11 @@ pre {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'),
+  src: local('Material Icons'), local('MaterialIcons'),
+        url(../../mdl/fonts/MaterialIcons.woff2) format('woff2'),
         url(../../mdl/fonts/MaterialIcons.ttf) format('ttf'),
-        url(../../mdl/fonts/MaterialIcons.woff) format('woff'),
-        url(../../mdl/fonts/MaterialIcons.woff2) format('woff2');
-}
+        url(../../mdl/fonts/MaterialIcons.woff) format('woff');
+  }
 
 .material-icons {
   font-family: 'Material Icons';
