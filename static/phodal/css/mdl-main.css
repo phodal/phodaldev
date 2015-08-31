@@ -666,3 +666,54 @@ pre {
     width: 200%;
   }
 }
+
+
+/**** Mobile layout ****/
+@media (max-width: 750px) {
+  .android-navigation-container {
+    display: none;
+  }
+
+  .android-title {
+    display: none !important;
+  }
+
+  .android-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(10% );
+    top: 0px;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .android-mobile-title span.android-logo-image {
+    top: 16px;
+    left: 14px;
+    position: relative;
+  }
+
+  .android-mobile-title span.android-logo-image h2 {
+    top: -16px;
+    left: -14px;
+    position: relative;
+  }
+
+  .android-mobile-title h2.mdl-card__title-text {
+     font-size: 1em;
+  }
+  .android-search-box.is-focused ~ .android-mobile-title {
+    opacity: 0;
+  }
+
+  .android-more-button {
+    display: none;
+  }
+
+  .android-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .android-search-box .mdl-textfield__expandable-holder {
+    width: 200%;
+  }
+}
