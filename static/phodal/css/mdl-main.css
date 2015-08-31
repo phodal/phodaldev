@@ -411,7 +411,10 @@ pre {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../../mdl/fonts/MaterialIcons-Regular.woff2) format('woff2');
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+        url(../../mdl/fonts/MaterialIcons.ttf) format('ttf'),
+        url(../../mdl/fonts/MaterialIcons.woff) format('woff'),
+        url(../../mdl/fonts/MaterialIcons.woff2) format('woff2');
 }
 
 .material-icons {
