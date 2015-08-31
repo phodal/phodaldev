@@ -475,25 +475,14 @@ pre {
   width: auto;
 }
 
-.android-fab {
-  position: absolute;
-  right: 20%;
-  bottom: -26px;
-  z-index: 3;
-  background: #64ffda !important;
-  color: black !important;
-}
-
 .android-mobile-title {
   display: none !important;
 }
-
 
 .android-logo-image {
   height: 28px;
   width: 140px;
 }
-
 
 .android-header {
   overflow: visible;
@@ -638,11 +627,9 @@ pre {
     top: 6px;
   }
 
-
 .android-link-menu:hover {
   cursor: pointer;
 }
-
 
 /**** Mobile layout ****/
 @media (max-width: 900px) {
@@ -677,43 +664,5 @@ pre {
 
   .android-search-box .mdl-textfield__expandable-holder {
     width: 200%;
-  }
-
-  .android-be-together-section {
-    height: 350px;
-  }
-
-  .android-slogan {
-    font-size: 26px;
-    margin: 0 16px;
-    padding-top: 24px;
-  }
-
-  .android-sub-slogan {
-    font-size: 16px;
-    margin: 0 16px;
-    padding-top: 8px;
-  }
-
-  .android-create-character {
-    padding-top: 200px;
-    font-size: 16px;
-  }
-
-  .android-create-character img {
-    height: 12px;
-  }
-
-  .android-fab {
-    display: none;
-  }
-
-  .android-wear-band-text {
-    margin-left: 0;
-    padding: 16px;
-  }
-
-  .android-footer .mdl-mega-footer--bottom-section {
-    display: none;
   }
 }
