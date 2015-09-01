@@ -2,7 +2,6 @@
 
 {% spaceless %}
 {% if page_branch_in_menu %}
-  <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
   {% for page in page_branch %}
   {% if page.in_menu %}
     <a href="{{ page.get_absolute_url }}" id="tree-menu-{{ page.html_id }}"

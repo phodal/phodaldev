@@ -88,6 +88,7 @@
         {% endnevercache %}
         <nav class="mdl-navigation">
             {% spaceless %}
+   	      <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
             {% page_menu "pages/menus/tree.html" %}
             {% endspaceless %}
         </nav>
