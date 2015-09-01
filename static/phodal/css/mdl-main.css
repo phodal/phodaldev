@@ -717,3 +717,8 @@ pre {
     width: 200%;
   }
 }
+
+span.mdl-layout-title.left-menu {
+  height: 88px;
+  color: rgb(33,150,243);
+}
