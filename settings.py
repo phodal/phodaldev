@@ -253,14 +253,15 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
-    "macros",
-    "feed",
-    "blogapi",
     #"mezzanine.twitter",
     "mezzanine.accounts",
     # "mezzanine.mobile",
     "mezzanine_pagedown",
-    "tastypie"
+    "tastypie",
+    "macros",
+    "feed",
+    "rest_framework",
+    "blogapi"
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'

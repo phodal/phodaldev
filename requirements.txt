@@ -4,3 +4,4 @@ django-tastypie
 mezzanine-pagedown
 newrelic==2.50.0.39
 django-macros==0.4.0
+djangorestframework==3.2.3
