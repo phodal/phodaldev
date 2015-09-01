@@ -63,8 +63,8 @@ class BaseCorsResource(Resource):
 class AllBlogSlugResource(BaseCorsResource, ModelResource):
     class Meta:
         queryset = BlogPost.objects.published()
-        resource_name = "url"
-        fields = ['keywords_string', 'slug', 'title']
+        resource_name = "app"
+        fields = ['keywords_string', 'slug', 'title', 'id']
         allowed_methods = ['get']
         serializer = Serializer()
         cache = SimpleCache(timeout=100)
@@ -77,7 +77,7 @@ class BlogResource(BaseCorsResource, ModelResource):
     class Meta:
         queryset = BlogPost.objects.published()
         resource_name = "blog"
-        fields = ['keywords_string', 'slug', 'title', 'content', 'description']
+        fields = ['keywords_string', 'slug', 'title', 'content', 'description', 'id']
         allowed_methods = ['get']
         serializer = Serializer()
         cache = SimpleCache(timeout=10)

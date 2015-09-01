@@ -261,6 +261,7 @@ INSTALLED_APPS = (
     "macros",
     "feed",
     "rest_framework",
+    "corsheaders",
     "blogapi"
 )
 
@@ -298,6 +299,7 @@ MIDDLEWARE_CLASSES = (
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -383,3 +385,10 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost',
+    '*.phodal.com'
+)
