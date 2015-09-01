@@ -48,7 +48,7 @@ class BaseCorsResource(Resource):
             response = HttpResponse(allows)
             response['Access-Control-Allow-Origin'] = '*'
             response['Access-Control-Allow-Headers'] = 'Content-Type'
-            response['Access-Control-Allow-Methods'] = "GET, PUT, POST, PATCH"
+            response['Access-Control-Allow-Methods'] = "GET"
             response['Allow'] = allows
             raise ImmediateHttpResponse(response=response)
 
