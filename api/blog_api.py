@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+import itertools
 from mezzanine.blog.models import BlogPost
 from rest_framework import serializers, viewsets
 from rest_framework import filters
@@ -45,9 +46,20 @@ class BlogpostDetailSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('title', 'slug', 'description', 'content', 'id', 'date', 'user')
 
 
-class BlogpostDetailSet(viewsets.ModelViewSet):
-    queryset = BlogPost.objects.filter(status=2)[:20]
-    serializer_class = BlogpostDetailSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
-    filter_backends = (filters.SearchFilter,)
+class BlogpostDetailSet(viewsets.ReadOnlyModelViewSet):
+    queryset = BlogPost.objects.filter(status=2)
     search_fields = ('title', 'slug')
+
+    def list(self, request):
+        queryset = BlogPost.objects.filter(status=2)[:10]
+
+        search_param = self.request.query_params.get('search', None)
+        if search_param is not None:
+            queryset = BlogPost.objects.filter(title__contains=search_param, status=2)[:10]
+
+        search_param = self.request.query_params.get('search_slug', None)
+        if search_param is not None:
+            queryset = BlogPost.objects.filter(slug__contains=search_param, status=2)[:10]
+
+        serializer = BlogpostDetailSerializer(queryset, many=True)
+        return Response(serializer.data)
