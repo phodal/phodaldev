@@ -1,12 +1,12 @@
 from django.contrib.auth.models import User
-import itertools
 from mezzanine.blog.models import BlogPost
 from rest_framework import serializers, viewsets
 from rest_framework import filters
-from rest_framework.decorators import detail_route
+from rest_framework.decorators import detail_route, api_view
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import renderers
+from rest_framework import status
 
 
 class BlogpostListSerializer(serializers.HyperlinkedModelSerializer):
@@ -26,7 +26,6 @@ class BlogpostListSet(viewsets.ReadOnlyModelViewSet):
     def highlight(self, request, *args, **kwargs):
         snippet = self.get_object()
         return Response(snippet.highlighted)
-
 
 class BlogpostDetailSerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.SerializerMethodField('get_username_by_id')
@@ -63,3 +62,15 @@ class BlogpostDetailSet(viewsets.ReadOnlyModelViewSet):
 
         serializer = BlogpostDetailSerializer(queryset, many=True)
         return Response(serializer.data)
+
+class BlogpostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogPost
+
+@api_view(['POST'])
+def create_blog(request):
+    serializer = BlogpostSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
