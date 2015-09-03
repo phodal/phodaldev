@@ -68,7 +68,7 @@ class BlogpostSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @authentication_classes([JSONWebTokenAuthentication])
 @permission_classes((IsAuthenticated,))
 def create_blog(request):
