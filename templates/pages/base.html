@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% load pages_tags mezzanine_tags i18n future staticfiles macros %}
 
 <head>
 <meta http-equiv="content-language" content="zh-CN" />
@@ -45,12 +45,16 @@
 {% block extra_head %}{% endblock %}
 </head>
 
+{% macro page_title %}
+    <span class="android-logo-image">{% block title %}{% endblock %}</span>
+{% endmacro %}
+
 <body itemscope itemtype="http://schema.org/WebPage">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
             <span class="android-title mdl-layout-title">
-              <span class="android-logo-image">{% block title %}{% endblock %}</span>
+              {% use_macro page_title %}
             </span>
             <!-- Add spacer, to align navigation to the right in desktop -->
             <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -70,14 +74,14 @@
                 </nav>
             </div>
           <span class="android-mobile-title mdl-layout-title">
-            <span class="android-logo-image">PHODAL</span>
+            {% use_macro page_title %}
           </span>
         </div>
     </div>
 
 
     <div class="android-drawer mdl-layout__drawer">
-    <span class="mdl-layout-title">
+    <span class="mdl-layout-title left-menu">
       <span class="android-logo-image">PHODAL</span>
     </span>
         {% nevercache %}
@@ -85,6 +89,7 @@
         {% endnevercache %}
         <nav class="mdl-navigation">
             {% spaceless %}
+   	        <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
             {% page_menu "pages/menus/tree.html" %}
             {% endspaceless %}
         </nav>
