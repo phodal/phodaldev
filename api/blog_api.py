@@ -2,7 +2,8 @@ from django.contrib.auth.models import User
 from mezzanine.blog.models import BlogPost
 from rest_framework import serializers, viewsets
 from rest_framework import filters
-from rest_framework.decorators import detail_route, api_view
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework.decorators import detail_route, api_view, permission_classes, authentication_classes
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import renderers
@@ -68,7 +69,10 @@ class BlogpostSerializer(serializers.ModelSerializer):
         model = BlogPost
 
 @api_view(['POST'])
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes((IsAuthenticated,))
 def create_blog(request):
+
     serializer = BlogpostSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()

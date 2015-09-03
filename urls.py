@@ -49,6 +49,9 @@ urlpatterns += patterns('',
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),
     url(r"^api/app/", include("api.urls")),
+    url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
+    url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),
+    url(r'^api-token-verify/', 'rest_framework_jwt.views.verify_jwt_token'),
     url("^", include("mezzanine.urls")),
 )
 
