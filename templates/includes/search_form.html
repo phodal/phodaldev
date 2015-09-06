@@ -11,7 +11,7 @@
 $('.autocomplete').autocomplete({
     minChars: 2,
     width: 350,
-    serviceUrl: '/api/v1/url/?limit=20&format=json&',
+    serviceUrl: '/api/v1/app/?limit=20&format=json&',
     paramName: 'title__contains',
     transformResult: function(response) {
         var result = [];
