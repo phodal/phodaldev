@@ -15,3 +15,9 @@ _gaq.unshift(['_setAccount', '{{ settings.GOOGLE_ANALYTICS_ID }}']);
 })(document, 'script');
 {% endif %}
 </script>
+<script>
+$( document ).ready(function() {
+    $('.middle.mdl-layout__content').css('z-index', 'initial');
+    $('.android-content.mdl-layout__content').css('z-index', 'initial');
+});
+</script>
