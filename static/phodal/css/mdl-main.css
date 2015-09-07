@@ -736,3 +736,8 @@ span.mdl-layout-title.left-menu {
 .middle h2.mdl-card__title-text a {
   text-decoration: none;
 }
+
+.android-search-box .mdl-textfield__input{
+  position:relative;
+  right: 20px;
+}
