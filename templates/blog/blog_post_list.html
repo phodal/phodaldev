@@ -60,11 +60,11 @@
 
 {% if tag or category or year or month or author %}
     {% block blog_post_list_filterinfo %}
-    <p>
+    <h2 class="section--center mdl-grid mdl-cell--11-col">
     {% if tag %}
-        {% trans "Viewing posts tagged" %} {{ tag }}
+        {% trans "查看标签" %} {{ tag }}
     {% else %}{% if category %}
-        {% trans "Viewing posts for the category" %} {{ category }}
+        {% trans "查看分类" %} {{ category }}
     {% else %}{% if year or month %}
         {% trans "Viewing posts from" %} {% if month %}{{ month }}, {% endif %}
         {{ year }}
@@ -73,7 +73,7 @@
         {{ author.get_full_name|default:author.username }}
     {% endif %}{% endif %}{% endif %}{% endif %}
     {% endblock %}
-    </p>
+    </h2>
 {% else %}
     {% if page %}
     {% block blog_post_list_pagecontent %}
