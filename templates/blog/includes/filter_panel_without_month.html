@@ -4,7 +4,7 @@
 {% blog_recent_posts 10 as recent_posts %}
 {% if recent_posts %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "最近文章" %}</h3>
     </div>
 <div class="mdl-card__supporting-text">
@@ -32,7 +32,7 @@
 {% blog_categories as categories %}
 {% if categories %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "分类" %}</h3>
     </div>
 <ul class="mdl-card__supporting-text list-unstyled">
@@ -50,7 +50,7 @@
 {% keywords_for blog.blogpost as tags %}
 {% if tags %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "标签" %}</h3>
     </div>
 <ul class="mdl-card__supporting-text list-unstyled tag-cloud">
@@ -71,7 +71,7 @@
 {% blog_authors as authors %}
 {% if authors %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "作者" %}</h3>
     </div>
 <ul class="mdl-card__supporting-text list-unstyled tag-cloud">
@@ -86,7 +86,7 @@
 
 {% block blog_feeds %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "Feeds" %}</h3>
     </div>
     <div class="mdl-card__supporting-text list-unstyled">
