@@ -731,3 +731,8 @@ span.mdl-layout-title.left-menu {
 .tag-cloud li {
   display:inline-block;
 }
+
+.author a,
+.middle h2.mdl-card__title-text a {
+  text-decoration: none;
+}
