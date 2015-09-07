@@ -1,12 +1,17 @@
 {% load mezzanine_tags i18n future %}
-<div itemscope itemtype="http://schema.org/WebSite">
- <meta itemprop="url" content="http://www.phodal.com/" />
     <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-    <meta itemprop="target" content="http://www.phodal.com/search/?q={search_term_string}"/>
     <div class="mdl-textfield__expandable-holder">
         <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
     </div>
-
+    <button style="top: 20px" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons" role="presentation">search</i>
+        <span class="visuallyhidden">Search</span>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple is-animating"
+                  style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(45px, 21px);">
+            </span>
+          </span>
+    </button>
  <script>
 $('.autocomplete').autocomplete({
     minChars: 2,
@@ -28,5 +33,4 @@ $('.autocomplete').autocomplete({
 </script>
 
     <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
-    </form>
-</div>
+</form>
