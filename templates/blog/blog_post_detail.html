@@ -30,13 +30,13 @@
 <div class="mdl-card__supporting-text">
 {% block blog_post_detail_postedby %}
 {% editable blog_post.publish_date %}
-<h6 class="post-meta">
+<span class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
     <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
     <span itemprop="datePublished" >{% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</span>
-</h6>
+</span>
 {% endeditable %}
 {% endblock %}
 {% block blog_post_detail_commentlink %}
@@ -69,23 +69,25 @@
 {% endblock %}
 </div>
 
-{% block blog_post_detail_keywords %}
-{% keywords_for blog_post as tags %}
-{% if tags %}
-{% spaceless %}
-<ul class="list-inline tags">
-    <li>{% trans "Tags" %}:</li>
-    {% for tag in tags %}
-    <li><a href="{% url "blog_post_list_tag" tag.slug %}">{{ tag }}</a></li>
-    {% endfor %}
-</ul>
-{% endspaceless %}
-{% endif %}
-{% endblock %}
-
 <div class="mdl-card__actions mdl-card--border">
+    {% block blog_post_detail_keywords %}
+    {% keywords_for blog_post as tags %}
+    {% if tags %}
+    {% spaceless %}
+    <p>
+        <ul class="list-inline tags">
+            <li>{% trans "标签" %}:</li>
+            {% for tag in tags %}
+            <li><a href="{% url "blog_post_list_tag" tag.slug %}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    </p>
+    {% endspaceless %}
+    {% endif %}
+    {% endblock %}
+
     <img src="{% static "phodal/images/github.png" %} " alt="" width="32" />
-    围观<a href="https://github.com/phodal/ideas" alt="phodal's ideas">我的 Idea</a>墙, 也许，你会遇到心仪的项目
+    围观<a href="https://github.com/phodal/ideas" alt="phodal's ideas">我的 Idea 墙</a>, 也许，你会遇到心仪的项目
 </div>
 </section>
 
@@ -97,18 +99,14 @@
     <div class="mdl-card__supporting-text">
         如果你看过《领域特定语言》《重构－改善既有代码的设计》、《UML精粹：标准对象建模语言简明指南》、《分析模式：可重用的对象模型》、
         《企业应用架构模式》、《NoSQL精粹》等等的书籍，也来看看他们的作者是如何工作的?
-        <h2>地点：</h2>
+        <h2>工作地点：</h2>
         <ul>
             <li>西安（9月21-22）</li>
             <li>成都（10月12-13）</li>
-            <li>武汉大学 10月13日, 华中科技大学 10月14日</li>
+            <li>武汉: 武汉大学 10月13日, 华中科技大学 10月14日</li>
             <li>北京（10月21-23）</li>
         </ul>
-        还有
-        <ul>
-            <li>上海</li>
-            <li>深圳</li>
-        </ul>
+        请就近选择办公室~~。
     </div>
     <p class="mdl-card__actions mdl-card--border">详情见官网: <a href="http://join.thoughtworkschina.com/"
                                                             title="ThoughtWorks 校招">http://join.thoughtworkschina.com/</a>
