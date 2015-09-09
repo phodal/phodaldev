@@ -86,18 +86,6 @@
 <div class="mdl-card__actions mdl-card--border">
     <img src="{% static "phodal/images/github.png" %} " alt="" width="32" />
     围观<a href="https://github.com/phodal/ideas" alt="phodal's ideas">我的 Idea</a>墙, 也许，你会遇到心仪的项目
-
-{% block blog_post_detail_related_posts %}
-{% if blog_post.related_posts.all %}
-<div id="related-posts">
-<h4>{% trans '或许您还需要' %}</h4>
-<ul class="list-unstyled">
-{% for post in blog_post.related_posts.all %}
-     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
 </div>
 </section>
 
@@ -129,31 +117,44 @@
 
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
-        <h3 class="mdl-card__title-text">?沒有找到想要的,试试站内搜索吧</h3>
+        <h3 class="mdl-card__title-text">或许您还需要</h3>
     </div>
 
-<form action="{% url "search" %}" class="autocomplete2 mdl-card__supporting-text">
-<input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
-</form>
-<p class="mdl-card__actions mdl-card--border">QQ技术交流群: 321689806</p>
-<script>
-$('#autocomplete2').autocomplete({
-    minChars: 2,
-    serviceUrl: '/api/v1/app/?limit=20&format=json&',
-    paramName: 'title__contains',
-    transformResult: function(response) {
-        var result = [];
-        $.each(JSON.parse(response).objects, function(index, dataItem) {
-            result.push({value: dataItem.title, data: dataItem.slug});
-        });
+    <div class="mdl-card__supporting-text">
+        {% block blog_post_detail_related_posts %}
+    {% if blog_post.related_posts.all %}
+    <div id="related-posts">
+    <ul class="list-unstyled">
+    {% for post in blog_post.related_posts.all %}
+     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
 
-        return { suggestions: result }
-    },
-    onSelect: function (suggestion) {
-        window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
-    }
-});
-</script>
+    <form action="{% url "search" %}" class="autocomplete2 ">
+    <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+    </form>
+    </div>
+    <p class="mdl-card__actions mdl-card--border">QQ技术交流群: 321689806</p>
+    <script>
+    $('#autocomplete2').autocomplete({
+        minChars: 2,
+        serviceUrl: '/api/v1/app/?limit=20&format=json&',
+        paramName: 'title__contains',
+        transformResult: function(response) {
+            var result = [];
+            $.each(JSON.parse(response).objects, function(index, dataItem) {
+                result.push({value: dataItem.title, data: dataItem.slug});
+            });
+
+            return { suggestions: result }
+        },
+        onSelect: function (suggestion) {
+            window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
+        }
+    });
+    </script>
 {% endblock %}
 </section>
 
