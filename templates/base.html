@@ -3,6 +3,8 @@
 {% load pages_tags mezzanine_tags i18n future staticfiles macros %}
 
 <head>
+<title>{% block meta_title %}{% endblock %}  - 手工艺人 {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+
 <meta http-equiv="content-language" content="zh-CN" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +20,12 @@
 <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
 <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
 <meta name="bitly-verification" content="b4cdaf394c9f"/>
-<link rel="author" href="https://plus.google.com/108569130336274162470/posts">
-<title>{% block meta_title %}{% endblock %}  - 手工艺人 {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="author" href="https://plus.google.com/108569130336274162470/posts" content="Phodal Huang">
 <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
+<meta name="google-play-app" content="app-id=com.phodal.blog">
+<link rel="android-touch-icon" href="{% static "phodal/images/android-icon.png" %}" />
+<link rel="apple-touch-icon" href="{% static "phodal/images/android-icon.png" %}" />
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
 <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
@@ -37,8 +41,21 @@
 <script src="{% static "mdl/jquery.2.1.4.min.js" %}"></script>
 <script src="{% static "phodal/js/highlight.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
+<script src="{% static "phodal/js/jquery.smartbanner.js" %}"></script>
 {% block extra_js %}
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+$(function() {
+ $.smartbanner({
+  title: 'Phodal"s Blog', // What the title of the app should be in the banner (defaults to <title>)
+  author: "Phodal Huang", // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+  price: 'FREE', // Price of the app
+  inGooglePlay: 'In Google Play', // Text of price for Android
+  button: '测试', // Text for the install button
+  appendToSelector: 'body'
+ })
+});
+</script>
 {% endblock %}
 {% endcompress %}
 
