@@ -69,7 +69,7 @@
         {% trans "Viewing posts from" %} {% if month %}{{ month }}, {% endif %}
         {{ year }}
     {% else %}{% if author %}
-        {% trans "Viewing posts by" %}
+        {% trans "查看作者" %}
         {{ author.get_full_name|default:author.username }}
     {% endif %}{% endif %}{% endif %}{% endif %}
     {% endblock %}
