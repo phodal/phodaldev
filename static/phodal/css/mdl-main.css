@@ -770,3 +770,7 @@ span.mdl-layout-title.left-menu {
 #smartbanner.android .sb-button:active span, #smartbanner.android .sb-button:hover span { background:#2AC7E1; }
 
 #smartbanner.windows .sb-icon { border-radius: 0px; }
+
+form.login {
+    width: 100%;
+}

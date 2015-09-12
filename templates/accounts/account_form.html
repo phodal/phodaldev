@@ -14,15 +14,23 @@
 
 {% errors_for form %}
 
-<form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-    <fieldset>
-    <legend>{{ title }}</legend>
-    {% fields_for form %}
-    <div class="form-actions">
-        {% block account_form_actions %}
-        <input class="btn pull-right mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="{{ title }}">
-        {% endblock %}
-    </div>
-    </fieldset>
-</form>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
+    <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %} class="login">
+        <fieldset>
+        <div class="mdl-card__title mdl-card--expand">
+            <legend class="mdl-card__title-text">{{ title }}</legend>
+        </div>
+
+        <div class="mdl-card__supporting-text">
+        {% fields_for form %}
+        </div>
+
+        <div class="mdl-card__actions mdl-card--expand">
+            {% block account_form_actions %}
+            <input class="right mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="{{ title }}">
+            {% endblock %}
+        </div>
+        </fieldset>
+    </form>
+</section>
 {% endblock %}
