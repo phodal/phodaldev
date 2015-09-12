@@ -1,26 +1,137 @@
 {% extends "base2.html" %}
-{% load i18n %}
+<!doctype html>
+<html lang="zh-cmn-Hans">
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-{% block meta_title %}{% trans "狼和凤凰 - ThoughtWorker" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
-{% block meta_keywords %}{% trans "Phodal,Geek's life,Phodal Huang,IOT,黄峰达" %}{% endblock %}
-{% block meta_description %}{% trans "唯一的公平是——它是不公平的。Phodal's博客，分享心得、思想、体会，从博客到写作，从写作到设计。狼和凤凰一起追逐龙,龙消失了。。。"%}{% endblock %}
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
+<head>
+    <meta http-equiv="content-language" content="zh-CN" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <link rel="canonical" href="https://www.phodal.com{{ blog_post.get_absolute_url }}" />
+    <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
+    <link rel="alternate" href="https://www.phodal.com{{ request.get_full_path }}" hreflang="x-default" />
+    <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
+    <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
+    <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
+    <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+    <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
+    <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+    <meta name='yandex-verification' content='7c80fea3c6548a5a' />
+    <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
+    <meta name="bitly-verification" content="b4cdaf394c9f"/>
+    <meta name="alexaVerifyID" content="ZZ-ekHwAaTl4lob12WYzKLimR58"/>
+    <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
+    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
-{% block main %}
-{% blocktrans %}
+    {% ifinstalled mezzanine.blog %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+    {% endifinstalled %}
 
-<div itemscope itemtype='http://schema.org/Article'><h3><span itemprop='name'>青玉案</span></h3>
-<p itemprop="text">
-笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。<br />
-天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
+    {% block extra_css %}{% endblock %}
+    {% endcompress %}
+
+    {% compress js %}
+    {% block extra_js %}{% endblock %}
+    {% endcompress %}
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<div class="container">
+
+    {% nevercache %}
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endnevercache %}
+
 </div>
 
-<div itemscope itemtype='http://schema.org/Article'><h3>
-<span itemprop='name'>鹧鸪天</span></h3>
-<p itemprop="text">昔誓昔盟或可期，东风恨恨卷青丝。相思忍对新醅酒，寂寞怕开却月门。<br/>情缱绻，梦依稀。忽惊三月燕归迟。天涯何必歌长恨，为有君心似旧时。</p>
+<div id="layout">
+    <div class="pure-g-r content">
+        <div class="pure-u-1-4 white"></div>
+        <div class="pure-u-3-4">
+            <div id="window">
+                <div id="toolbar">
+                    <div class="top">
+                        <div id="bubble">
+                            <div class="shine"></div>
+                            <div class="glow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="body" itemscope itemtype="http://schema.org/Person" style="font-family:mypriad;">
+                    <p>The only fair is - It is not fair</p>
+                    <p>fdHuang$ <span > python -v </span>
+                        <br /><span itemprop="affiliation">Python 2.7.5 </span></p>
+                    <p>fdHuang$ <span >  pwd</span>
+                        <br /><span itemprop="jobTitle">Program</span><span> 2002</span>
+                        <br /><span itemprop="jobTitle">Writer</span><span>  2008</span>
+                        <br /><span itemprop="jobTitle">Designer</span><span>  2006</span>
+                    </p>
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">fdHuang$ <span > !pwd</span>
+                        <br /><span itemprop="addressLocality">Xi'an</span><span itemprop="addressRegion"> Shannxi</span><span>, China ,Asia</span>
+                    </p>
+                    <p>fdHuang$ <span>more phodal</span>
+                        <br /> <span>一个正在成长的架构师，擅长前端、SEO、硬件的``ThoughtWorker``...</span>
+                    </p>
+                    <p class="poem">fdHuang$ <span> mail</span> <a href="mailto:h@phodal.com" itemprop="email"><span>h@phodal.com</span></a> </p>
+                    <div class="cursor"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="legal">
+
+            <div class="pcb">
+                <div class="pure-g-r">
+                    <div class="pure-u-1-4">
+                        <div class="l-box"></div>
+                    </div>
+                    <div class="pure-u-3-4">
+                        <div class="pure-menu pure-menu-open pure-menu-horizontal l-box">
+                            <ul class="breadcrumb" itemprop="breadcrumb">
+                                <li class="pure-menu-selected"><a href="/blog/"><h3>Blog</h3></a></li>
+                                <li class="pure-menu-selected"><a href="https://github.com/phodal"><h3>Github</h3></a>
+                                </li>
+                                <li class="pure-menu-selected">
+                                    <a href="http://read.douban.com/column/1495756/"><h3>青春没有bug</h3></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <br />
+                        <br />
+                        <code class="poem" itemscope itemtype="http://schema.org/Article">
+                            <h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
+                            <p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
+                            <p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{% endblocktrans %}
-{% endblock %}
+</div>
+</div>
+</footer>
+</body>
+</html>
