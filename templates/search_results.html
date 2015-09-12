@@ -32,7 +32,7 @@
 </div>
 
 
-<div id="search-results mdl-card__supporting-text">
+<div id="search-results" class="mdl-card__supporting-text">
     {% for result in results.object_list %}
     <h5>{{ forloop.counter0|add:results.start_index }})
         <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{ result }}</a></h5>
