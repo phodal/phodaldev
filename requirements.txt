@@ -7,3 +7,4 @@ django-macros==0.4.0
 djangorestframework==3.2.3
 django-cors-headers
 djangorestframework-jwt
+django-widget-tweaks==1.4.1
