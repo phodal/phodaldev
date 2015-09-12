@@ -43,9 +43,11 @@ urlpatterns += patterns("feed.view",
        "blog_post_feed", name="blog_post_feed")
 )
 
+urlpatterns += patterns("homepage.views",
+    url("^$", "homepage", name="home"),
+)
 
 urlpatterns += patterns('',
-    url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),
     url(r"^api/app/", include("api.urls")),

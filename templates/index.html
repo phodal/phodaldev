@@ -118,11 +118,19 @@
                         </div>
                         <br />
                         <br />
-                        <code class="poem" itemscope itemtype="http://schema.org/Article">
-                            <h2 itemprop="name">青玉案</h2>By <a href="http://www.hug8217.com" itemprop="author">Hug8217</a>
-                            <p itemprop="text">笔走云汉千里路，唯目送，冬归去。日暖春光，雕窗朱户，独抿清茶苦。</p>
-                            <p itemprop="text">天上人间情归处，南北隔，东西默。欲问相思，不问相思，三世与君知。</p>
-                        </code>
+                        {% for blog_post in blog_posts.object_list %}
+                        {% block blog_post_list_post_title %}
+                        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
+                        {% editable blog_post.title %}
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">
+                                <a href="{{ blog_post.get_absolute_url }}"  itemprop="name">{{ blog_post.title }}</a>
+                            </h2>
+                        </div>
+                        {% endeditable %}
+                        </section>
+                        {% endblock %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>

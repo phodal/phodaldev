@@ -259,6 +259,7 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     # "mezzanine.mobile",
     "widget_tweaks",
+    "homepage",
     "mezzanine_pagedown",
     "tastypie",
     "macros",
