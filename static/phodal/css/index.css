@@ -1,11 +1,30 @@
-body {
-    padding: 0;
-    margin:0 auto;
+h1, h2, h3, h4, body, p, a {
+    font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans", "Inconsolata","Roboto","Helvetica Neue","Verdana", "Tahoma" ,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","sans-serif";
 }
 
-h1, h2, h3, h4, body, p, a,
-.h1, .h2, .h3, .h4, .h5, .h6, code, kbd, pre, samp {
-    font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans", "Inconsolata", , "Roboto","Helvetica Neue","Segoe UI","Verdana", "Tahoma" ,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","sans-serif";
+.nav {
+    width: 960px;
+    margin: 0 auto;
+    text-transform: uppercase
+}
+
+.home-menu ul {
+    float: right;
+}
+
+.header {
+    padding: 0.5em;
+    width: 36px;
+}
+
+.supernav{
+    margin: 0;
+    text-align: right;
+    padding: 0;
+}
+
+.supernav ul li a {
+    font-size: 12px;
 }
 
 #body {
