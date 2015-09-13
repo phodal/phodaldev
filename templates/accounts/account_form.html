@@ -22,7 +22,7 @@
         </div>
 
         <div class="mdl-card__supporting-text">
-        {% fields_for form %}
+        {% fields_for form|add_class:"mdl-textfield__input" %}
         </div>
 
         <div class="mdl-card__actions mdl-card--expand">
