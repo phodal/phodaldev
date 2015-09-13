@@ -1,73 +1,14 @@
 body {
+    padding: 0;
     margin:0 auto;
-    background: url(../images/pcb_background.jpg);
-}
-.footer {
-    position: relative;
-    background:url(../images/pcb_background.png) repeat;
-    height: 100%;
-    width: 100%;
-}
-.pcb {
-    background:url(../images/pcb.jpg) no-repeat;
-    left:0px;
-    min-height:500px;
-    height: 100%;
-    width: auto;
-}
-body {
-    margin: 0;
-    font-family:"微软雅黑", "Microsoft Yahei", "WenQuanYi Micro Hei";
-}
-h1, h2, h3, h4 {
-    font-family:'Futura', 'mypriad';
-}
-.h1, .h2, .h3, .h4, .h5, .h6, code, kbd, pre, samp {
-    font-family:'inconsolata';
 }
 
-.tagline {
-    font-family: Marcsc;
-    color: black;
-    font-size: 12pt;
+h1, h2, h3, h4, body, p, a,
+.h1, .h2, .h3, .h4, .h5, .h6, code, kbd, pre, samp {
+    font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans", "Inconsolata", , "Roboto","Helvetica Neue","Segoe UI","Verdana", "Tahoma" ,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","sans-serif";
 }
-blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes:"\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-}
-blockquote p {
-    display: inline;
-}
-.about {
-    bottom: 0px;
-    position: relative;
-}
-body {
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5em;
-    text-rendering: auto;
-}
-#window {
-    min-width: 500px;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
-    /*-webkit-transition:all 0.5s; */
-    overflow: hidden;
-}
+
 #body {
-    font-family: Andale Mono, monospace;
     line-height: 1em;
     font-size:13px;
     float: left;
@@ -77,6 +18,7 @@ body {
     padding:10px;
     line-height:1.5em;
 }
+
 #body p {
     color: #63de00!important;
 }
@@ -103,82 +45,4 @@ body {
     100% {
         background:rgba(99, 222, 0, 0);
     }
-}
-.cursor {
-    display:inline-block;
-    width:11px;
-    height:19px;
-    margin-bottom:-3px;
-}
-#body:hover .cursor {
-    -webkit-animation-name: blink;
-    -webkit-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-name: blink;
-    -moz-animation-duration: 1.5s;
-    -moz-animation-iteration-count: infinite;
-}
-#body p::-webkit-selection {
-    background:#0b209e;
-}
-#body p::selection {
-    background:#0b209e;
-}
-#body p::-moz-selection {
-    background:#0b209e;
-}
-#body p {
-    margin-top:5px;
-    margin-bottom:5px;
-    font-size:13px;
-}
-#content {
-    float: left;
-    margin-top: 1px;
-}
-#foot {
-    height: 23px;
-    width: 100%;
-    float: left;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #cbcbcb), color-stop(0, #a7a7a7));
-    border-top:1px solid #515151;
-    border-radius:0 0 5px 5px;
-}
-#foot .handle {
-    width: 11px;
-    height: 11px;
-    float: right;
-    margin: 6px;
-    overflow: hidden;
-}
-.handle .grip {
-    -webkit-transform: rotate(45deg) scaley(3);
-    margin: 2px 0 0 2px;
-    color: #646464;
-    text-shadow: 1px 1px 0 #c6c6c6;
-    font-size: 14px;
-}
-span {
-	color:#fff;
-}
-span.brand {
-	font-family:inconsolata;
-	color:#565d64;
-	font-size: 14px;
-}
-.rio {
-}
-.pure-menu a, .pure-menu .pure-menu-heading
-{
-	padding: 5px 10px;
-}
-.poem{
-	color:#fff;
-}
-.poem a{
-	color:#fff;
-	text-decoration:none;
-}
-.white{
-    background:#fff;
 }
