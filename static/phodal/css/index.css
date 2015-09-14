@@ -78,10 +78,26 @@ h1, h2, h3, h4, body, p, a {
     margin: 0 auto;
 }
 
-.pwd h3,
-.pwd p
- {
+.pwd h2,
+.pwd h2 a,
+.pwd p {
+    color: #5090CC;
     text-align: center;
+}
+
+.pwd ul li {
+    list-style: none;
+    color: #5090CC;
+}
+
+.moreinfo ul li  {
+    list-style: none;
+}
+
+.pwd h2 a,
+.moreinfo a,
+.pwd a {
+    text-decoration: none;
 }
 
 .moreinfo {
@@ -128,6 +144,32 @@ footer .copy {
 
 footer .margin-center {
     margin: 0 auto;
+}
+
+.slice {
+    border-right: 1px #ccc dotted;
+}
+
+.slice-margin {
+    margin-left: 12px;
+}
+
+.topgradient {
+    height: 2px;
+    width: 100%;
+    background: #446173;
+}
+.bottomgradient {
+    height: 5px;
+    width: 100%;
+    background: #446173;
+    background: -moz-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #446173), color-stop(50%, #1d88c5), color-stop(51%, #1f81c2), color-stop(71%, #226fa6), color-stop(100%, #243843));
+    background: -webkit-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
+    background: -o-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
+    background: -ms-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
+    background: linear-gradient(to right, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#446173', endColorstr='#243843', GradientType=1 )
 }
 
 .background {
