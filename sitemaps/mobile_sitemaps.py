@@ -1,22 +1,16 @@
 from __future__ import unicode_literals
 import warnings
-from django.contrib.sitemaps.views import x_robots_tag
 
-from django.contrib.sites.models import Site, get_current_site
+from django.contrib.sitemaps.views import x_robots_tag
+from django.contrib.sites.models import get_current_site
 from django.core.paginator import EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.template.response import TemplateResponse
-
-from mezzanine.core.models import Displayable
-from mezzanine.pages.models import Page
-from mezzanine.utils.sites import current_site_id
-
-from mezzanine.blog.models import BlogPost, BlogCategory
 import six
-from django.contrib.sitemaps import Sitemap
+from .sitemaps import DisplayableSitemap
 
 
-class DisplayableSitemap(Sitemap):
+class DisplayableSitemap(DisplayableSitemap):
     """
     Sitemap class for Django's sitemaps framework that returns
     all published items for models that subclass ``Displayable``.
@@ -56,38 +50,3 @@ class DisplayableSitemap(Sitemap):
                 raise Http404("No page '%s'" % page)
         return TemplateResponse(request, template_name, {'urlset': urls},
                                 content_type=content_type)
-
-    def items(self):
-        """
-        Return all published items for models that subclass
-        ``Displayable``, excluding those that point to external sites.
-        """
-        blogpost_with_page = list(Displayable.objects.url_map(in_sitemap=True).values())
-        category = list(BlogCategory.objects.all())
-        return blogpost_with_page + category
-
-    @staticmethod
-    def lastmod(obj):
-        if isinstance(obj, BlogPost):
-            return obj.updated or obj.publish_date
-
-    @staticmethod
-    def changefreq(obj):
-        if isinstance(obj, BlogPost):
-            return "Monthly"
-        if isinstance(obj, BlogCategory):
-            return "Weekly"
-        if isinstance(obj, Page):
-            return "Weekly"
-        return "Daily"
-
-    @staticmethod
-    def priority(obj):
-        if isinstance(obj, BlogPost):
-            return "0.2"
-        if isinstance(obj, BlogCategory):
-            return "0.3"
-        if isinstance(obj, Page):
-            return "0.6"
-        return "1.0"
-
