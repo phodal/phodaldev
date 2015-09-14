@@ -8,13 +8,19 @@ h1, h2, h3, h4, body, p, a {
     text-transform: uppercase
 }
 
-.home-menu ul {
+.header {
+    height: 36px;
+}
+
+.header ul {
     float: right;
 }
 
+.header span {
+    line-height: 200%;
+}
 .header {
     padding: 0.5em;
-    width: 36px;
 }
 
 .supernav{
