@@ -62,8 +62,14 @@ h1, h2, h3, h4, body, p, a {
     width: 960px;
 }
 
+.l-content a,
 .moreinfo a {
-    color: #1e84c5;
+    color: #23B7F3;
+}
+
+.moreinfo p,
+.moreinfo h2 {
+    text-align: center;
 }
 
 .moreinfo h2 a {
