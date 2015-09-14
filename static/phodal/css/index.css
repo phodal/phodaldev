@@ -60,6 +60,12 @@ h1, h2, h3, h4, body, p, a {
     font-size: 12px;
 }
 
+.splash h1 {
+    padding-top: 100px;
+    line-height: 200%;
+    color: #fff;
+}
+
 .content {
     padding: 1em;
 }
@@ -122,4 +128,17 @@ footer .copy {
 
 footer .margin-center {
     margin: 0 auto;
+}
+
+.background {
+    background: transparent url('../images/bg.jpg') 0 0 no-repeat;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
+
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
