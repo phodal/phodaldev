@@ -39,6 +39,12 @@ h1, h2, h3, h4, body, p, a {
     margin: 0 auto;
 }
 
+.pwd h3,
+.pwd p
+ {
+    text-align: center;
+}
+
 .moreinfo {
     margin: 0 auto;
     width: 960px;
