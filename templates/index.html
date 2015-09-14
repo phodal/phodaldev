@@ -44,10 +44,12 @@
 <div class="super-header">
     <div class="pure-menu pure-menu-horizontal nav">
         <div class="supernav">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/" class="pure-menu-link">Search</a></li>
-                <li class="pure-menu-item"><a href="/blog" title="Blog" class="pure-menu-link">Blog</a></li>
-            </ul>
+
+        <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+        <input type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+        <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
+        </form>
+
         </div>
     </div>
 </div>
@@ -56,10 +58,11 @@
     <div class="pure-menu pure-menu-horizontal nav">
         <span><a href="/">PHODAL</a></span>
         <ul class="pure-menu-list menunav">
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Normal</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Normal</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Normal</a></li>
+            <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">BLOG</a></li>
+            <li class="pure-menu-item"><a href="/works" class="pure-menu-link">CODE</a></li>
+            <li class="pure-menu-item"><a href="/literature" class="pure-menu-link">LITERATURE</a></li>
+            <li class="pure-menu-item"><a href="/resume" class="pure-menu-link">RESUME</a></li>
+            <li class="pure-menu-item"><a href="/more" class="pure-menu-link">MORE</a></li>
         </ul>
     </div>
 </div>

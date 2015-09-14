@@ -35,6 +35,21 @@ h1, h2, h3, h4, body, p, a {
     color: #446173;
 }
 
+.super-header input {
+    color: white;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    outline: none;
+    margin: 0;
+    padding: 4px 0;
+    width: 255px;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+    -webkit-appearance: none;
+}
+
 .supernav{
     margin: 0;
     text-align: right;
