@@ -159,17 +159,28 @@ footer .margin-center {
     width: 100%;
     background: #446173;
 }
+
+.literature {
+    background: #EEEEEE;
+}
+
+.code {
+    background: #FBFBFB;
+}
+
+.design {
+    background: #D4D4D4;
+}
+
+.about {
+    color: #fff;
+    background: #478BA6;
+}
+
 .bottomgradient {
     height: 5px;
     width: 100%;
-    background: #446173;
-    background: -moz-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #446173), color-stop(50%, #1d88c5), color-stop(51%, #1f81c2), color-stop(71%, #226fa6), color-stop(100%, #243843));
-    background: -webkit-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
-    background: -o-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
-    background: -ms-linear-gradient(left, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
-    background: linear-gradient(to right, #446173 0%, #1d88c5 50%, #1f81c2 51%, #226fa6 71%, #243843 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#446173', endColorstr='#243843', GradientType=1 )
+    background: #fff;
 }
 
 .background {
