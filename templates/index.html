@@ -3,27 +3,29 @@
 {% load pages_tags mezzanine_tags i18n blog_tags future staticfiles %}
 
 <head>
+    <title>狼和凤凰 - ThoughtWorker | Growth Engineer</title>
+
     <meta http-equiv="content-language" content="zh-CN" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <link rel="canonical" href="https://www.phodal.com{{ blog_post.get_absolute_url }}" />
-    <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
-    <link rel="alternate" href="https://www.phodal.com{{ request.get_full_path }}" hreflang="x-default" />
+    <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+    <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+    <meta name="alexaVerifyID" content="ZZ-ekHwAaTl4lob12WYzKLimR58"/>
     <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
     <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
     <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
-    <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
     <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
-    <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
     <meta name='yandex-verification' content='7c80fea3c6548a5a' />
     <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
     <meta name="bitly-verification" content="b4cdaf394c9f"/>
-    <meta name="alexaVerifyID" content="ZZ-ekHwAaTl4lob12WYzKLimR58"/>
-    <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
-    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+
+    <link rel="canonical" href="https://www.phodal.com{{ blog_post.get_absolute_url }}" />
+    <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
+    <link rel="alternate" href="https://www.phodal.com{{ request.get_full_path }}" hreflang="x-default" />
     <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
+    <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
 
     {% ifinstalled mezzanine.blog %}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
@@ -34,14 +36,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/grid-responsive.min.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
-    {% block extra_css %}{% endblock %}
     {% endcompress %}
-
-    {% compress js %}
-    {% block extra_js %}{% endblock %}
-    {% endcompress %}
-
-    {% block extra_head %}{% endblock %}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
