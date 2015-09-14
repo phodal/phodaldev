@@ -35,6 +35,15 @@ h1, h2, h3, h4, body, p, a {
     text-align: center;
 }
 
+.l-content {
+    margin: 0 auto;
+}
+
+.moreinfo {
+    margin: 0 auto;
+    width: 960px;
+}
+
 .moreinfo a {
     color: #1e84c5;
 }
