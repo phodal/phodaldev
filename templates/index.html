@@ -146,10 +146,12 @@
         </div>
         <div class="pure-u-1-3">
             <h2>Recently Blog</h2>
+            <p>最近的心得</p>
             {% for blog_post in blog_posts.object_list %}
             {% block blog_post_list_post_title %}
             <a href="{{ blog_post.get_absolute_url }}" itemprop="name">{{ blog_post.title }}</a>
-            <p>{{ blog_post.description }}</p>
+            <br/>
+            <!--<p>{{ blog_post.description }}</p>-->
             {% endblock %}
             {% endfor %}
         </div>
