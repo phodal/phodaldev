@@ -34,3 +34,11 @@ h1, h2, h3, h4, body, p, a {
 .is-center {
     text-align: center;
 }
+
+.moreinfo a {
+    color: #1e84c5;
+}
+
+.moreinfo h2 a {
+    text-decoration: none;
+}
