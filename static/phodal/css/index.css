@@ -10,12 +10,13 @@ h1, h2, h3, h4, body, p, a {
 
 .header {
     height: 36px;
-    color: white;
+    color: #D4F3FF;
     background-color: #428099;
 }
 
 .header a {
-    color: white;
+    color: #D4F3FF;
+    text-decoration: none;
 }
 
 .header ul {
@@ -27,6 +28,11 @@ h1, h2, h3, h4, body, p, a {
 }
 .header {
     padding: 0.5em;
+}
+
+.super-header {
+    background: #091026;
+    color: #446173;
 }
 
 .supernav{
@@ -85,7 +91,7 @@ footer .pure-menu {
 }
 
 footer .pure-menu-link {
-    color: white;
+    color: #D4F3FF;
 }
 
 footer .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
@@ -94,9 +100,10 @@ footer .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link
 }
 
 footer .copy {
-    margin: 0 0 20px 0;
-    line-height: 150%;
-    color: white;
+    background: #091026;
+    padding: 10px 0 10px 0;
+    line-height: 200%;
+    color: #446173;
 }
 
 footer .margin-center {
