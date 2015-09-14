@@ -10,6 +10,12 @@ h1, h2, h3, h4, body, p, a {
 
 .header {
     height: 36px;
+    color: white;
+    background-color: #428099;
+}
+
+.header a {
+    color: white;
 }
 
 .header ul {
@@ -62,4 +68,31 @@ h1, h2, h3, h4, body, p, a {
 
 .moreinfo h2 a {
     text-decoration: none;
+}
+
+footer {
+    background-color: #428099;
+}
+
+footer .pure-menu {
+    padding: 25px 0 0 0;
+}
+
+footer .pure-menu-link {
+    color: white;
+}
+
+footer .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
+    color: #eee;
+    background-color: #23B7F3;
+}
+
+footer .copy {
+    margin: 0 0 20px 0;
+    line-height: 150%;
+    color: white;
+}
+
+footer .margin-center {
+    margin: 0 auto;
 }
