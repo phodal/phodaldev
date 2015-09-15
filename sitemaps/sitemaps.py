@@ -15,6 +15,8 @@ class DisplayableSitemap(Sitemap):
     all published items for models that subclass ``Displayable``.
     """
 
+    protocol = 'http'
+    
     def items(self):
         """
         Return all published items for models that subclass
