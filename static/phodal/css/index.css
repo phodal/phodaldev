@@ -167,6 +167,10 @@ footer .margin-center {
     background: #FBFBFB;
 }
 
+.pwd {
+    line-height: 150%;
+}
+
 .design {
     background: #D4D4D4;
 }
