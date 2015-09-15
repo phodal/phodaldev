@@ -171,6 +171,15 @@ footer .margin-center {
     background: #D4D4D4;
 }
 
+.social {
+    color: #23B7F3;
+    margin-bottom: 25px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
 .about {
     color: #fff;
     background: #478BA6;
@@ -187,7 +196,6 @@ footer .margin-center {
     text-align: center;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
-
     width: 100%;
     height: 400px;
     background-repeat: no-repeat;
