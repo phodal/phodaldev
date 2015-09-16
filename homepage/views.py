@@ -17,7 +17,7 @@ def homepage(request, tag=None, year=None, month=None, username=None,
     author = None
 
     prefetch = ("categories", "keywords__keyword")
-    blog_posts = blog_posts.select_related("user", "user__profile").prefetch_related(*prefetch)[:4]
+    blog_posts = blog_posts.select_related("user", "user__profile").prefetch_related(*prefetch)[:3]
 
     blog_posts = paginate(blog_posts, request.GET.get("page", 1),
                           settings.BLOG_POST_PER_PAGE,

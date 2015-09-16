@@ -78,16 +78,6 @@
     <div class="topgradient"></div>
 
     <div class="content">
-        <div class="l-content social">
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-1-1 is-center">
-                    <h1>Social</h1>
-                    微博: <a href="http://weibo.com/phodal">http://weibo.com/phodal</a>、
-                    Github: <a href="https://github.com/phodal">https://github.com/phodal</a>、
-                    知乎: <a href="http://www.zhihu.com/people/phodal">http://www.zhihu.com/people/phodal</a>
-                </div>
-            </div>
-        </div>
         <div class="l-content">
             <div class="pure-g content pwd">
                 <div class="pure-u-1 pure-u-md-1-3 literature">
@@ -133,21 +123,14 @@
                 <h2>前端、后台、SEO、硬件</h2>
             </div>
         </div>
-        <div class="pure-u-1 pure-u-md-1-1 is-center social">
-            <h1>社区</h1>
-            <a href="http://www.infoq.com/cn/author/%E9%BB%84%E5%B3%B0%E8%BE%BE" rel="nofollow">InfoQ社区编辑</a>、
-            <a href="http://blog.csdn.net/phodal" rel="nofollow">CSDN前端博客专家</a>、
-            <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault Top Writer</a>、
-            <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>
-        </div>
-        <div class="pure-g content">
+        <div class="pure-g l-content recently-blog">
             <div class="pure-u-1 pure-u-md-1-1 is-center">
                 <a href="/blog" title="Recently Blog"><h2>Recently Blog › </h2></a>
             </div>
-            <div class="blog_posts">
+            <div class="blog-posts">
                 {% for blog_post in blog_posts.object_list %}
                     {% block blog_post_list_post_title %}
-                    <div class="pure-u-1-1 pure-u-md-1-4 blog_post">
+                    <div class="pure-u-1-1 pure-u-md-1-3">
                         <a href="{{ blog_post.get_absolute_url }}" itemprop="name"><h3>{{ blog_post.title }}</h3></a>
                         {{ blog_post.description|richtext_filters|safe }}
                     </div>
@@ -155,23 +138,31 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="pure-u-1 pure-u-md-1-1 is-center social">
+            <h1>社区</h1>
+            <a href="http://www.infoq.com/cn/author/%E9%BB%84%E5%B3%B0%E8%BE%BE" rel="nofollow">InfoQ社区编辑</a>、
+            <a href="http://blog.csdn.net/phodal" rel="nofollow">CSDN前端博客专家</a>、
+            <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault Top Writer</a>、
+            <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>
+        </div>
         <div class="pure-g content moreinfo">
             <div class="pure-u-1 pure-u-md-1-8">
             </div>
-            <div class="pure-u-1 pure-u-md-3-8 slice">
+            <div class="pure-u-1 pure-u-md-1-4 slice">
                 <h2><a href="https://github.com/phodal" title="Recently Github">Recently Github › </a></h2>
                 <p>
                    也许，你会遇到心仪的项目
                 </p>
                 <ul>
-                    <li><a href="https://github.com/echoesworks/echoesworks" rel="nofollow">Echoesworks</a>: Tech Blog/Presentation/Slider Framework</li>
+                    <li><a href="https://github.com/echoesworks/echoesworks" rel="nofollow">Echoesworks</a>: Tech Blog, Presentation ,
+                        Slider Framework</li>
                     <li><a href="https://github.com/phodal/lan" rel="nofollow">Lan</a>: Internet of Things Server</li>
                     <li><a href="https://github.com/phodal/sherlock" rel="nofollow">Sherlock</a>: Skill Tree</li>
                     <li><a href="https://github.com/phodal/lettuce" rel="nofollow">Lettuce</a>: Mobile Framework for Romantic.</li>
                     <li><a href="https://github.com/phodal/awesome-developer" rel="nofollow">Web Developer学习路线图</a></li>
                 </ul>
             </div>
-            <div class="pure-u-1 pure-u-md-3-8  slice-margin">
+            <div class="pure-u-1 pure-u-md-1-4 slice slice-margin">
                 <h2><a href="/support" title="Tech Support">Tech Support › </a> </h2>
                 <p>在技术上遇到问题?</p>
                 <ul>
@@ -179,6 +170,16 @@
                     <li>前端</li>
                     <li>后台</li>
                     <li>运营</li>
+                </ul>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-4 slice-margin">
+                <h2>Social </h2>
+                <p>在下面的地方关注我</p>
+                <ul>
+                    <li>微博: <a href="http://weibo.com/phodal">http://weibo.com/phodal</a></li>
+                    <li>Github: <a href="https://github.com/phodal">https://github.com/phodal</a></li>
+                    <li>知乎: <a href="http://www.zhihu.com/people/phodal">http://www.zhihu.com/people/phodal</a></li>
+                    <li>SegmentFault: <a href="http://segmentfault.com/u/phodal">http://segmentfault.com/u/phodal</a></li>
                 </ul>
             </div>
             <div class="pure-u-1 pure-u-md-1-8">

@@ -217,19 +217,21 @@ footer .margin-center {
     }
 }
 
-.blog_posts {
+
+.blog-posts {
     margin: 0 4em;
 }
 
-.blog_posts a {
+.recently-blog a,
+.blog-posts a {
     text-decoration: none;
 }
 
-.blog_posts p {
+.blog-posts p {
     margin: 0.5em 0.2em;
 }
 
-.blog_posts h3 {
+.blog-posts h3 {
     text-align: center;
     -webkit-margin-before: 0.1em;
     -webkit-margin-after: 0.1em;
