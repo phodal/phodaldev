@@ -871,3 +871,7 @@ form.login {
 .recent-post ul li {
     margin-left: 5px;
 }
+
+section.allposts {
+    background: none;
+}

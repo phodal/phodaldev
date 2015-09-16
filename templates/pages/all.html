@@ -33,11 +33,15 @@ blogposts.config(function($interpolateProvider) {
     });
  });
 </script>
-<div ng-app="blogposts">
-<div class="posts"  ng-controller="blogController">
-<ul>
-<li ng-repeat="post in posts"><a href="/blog/{[{post.slug}]}">{[{post.title}]}</a></li>
-</ul>
-</div>
-</div>
+<section class="allposts section--center mdl-grid mdl-grid--no-spacing mdl-cell--11-col">
+    <div class="mdl-card__supporting-text">
+        <div ng-app="blogposts">
+            <div class="posts" ng-controller="blogController">
+                <ul>
+                    <li ng-repeat="post in posts"><a href="/blog/{[{post.slug}]}">{[{post.title}]}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
