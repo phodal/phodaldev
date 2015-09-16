@@ -875,3 +875,12 @@ form.login {
 section.allposts {
     background: none;
 }
+
+section.richtext ul li {
+    list-style: none;
+}
+
+section.richtext ul li a {
+    font-size: 14px;
+    text-decoration: none;
+}
