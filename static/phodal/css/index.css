@@ -221,8 +221,12 @@ footer .margin-center {
     margin: 0 4em;
 }
 
+.blog_posts a {
+    text-decoration: none;
+}
+
 .blog_posts p {
-    margin: 0 0.2em;
+    margin: 0.5em 0.2em;
 }
 
 .blog_posts h3 {

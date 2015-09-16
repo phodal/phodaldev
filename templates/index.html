@@ -140,14 +140,14 @@
             <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault Top Writer</a>、
             <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>
         </div>
-        <div class="pure-g">
+        <div class="pure-g content">
             <div class="pure-u-1 pure-u-md-1-1 is-center">
-                <h2><a href="/blog" title="Recently Blog">Recently Blog › </a></h2>
+                <a href="/blog" title="Recently Blog"><h2>Recently Blog › </h2></a>
             </div>
-            <div class="pure-g blog_posts">
+            <div class="blog_posts">
                 {% for blog_post in blog_posts.object_list %}
                     {% block blog_post_list_post_title %}
-                    <div class="pure-u-1-4 blog_post">
+                    <div class="pure-u-1-1 pure-u-md-1-4 blog_post">
                         <a href="{{ blog_post.get_absolute_url }}" itemprop="name"><h3>{{ blog_post.title }}</h3></a>
                         {{ blog_post.description|richtext_filters|safe }}
                     </div>
