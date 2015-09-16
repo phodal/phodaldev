@@ -140,10 +140,25 @@
             <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault Top Writer</a>、
             <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>
         </div>
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-1 is-center">
+                <h2><a href="/blog" title="Recently Blog">Recently Blog › </a></h2>
+            </div>
+            <div class="pure-g blog_posts">
+                {% for blog_post in blog_posts.object_list %}
+                    {% block blog_post_list_post_title %}
+                    <div class="pure-u-1-4 blog_post">
+                        <a href="{{ blog_post.get_absolute_url }}" itemprop="name"><h3>{{ blog_post.title }}</h3></a>
+                        {{ blog_post.description|richtext_filters|safe }}
+                    </div>
+                    {% endblock %}
+                {% endfor %}
+            </div>
+        </div>
         <div class="pure-g content moreinfo">
             <div class="pure-u-1 pure-u-md-1-8">
             </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice">
+            <div class="pure-u-1 pure-u-md-3-8 slice">
                 <h2><a href="https://github.com/phodal" title="Recently Github">Recently Github › </a></h2>
                 <p>
                    也许，你会遇到心仪的项目
@@ -156,7 +171,7 @@
                     <li><a href="https://github.com/phodal/awesome-developer" rel="nofollow">Web Developer学习路线图</a></li>
                 </ul>
             </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice slice-margin">
+            <div class="pure-u-1 pure-u-md-3-8  slice-margin">
                 <h2><a href="/support" title="Tech Support">Tech Support › </a> </h2>
                 <p>在技术上遇到问题?</p>
                 <ul>
@@ -165,17 +180,6 @@
                     <li>后台</li>
                     <li>运营</li>
                 </ul>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice-margin">
-                <h2><a href="/blog" title="Recently Blog">Recently Blog › </a></h2>
-                <p>最近的心得与技术尝试</p>
-                {% for blog_post in blog_posts.object_list %}
-                {% block blog_post_list_post_title %}
-                <a href="{{ blog_post.get_absolute_url }}" itemprop="name">{{ blog_post.title }}</a>
-                <br/>
-                <!--<p>{{ blog_post.description }}</p>-->
-                {% endblock %}
-                {% endfor %}
             </div>
             <div class="pure-u-1 pure-u-md-1-8">
             </div>
