@@ -867,3 +867,7 @@ form.login {
 .alert-danger .alert-link {
   color: #843534;
 }
+
+.recent-post ul li {
+    margin-left: 5px;
+}
