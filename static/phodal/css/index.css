@@ -101,6 +101,7 @@ h1, h2, h3, h4, body, p, a {
 
 .moreinfo {
     margin: 0 auto;
+    line-height: 150%;
 }
 
 .l-content a,

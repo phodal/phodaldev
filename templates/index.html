@@ -168,7 +168,7 @@
             </div>
             <div class="pure-u-1 pure-u-md-1-4 slice-margin">
                 <h2><a href="/blog" title="Recently Blog">Recently Blog › </a></h2>
-                <p>最近的心得</p>
+                <p>最近的心得与技术尝试</p>
                 {% for blog_post in blog_posts.object_list %}
                 {% block blog_post_list_post_title %}
                 <a href="{{ blog_post.get_absolute_url }}" itemprop="name">{{ blog_post.title }}</a>
