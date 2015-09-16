@@ -105,6 +105,7 @@ h1, h2, h3, h4, body, p, a {
 }
 
 .l-content a,
+.moreinfo h2,
 .moreinfo a {
     color: #23B7F3;
 }
@@ -182,6 +183,8 @@ footer .margin-center {
 }
 
 .social a {
+    font-size: 18px;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -222,13 +225,17 @@ footer .margin-center {
     margin: 0 4em;
 }
 
+.recently-blog {
+    border-bottom: 1px solid #eee;
+}
+
 .recently-blog a,
 .blog-posts a {
     text-decoration: none;
 }
 
 .blog-posts p {
-    margin: 0.5em 0.2em;
+    margin: 0.5em 0.5em;
 }
 
 .blog-posts h3 {
