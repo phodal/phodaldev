@@ -266,6 +266,7 @@ INSTALLED_APPS = (
     "feed",
     "rest_framework",
     "corsheaders",
+    "events",
     "blogapi"
 )
 
