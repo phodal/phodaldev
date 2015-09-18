@@ -11,6 +11,6 @@ def events():
 
 
 @register.as_tag
-def events():
+def ads():
     current_ad = Ad.objects.future()[:1]
     return current_ad

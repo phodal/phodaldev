@@ -1,5 +1,5 @@
 {% extends "blog/blog_post_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles event_tags %}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -92,27 +92,17 @@
 </div>
 </section>
 
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
-    <div class="mdl-card__title mdl-card--border mdl-card--expand">
-        <h3 class="mdl-card__title-text">临时广告区: <a href="http://join.thoughtworkschina.com/ "
-                                                   title="ThoughtWorks 2016届校招">ThoughtWorks 2016届校招</a></h3>
-    </div>
-    <div class="mdl-card__supporting-text">
-        如果你看过《领域特定语言》《重构－改善既有代码的设计》、《UML精粹：标准对象建模语言简明指南》、《分析模式：可重用的对象模型》、
-        《企业应用架构模式》、《NoSQL精粹》等等的书籍，也来看看他们的作者是如何工作的?
-        <h2>工作地点：</h2>
-        <ul>
-            <li>西安（9月21-22）</li>
-            <li>成都（10月12-13）</li>
-            <li>武汉: 武汉大学 10月13日, 华中科技大学 10月14日</li>
-            <li>北京（10月21-23）</li>
-        </ul>
-        请就近选择办公室~~。
-    </div>
-    <p class="mdl-card__actions mdl-card--border">详情见官网: <a href="http://join.thoughtworkschina.com/"
-                                                            title="ThoughtWorks 校招">http://join.thoughtworkschina.com/</a>
-    </p>
+
+{% block ads %}
+<section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
+  {% ads %}
+  {% for ad in ads %}
+    {% editable ad.content %}
+    <div>{{ ad.content |richtext_filters|safe }}</div>
+    {% endeditable %}
+  {% endfor %}
 </section>
+{% endblock %}
 
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
