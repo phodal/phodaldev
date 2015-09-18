@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from mezzanine.core.fields import RichTextField
+
 
 class EventQuerySet(models.query.QuerySet):
     def published(self):
@@ -16,8 +18,7 @@ class EventQuerySet(models.query.QuerySet):
 
 
 class Event(models.Model):
-    headline = models.CharField(max_length=200, null=False)
-    external_url = models.URLField()
+    content = RichTextField("Content")
     date = models.DateField()
     location = models.CharField(max_length=100)
     is_active = models.BooleanField(

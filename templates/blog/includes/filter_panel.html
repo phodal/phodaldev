@@ -1,22 +1,5 @@
 {% load blog_tags keyword_tags mezzanine_tags i18n future event_tags %}
 
-{% block events %}
-<section class="section--center mdl-grid mdl-shadow--2dp recent-post">
-    <div class="mdl-card__title mdl-card--border mdl-card--expand">
-        <h3 class="mdl-card__title-text">Upcoming Events</h3>
-    </div>
-    <ul class="mdl-card__supporting-text list-unstyled">
-        {% events %}
-      {% for event in events %}
-        <li>
-          <div><a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a></div>
-          <span class="meta"><span>{{ event.date }}</span>  |  {{ event.location }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-</section>
-{% endblock %}
-
 {% block blog_recent_posts %}
 {% blog_recent_posts 10 as recent_posts %}
 {% if recent_posts %}
@@ -44,6 +27,23 @@
 {% endblock %}
 
 {% include "includes/user_info.html" %}
+
+{% block events %}
+<section class="section--center mdl-grid mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
+        <h3 class="mdl-card__title-text">最近的一些事</h3>
+    </div>
+    <ul class="mdl-card__supporting-text list-unstyled">
+        {% events %}
+      {% for event in events %}
+        <li>
+          <div>{{ event.content |richtext_filters|safe }}</div>
+          <span class="meta"><span>{{ event.date }}</span>  |  {{ event.location }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+</section>
+{% endblock %}
 
 {% block blog_months %}
 {% blog_months as months %}
