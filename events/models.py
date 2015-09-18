@@ -50,3 +50,34 @@ class Event(models.Model):
         return self.is_active and self.pub_date <= timezone.now()
 
     is_published.boolean = True
+
+
+class Ad(models.Model):
+    content = RichTextField("Content")
+    date = models.DateField()
+    is_active = models.BooleanField(
+        help_text=(
+            "Tick to make this event live (see also the publication date). "
+            "Note that administrators (like yourself) are allowed to preview "
+            "inactive events whereas the general public aren't."
+        ),
+        default=False,
+    )
+    pub_date = models.DateTimeField(
+        verbose_name=("Publication date"),
+        help_text=(
+            "For an event to be published, it must be active and its "
+            "publication date must be in the past."
+        ),
+    )
+
+    objects = EventQuerySet.as_manager()
+
+    class Meta:
+        ordering = ('-pub_date',)
+        get_latest_by = 'pub_date'
+
+    def is_published(self):
+        return self.is_active and self.pub_date <= timezone.now()
+
+    is_published.boolean = True
