@@ -1,16 +1,17 @@
 {% load blog_tags keyword_tags mezzanine_tags i18n future event_tags %}
 
-<h2>Upcoming Events</h2>
-<ul class="list-events">
-    {{ events.date }}
-  {% for event in events %}
-    <li>
-      <a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a>
-      <span class="meta"><span>{{ event.date|date:"F j, Y" }}</span>  |  {{ event.location }}</span>
-      <i class="icon icon-calendar"></i>
-    </li>
-  {% endfor %}
-</ul>
+{% block events %}
+    <h2>Upcoming Events</h2>
+    <ul class="list-events">
+        {% events %}
+      {% for event in events %}
+        <li>
+          <a href="{{ event.external_url }}" target="_blank">{{ event.headline }}</a>
+          <span class="meta"><span>{{ event.date|date:"F j, Y" }}</span>  |  {{ event.location }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}
 
 {% block blog_recent_posts %}
 {% blog_recent_posts 10 as recent_posts %}
