@@ -53,6 +53,8 @@ class Event(models.Model):
 
 
 class Ad(models.Model):
+    title = models.CharField(max_length=20)
+    url = models.URLField()
     content = RichTextField("Content")
     date = models.DateField()
     is_active = models.BooleanField(

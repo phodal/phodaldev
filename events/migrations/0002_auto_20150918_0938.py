@@ -16,6 +16,8 @@ class Migration(migrations.Migration):
             name='Ad',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('title', models.CharField(max_length=20)),
+                ('url', models.URLField()),
                 ('content', mezzanine.core.fields.RichTextField(verbose_name=b'Content')),
                 ('date', models.DateField()),
                 ('is_active', models.BooleanField(default=False, help_text=b"Tick to make this event live (see also the publication date). Note that administrators (like yourself) are allowed to preview inactive events whereas the general public aren't.")),

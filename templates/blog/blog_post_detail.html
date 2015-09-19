@@ -98,9 +98,19 @@
 {% for ad in ads %}
     {% if ad %}
     <section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
+        <div class="mdl-card__title mdl-card--border mdl-card--expand">
+            {% editable ad.title %}
+            <h3 class="mdl-card__title-text">{{ ad.title }} </h3>
+            {% endeditable %}
+        </div>
         {% editable ad.content %}
-        <div>{{ ad.content |richtext_filters|safe }}</div>
+        <div class="mdl-card__supporting-text">{{ ad.content |richtext_filters|safe }}</div>
         {% endeditable %}
+        <div class="mdl-card__actions mdl-card--border">
+            {% editable ad.external_url %}
+                {{ ad.url }}
+            {% endeditable %}
+        </div>
     </section>
     {% endif %}
 {% endfor %}
