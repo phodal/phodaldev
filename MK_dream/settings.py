@@ -194,8 +194,11 @@ DATABASES = {
 
 import os
 
+
 # Full filesystem path to the project.
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
+PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
+PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
 # Name of the directory for the project.
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
@@ -361,36 +364,6 @@ OPTIONAL_APPS = (
 # }
 
 
-##################
-# LOCAL SETTINGS #
-##################
-
-# Allow any settings to be defined in local_settings.py which should be
-# ignored in your version control system allowing for settings to be
-# defined per machine.
-try:
-    from local_settings import *
-except ImportError:
-    pass
-
-
-####################
-# DYNAMIC SETTINGS #
-####################
-
-# set_dynamic_settings() will rewrite globals based on what has been
-# defined so far, in order to provide some better defaults where
-# applicable. We also allow this settings module to be imported
-# without Mezzanine installed, as the case may be when using the
-# fabfile, where setting the dynamic settings below isn't strictly
-# required.
-try:
-    from mezzanine.utils.conf import set_dynamic_settings
-except ImportError:
-    pass
-else:
-    set_dynamic_settings(globals())
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = (
@@ -412,3 +385,38 @@ CORS_ORIGIN_WHITELIST = (
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=14)
 }
+
+
+##################
+# LOCAL SETTINGS #
+##################
+
+# Allow any settings to be defined in local_settings.py which should be
+# ignored in your version control system allowing for settings to be
+# defined per machine.
+
+# Instead of doing "from .local_settings import *", we use exec so that
+# local_settings has full access to everything defined in this module.
+
+f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
+if os.path.exists(f):
+    exec(open(f, "rb").read())
+
+
+####################
+# DYNAMIC SETTINGS #
+####################
+
+# set_dynamic_settings() will rewrite globals based on what has been
+# defined so far, in order to provide some better defaults where
+# applicable. We also allow this settings module to be imported
+# without Mezzanine installed, as the case may be when using the
+# fabfile, where setting the dynamic settings below isn't strictly
+# required.
+try:
+    from mezzanine.utils.conf import set_dynamic_settings
+except ImportError:
+    pass
+else:
+    set_dynamic_settings(globals())
+
