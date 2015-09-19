@@ -107,8 +107,8 @@
         <div class="mdl-card__supporting-text">{{ ad.content |richtext_filters|safe }}</div>
         {% endeditable %}
         <div class="mdl-card__actions mdl-card--border">
-            {% editable ad.external_url %}
-                {{ ad.url }}
+            {% editable ad.url %}
+            详情见官网: <a href="{{ ad.url }}">{{ ad.url }}</a>
             {% endeditable %}
         </div>
     </section>
