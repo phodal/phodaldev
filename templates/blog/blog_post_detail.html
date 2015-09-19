@@ -94,14 +94,16 @@
 
 
 {% block ads %}
-<section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
-  {% ads %}
-  {% for ad in ads %}
-    {% editable ad.content %}
-    <div>{{ ad.content |richtext_filters|safe }}</div>
-    {% endeditable %}
-  {% endfor %}
-</section>
+{% ads %}
+{% for ad in ads %}
+    {% if ad %}
+    <section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
+        {% editable ad.content %}
+        <div>{{ ad.content |richtext_filters|safe }}</div>
+        {% endeditable %}
+    </section>
+    {% endif %}
+{% endfor %}
 {% endblock %}
 
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
