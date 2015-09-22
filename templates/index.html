@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n mezzanine_tags pages_tags blog_tags future staticfiles %}
+{% load i18n mezzanine_tags pages_tags blog_tags future staticfiles infos_tags %}
 
 <head>
     <title>狼和凤凰 - ThoughtWorker | Growth Engineer</title>
@@ -118,16 +118,23 @@
         </div>
     </div>
     <div class="l-content">
-        <div class="pure-g about">
+        <div class="pure-g">
             <div class="pure-u-1 is-center">
-                <h3>我是黄峰达，1991年出生于闽南，毕业于西安文理学院(电子信息工程专业)，目前就职于ThoughtWorks</h3>
-                <h2>前端、后台、SEO、硬件</h2>
                 <div class="pure-u-1 pure-u-md-1-1 is-center social">
                     <a href="http://www.infoq.com/cn/author/%E9%BB%84%E5%B3%B0%E8%BE%BE" rel="nofollow">InfoQ社区编辑</a>、
                     <a href="http://blog.csdn.net/phodal" rel="nofollow">CSDN前端博客专家</a>、
                     <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault Top Writer</a>、
-                    <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>
+                    <a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow">稀土掘金 Editor</a>、
+                    <a href="http://www.leiphone.com/author/phodal" rel="nofollow">雷锋网认证作者</a>
                 </div>
+            </div>
+        </div>
+        <div class="pure-g about">
+            <div class="pure-u-1 is-center">
+                {% about %}
+                {% if about %}
+                    {{ about.content |richtext_filters|safe }}
+                {% endif %}
             </div>
         </div>
         {% block blogposts %}
