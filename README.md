@@ -22,6 +22,17 @@ Basis On Mezzanine CMS
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
+##issue of Migrate
+
+1.delete django_content_type coloumn name
+
+    delete from django_content_type
+    delete from django_migrations where name = '0002_remove_content_type_name'
+
+2.migrate
+
+    python manage.py migrate contenttypes
+    python manage.py migrate 
 
 ##License
 
