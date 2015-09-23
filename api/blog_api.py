@@ -48,6 +48,7 @@ class BlogpostDetailSerializer(serializers.HyperlinkedModelSerializer):
 
 class BlogpostDetailSet(viewsets.ReadOnlyModelViewSet):
     queryset = BlogPost.objects.filter(status=2)
+    serializer_class = BlogpostDetailSerializer
     search_fields = ('title', 'slug')
 
     def list(self, request):
