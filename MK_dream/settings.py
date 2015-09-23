@@ -1,4 +1,7 @@
+# coding=utf-8
 from __future__ import absolute_import, unicode_literals
+import os
+from django.utils.translation import ugettext_lazy as _
 
 ######################
 # MEZZANINE SETTINGS #
@@ -14,10 +17,10 @@ from __future__ import absolute_import, unicode_literals
 # Controls the ordering and grouping of the admin menu.
 #
 ADMIN_MENU_ORDER = (
-    ("Content", ("pages.Page", "blog.BlogPost",
+    (_("内容"), ("pages.Page", "blog.BlogPost",
        "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
-    ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting", "events.Event", "events.Ad", "homepage.Info",)),
-    ("Users", ("auth.User", "auth.Group")),
+    (_("站点"), ("sites.Site", "redirects.Redirect", "conf.Setting", "events.Event", "events.Ad", "homepage.Info",)),
+    (_("用户"), ("auth.User", "auth.Group")),
 )
 
 # A three item sequence, each containing a sequence of template tags
