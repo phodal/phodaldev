@@ -12,6 +12,8 @@ Basis On Mezzanine CMS
 - AutoSuggest
 - API
 - Mobile APP API
+- Event & Ads
+- Homepage Blog
 
 ##APP 
 
