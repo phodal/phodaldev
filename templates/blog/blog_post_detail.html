@@ -36,7 +36,7 @@
     {% with blog_post.user as author %}
     <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
-    <span itemprop="datePublished" >{% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}</span>
+    <span itemprop="datePublished">{{ blog_post.publish_date }}</span>
 </span>
 {% endeditable %}
 {% endblock %}
