@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
-{% block main %}
 
+{% block meta_title %}网站历史事件{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+事件,phodal事件,最近的事,网站历史事件
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+这里记录了关于网站及最近相关的一些事情。
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+网站历史事件
+{% endblock %}
+
+{% block main %}
 {% for event in events %}
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col blog-list">
         <div class="mdl-card__supporting-text">
