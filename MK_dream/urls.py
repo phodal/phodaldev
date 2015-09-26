@@ -50,6 +50,10 @@ urlpatterns += patterns("homepage.views",
     url("^$", "homepage", name="home"),
 )
 
+urlpatterns += patterns("",
+        ("^events/", include("events.urls")),
+    )
+
 urlpatterns += patterns('',
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),

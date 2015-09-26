@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+{% block main %}
+
+{% for event in events %}
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col blog-list">
+        <div class="mdl-card__supporting-text">
+            {{ event.content|richtext_filters|safe }}
+        </div>
+         <div class="mdl-card__actions mdl-card--border">
+             {{ event.pub_date }} in {{ event.location }}
+         </div>
+    </section>
+{% endfor %}
+
+{% endblock %}
