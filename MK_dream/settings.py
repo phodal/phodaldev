@@ -26,11 +26,11 @@ ADMIN_MENU_ORDER = (
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
 #
-# DASHBOARD_TAGS = (
-#     ("blog_tags.quick_blog", "mezzanine_tags.app_list"),
-#     ("comment_tags.recent_comments",),
-#     ("mezzanine_tags.recent_actions",),
-# )
+DASHBOARD_TAGS = (
+    ("mezzanine_tags.app_list",),
+    ("comment_tags.recent_comments",),
+    ("mezzanine_tags.recent_actions",),
+)
 
 # A sequence of templates used by the ``page_menu`` template tag. Each
 # item in the sequence is a three item sequence, containing a unique ID
