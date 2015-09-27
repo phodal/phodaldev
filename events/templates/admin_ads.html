@@ -1,0 +1,12 @@
+{% load i18n mezzanine_tags %}
+
+<div class="module" id="comments-module">
+<h2>{% trans "AD" %}</h2>
+<ul>
+    {% for ad in ads %}
+    <li>
+        {{ ad.content|richtext_filters|safe }}
+    </li>
+    {% endfor %}
+</ul>
+</div>

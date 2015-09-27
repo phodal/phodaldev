@@ -27,7 +27,7 @@ ADMIN_MENU_ORDER = (
 # used to render the admin dashboard.
 #
 DASHBOARD_TAGS = (
-    ("mezzanine_tags.app_list",),
+    ("event_tags.admin_ads", "mezzanine_tags.app_list",),
     ("comment_tags.recent_comments",),
     ("mezzanine_tags.recent_actions",),
 )

@@ -14,3 +14,12 @@ def events():
 def ads():
     current_ad = Ad.objects.future()[:1]
     return current_ad
+
+@register.inclusion_tag("admin_ads.html", takes_context=True)
+def admin_ads(context):
+    """
+    Dashboard widget for displaying recent comments.
+    """
+    ads = Ad.objects.all()
+    context["ads"] = ads
+    return context
