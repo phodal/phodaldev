@@ -1,6 +1,6 @@
 .wmd-wrapper {
     display: inline-block;
-    width: 1000px;
+    width: 980px;
 }
 
 .wmd-panel {
@@ -19,7 +19,7 @@
 {
     display: inline-block;
     vertical-align: top;
-    width: 474px;
+    width: 454px;
     height: 400px;
     overflow: auto;
     margin-top: 30px;
@@ -41,6 +41,7 @@
     border-width: 1px;
 }
 
+.wmd-preview h1 { z-index: 0; }
 .wmd-preview em { font-style: italic; }
 .wmd-preview ul li { list-style-type: disc; }
 .wmd-preview ul ul li { list-style-type: circle; }

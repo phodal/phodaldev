@@ -1,6 +1,5 @@
 
 
-
 /* Basic Settings, Fieldsets, Form-Rows
 ------------------------------------------------------------------------------------------------------ */
 
@@ -18,12 +17,22 @@ fieldset > div:last-child {
 }
 
 .form-row {
-    overflow: hidden;
     padding: 8px 15px;
     line-height: 18px;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #e0e0e0;
 }
+
+.form-row:before,
+.form-row:after {
+    content: " ";
+    display: table;
+}
+
+.form-row:after {
+    clear: both;
+}
+
 .form-row:first-child {
     border-top: none;
     -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;
@@ -150,14 +159,14 @@ input:focus, textarea:focus, select:focus {
 
 /*  Text, Password ................................................... */
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=url] {
     padding: 5px 3px 4px;
     height: 14px;
 }
 /*  Webkit browser hack: apply same horizontal padding as in moz browsers
     Moz Browsers have a default horizontal padding of 3px in input[type=submit] */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type=text], input[type=password] {
+    input[type=text], input[type=password], input[type=email], input[type=url] {
         padding: 0 3px 4px;
         height: 19px;
         line-height: 25px !important;

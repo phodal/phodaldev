@@ -24,6 +24,7 @@ function FileSubmit(FilePath, FileURL, ThumbURL, FileType) {
         // link the preview-image to the original image
         link.setAttribute("href", FileURL);
         link.setAttribute("target", "_blank");
+        link.setAttribute("style", "display:inline");
         preview.setAttribute("src", ThumbURL);
         help.setAttribute("style", "display:inline");
         jQuery(help).addClass("mezz-fb-thumbnail");

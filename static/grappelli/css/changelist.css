@@ -122,6 +122,22 @@
     border-top: 1px solid #fff;
     border-bottom: 1px solid #d4d4d4;
 }
+
+#changelist .actions.selected {
+    background: #fffccf;
+    border-top: 1px solid #fffee8;
+    border-bottom: 1px solid #edecd6;
+}
+
+#changelist .actions span.all,
+#changelist .actions span.action-counter,
+#changelist .actions span.clear,
+#changelist .actions span.question {
+    font-size: 11px;
+    margin: 0 0.5em;
+    display: none;
+}
+
 #changelist .actions:first-child {
     border-top: none;
 }

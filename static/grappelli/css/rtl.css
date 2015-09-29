@@ -11,22 +11,17 @@ body {
     margin: 0 5px 0 0;
 }
 
-ul.messagelist li {
-    background-position-x: 99%;
+ul.messagelist li, ul.messagelist li.success {
+    background-position: 99% 50%;
     padding: 5px 30px 5px 0;
 }
 
 /* LOGIN */
 
-.login #content-main {
-    min-width: 380px;
-}
-
 .login .form-row label {
     float: right;
     padding-left: 0.5em;
     padding-right: 0;
-    width: 140px;
 }
 
 .login .submit-row input {
@@ -72,9 +67,7 @@ th {
 }
 
 #user-tools {
-    right: auto;
-    left: 0;
-    text-align: left;
+    float: left;
     border-left: 0;
     border-right: 1px solid #262626;
 }
@@ -212,12 +205,12 @@ caption, th, td {
 /* FORMS */
 
 .aligned label {
-    padding: 0 0 3px 1em;
+    padding: 0 0 3px 10px;
     float: right;
 }
 
 .submit-row {
-    text-align: left;
+    text-align: right;
 }
 
 .submit-row p.deletelink-box, .submit-row p.cancellink-box {
@@ -233,6 +226,10 @@ caption, th, td {
 
 .vDateField, .vTimeField {
     margin-left: 2px;
+}
+
+#id_slug {
+    direction: ltr;
 }
 
 form ul.inline li {
@@ -266,7 +263,7 @@ form .aligned p.help {
 }
 
 input[type="checkbox"], input[type="radio"] {
-    margin: 0 135px 0 0;
+    margin: 0 130px 0 0;
 }
 
 ul.radiolist label input, ul.checkboxlist label input {
@@ -288,11 +285,6 @@ form .aligned input + label + p.help {
 
 table input[type="checkbox"], table input[type="radio"] {
     margin-right: 0;
-}
-
-#user_form .password #id_password {
-    direction: ltr;
-    text-align: right;
 }
 
 /* WIDGETS */
