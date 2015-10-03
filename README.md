@@ -15,6 +15,28 @@ Basis On Mezzanine CMS
 - Event & Ads
 - Homepage Blog
 
+##Ru
+
+Python 2.7
+
+1.VirtualEnv 
+
+2.Install Deps
+
+    pip install -r requirements.txt
+
+3.Createdb
+
+    python manage.py createdb
+
+4.Run
+
+    python manage.py runserver
+
+Server
+
+    gunicor. MK_dream.wsgi
+
 ##APP 
 
 代码: [https://github.com/phodal/app](https://github.com/phodal/app)
