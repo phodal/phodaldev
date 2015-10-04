@@ -7,15 +7,15 @@ Basis On Mezzanine CMS
 ##More Than Mezzanine
 
 - Sitemap with Category & day
-- More SEO
-- Less feed articles length
-- AutoSuggest
-- API
+- More SEO Optional
+- Limit  RSS feed articles length
+- AutoSuggest For Search
+- Blogposts Search API
 - Mobile APP API
-- Event & Ads
+- Event & Ads Module
 - Homepage Blog
 
-##Ru
+##Run
 
 Python 2.7
 
@@ -35,11 +35,14 @@ Python 2.7
 
 Server
 
-    gunicor. MK_dream.wsgi
+    gunicorn MK_dream.wsgi
 
 ##APP 
 
-代码: [https://github.com/phodal/app](https://github.com/phodal/app)
+项目代码: [https://github.com/phodal/app](https://github.com/phodal/app)
+
+
+下载
 
 <a href="https://play.google.com/store/apps/details?id=com.phodal.designiot">
   <img alt="Get it on Google Play"
