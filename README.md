@@ -1,12 +1,12 @@
-#Person's Blog
+#Phodal's Blog
 
 For more see in: [https://www.phodal.com/](https://www.phodal.com/)
 
-Basis On Mezzanine CMS
+Powered by Mezzanine CMS (django)
 
 ##More Than Mezzanine
 
-- Sitemap with Category & day
+- Sitemap with Category & Date
 - More SEO Optional
 - Limit  RSS feed articles length
 - AutoSuggest For Search
