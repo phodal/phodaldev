@@ -49,22 +49,6 @@ Server
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
-##Migrate to Django 1.8
-    
-    ALTER TABLE django_content_type RENAME TO content_type_old;
-    
-    CREATE TABLE "django_content_type" (
-    "id" integer NOT NULL PRIMARY KEY,
-    "app_label" varchar(100) NOT NULL,
-    "model" varchar(100) NOT NULL,
-    UNIQUE ("app_label", "model")
-    );
-    
-    INSERT INTO django_content_type(id, app_label,model)
-    SELECT id, app_label,model
-    FROM content_type_old;
-    
-    DROP TABLE content_type_old;
 ##License
 
 © 2015 [Phodal Huang][phodal]. This code is distributed under the MIT license.
