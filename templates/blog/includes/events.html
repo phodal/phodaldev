@@ -10,11 +10,11 @@
       {% for event in events %}
         <li>
           <div itemprop="description">{{ event.content |richtext_filters|safe }}</div>
-          <p class="meta"><span itemprop="startDate" content="{{ event.date }}">{{ event.pub_date }}</span>  |
-              <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <span class="meta"><span itemprop="startDate" content="{{ event.date }}">{{ event.pub_date }}</span>  |
+              <span itemprop="location" itemscope itemtype="http://schema.org/Place">
                   <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ event.location }}</span>
-              </div>
-          </p>
+              </span>
+          </span>
         </li>
       {% endfor %}
     </ul>
