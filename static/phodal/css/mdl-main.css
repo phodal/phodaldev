@@ -707,6 +707,22 @@ pre {
     opacity: 0;
   }
 
+  .mdl-card__supporting-text {
+    width: 100%;
+    padding: 16px 8px;
+  }
+
+    .mdl-cell {
+        margin: 4px;
+    }
+    .mdl-cell--9-col,.mdl-cell--9-col-phone.mdl-cell--9-col-phone {
+        width: calc(100%)
+    }
+
+    .mdl-cell--12-col,.mdl-cell--12-col-tablet.mdl-cell--12-col-tablet {
+        width: calc(100%)
+    }
+
   .android-more-button {
     display: none;
   }
