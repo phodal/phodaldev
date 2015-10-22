@@ -24,16 +24,6 @@ class BaseCorsResource(Resource):
         response['Access-Control-Allow-Headers'] = 'Content-Type'
         return response
 
-    def post_list(self, request, **kwargs):
-        """
-        In case of POST make sure we return the Access-Control-Allow Origin
-        regardless of returning data
-        """
-        response = super(BaseCorsResource, self).post_list(request, **kwargs)
-        response['Access-Control-Allow-Origin'] = '*'
-        response['Access-Control-Expose-Headers'] = 'Location'
-        return response
-
     def method_check(self, request, allowed=None):
         """
         Check for an OPTIONS request. If so return the Allow- headers
