@@ -734,6 +734,10 @@ pre {
   .android-search-box .mdl-textfield__expandable-holder {
     width: 200%;
   }
+  .right {
+    width: 100%;
+    padding: 0 11px;
+    }
 }
 
 span.mdl-layout-title.left-menu {
