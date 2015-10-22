@@ -11,7 +11,6 @@ from tastypie.api import Api
 from blogapi.api import AllBlogSlugResource, BlogResource
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
-from sitemaps.sitemaps_https import DisplayableHTTPSSitemap
 
 apiv1 = Api(api_name='v1')
 apiv1.register(BlogResource())
@@ -30,12 +29,10 @@ if getattr(settings, "PACKAGE_NAME_FILEBROWSER") in settings.INSTALLED_APPS:
     )
 
 sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
-sitemaps_https = {"sitemaps": {"all": DisplayableHTTPSSitemap}}
 mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
 
 urlpatterns += patterns("sitemaps.views",
     ("^sitemap\.xml$", "index", sitemaps),
-    ("^sitemap_https\.xml$", "index", sitemaps_https),
     ("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
 )
 
