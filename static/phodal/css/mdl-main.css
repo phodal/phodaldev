@@ -264,6 +264,8 @@ pre {
 
 .middle img {
     max-width: 600px;
+    width: 100%;
+    height: auto;
 }
 .middle .posts ul {
     counter-reset: li;
