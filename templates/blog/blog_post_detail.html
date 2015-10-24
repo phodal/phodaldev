@@ -58,9 +58,6 @@
 {% endif %}
 {% endblock %}
 
-{% if settings.COMMENTS_DISQUS_SHORTNAME %}
-{% endif %}
-
 {% block blog_post_detail_content %}
 <div  itemprop="articleBody">
 {% editable blog_post.content %}
@@ -87,7 +84,20 @@
     {% endif %}
     {% endblock %}
 
-    围观我的<a href="https://github.com/phodal/ideas" alt="phodal's ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目
+    围观我的<a href="https://github.com/phodal/ideas" alt="phodal's ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br />
+    <br />或许您还需要:
+    {% block blog_post_detail_related_posts %}
+    {% if blog_post.related_posts.all %}
+    <div id="related-posts">
+    <ul class="list-unstyled">
+    {% for post in blog_post.related_posts.all %}
+     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+    {% endblock %}
+
 </div>
 </section>
 
@@ -115,22 +125,12 @@
 {% endfor %}
 {% endblock %}
 
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
-    <div class="mdl-card__title mdl-card--border mdl-card--expand">
-        <h3 class="mdl-card__title-text">或许您还需要</h3>
-    </div>
+{% block blog_post_detail_comments %}
+{% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
+{% endblock %}
 
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
     <div class="mdl-card__supporting-text">
-        {% block blog_post_detail_related_posts %}
-    {% if blog_post.related_posts.all %}
-    <div id="related-posts">
-    <ul class="list-unstyled">
-    {% for post in blog_post.related_posts.all %}
-     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    </div>
-    {% endif %}
 
     <form action="{% url "search" %}" class="autocomplete2 ">
     <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}" type="text" required/>
@@ -155,12 +155,7 @@
         }
     });
     </script>
-{% endblock %}
 </section>
-
-{% block blog_post_detail_comments %}
-{% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
-{% endblock %}
 
 {% endblock %}
 
