@@ -9,13 +9,11 @@ from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
 from wechat_sdk.messages import TextMessage, VoiceMessage, ImageMessage, VideoMessage, LinkMessage, LocationMessage, \
     EventMessage
-from django.db import models
 
 WECHAT_TOKEN = 'thisislooklikeatookenmaybe'
 AppID = 'wxd196ba4c0237a839'
 AppSecret = 'd760de12c8c2a71ef808f2d4837428ce'
 
-# 实例化 WechatBasic
 wechat_instance = WechatBasic(
     token=WECHAT_TOKEN,
     appid=AppID,
@@ -105,11 +103,9 @@ def wechat(request):
         reply_text = '链接信息'
     elif isinstance(message, LocationMessage):
         reply_text = '地理位置信息'
-    elif isinstance(message, EventMessage):  # 事件信息
-        if message.type == 'subscribe':  # 关注事件(包括普通关注事件和扫描二维码造成的关注事件)
-            reply_text = '感谢您的关注！\nPhodal君正在实现功能中。'
-
-            # 如果 key 和 ticket 均不为空，则是扫描二维码造成的关注事件
+    elif isinstance(message, EventMessage):
+        if message.type == 'subscribe':
+            reply_text = '感谢您的关注！回复【功能】返回使用指南'
             if message.key and message.ticket:
                 reply_text += '\n来源：扫描二维码'
             else:
@@ -130,7 +126,6 @@ def wechat(request):
         reply_text = '稍等：Phodal君正在实现功能中。'
 
     response = wechat_instance.response_text(content=reply_text)
-
     return HttpResponse(response, content_type="application/xml")
 
 
@@ -138,6 +133,7 @@ def get_new_blogposts(request):
     blog_posts = BlogPost.objects.published(for_user=request.user)
     prefetch = ("categories", "keywords__keyword")
     blog_posts = blog_posts.select_related("user").prefetch_related(*prefetch)[:5]
+    picurl = 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460'
     response = [
         {
             'title': blog_posts[0].title,
@@ -146,19 +142,19 @@ def get_new_blogposts(request):
             'url': blog_posts[0].slug,
         }, {
             'title': blog_posts[1].title,
-            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'picurl': picurl,
             'url': blog_posts[1].slug,
         }, {
             'title': blog_posts[2].title,
-            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'picurl': picurl,
             'url': blog_posts[2].slug,
         }, {
             'title': blog_posts[3].title,
-            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'picurl': picurl,
             'url': blog_posts[3].slug,
         }, {
             'title': blog_posts[4].title,
-            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'picurl': picurl,
             'url': blog_posts[4].slug,
         }
     ]
