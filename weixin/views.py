@@ -10,9 +10,7 @@ from wechat_sdk.exceptions import ParseError
 from wechat_sdk.messages import TextMessage, VoiceMessage, ImageMessage, VideoMessage, LinkMessage, LocationMessage, \
     EventMessage
 
-WECHAT_TOKEN = 'thisislooklikeatookenmaybe'
-AppID = 'wxd196ba4c0237a839'
-AppSecret = 'd760de12c8c2a71ef808f2d4837428ce'
+from MK_dream.local_settings import WECHAT_TOKEN, AppID, AppSecret
 
 wechat_instance = WechatBasic(
     token=WECHAT_TOKEN,
