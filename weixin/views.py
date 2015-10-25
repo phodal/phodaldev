@@ -59,12 +59,36 @@ def wechat(request):
                 '目前支持的功能：\n' +
                 'Phodal君正在实现功能中。'
             )
+        if 'wiki' in content or '维基' in content:
+            import wikipedia
+            wiki_content = content.replace("wiki:", "")
+            print wiki_content
+            wiki = wikipedia.page(wiki_content)
+
+            # wikipedia.search(wiki_content)
+
+            print wiki.title,wiki.summary,wiki.url
+            message = [{
+                'title': wiki.title,
+                'picurl': '',
+                'description': wiki.summary,
+                'url': wiki.url
+            }]
+
+            return HttpResponse(wechat_instance.response_news(message), content_type="application/xml")
+
+        if 'google' in content:
+            from google import search
+            for url in search(content.replace('google:', ''), stop=1):
+                print(url)
+
+            return HttpResponse(wechat_instance.response_news(get_new_blogposts(request)), content_type="application/xml")
         else:
             response = get_new_blogposts(request)
             message = {
                 'title': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
                 'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
-                'description': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
+                'description': '稍等：Phodal君正在实现功能中。现在为你返回最新文章。',
                 'url': 'https://www.phodal.com/',
             }
             response.insert(0, message)
