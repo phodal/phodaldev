@@ -6,7 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
-from wechat_sdk.messages import TextMessage
+from wechat_sdk.messages import TextMessage, VoiceMessage, ImageMessage, VideoMessage, LinkMessage, LocationMessage, \
+    EventMessage
 
 WECHAT_TOKEN = 'thisislooklikeatookenmaybe'
 AppID = 'wxd196ba4c0237a839'
@@ -61,7 +62,40 @@ def wechat(request):
             )
         else:
             reply_text = '稍等：Phodal君正在实现功能中。'
+            
+    elif isinstance(message, VoiceMessage):
+        reply_text = '语音信息我听不懂/:P-(/:P-(/:P-('
+    elif isinstance(message, ImageMessage):
+        reply_text = '图片信息我也看不懂/:P-(/:P-(/:P-('
+    elif isinstance(message, VideoMessage):
+        reply_text = '视频我不会看/:P-('
+    elif isinstance(message, LinkMessage):
+        reply_text = '链接信息'
+    elif isinstance(message, LocationMessage):
+        reply_text = '地理位置信息'
+    elif isinstance(message, EventMessage):  # 事件信息
+        if message.type == 'subscribe':  # 关注事件(包括普通关注事件和扫描二维码造成的关注事件)
+            follow_event = KeyWordModel.objects.get(keyword='关注事件')
+            reply_text = follow_event.content
 
-        response = wechat_instance.response_text(content=reply_text)
+            # 如果 key 和 ticket 均不为空，则是扫描二维码造成的关注事件
+            if message.key and message.ticket:
+                reply_text += '\n来源：扫描二维码关注'
+            else:
+                reply_text += '\n来源：搜索名称关注'
+        elif message.type == 'unsubscribe':
+            reply_text = '取消关注事件'
+        elif message.type == 'scan':
+            reply_text = '已关注用户扫描二维码！'
+        elif message.type == 'location':
+            reply_text = '上报地理位置'
+        elif message.type == 'click':
+            reply_text = '自定义菜单点击'
+        elif message.type == 'view':
+            reply_text = '自定义菜单跳转链接'
+        elif message.type == 'templatesendjobfinish':
+            reply_text = '模板消息'
+
+    response = wechat_instance.response_text(content=reply_text)
 
     return HttpResponse(response, content_type="application/xml")
