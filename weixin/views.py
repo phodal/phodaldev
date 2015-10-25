@@ -86,6 +86,11 @@ def wechat(request):
             keyword = content.replace('search:','')
             blogpost = BlogPost.objects.search(keyword)[:5]
             messages = blogpost_to_array(blogpost)
+            messages.append({
+                'title': '在https://www.phodal.com/上查看所有结果',
+                'picurl': 'https://www.phodal.com/static/media/uploads/search.jpg',
+                'url': 'http://www.phodal.com/search/?q=' + 'keyword'
+            })
             return HttpResponse(wechat_instance.response_news(messages), content_type="application/xml")
         else:
             response = get_new_blogposts(request)
@@ -143,28 +148,29 @@ def get_new_blogposts(request):
 
 def blogpost_to_array(blog_posts):
     picurl = 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460'
+    blog_url = 'https://www.phodal.com/blog/'
     response = [
         {
             'title': blog_posts[0].title,
             'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
             'description': blog_posts[0].description,
-            'url': blog_posts[0].slug,
+            'url': blog_url + blog_posts[0].slug,
         }, {
             'title': blog_posts[1].title,
             'picurl': picurl,
-            'url': blog_posts[1].slug,
+            'url': blog_url + blog_posts[1].slug,
         }, {
             'title': blog_posts[2].title,
             'picurl': picurl,
-            'url': blog_posts[2].slug,
+            'url': blog_url + blog_posts[2].slug,
         }, {
             'title': blog_posts[3].title,
             'picurl': picurl,
-            'url': blog_posts[3].slug,
+            'url': blog_url + blog_posts[3].slug,
         }, {
             'title': blog_posts[4].title,
             'picurl': picurl,
-            'url': blog_posts[4].slug,
+            'url': blog_url + blog_posts[4].slug,
         }
     ]
     return response
