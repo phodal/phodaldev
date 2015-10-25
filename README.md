@@ -13,7 +13,25 @@ Powered by Mezzanine CMS (django)
 - Blogposts Search API
 - Mobile APP API
 - Event & Ads Module
-- Homepage Blog
+- Homepage News
+- Wechat Support
+
+##微信公众号
+
+![QRCode](https://www.phodal.com/static/phodal/images/qrcode.jpg)
+
+##APP 
+
+项目代码: [https://github.com/phodal/app](https://github.com/phodal/app)
+
+
+下载
+
+<a href="https://play.google.com/store/apps/details?id=com.phodal.designiot">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
+</a>
+
 
 ##Run
 
@@ -36,19 +54,7 @@ Python 2.7
 Server
 
     gunicorn MK_dream.wsgi
-
-##APP 
-
-项目代码: [https://github.com/phodal/app](https://github.com/phodal/app)
-
-
-下载
-
-<a href="https://play.google.com/store/apps/details?id=com.phodal.designiot">
-  <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
-</a>
-
+    
 ##License
 
 © 2015 [Phodal Huang][phodal]. This code is distributed under the MIT license.
