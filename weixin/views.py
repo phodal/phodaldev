@@ -61,12 +61,13 @@ def wechat(request):
             )
         else:
             response = get_new_blogposts(request)
-            response[0] = {
+            message = {
                 'title': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
                 'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
                 'description': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
                 'url': 'https://www.phodal.com/',
             }
+            response.insert(0, message)
             return HttpResponse(wechat_instance.response_news(response), content_type="application/xml")
 
     elif isinstance(message, VoiceMessage):
