@@ -8,6 +8,7 @@ from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
 from wechat_sdk.messages import TextMessage, VoiceMessage, ImageMessage, VideoMessage, LinkMessage, LocationMessage, \
     EventMessage
+from django.db import models
 
 WECHAT_TOKEN = 'thisislooklikeatookenmaybe'
 AppID = 'wxd196ba4c0237a839'
@@ -19,7 +20,6 @@ wechat_instance = WechatBasic(
     appid=AppID,
     appsecret=AppSecret
 )
-
 
 @csrf_exempt
 def wechat(request):
@@ -47,11 +47,6 @@ def wechat(request):
     # 获取解析好的微信请求信息
     message = wechat_instance.get_message()
 
-    # 关注事件以及不匹配时的默认回复
-    response = wechat_instance.response_text(
-        content=(
-            '感谢您的关注！\n回复【功能】两个字查看支持的功能，还可以回复任意内容开始聊天！\nPhodal君正在实现功能中。'
-        ))
     if isinstance(message, TextMessage):
         # 当前会话内容
         content = message.content.strip()
@@ -75,14 +70,13 @@ def wechat(request):
         reply_text = '地理位置信息'
     elif isinstance(message, EventMessage):  # 事件信息
         if message.type == 'subscribe':  # 关注事件(包括普通关注事件和扫描二维码造成的关注事件)
-            follow_event = KeyWordModel.objects.get(keyword='关注事件')
-            reply_text = follow_event.content
+            reply_text = '感谢您的关注！\nPhodal君正在实现功能中。'
 
             # 如果 key 和 ticket 均不为空，则是扫描二维码造成的关注事件
             if message.key and message.ticket:
-                reply_text += '\n来源：扫描二维码关注'
+                reply_text += '\n来源：扫描二维码'
             else:
-                reply_text += '\n来源：搜索名称关注'
+                reply_text += '\n来源：搜索名称'
         elif message.type == 'unsubscribe':
             reply_text = '取消关注事件'
         elif message.type == 'scan':
@@ -95,6 +89,8 @@ def wechat(request):
             reply_text = '自定义菜单跳转链接'
         elif message.type == 'templatesendjobfinish':
             reply_text = '模板消息'
+    else:
+        reply_text = '稍等：Phodal君正在实现功能中。'
 
     response = wechat_instance.response_text(content=reply_text)
 
