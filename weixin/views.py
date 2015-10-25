@@ -22,6 +22,7 @@ wechat_instance = WechatBasic(
     appsecret=AppSecret
 )
 
+
 @csrf_exempt
 def wechat(request):
     if request.method == 'GET':
@@ -51,44 +52,23 @@ def wechat(request):
     if isinstance(message, TextMessage):
         # 当前会话内容
         content = message.content.strip()
-        if content == '博客' or content == 'blog':
-            blog_posts = BlogPost.objects.published(for_user=request.user)
-
-            prefetch = ("categories", "keywords__keyword")
-            blog_posts = blog_posts.select_related("user").prefetch_related(*prefetch)[:5]
-            response = wechat_instance.response_news([
-                {
-                    'title': blog_posts[0].title,
-                    'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
-                    'description': blog_posts[0].description,
-                    'url': blog_posts[0].slug,
-                }, {
-                    'title': blog_posts[1].title,
-                    'picurl': 'http://doraemonext.oss-cn-hangzhou.aliyuncs.com/test/wechat-test.jpg',
-                    'url': blog_posts[1].slug,
-                }, {
-                    'title': blog_posts[2].title,
-                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
-                    'url': blog_posts[2].slug,
-                }, {
-                    'title': blog_posts[3].title,
-                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
-                    'url': blog_posts[3].slug,
-                }, {
-                    'title': blog_posts[4].title,
-                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
-                    'url': blog_posts[4].slug,
-                }
-            ])
-            return HttpResponse(response, content_type="application/xml")
+        if content == '博客' or content == 'blog' or content == '最新':
+            return HttpResponse(wechat_instance.response_news(get_new_blogposts(request)), content_type="application/xml")
         if content == '功能':
             reply_text = (
                 '目前支持的功能：\n' +
                 'Phodal君正在实现功能中。'
             )
         else:
-            reply_text = '稍等：Phodal君正在实现功能中。'
-            
+            response = get_new_blogposts(request)
+            response[0] = {
+                'title': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
+                'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
+                'description': '稍等：Phodal君正在实现功能中。正在为你返回最新文章。',
+                'url': 'https://www.phodal.com/',
+            }
+            return HttpResponse(wechat_instance.response_news(response), content_type="application/xml")
+
     elif isinstance(message, VoiceMessage):
         reply_text = '语音信息我听不懂/:P-(/:P-(/:P-('
     elif isinstance(message, ImageMessage):
@@ -126,3 +106,34 @@ def wechat(request):
     response = wechat_instance.response_text(content=reply_text)
 
     return HttpResponse(response, content_type="application/xml")
+
+
+def get_new_blogposts(request):
+    blog_posts = BlogPost.objects.published(for_user=request.user)
+    prefetch = ("categories", "keywords__keyword")
+    blog_posts = blog_posts.select_related("user").prefetch_related(*prefetch)[:5]
+    response = [
+        {
+            'title': blog_posts[0].title,
+            'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
+            'description': blog_posts[0].description,
+            'url': blog_posts[0].slug,
+        }, {
+            'title': blog_posts[1].title,
+            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'url': blog_posts[1].slug,
+        }, {
+            'title': blog_posts[2].title,
+            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'url': blog_posts[2].slug,
+        }, {
+            'title': blog_posts[3].title,
+            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'url': blog_posts[3].slug,
+        }, {
+            'title': blog_posts[4].title,
+            'picurl': 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460',
+            'url': blog_posts[4].slug,
+        }
+    ]
+    return response
