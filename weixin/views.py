@@ -56,16 +56,17 @@ def wechat(request):
             return HttpResponse(wechat_instance.response_news(get_new_blogposts(request)), content_type="application/xml")
         if content == '功能':
             reply_text = (
-                '目前支持的功能：\n' +
-                'Phodal君正在实现功能中。'
+                '目前支持的功能：最新博客\n'
+                '正在实现: 博客搜索、标签搜索、Google、Wiki'
             )
+            response = wechat_instance.response_text(content=reply_text)
+            return HttpResponse(response, content_type="application/xml")
+
         if 'wiki' in content or '维基' in content:
             import wikipedia
             wiki_content = content.replace("wiki:", "")
             print wiki_content
             wiki = wikipedia.page(wiki_content)
-
-            # wikipedia.search(wiki_content)
 
             print wiki.title,wiki.summary,wiki.url
             message = [{
