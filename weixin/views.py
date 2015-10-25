@@ -2,8 +2,10 @@
 from __future__ import unicode_literals
 
 from django.http.response import HttpResponse, HttpResponseBadRequest
+from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
-from mezzanine.blog.models import BlogPost
+from mezzanine.blog.models import BlogPost, BlogCategory
+from mezzanine.generic.models import Keyword
 
 from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
@@ -80,6 +82,11 @@ def wechat(request):
                 print(url)
 
             return HttpResponse(wechat_instance.response_news(get_new_blogposts(request)), content_type="application/xml")
+        if 'search' in content:
+            keyword = content.replace('search:','')
+            blogpost = BlogPost.objects.search(keyword)[:5]
+            messages = blogpost_to_array(blogpost)
+            return HttpResponse(wechat_instance.response_news(messages), content_type="application/xml")
         else:
             response = get_new_blogposts(request)
             message = {
@@ -131,6 +138,10 @@ def get_new_blogposts(request):
     blog_posts = BlogPost.objects.published(for_user=request.user)
     prefetch = ("categories", "keywords__keyword")
     blog_posts = blog_posts.select_related("user").prefetch_related(*prefetch)[:5]
+    return blogpost_to_array(blog_posts)
+
+
+def blogpost_to_array(blog_posts):
     picurl = 'https://avatars1.githubusercontent.com/u/472311?v=3&s=460'
     response = [
         {
