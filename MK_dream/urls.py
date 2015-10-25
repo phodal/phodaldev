@@ -4,7 +4,6 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
-from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 import mezzanine_pagedown.urls
 from tastypie.api import Api
@@ -58,6 +57,7 @@ urlpatterns += patterns('',
     url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),
     url(r'^api-token-verify/', 'rest_framework_jwt.views.verify_jwt_token'),
+    url(r'^weixin/', 'weixin.views.wechat'),
     url("^", include("mezzanine.urls")),
 )
 
