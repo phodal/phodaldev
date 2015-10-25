@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.http.response import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
+from mezzanine.blog.models import BlogPost
 
 from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
@@ -50,6 +51,36 @@ def wechat(request):
     if isinstance(message, TextMessage):
         # 当前会话内容
         content = message.content.strip()
+        if content == '博客' or content == 'blog':
+            blog_posts = BlogPost.objects.published(for_user=request.user)
+
+            prefetch = ("categories", "keywords__keyword")
+            blog_posts = blog_posts.select_related("user").prefetch_related(*prefetch)[:5]
+            response = wechat_instance.response_news([
+                {
+                    'title': blog_posts[0].title,
+                    'picurl': 'https://www.phodal.com/static/phodal/images/bg.jpg',
+                    'description': blog_posts[0].description,
+                    'url': blog_posts[0].slug,
+                }, {
+                    'title': blog_posts[1].title,
+                    'picurl': 'http://doraemonext.oss-cn-hangzhou.aliyuncs.com/test/wechat-test.jpg',
+                    'url': blog_posts[1].slug,
+                }, {
+                    'title': blog_posts[2].title,
+                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
+                    'url': blog_posts[2].slug,
+                }, {
+                    'title': blog_posts[3].title,
+                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
+                    'url': blog_posts[3].slug,
+                }, {
+                    'title': blog_posts[4].title,
+                    'picurl': 'http://www.ziqiangxuetang.com/media/uploads/images/django_logo_20140508_061519_35.jpg',
+                    'url': blog_posts[4].slug,
+                }
+            ])
+            return HttpResponse(response, content_type="application/xml")
         if content == '功能':
             reply_text = (
                 '目前支持的功能：\n' +
