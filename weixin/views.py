@@ -54,8 +54,10 @@ def wechat(request):
             return HttpResponse(wechat_instance.response_news(get_new_blogposts(request)), content_type="application/xml")
         if content == '功能':
             reply_text = (
-                '目前支持的功能：最新博客\n'
-                '正在实现: 博客搜索、标签搜索、Google、Wiki'
+                '目前支持的功能：最新博客、博客搜索\n' +
+                '回复【最新】或者【博客】，将返回最新博客' +
+                '回复【search:ionic】，将搜索ionic相关内容 \n' +
+                '正在实现: Google、Wiki'
             )
             response = wechat_instance.response_text(content=reply_text)
             return HttpResponse(response, content_type="application/xml")
@@ -115,11 +117,11 @@ def wechat(request):
         reply_text = '地理位置信息'
     elif isinstance(message, EventMessage):
         if message.type == 'subscribe':
-            reply_text = '感谢您的关注！回复【功能】返回使用指南'
+            reply_text = '感谢您的到来!回复【功能】返回使用指南'
             if message.key and message.ticket:
-                reply_text += '\n来源：扫描二维码'
+                reply_text += '\n来源：二维码扫描'
             else:
-                reply_text += '\n来源：搜索名称'
+                reply_text += '\n来源：搜索公众号名称'
         elif message.type == 'unsubscribe':
             reply_text = '取消关注事件'
         elif message.type == 'scan':
