@@ -2,10 +2,8 @@
 from __future__ import unicode_literals
 
 from django.http.response import HttpResponse, HttpResponseBadRequest
-from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
-from mezzanine.blog.models import BlogPost, BlogCategory
-from mezzanine.generic.models import Keyword
+from mezzanine.blog.models import BlogPost
 
 from wechat_sdk import WechatBasic
 from wechat_sdk.exceptions import ParseError
