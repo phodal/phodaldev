@@ -56,6 +56,8 @@ Server
     gunicorn MK_dream.wsgi
 
 ###Color Lists
+
+    http://www.color-hex.com/color/282e31
     
 - #cbe7f8
 - #b6cfdf
@@ -68,7 +70,10 @@ Server
 - #282e31
 - #141718
 - #000000
-    
+
+
+- 4D939F
+
 ##License
 
 © 2015 [Phodal Huang][phodal]. This code is distributed under the MIT license.

@@ -5,12 +5,12 @@ body {
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 2.4em;
     margin-bottom: 20px;
 }
 
 .android-content h1 {
-    font-size: 2.8em;
+    font-size: 2.4em;
     text-shadow: none;
     margin: 0;
 }
@@ -25,16 +25,29 @@ h3 {
     margin-bottom: 10px
 }
 
+.mdl-layout__header {
+    background-color: #939698;
+}
+
+.mdl-mega-footer {
+    background-color: #52575a;
+}
+
 .mdl-card__supporting-text h1,
 .mdl-card__supporting-text h2,
-.mdl-card__supporting-text h3 {
-   color: rgb(33,150,243);
-}
+.mdl-card__supporting-text h3,
 .mdl-card__supporting-text p,
 .mdl-card__supporting-text ul li,
 .mdl-card__supporting-text ol li,
-p {
-    color: #000;
+h1 ,h2 ,h3, p {
+    color: #282e31;
+}
+
+.list-unstyled li a,
+.right ul li a,
+.mdl-card__supporting-text a,
+a {
+    color: #1c2022;;
 }
 
 .right {
@@ -906,4 +919,9 @@ section.richtext ul li {
 section.richtext ul li a {
     font-size: 14px;
     text-decoration: none;
+}
+
+.mdl-button--fab.mdl-button--colored,
+.mdl-button--fab.mdl-button--colored:hover {
+    background-color: #282E31;
 }
