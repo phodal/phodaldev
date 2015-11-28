@@ -44,10 +44,14 @@ h1 ,h2 ,h3, p {
 }
 
 .list-unstyled li a,
-.right ul li a,
 .mdl-card__supporting-text a,
 a {
-    color: #1c2022;;
+    color: #1c2022;
+}
+
+.right ul li a
+{
+    color: #0d6fca;
 }
 
 .right {
@@ -924,4 +928,12 @@ section.richtext ul li a {
 .mdl-button--fab.mdl-button--colored,
 .mdl-button--fab.mdl-button--colored:hover {
     background-color: #282E31;
+}
+
+.mdl-textfield.is-invalid .mdl-textfield__input,
+.mdl-textfield.is-input .mdl-textfield__input,
+.mdl-textfield.is-focused .mdl-textfield__input {
+    width: 350px;
+    border-color: #fff;
+    color: #fff;
 }
