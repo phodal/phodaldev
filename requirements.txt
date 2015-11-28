@@ -1,5 +1,5 @@
 Mezzanine==4.0.1
-django==1.8.0
+django==1.8.7
 django-tastypie
 mezzanine-pagedown
 newrelic==2.50.0.39
