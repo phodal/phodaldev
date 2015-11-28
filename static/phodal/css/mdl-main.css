@@ -725,6 +725,9 @@ pre {
     opacity: 0;
   }
 
+  .middle img {
+    width: 100%;
+  }
   .mdl-card__supporting-text {
     width: 100%;
     padding: 16px 8px;
