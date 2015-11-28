@@ -54,6 +54,20 @@ Python 2.7
 Server
 
     gunicorn MK_dream.wsgi
+
+###Color Lists
+    
+- #cbe7f8
+- #b6cfdf
+- #a2b8c6
+- #8ea1ad
+- #798a94
+- #65737c
+- #515c63
+- #3c454a
+- #282e31
+- #141718
+- #000000
     
 ##License
 
