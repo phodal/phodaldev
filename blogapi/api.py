@@ -1,11 +1,12 @@
-from tastypie.resources import Resource, ModelResource, ALL, ALL_WITH_RELATIONS
+from django.db.models import Q
 from django.http.response import HttpResponse
-from tastypie.exceptions import ImmediateHttpResponse
-from tastypie.cache import SimpleCache
-from tastypie import http
-from tastypie.serializers import Serializer
-
 from mezzanine.blog.models import BlogPost
+from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
+from tastypie import http
+from tastypie.cache import SimpleCache
+from tastypie.exceptions import ImmediateHttpResponse
+from tastypie.resources import Resource, ModelResource, ALL_WITH_RELATIONS
+from tastypie.serializers import Serializer
 
 
 class BaseCorsResource(Resource):
@@ -52,7 +53,7 @@ class BaseCorsResource(Resource):
 
 class AllBlogSlugResource(BaseCorsResource, ModelResource):
     class Meta:
-        queryset = BlogPost.objects.published()
+        queryset = BlogPost.objects.all().filter(Q(status=CONTENT_STATUS_PUBLISHED))
         resource_name = "app"
         fields = ['keywords_string', 'slug', 'title', 'id']
         allowed_methods = ['get']
@@ -65,7 +66,7 @@ class AllBlogSlugResource(BaseCorsResource, ModelResource):
 
 class BlogResource(BaseCorsResource, ModelResource):
     class Meta:
-        queryset = BlogPost.objects.published()
+        queryset = BlogPost.objects.all().filter(Q(status=CONTENT_STATUS_PUBLISHED))
         resource_name = "blog"
         fields = ['keywords_string', 'slug', 'title', 'content', 'description', 'id']
         allowed_methods = ['get']
