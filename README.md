@@ -1,8 +1,6 @@
 #Phodal's Blog
 
-For more see in: [https://www.phodal.com/](https://www.phodal.com/)
-
-Powered by Mezzanine CMS (django)
+Powered by Mezzanine CMS & Django & Material Design Lite
 
 ##More Than Mezzanine
 
@@ -24,14 +22,12 @@ Powered by Mezzanine CMS (django)
 
 项目代码: [https://github.com/phodal/app](https://github.com/phodal/app)
 
-
 下载
 
 <a href="https://play.google.com/store/apps/details?id=com.phodal.designiot">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
-
 
 ##Run
 
@@ -57,7 +53,7 @@ Server
 
 ###Color Lists
 
-    http://www.color-hex.com/color/282e31
+http://www.color-hex.com/color/282e31
     
 - #cbe7f8
 - #b6cfdf
@@ -70,7 +66,6 @@ Server
 - #282e31
 - #141718
 - #000000
-
 
 - 4D939F
 
