@@ -1,6 +1,30 @@
-{% load mezzanine_tags %}
+{% load mezzanine_tags staticfiles %}
 
 {% editable_loader %}
+
+{% compress js %}
+<script src="{% static "mdl/material.min.js" %}"></script>
+<script src="{% static "mdl/jquery.2.1.4.min.js" %}"></script>
+<script src="{% static "phodal/js/highlight.min.js" %}"></script>
+<script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
+<script src="{% static "phodal/js/jquery.smartbanner.js" %}"></script>
+{% block extra_js %}
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+$(function() {
+ $.smartbanner({
+  title: 'Phodal"s Blog', // What the title of the app should be in the banner (defaults to <title>)
+  author: "Phodal Huang", // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+  price: 'FREE', // Price of the app
+  inGooglePlay: 'In Google Play', // Text of price for Android
+  button: '安裝及测试', // Text for the install button
+  appendToSelector: 'body'
+ })
+});
+</script>
+{% endblock %}
+{% endcompress %}
+
 
 <script>
 {% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
