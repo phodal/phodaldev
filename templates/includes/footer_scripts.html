@@ -8,6 +8,7 @@
 <script src="{% static "phodal/js/highlight.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.smartbanner.js" %}"></script>
+<script src="{% static "phodal/js/analytics.js" %}"></script>
 {% block extra_js %}
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
@@ -21,6 +22,39 @@ $(function() {
   appendToSelector: 'body'
  })
 });
+$('.autocomplete').autocomplete({
+    minChars: 2,
+    width: 350,
+    serviceUrl: '/api/v1/app/?limit=20&format=json&',
+    paramName: 'title__contains',
+    transformResult: function(response) {
+        var result = [];
+        $.each(JSON.parse(response).objects, function(index, dataItem) {
+            result.push({value: dataItem.title, data: dataItem.slug});
+        });
+
+        return { suggestions: result }
+    },
+    onSelect: function (suggestion) {
+        window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
+    }
+});
+$('#autocomplete2').autocomplete({
+        minChars: 2,
+        serviceUrl: '/api/v1/app/?limit=20&format=json&',
+        paramName: 'title__contains',
+        transformResult: function(response) {
+            var result = [];
+            $.each(JSON.parse(response).objects, function(index, dataItem) {
+                result.push({value: dataItem.title, data: dataItem.slug});
+            });
+
+            return { suggestions: result }
+        },
+        onSelect: function (suggestion) {
+            window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
+        }
+    });
 </script>
 {% endblock %}
 {% endcompress %}

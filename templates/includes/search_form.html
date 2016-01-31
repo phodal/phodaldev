@@ -1,5 +1,5 @@
 {% load mezzanine_tags i18n future %}
-    <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+<form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
     <div class="mdl-textfield__expandable-holder">
         <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
     </div>
@@ -12,25 +12,5 @@
             </span>
           </span>
     </button>
- <script>
-$('.autocomplete').autocomplete({
-    minChars: 2,
-    width: 350,
-    serviceUrl: '/api/v1/app/?limit=20&format=json&',
-    paramName: 'title__contains',
-    transformResult: function(response) {
-        var result = [];
-        $.each(JSON.parse(response).objects, function(index, dataItem) {
-            result.push({value: dataItem.title, data: dataItem.slug});
-        });
-
-        return { suggestions: result }
-    },
-    onSelect: function (suggestion) {
-        window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
-    }
-});
-</script>
-
     <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
 </form>
