@@ -18,7 +18,7 @@ $(function() {
         return 'android';
     } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
         return 'ios';
-    } else {
+    } else if (/windows phone/i.test(navigator.userAgent.toLowerCase())) {
         return 'windows';
     }
  }
