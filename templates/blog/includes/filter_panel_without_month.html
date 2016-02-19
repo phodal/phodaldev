@@ -1,5 +1,31 @@
 {% load blog_tags keyword_tags mezzanine_tags i18n future %}
 
+{% block blog_feeds %}
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
+        <h3 class="mdl-card__title-text">{% trans "Feeds" %}</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+    {% if tag %}
+        <a href="{% url "blog_post_feed_tag" tag.slug "rss" %}">{% trans "RSS" %}</a> /
+        <a href="{% url "blog_post_feed_tag" tag.slug "atom" %}">{% trans "Atom" %}</a>
+    {% endif %}
+    {% if category %}
+        <a href="{% url "blog_post_feed_category" category.slug "rss" %}">{% trans "RSS" %}</a> /
+        <a href="{% url "blog_post_feed_category" category.slug "atom" %}">{% trans "Atom" %}</a>
+    {% endif %}
+    {% if author %}
+        <a href="{% url "blog_post_feed_author" author.username "rss" %}">{% trans "RSS" %}</a> /
+        <a href="{% url "blog_post_feed_author" author.username "atom" %}">{% trans "Atom" %}</a>
+    {% endif %}
+    {% if not tag and not category and not author %}
+        <a href="{% url "blog_post_feed" "rss" %}">{% trans "RSS" %}</a> /
+        <a href="{% url "blog_post_feed" "atom" %}">{% trans "Atom" %}</a>
+    {% endif %}
+    </div>
+</section>
+{% endblock %}
+
 {% block blog_recent_posts %}
 {% blog_recent_posts 10 as recent_posts %}
 {% if recent_posts %}
