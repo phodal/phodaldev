@@ -98,6 +98,9 @@
     {% endif %}
     {% endblock %}
 
+    <p class="mdl-card__actions mdl-card--border">QQ技术交流群: 321689806</p>
+    <p>我的微信公众号(Phodal)</p>
+    <img style="border-radius: 3px;" width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
 </div>
 </section>
 
@@ -136,7 +139,6 @@
     <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}" type="text" required/>
     </form>
     </div>
-    <p class="mdl-card__actions mdl-card--border">QQ技术交流群: 321689806</p>
 </section>
 
 {% endblock %}
