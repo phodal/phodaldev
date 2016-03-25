@@ -1,18 +1,36 @@
 {% extends "base.html" %}
 
-{% load i18n %}
+{% load i18n staticfiles %}
 
 {% block meta_title %}
-{% trans "Page not found" %}
+{% trans "Page not found | Phodal can help you" %}
 {% endblock %}
 
 {% block title %}
-{% trans "Page not found" %}
+{% trans "404" %}
 {% endblock %}
 
 {% block main %}
-<div class="panel panel-danger">
-	<div class="panel-heading"><h3 class="panel-title">{% trans "Page not found" %}</h3></div>
-	<div class="panel-body">{% trans "The page you requested does not exist." %}</div>
-</div>
+<section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
+        <h3 class="mdl-card__title-text">Page not found! 404</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+	<p>The page you requested does not exist.</p>
+	<p>需要的内容不存在？以下面的方式和我联系</p>
+        <p>
+        Github: <a rel="nofollow" href="https://github.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        微博:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        知乎:<a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        </p>
+
+        <strong>微信公众号(Phodal)</strong>
+        <br>
+        <img style="border-radius: 3px;" width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <p>围观我的<a href="https://github.com/phodal/ideas" alt="phodal's ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br /></p>
+        QQ技术交流群: 321689806
+    </div>
+</section>
 {% endblock %}
