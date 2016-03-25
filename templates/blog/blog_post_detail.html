@@ -75,11 +75,6 @@
     <ul class="list-unstyled">
     {% for post in blog_post.related_posts.all %}
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-
-    {% block blog_post_list_post_content %}
-    <blockquote>{{ post.description_from_content|safe |slice:":80" }}</blockquote>
-    {% endblock %}
-
     {% endfor %}
     </ul>
     </div>
