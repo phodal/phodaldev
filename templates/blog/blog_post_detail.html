@@ -68,6 +68,27 @@
 </div>
 
 <div class="mdl-card__actions mdl-card--border">
+    <br />或许您还需要下面的文章:
+    {% block blog_post_detail_related_posts %}
+    {% if blog_post.related_posts.all %}
+    <div id="related-posts">
+    <ul class="list-unstyled">
+    {% for post in blog_post.related_posts.all %}
+     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+
+    {% block blog_post_list_post_content %}
+    <blockquote>{{ post.description_from_content|safe |slice:":80" }}</blockquote>
+    {% endblock %}
+
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}
+
+    {% endblock %}
+</div>
+
+<div class="mdl-card__actions mdl-card--border">
     {% block blog_post_detail_keywords %}
     {% keywords_for blog_post as tags %}
     {% if tags %}
@@ -83,39 +104,28 @@
     {% endspaceless %}
     {% endif %}
     {% endblock %}
-
-    围观我的<a href="https://github.com/phodal/ideas" alt="phodal's ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br />
-    <br />或许您还需要:
-    {% block blog_post_detail_related_posts %}
-    {% if blog_post.related_posts.all %}
-    <div id="related-posts">
-    <ul class="list-unstyled">
-    {% for post in blog_post.related_posts.all %}
-     <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-
-    {% block blog_post_list_post_content %}
-    {{ post.description_from_content|safe |slice:":80" }}
-    {% endblock %}
-
-    {% endfor %}
-    </ul>
-    </div>
-    {% endif %}
-    {% endblock %}
-
-    <p class="mdl-card__actions mdl-card--border">
-    Github: <a rel="nofollow" href="https://github.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
-    微博:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
-    知乎:<a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
-    </p>
-
-    <strong>微信公众号(Phodal)</strong>
-    <br>
-    <img style="border-radius: 3px;" width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
-    <br>
-    QQ技术交流群: 321689806
-    <br>
 </div>
+</section>
+
+<section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
+    <div class="mdl-card__title mdl-card--border mdl-card--expand">
+        <h3 class="mdl-card__title-text">关于我</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <p>
+        Github: <a rel="nofollow" href="https://github.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        微博:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        知乎:<a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
+        </p>
+
+        <strong>微信公众号(Phodal)</strong>
+        <br>
+        <img style="border-radius: 3px;" width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <p>围观我的<a href="https://github.com/phodal/ideas" alt="phodal's ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br /></p>
+        QQ技术交流群: 321689806
+    </div>
 </section>
 
 
