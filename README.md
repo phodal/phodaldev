@@ -13,10 +13,7 @@ Powered by Mezzanine CMS & Django & Material Design Lite
 - Event & Ads Module
 - Homepage News
 - Wechat Support
-
-##微信公众号
-
-![QRCode](https://www.phodal.com/static/phodal/images/qrcode.jpg)
+- AMP Support
 
 ##APP 
 
@@ -51,25 +48,7 @@ Server
 
     gunicorn MK_dream.wsgi
 
-###Color Lists
-
-http://www.color-hex.com/color/282e31
-    
-- #cbe7f8
-- #b6cfdf
-- #a2b8c6
-- #8ea1ad
-- #798a94
-- #65737c
-- #515c63
-- #3c454a
-- #282e31
-- #141718
-- #000000
-
-- 4D939F
-
 ##License
 
-© 2015 [Phodal Huang][phodal]. This code is distributed under the MIT license.
+© 2014~2016 [Phodal Huang][phodal]. This code is distributed under the MIT license.
 [phodal]:http://www.phodal.com/
