@@ -5,6 +5,7 @@
 <head>
 <title>{% block meta_title %}{% endblock %}  - Phodal {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 
+<meta charset="utf-8">
 <meta http-equiv="content-language" content="zh-CN" />
 <meta name="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -30,8 +31,8 @@
 
 
 {% compress css %}
-<link rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "mdl/material.min.css" %}">
-<link rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "phodal/css/mdl-main.css" %}">
+<link amp-custom rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "mdl/material.min.css" %}">
+<link amp-custom rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "phodal/css/mdl-main.css" %}">
 {% endcompress %}
     
 {% block extra_head %}{% endblock %}
@@ -52,11 +53,7 @@
             </span>
             <!-- Add spacer, to align navigation to the right in desktop -->
             <div class="android-header-spacer mdl-layout-spacer"></div>
-            <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-                <div class="mdl-textfield__expandable-holder">
-                    {% search_form "all" %}
-                </div>
-            </div>
+
             <!-- Navigation -->
             <div class="android-navigation-container">
                 <nav class="android-navigation mdl-navigation">

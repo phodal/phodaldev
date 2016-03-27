@@ -123,43 +123,6 @@
     </div>
 </section>
 
-
-{% block ads %}
-{% ads %}
-{% for ad in ads %}
-    {% if ad %}
-    <section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
-        <div class="mdl-card__title mdl-card--border mdl-card--expand">
-            {% editable ad.title %}
-            <h3 class="mdl-card__title-text">{{ ad.title }} </h3>
-            {% endeditable %}
-        </div>
-        {% editable ad.content %}
-        <div class="mdl-card__supporting-text">{{ ad.content |richtext_filters|safe }}</div>
-        {% endeditable %}
-        <div class="mdl-card__actions mdl-card--border">
-            {% editable ad.url %}
-            详情见官网: <a href="{{ ad.url }}">{{ ad.url }}</a>
-            {% endeditable %}
-        </div>
-    </section>
-    {% endif %}
-{% endfor %}
-{% endblock %}
-
-{% block blog_post_detail_comments %}
-{% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
-{% endblock %}
-
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
-    <div class="mdl-card__supporting-text">
-
-    <form action="{% url "search" %}" class="autocomplete2 ">
-    <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}" type="text" required/>
-    </form>
-    </div>
-</section>
-
 {% endblock %}
 
 {% block right_panel %}
