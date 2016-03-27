@@ -60,7 +60,7 @@
 
 {% block blog_post_detail_content %}
 <div  itemprop="articleBody">
-{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img"|safe }}
+{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img" | replace:"/img>/amp-img>"  |safe }}
 </div>
 {% endblock %}
 </div>
