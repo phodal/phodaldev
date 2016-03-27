@@ -7,6 +7,8 @@ from django.contrib import admin
 from mezzanine.conf import settings
 import mezzanine_pagedown.urls
 from tastypie.api import Api
+
+from amp import views as amp_views
 from blogapi.api import AllBlogSlugResource, BlogResource
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
@@ -51,6 +53,7 @@ urlpatterns += patterns("",
     )
 
 urlpatterns += patterns('',
+    url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),
     url(r"^api/app/", include("api.urls")),
