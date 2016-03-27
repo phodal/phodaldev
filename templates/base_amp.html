@@ -1,0 +1,138 @@
+<!doctype html>
+<html amp lang="zh-cmn-Hans">
+{% load pages_tags mezzanine_tags i18n future staticfiles macros %}
+
+<head>
+<title>{% block meta_title %}{% endblock %}  - Phodal {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+
+<meta http-equiv="content-language" content="zh-CN" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<link rel="canonical" href="https://www.phodal.com/blog/{{ slug }}" />
+<link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
+<link rel="alternate" hreflang="x-default" href="https://www.phodal.com{{ request.get_full_path }}"/>
+<meta name="baidu-site-verification" content="dZvx5Cg1jt" />
+<meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
+<meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+<meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
+<meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+<meta name="sogou_site_verification" content="46iR0w9xzJ"/>
+<meta name="bitly-verification" content="b4cdaf394c9f"/>
+<meta itemprop="url" content="https://www.phodal.com"/>
+<link rel="author" href="https://plus.google.com/108569130336274162470/posts" content="Phodal Huang">
+<link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
+
+<meta name="google-play-app" content="app-id=ren.growth">
+<meta name="apple-itunes-app" content="app-id=1078807522">
+<meta name="msApplication-ID" content="51077Phodal.GrowthRen" />
+<meta name="msApplication-PackageFamilyName" content="51077Phodal.GrowthRen_d4jwzt1r37cxj" />
+
+<link rel="android-touch-icon" href="{% static "phodal/images/growth.png" %}" />
+<link rel="apple-touch-icon" href="{% static "phodal/images/growth.png" %}" />
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+{% endifinstalled %}
+
+{% compress css %}
+<link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
+{% endcompress %}
+    
+{% block extra_head %}{% endblock %}
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+
+{% macro page_title %}
+    <span class="android-logo-image">{% block title %}{% endblock %}</span>
+{% endmacro %}
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+            <span class="android-title mdl-layout-title">
+              {% use_macro page_title %}
+            </span>
+            <!-- Add spacer, to align navigation to the right in desktop -->
+            <div class="android-header-spacer mdl-layout-spacer"></div>
+            <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                <div class="mdl-textfield__expandable-holder">
+                    {% search_form "all" %}
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="android-navigation-container">
+                <nav class="android-navigation mdl-navigation">
+                    {% page_menu "pages/menus/nav_menu.html" %}
+                </nav>
+            </div>
+          <span class="android-mobile-title mdl-layout-title">
+            {% use_macro page_title %}
+          </span>
+        </div>
+    </div>
+
+
+    <div class="android-drawer mdl-layout__drawer">
+    <span class="mdl-layout-title left-menu">
+      <span class="android-logo-image">PHODAL</span>
+    </span>
+        {% nevercache %}
+            {% include "includes/user_panel.html" %}
+        {% endnevercache %}
+        <nav class="mdl-navigation">
+            {% spaceless %}
+   	      <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
+            {% page_menu "pages/menus/tree.html" %}
+            {% endspaceless %}
+        </nav>
+    </div>
+
+    <div class="android-content mdl-layout__content">
+        {% nevercache %}
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endnevercache %}
+
+        <div class="mdl-grid mdl-cell--12-col">
+            <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope itemtype="http://schema.org/Article">
+                {% block main %}{% endblock %}
+            </div>
+
+            <div class="mdl-cell--3-col right">
+                {% block right_panel %}
+                {% include "includes/user_info.html" %}
+                {% endblock %}
+            </div>
+        </div>
+        <div style="overflow: auto;"></div>
+        <footer class="android-footer mdl-mega-footer">
+            <div class="mdl-mega-footer--middle-section mdl-cell--10-col center">
+                {% page_menu "pages/menus/footer.html" %}
+            </div>
+            <div class="mdl-mega-footer--bottom-section mdl-cell--8-col center">
+                <div class="mdl-logo">
+                    Powered by Mezzanine & Django & Material Design Lite
+                    <br />
+                    Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+{% include "includes/footer_scripts.html" %}
+</body>
+</html>
