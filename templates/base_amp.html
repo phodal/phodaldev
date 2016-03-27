@@ -97,14 +97,8 @@
         {% endnevercache %}
 
         <div class="mdl-grid mdl-cell--12-col">
-            <div class="middle mdl-layout__content mdl-cell mdl-cell--9-col" itemscope itemtype="http://schema.org/Article">
+            <div class="middle mdl-layout__content mdl-cell" itemscope itemtype="http://schema.org/Article">
                 {% block main %}{% endblock %}
-            </div>
-
-            <div class="mdl-cell--3-col right">
-                {% block right_panel %}
-                {% include "includes/user_info.html" %}
-                {% endblock %}
             </div>
         </div>
         <footer class="android-footer mdl-mega-footer">
