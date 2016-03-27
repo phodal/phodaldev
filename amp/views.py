@@ -7,7 +7,6 @@ def amp_blog_post_detail(request, slug, year=None, month=None, day=None,
                      template="blog/amp_blog_post_detail.html",
                      extra_context=None):
 
-    print(request)
     blog_posts = BlogPost.objects.published(
         for_user=request.user).select_related()
     blog_post = get_object_or_404(blog_posts, slug=slug)

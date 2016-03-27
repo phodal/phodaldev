@@ -11,6 +11,7 @@
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <link rel="canonical" href="https://www.phodal.com{{ request.get_full_path }}" />
+{% if blog_post %}<link rel="amphtml" href="https://www.phodal.com/amp/{{ blog_post.slug}}/" />{% endif %}
 <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
 <link rel="alternate" hreflang="x-default" href="https://www.phodal.com{{ request.get_full_path }}"/>
 <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
