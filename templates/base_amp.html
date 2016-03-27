@@ -31,8 +31,9 @@
 
 
 {% compress css %}
-<link amp-custom rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "mdl/material.min.css" %}">
-<link amp-custom rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "phodal/css/mdl-main.css" %}">
+<style amp-custom>
+
+</style>
 {% endcompress %}
     
 {% block extra_head %}{% endblock %}
@@ -116,6 +117,5 @@
     </div>
 </div>
 
-{% include "includes/amp_footer_scripts.html" %}
 </body>
 </html>
