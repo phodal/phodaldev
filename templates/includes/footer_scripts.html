@@ -69,6 +69,10 @@ $('#autocomplete2').autocomplete({
             window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
         }
     });
+$( document ).ready(function() {
+    $('.middle.mdl-layout__content').css('z-index', 'initial');
+    $('.android-content.mdl-layout__content').css('z-index', 'initial');
+});
 </script>
 {% endblock %}
 {% endcompress %}
@@ -84,10 +88,4 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '{{ settings.GOOGLE_ANALYTICS_ID }}', 'auto');  // Replace with your property ID.
 ga('send', 'pageview');
 {% endif %}
-</script>
-<script>
-$( document ).ready(function() {
-    $('.middle.mdl-layout__content').css('z-index', 'initial');
-    $('.android-content.mdl-layout__content').css('z-index', 'initial');
-});
 </script>
