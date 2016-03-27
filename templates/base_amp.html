@@ -6,8 +6,8 @@
 <title>{% block meta_title %}{% endblock %}  - Phodal {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 
 <meta http-equiv="content-language" content="zh-CN" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <link rel="canonical" href="https://www.phodal.com/blog/{{ slug }}" />
@@ -21,7 +21,6 @@
 <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
 <meta name="bitly-verification" content="b4cdaf394c9f"/>
 <meta itemprop="url" content="https://www.phodal.com"/>
-<link rel="author" href="https://plus.google.com/108569130336274162470/posts" content="Phodal Huang">
 <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
 
 <meta name="google-play-app" content="app-id=ren.growth">
@@ -29,16 +28,10 @@
 <meta name="msApplication-ID" content="51077Phodal.GrowthRen" />
 <meta name="msApplication-PackageFamilyName" content="51077Phodal.GrowthRen_d4jwzt1r37cxj" />
 
-<link rel="android-touch-icon" href="{% static "phodal/images/growth.png" %}" />
-<link rel="apple-touch-icon" href="{% static "phodal/images/growth.png" %}" />
-{% ifinstalled mezzanine.blog %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
-{% endifinstalled %}
 
 {% compress css %}
-<link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
-<link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
+<link rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "mdl/material.min.css" %}">
+<link rel="stylesheet" type="text/css" href="http://{{request.get_host}}{% static "phodal/css/mdl-main.css" %}">
 {% endcompress %}
     
 {% block extra_head %}{% endblock %}
