@@ -274,7 +274,8 @@ INSTALLED_APPS = (
     "feed",
     "rest_framework",
     "corsheaders",
-    "blogapi"
+    "blogapi",
+    "amp"
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'

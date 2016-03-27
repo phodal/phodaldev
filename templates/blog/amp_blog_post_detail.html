@@ -1,5 +1,5 @@
 {% extends "base_amp.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles event_tags %}
+{% load  mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles event_tags amp_tags%}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -60,9 +60,7 @@
 
 {% block blog_post_detail_content %}
 <div  itemprop="articleBody">
-{% editable blog_post.content %}
-{{ blog_post.content|richtext_filters|safe }}
-{% endeditable %}
+{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img"|safe }}
 </div>
 {% endblock %}
 </div>
@@ -115,7 +113,7 @@
 
         <strong>微信公众号(Phodal)</strong>
         <br>
-        <img width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
+        <amp-img width="178" height="178" src="{% static "phodal/images/qrcode.jpg"%}" />
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <p>围观我的<a href="https://github.com/phodal/ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br /></p>
