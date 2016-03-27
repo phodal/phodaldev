@@ -32,7 +32,253 @@
 
 {% compress css %}
 <style amp-custom>
+h1, h2, h3, h4, body, p, a {
+    font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans", "Inconsolata","Roboto","Helvetica Neue","Verdana", "Tahoma" ,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","sans-serif";
+}
 
+.nav {
+    margin: 0 auto;
+    text-transform: uppercase
+}
+
+.header {
+    height: 36px;
+    color: #fff;
+    background-color: #5e6772;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header ul {
+    float: right;
+}
+
+.header span {
+    line-height: 200%;
+}
+.header {
+    padding: 0.5em;
+}
+
+.super-header {
+    background: #222;
+    color: #000;
+}
+
+.super-header input {
+    color: white;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    outline: none;
+    margin: 0;
+    padding: 4px 0;
+    width: 255px;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+    -webkit-appearance: none;
+}
+
+.supernav{
+    margin: 0;
+    text-align: right;
+    padding: 0;
+}
+
+.supernav ul li a {
+    font-size: 12px;
+}
+
+.splash h1 {
+    padding-top: 100px;
+    line-height: 200%;
+    color: #fff;
+}
+
+.content {
+    padding: 1em;
+}
+
+.is-center {
+    text-align: center;
+}
+
+.l-content {
+    margin: 0 auto;
+}
+
+.pwd h2,
+.pwd h2 a,
+.pwd p {
+    color: #5090CC;
+    text-align: center;
+}
+
+.pwd ul li {
+    list-style: none;
+    color: #5090CC;
+}
+
+.moreinfo ul li  {
+    list-style: none;
+}
+
+.pwd h2 a,
+.moreinfo a,
+.pwd a {
+    text-decoration: none;
+}
+
+.moreinfo {
+    margin: 0 auto;
+    line-height: 150%;
+}
+
+.l-content a,
+.moreinfo h2,
+.moreinfo a {
+    color: #23B7F3;
+}
+
+.moreinfo p,
+.moreinfo h2 {
+    text-align: center;
+}
+
+.moreinfo h2 a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #5e6772;
+}
+
+footer .pure-menu {
+    padding: 25px 0 0 0;
+}
+
+footer .pure-menu-link {
+    color: #fff;
+}
+
+footer .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
+    color: #eee;
+    background-color: #23B7F3;
+}
+
+footer .copy {
+    background: #222;
+    padding: 10px 0 10px 0;
+    line-height: 200%;
+    color: #fff;
+}
+
+footer .margin-center {
+    margin: 0 auto;
+}
+
+.slice {
+    border-right: 1px #ccc dotted;
+}
+
+.slice-margin {
+    margin-left: 12px;
+}
+
+.topgradient {
+    height: 2px;
+    width: 100%;
+    background: #446173;
+}
+
+.literature {
+    background: #EEEEEE;
+}
+
+.code {
+    background: #FAF9F9;
+}
+
+.pwd {
+    line-height: 150%;
+}
+
+.design {
+    background: #eee;
+}
+
+.social {
+    color: #23B7F3;
+    margin-bottom: 25px;
+}
+
+.social a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.about {
+    color: #fff;
+    background: #5e6772;
+}
+
+.bottomgradient {
+    height: 5px;
+    width: 100%;
+    background: #fff;
+}
+
+.background {
+    background: transparent url('../images/bg.jpg') 0 0 no-repeat;
+    text-align: center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 62em) {
+    .header span a {
+        color: #fff;
+    }
+    .header .pure-menu-link, .header .pure-menu-heading {
+        padding: 0.5em 0em;
+    }
+}
+
+
+.blog-posts {
+    margin: 0 4em;
+}
+
+.recently-blog {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0 20px;
+}
+
+.recently-blog a,
+.blog-posts a {
+    text-decoration: none;
+}
+
+.blog-posts p {
+    margin: 0.5em 0.5em;
+}
+
+.blog-posts h3 {
+    text-align: center;
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
 </style>
 {% endcompress %}
     
