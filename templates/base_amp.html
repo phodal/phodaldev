@@ -313,36 +313,7 @@ footer .margin-center {
         </div>
     </div>
 
-
-    <div class="android-drawer mdl-layout__drawer">
-    <span class="mdl-layout-title left-menu">
-      <span class="android-logo-image">PHODAL</span>
-    </span>
-        {% nevercache %}
-            {% include "includes/user_panel.html" %}
-        {% endnevercache %}
-        <nav class="mdl-navigation">
-            {% spaceless %}
-   	      <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
-            {% page_menu "pages/menus/tree.html" %}
-            {% endspaceless %}
-        </nav>
-    </div>
-
     <div class="android-content mdl-layout__content">
-        {% nevercache %}
-        {% if messages %}
-        <div class="messages">
-            {% for message in messages %}
-            <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{ message }}
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% endnevercache %}
-
         <div class="mdl-grid mdl-cell--12-col">
             <div class="middle mdl-layout__content mdl-cell" itemscope itemtype="http://schema.org/Article">
                 {% block main %}{% endblock %}
