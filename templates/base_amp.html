@@ -38,7 +38,7 @@ h1, h2, h3, h4, body, p, a {
 
 .nav {
     margin: 0 auto;
-    text-transform: uppercase
+    textstransform: uppercase
 }
 
 .header {
@@ -111,48 +111,6 @@ h1, h2, h3, h4, body, p, a {
     margin: 0 auto;
 }
 
-.pwd h2,
-.pwd h2 a,
-.pwd p {
-    color: #5090CC;
-    text-align: center;
-}
-
-.pwd ul li {
-    list-style: none;
-    color: #5090CC;
-}
-
-.moreinfo ul li  {
-    list-style: none;
-}
-
-.pwd h2 a,
-.moreinfo a,
-.pwd a {
-    text-decoration: none;
-}
-
-.moreinfo {
-    margin: 0 auto;
-    line-height: 150%;
-}
-
-.l-content a,
-.moreinfo h2,
-.moreinfo a {
-    color: #23B7F3;
-}
-
-.moreinfo p,
-.moreinfo h2 {
-    text-align: center;
-}
-
-.moreinfo h2 a {
-    text-decoration: none;
-}
-
 footer {
     background-color: #5e6772;
 }
@@ -180,105 +138,6 @@ footer .copy {
 footer .margin-center {
     margin: 0 auto;
 }
-
-.slice {
-    border-right: 1px #ccc dotted;
-}
-
-.slice-margin {
-    margin-left: 12px;
-}
-
-.topgradient {
-    height: 2px;
-    width: 100%;
-    background: #446173;
-}
-
-.literature {
-    background: #EEEEEE;
-}
-
-.code {
-    background: #FAF9F9;
-}
-
-.pwd {
-    line-height: 150%;
-}
-
-.design {
-    background: #eee;
-}
-
-.social {
-    color: #23B7F3;
-    margin-bottom: 25px;
-}
-
-.social a {
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.about {
-    color: #fff;
-    background: #5e6772;
-}
-
-.bottomgradient {
-    height: 5px;
-    width: 100%;
-    background: #fff;
-}
-
-.background {
-    background: transparent url('../images/bg.jpg') 0 0 no-repeat;
-    text-align: center;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
-    width: 100%;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-@media (max-width: 62em) {
-    .header span a {
-        color: #fff;
-    }
-    .header .pure-menu-link, .header .pure-menu-heading {
-        padding: 0.5em 0em;
-    }
-}
-
-
-.blog-posts {
-    margin: 0 4em;
-}
-
-.recently-blog {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0 20px;
-}
-
-.recently-blog a,
-.blog-posts a {
-    text-decoration: none;
-}
-
-.blog-posts p {
-    margin: 0.5em 0.5em;
-}
-
-.blog-posts h3 {
-    text-align: center;
-    -webkit-margin-before: 0.1em;
-    -webkit-margin-after: 0.1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
 </style>
 {% endcompress %}
     
@@ -292,24 +151,15 @@ footer .margin-center {
 {% endmacro %}
 
 <body itemscope itemtype="http://schema.org/WebPage">
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-        <div class="mdl-layout__header-row">
-            <span class="android-title mdl-layout-title">
-              {% use_macro page_title %}
-            </span>
-            <!-- Add spacer, to align navigation to the right in desktop -->
-            <div class="android-header-spacer mdl-layout-spacer"></div>
-
-            <!-- Navigation -->
-            <div class="android-navigation-container">
-                <nav class="android-navigation mdl-navigation">
-                    {% page_menu "pages/menus/nav_menu.html" %}
-                </nav>
-            </div>
-          <span class="android-mobile-title mdl-layout-title">
-            {% use_macro page_title %}
-          </span>
+<div class="pure-g">
+    <div class="header pure-u-1">
+        <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
+            <span><a href="/">PHODAL</a></span>
+            <ul class="pure-menu-list menunav">
+                <li class="pure-menu-item"><a href="/blog/" class="pure-menu-link">BLOG</a></li>
+                <li class="pure-menu-item"><a href="/works/" class="pure-menu-link">CODE</a></li>
+                <li class="pure-menu-item"><a href="/literature/" class="pure-menu-link">LITERATURE</a></li>
+            </ul>
         </div>
     </div>
 
