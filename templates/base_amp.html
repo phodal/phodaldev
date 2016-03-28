@@ -189,7 +189,12 @@ footer .pure-menu {
 footer .pure-menu-link {
     color: #fff;
 }
-
+.pure-u-5-6, .pure-u-20-24 {
+    width: 83.3333%;
+}
+.pure-menu-link, .pure-menu-disabled, .pure-menu-heading {
+    padding: .5em 1em;
+}
 footer .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
     color: #eee;
     background-color: #23B7F3;
@@ -236,15 +241,13 @@ footer .margin-center {
                 {% block main %}{% endblock %}
             </div>
         </div>
-        <footer class="android-footer mdl-mega-footer">
-            <div class="mdl-mega-footer--middle-section mdl-cell--10-col center">
-                {% page_menu "pages/menus/footer.html" %}
-            </div>
-            <div class="mdl-mega-footer--bottom-section mdl-cell--8-col center">
-                <div class="mdl-logo">
-                    Powered by Mezzanine & Django & Material Design Lite
-                    <br />
-                    Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
+        <footer>
+            <div class="pure-g">
+                <div class="pure-u-5-6 margin-center">
+                {% page_menu "pages/menus/homepage_footer.html" %}
+                </div>
+                <div class="is-center pure-u-1-1 copy">
+                    A Phodal's Project
                 </div>
             </div>
         </footer>
