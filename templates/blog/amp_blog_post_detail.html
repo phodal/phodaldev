@@ -26,8 +26,8 @@
 {% endblock %}
 
 {% block main %}
-<h2 class="section--center mdl-grid mdl-cell--11-col" itemprop="headline">{{ blog_post.title }}</h2>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
+<h2 itemprop="headline">{{ blog_post.title }}</h2>
+<article>
 <div class="mdl-card__supporting-text">
 {% block blog_post_detail_postedby %}
 {% editable blog_post.publish_date %}
@@ -98,7 +98,7 @@
     {% endif %}
     {% endblock %}
 </div>
-</section>
+</article>
 
 <section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
