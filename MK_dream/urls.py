@@ -53,7 +53,7 @@ urlpatterns += patterns("",
     )
 
 urlpatterns += patterns('',
-#    url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
+   url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
     url(r"^api/", include(apiv1.urls)),
     url(r"^api/app/", include("api.urls")),
