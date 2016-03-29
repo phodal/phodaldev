@@ -52,12 +52,6 @@
 </p>
 {% endblock %}
 
-{% block blog_post_detail_featured_image %}
-{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-<p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}"></p>
-{% endif %}
-{% endblock %}
-
 {% block blog_post_detail_content %}
 <div  itemprop="articleBody">
 {{ blog_post.content|richtext_filters|replace:"/<img/<amp-img" | replace:"/img>/amp-img>"  |safe }}
@@ -65,12 +59,12 @@
 {% endblock %}
 </div>
 
-<div class="mdl-card__actions mdl-card--border">
+<div>
     <br />或许您还需要下面的文章:
     {% block blog_post_detail_related_posts %}
     {% if blog_post.related_posts.all %}
     <div id="related-posts">
-    <ul class="list-unstyled">
+    <ul>
     {% for post in blog_post.related_posts.all %}
      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
     {% endfor %}
@@ -80,31 +74,13 @@
 
     {% endblock %}
 </div>
-
-<div class="mdl-card__actions mdl-card--border">
-    {% block blog_post_detail_keywords %}
-    {% keywords_for blog_post as tags %}
-    {% if tags %}
-    {% spaceless %}
-    <p>
-        <ul class="list-inline tags">
-            <li>{% trans "标签" %}:</li>
-            {% for tag in tags %}
-            <li><a href="{% url "blog_post_list_tag" tag.slug %}">{{ tag }}</a></li>
-            {% endfor %}
-        </ul>
-    </p>
-    {% endspaceless %}
-    {% endif %}
-    {% endblock %}
-</div>
 </article>
 
-<section class="section--center mdl-grid mdl-shadow--2dp mdl-cell--11-col recent-post">
-    <div class="mdl-card__title mdl-card--border mdl-card--expand">
-        <h3 class="mdl-card__title-text">关于我</h3>
+<section>
+    <div>
+        <h3>关于我</h3>
     </div>
-    <div class="mdl-card__supporting-text">
+    <div>
         <p>
         Github: <a rel="nofollow" href="https://github.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
         微博:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a> &nbsp;&nbsp;&nbsp;
@@ -114,7 +90,7 @@
         <strong>微信公众号(Phodal)</strong>
         <br>
     </div>
-    <div class="mdl-card__actions mdl-card--border">
+    <div>
         <p>围观我的<a href="https://github.com/phodal/ideas">Github Idea</a>墙, 也许，你会遇到心仪的项目<br /></p>
         QQ技术交流群: 321689806
     </div>
