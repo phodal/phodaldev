@@ -30,7 +30,6 @@
 <article>
 <div class="mdl-card__supporting-text">
 {% block blog_post_detail_postedby %}
-{% editable blog_post.publish_date %}
 <span class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
@@ -38,7 +37,6 @@
     {% endwith %}
     <span itemprop="datePublished">{{ blog_post.publish_date }}</span>
 </span>
-{% endeditable %}
 {% endblock %}
 {% block blog_post_detail_commentlink %}
 <p>
