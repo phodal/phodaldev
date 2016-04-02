@@ -150,16 +150,6 @@
 {% block blog_post_detail_comments %}
 {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
 {% endblock %}
-
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
-    <div class="mdl-card__supporting-text">
-
-    <form action="{% url "search" %}" class="autocomplete2 ">
-    <input class="form-control" id="autocomplete2" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}" type="text" required/>
-    </form>
-    </div>
-</section>
-
 {% endblock %}
 
 {% block right_panel %}
