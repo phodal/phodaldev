@@ -14,28 +14,24 @@
 
 {% block breadcrumb_menu %}
 {{ block.super }}
-<span class="active" itemprop="name">{{ blog_post.title }}</span>
+<span class="active">{{ blog_post.title }}</span>
 {% endblock %}
 
 {% block title %}
-<div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text">
-    Blog
-    </h2>
-</div>
+<h2>Blog</h2>
 {% endblock %}
 
 {% block main %}
-<h2 itemprop="headline">{{ blog_post.title }}</h2>
+<h2>{{ blog_post.title }}</h2>
 <article>
-<div class="mdl-card__supporting-text">
+<div>
 {% block blog_post_detail_postedby %}
 <span class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
-    <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
+    <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
-    <span itemprop="datePublished">{{ blog_post.publish_date }}</span>
+    <span>{{ blog_post.publish_date }}</span>
 </span>
 {% endblock %}
 {% block blog_post_detail_commentlink %}
@@ -51,8 +47,8 @@
 {% endblock %}
 
 {% block blog_post_detail_content %}
-<div  itemprop="articleBody">
-{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img itemprop='image'" | replace:"/img>/amp-img>"  |safe }}
+<div>
+{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img" | replace:"/img>/amp-img>"  |safe }}
 </div>
 {% endblock %}
 </div>
