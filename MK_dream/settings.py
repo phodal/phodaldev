@@ -273,7 +273,6 @@ INSTALLED_APPS = (
     "feed",
     "rest_framework",
     "corsheaders",
-    "blogapi",
     "amp"
 )
 

@@ -1,21 +1,14 @@
 from __future__ import unicode_literals
 
+import mezzanine_pagedown.urls
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-
 from mezzanine.conf import settings
-import mezzanine_pagedown.urls
-from tastypie.api import Api
 
 from amp import views as amp_views
-from blogapi.api import AllBlogSlugResource, BlogResource
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
-
-apiv1 = Api(api_name='v1')
-apiv1.register(BlogResource())
-apiv1.register(AllBlogSlugResource())
 
 admin.autodiscover()
 
@@ -55,7 +48,6 @@ urlpatterns += patterns("",
 urlpatterns += patterns('',
    url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
     url("^pagedown/", include(mezzanine_pagedown.urls)),
-    url(r"^api/", include(apiv1.urls)),
     url(r"^api/app/", include("api.urls")),
     url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),

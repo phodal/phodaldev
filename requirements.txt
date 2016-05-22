@@ -1,10 +1,9 @@
 Mezzanine==4.1.0
 django==1.8.7
-django-tastypie
 mezzanine-pagedown
 newrelic==2.50.0.39
 django-macros==0.4.0
-djangorestframework==3.2.3
+djangorestframework==3.3.3
 django-cors-headers
 djangorestframework-jwt
 django-widget-tweaks==1.4.1
