@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
 
 from django.http import Http404
-import feeds
+
+from feed import feeds
 
 
 def blog_post_feed(request, format, **kwargs):

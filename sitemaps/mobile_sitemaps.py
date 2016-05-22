@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import warnings
 
 from django.contrib.sitemaps.views import x_robots_tag
-from django.contrib.sites.models import get_current_site
+from django.contrib.sites.shortcuts import get_current_site
 from django.core.paginator import EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.template.response import TemplateResponse
