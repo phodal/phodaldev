@@ -48,7 +48,7 @@
 
 {% block blog_post_detail_content %}
 <div>
-{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img" | replace:"/img>/amp-img>"  |safe }}
+{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img height=400 layout='fixed-height'" | replace:"/img>/amp-img>"  |safe }}
 </div>
 {% endblock %}
 </div>
