@@ -92,7 +92,7 @@
 {% editable blog_post.title %}
 <div class="mdl-card__title mdl-card--border mdl-card--expand">
     <h2 class="mdl-card__title-text">
-        <a href="{{ blog_post.get_absolute_url }}"  itemprop="headline">{{ blog_post.title }} › </a>
+        <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }} › </a>
     </h2>
 </div>
 {% endeditable %}
@@ -104,7 +104,7 @@
 <h6 class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
-    <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
+    <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
     {% with blog_post.categories.all as categories %}
     {% if categories %}
@@ -114,7 +114,7 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-    <span itemprop="datePublished">{{ blog_post.publish_date }}</span>
+    <span >{{ blog_post.publish_date }}</span>
 </h6>
 {% endeditable %}
 {% endblock %}
@@ -122,21 +122,21 @@
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
 {% block blog_post_list_post_featured_image %}
 <a href="{{ blog_post.get_absolute_url }}">
-    <img itemprop="image" class="img-thumbnail pull-left" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
+    <img class="img-thumbnail pull-left" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
 </a>
 {% endblock %}
 {% endif %}
 
 {% block blog_post_list_post_content %}
-<div  itemprop="articleBody">
+
 {% editable blog_post.content %}
 {{ blog_post.description_from_content|safe }}
 {% endeditable %}
-</div>
+
 {% endblock %}
 
 {% block blog_post_list_post_links %}
-    <div itemprop="articleSection">
+    <div>
         {% keywords_for blog_post as tags %}
         {% if tags %}
         <ul class="list-inline tags">

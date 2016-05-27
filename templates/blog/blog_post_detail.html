@@ -14,7 +14,7 @@
 
 {% block breadcrumb_menu %}
 {{ block.super }}
-<span class="active" itemprop="name">{{ blog_post.title }}</span>
+<span class="active">{{ blog_post.title }}</span>
 {% endblock %}
 
 {% block title %}
@@ -26,7 +26,7 @@
 {% endblock %}
 
 {% block main %}
-<h2 class="section--center mdl-grid mdl-cell--11-col" itemprop="headline">{{ blog_post.title }}</h2>
+<h2 class="section--center mdl-grid mdl-cell--11-col">{{ blog_post.title }}</h2>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp post_detail mdl-cell--11-col">
 <div class="mdl-card__supporting-text">
 {% block blog_post_detail_postedby %}
@@ -34,9 +34,9 @@
 <span class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
-    <a href="{% url "blog_post_list_author" author %}" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.get_full_name|default:author.username }}</a>
+    <a href="{% url "blog_post_list_author" author %}" >{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
-    <span itemprop="datePublished">{{ blog_post.publish_date }}</span>
+    <span>{{ blog_post.publish_date }}</span>
 </span>
 {% endeditable %}
 {% endblock %}
@@ -59,13 +59,12 @@
 {% endblock %}
 
 {% block blog_post_detail_content %}
-<div  itemprop="articleBody">
+
 {% editable blog_post.content %}
 {{ blog_post.content|richtext_filters|safe }}
 {% endeditable %}
 </div>
 {% endblock %}
-</div>
 
 <div class="mdl-card__actions mdl-card--border">
     <br />或许您还需要下面的文章:
