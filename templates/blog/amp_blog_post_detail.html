@@ -90,41 +90,6 @@
     </div>
 </section>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.phodal.com/amp/{{ blog_post.slug}}/"
-  },
-  "headline": "{{ blog_post.title }}",
-  "datePublished": "{{blog_post.publish_date}}",
-  "dateModified": "{{blog_post.updated}}",
-  "author": {
-    "@type": "Person",
-    "name": "Phodal"
-  },
-"image": {
-    "@type": "ImageObject",
-    "url": "https://www.phodal.com/static/phodal/images/phodal.jpg",
-    "height": 320,
-    "width": 320
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Phodal",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.phodal.com/static/phodal/images/publisher-logo.jpg",
-      "width": 600,
-      "height": 60
-    }
-  },
-  "description": "{{ blog_post.description }}"
-}
-</script>
-
 {% endblock %}
 
 {% block right_panel %}
