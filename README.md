@@ -13,7 +13,8 @@ Powered by Mezzanine CMS & Django & Material Design Lite
 - Event & Ads Module
 - Homepage News
 - Wechat Support
-- AMP Support
+- Google AMP Support (Blog Page)
+- Google Micro Data
 
 ##APP 
 
