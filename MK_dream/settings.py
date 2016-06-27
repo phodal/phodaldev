@@ -238,6 +238,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
 
 ################
@@ -262,14 +263,18 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
+    #"mezzanine.twitter",
     "mezzanine.accounts",
+    # "mezzanine.mobile",
     "widget_tweaks",
     "homepage",
     "mezzanine_pagedown",
+    "tastypie",
     "macros",
     "feed",
     "rest_framework",
     "corsheaders",
+    "blogapi",
     "amp"
 )
 
@@ -283,24 +288,21 @@ RICHTEXT_FILTERS = (
     "mezzanine_pagedown.filters.extra",
     "mezzanine_pagedown.filters.plain")
 
-TEMPLATES = [{'APP_DIRS': True,
-              'BACKEND': 'django.template.backends.django.DjangoTemplates',
-              'DIRS': (os.path.join(PROJECT_ROOT, "templates"),),
-              'OPTIONS': {
-                  'builtins': ['mezzanine.template.loader_tags'],
-                  'context_processors': (
-                      'django.contrib.auth.context_processors.auth',
-                      'django.contrib.messages.context_processors.messages',
-                      'django.core.context_processors.debug',
-                      'django.core.context_processors.i18n',
-                      'django.core.context_processors.static',
-                      'django.core.context_processors.media',
-                      'django.core.context_processors.request',
-                      'django.core.context_processors.tz',
-                      'mezzanine.conf.context_processors.settings',
-                      'mezzanine.pages.context_processors.page')
-              }
-              }]
+# List of processors used by RequestContext to populate the context.
+# Each one should be a callable that takes the request object as its
+# only parameter and returns a dictionary to add to the context.
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.contrib.messages.context_processors.messages",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.static",
+    "django.core.context_processors.media",
+    "django.core.context_processors.request",
+    "django.core.context_processors.tz",
+    "mezzanine.conf.context_processors.settings",
+    "mezzanine.pages.context_processors.page",
+)
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
@@ -422,4 +424,5 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
 
