@@ -1,237 +1,230 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n mezzanine_tags pages_tags blog_tags future staticfiles infos_tags %}
+    {% load i18n mezzanine_tags pages_tags blog_tags future staticfiles infos_tags %}
 
-<head>
-    <title> Phodal - 狼和凤凰 | Growth Engineer</title>
+    <head>
+        <title> Phodal - 狼和凤凰 | Growth Engineer</title>
 
-    <meta http-equiv="content-language" content="zh-CN" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
-    <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
-    <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
-    <meta name="alexaVerifyID" content="ZZ-ekHwAaTl4lob12WYzKLimR58"/>
-    <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
-    <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
-    <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
-    <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
-    <meta name='yandex-verification' content='7c80fea3c6548a5a' />
-    <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
-    <meta name="bitly-verification" content="b4cdaf394c9f"/>
+        <meta http-equiv="content-language" content="zh-CN" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <meta name="google-site-verification" content="3-n5j67nVlQ0ICC3DJb28FXuJI7pEei5v2kx7AR8eHU" />
+        <meta name="msvalidate.01" content="F30E514979FE4E6033CFC2F92FA816C4" />
+        <meta name="alexaVerifyID" content="ZZ-ekHwAaTl4lob12WYzKLimR58"/>
+        <meta name="baidu-site-verification" content="dZvx5Cg1jt" />
+        <meta name="baidu-tc-verification" content="f7b366ac5d55ab1f7b49d02aba0b7729" />
+        <meta baidu-gxt-verify-token="b717152da263036a4bf02b98bdf631d0">
+        <meta name="360-site-verification" content="cba6ea64db6f8161813b27e9897ab6c8" />
+        <meta name='yandex-verification' content='7c80fea3c6548a5a' />
+        <meta name="sogou_site_verification" content="46iR0w9xzJ"/>
+        <meta name="bitly-verification" content="b4cdaf394c9f"/>
 
-    <link rel="canonical" href="https://www.phodal.com{{ blog_post.get_absolute_url }}" />
-    <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
-    <link rel="alternate" href="https://www.phodal.com{{ request.get_full_path }}" hreflang="x-default" />
-    <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
-    <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
+        <link rel="canonical" href="https://www.phodal.com{{ blog_post.get_absolute_url }}" />
+        <link rel="alternate" href="android-app://com.phodal.blog/https/www.phodal.com{{ request.get_full_path }}" />
+        <link rel="alternate" href="https://www.phodal.com{{ request.get_full_path }}" hreflang="x-default" />
+        <link rel="shortcut icon" href="{% static "phodal/images/favicon.ico" %}">
+        <link rel="author" href="https://plus.google.com/108569130336274162470/posts">
 
-    {% ifinstalled mezzanine.blog %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
-    {% endifinstalled %}
+        {% ifinstalled mezzanine.blog %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+        {% endifinstalled %}
 
-    {% compress css %}
-    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/grid-responsive.min.css" %}">
-    <link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
-    {% endcompress %}
-</head>
+        {% compress css %}
+        <link rel="stylesheet" type="text/css" href="{% static "phodal/css/pure-min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "phodal/css/grid-responsive.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "phodal/css/index.css" %}">
+        {% endcompress %}
+    </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+    <body itemscope itemtype="http://schema.org/WebPage">
 
-<div class="pure-g">
-<div class="super-header pure-u-1">
-    <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
-        <div class="supernav">
-
-        <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-        <input type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
-        <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
-        </form>
-
-        </div>
-    </div>
-</div>
-
-<div class="header pure-u-1">
-    <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
-        <span><a href="/">PHODAL</a></span>
-        <ul class="pure-menu-list menunav">
-            <li class="pure-menu-item"><a href="/blog/" class="pure-menu-link">BLOG</a></li>
-            <li class="pure-menu-item"><a href="/works/" class="pure-menu-link">CODE</a></li>
-            <li class="pure-menu-item"><a href="/literature/" class="pure-menu-link">LITERATURE</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-
-<div id="layout">
-    <div class="pure-g-r splash">
-        <div class="pure-u-1 is-center background">
-            <h1>THE ONLY FAIR IS NOT FAIR <br/> ENJOY CREATE & SHARE</h1>
-        </div>
-    </div>
-    <div class="topgradient"></div>
-
-    <div class="content">
-        <div class="l-content">
-            <div class="pure-g content pwd">
-                <div class="pure-u-1 pure-u-md-1-3 literature">
-                    <h2><a href="/literature">LITERATURE</a></h2>
-                    <p>Share mind</p>
-                    <ul>
-                        <li>Reviewer of Manning Publications、Packt Publishing</li>
-                        <li>Review 《Learning Internet of Things》</li>
-                        <li>著有电子书: <a href="http://designiot.phodal.com/" title="著有电子书: 《一步步搭建物联网系统》(网页版)">《一步步搭建物联网系统》(网页版)</a></li>
-                        <li>《Learning Internet of Things》翻译ing</li>
-                        <li>《Ardunino Sketches》翻译ing</li>
-                        <li>CSDN 【前端人生】：<a href="http://www.csdn.net/article/2015-07-16/2825225-ThoughtWorks-phodal" rel="nofollow" title="《利用横向扩展方式，快速学习前端新框架》">《利用横向扩展方式，快速学习前端新框架》</a></li>
-                    </ul>
-                </div>
-                <div class="pure-u-1 pure-u-md-1-3 code">
-                    <h2><a href="/works">CODE</a></h2>
-                    <p>Hello, World</p>
-                    <ul>
-                        <li>JavaScript,Python,Node.js</li>
-                        <li>Backbone,Ionic(ngCordova),React</li>
-                        <li>Django,Flask</li>
-                        <li>Nginx,Gunicorn</li>
-                        <li>Intellij,WebStorm</li>
-                        <li>Emacs,Vim</li>
-                    </ul>
-                </div>
-                <div class="pure-u-1 pure-u-md-1-3 design">
-                    <h2><a href="/design">Design</a></h2>
-                    <p>Ongoing..............</p>
-                    <ul>
-                        <li>Photograph</li>
-                        <li>Paint</li>
-                        <li>Website</li>
-                        <li>Architecture</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="l-content">
         <div class="pure-g">
-            <div class="pure-u-1 is-center">
-                <div class="pure-u-1 pure-u-md-1-1 is-center social">
-                    <a href="https://www.zhihu.com/people/phodal" rel="nofollow">知乎</a>、
-                    <a href="http://weibo.com/phodal" rel="nofollow">微博</a>、
-                    <a href="https://github.com/phodal" rel="nofollow">GitHub</a>、
-                    <a href="https://v2ex.com/member/phodal" rel="nofollow">V2EX</a>、
-                    <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault</a>、
-                    <a href="http://www.jianshu.com/users/e64ad9fba4da" rel="nofollow">简书</a>、
-                    <a href="http://blog.csdn.net/phodal" rel="nofollow">CSDN</a>
+            <div class="super-header pure-u-1">
+                <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
+                    <div class="supernav">
+
+                        <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                            <input type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+                            <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="header pure-u-1">
+                <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
+                    <span><a href="/">PHODAL</a></span>
+                    <ul class="pure-menu-list menunav">
+                        <li class="pure-menu-item"><a href="/blog/" class="pure-menu-link">BLOG</a></li>
+                        <li class="pure-menu-item"><a href="/works/" class="pure-menu-link">CODE</a></li>
+                        <li class="pure-menu-item"><a href="/literature/" class="pure-menu-link">LITERATURE</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="pure-g about">
-            <div class="pure-u-1 is-center">
-                {% about %}
-                {% if about %}
-                    {{ about.content |richtext_filters|safe }}
-                {% endif %}
-            </div>
-        </div>
-        {% block blogposts %}
-        <div class="pure-g l-content recently-blog">
-            <div class="pure-u-1 pure-u-md-1-1 is-center">
-                <a href="/blog/" title="Recently Blog"><h2>最新博客 › </h2></a>
-            </div>
-            <div class="blog-posts">
-                {% for blog_post in blog_posts.object_list %}
-                    <div class="pure-u-1-1 pure-u-md-1-3">
-                        {% block blog_post_list_post_title %}
-                        <a href="{{ blog_post.get_absolute_url }}" itemprop="name"><h3>{{ blog_post.title }}</h3></a>
-                        {% endblock %}
 
-                        {% block blog_post_list_post_content %}
-                        {{ blog_post.description_from_content|safe }}
-                        {% endblock %}
+        <div id="layout">
+            <div class="pure-g-r splash">
+                <div class="pure-u-1 is-center background">
+                    <h1>THE ONLY FAIR IS NOT FAIR <br/> ENJOY CREATE & SHARE</h1>
+                </div>
+            </div>
+            <div class="topgradient"></div>
+
+            <div class="content">
+                <div class="l-content">
+                    <div class="pure-g content pwd">
+                        <div class="pure-u-1 pure-u-md-1-3 literature">
+                            <h2><a href="/literature">LITERATURE</a></h2>
+                            <h3>share a world</h3>
+                            <ul>
+                                <li>reviewer</li>
+                                <li>writer</li>
+                                <li>author</li>
+                            </ul>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3 code">
+                            <h2><a href="/works">CODE</a></h2>
+                            <h3>hello, world</h3>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3 design">
+                            <h2><a href="/design">Design</a></h2>
+                            <h3>like your life</h3>
+                            <ul>
+                                <li>photograph</li>
+                                <li>paint</li>
+                                <li>website</li>
+                            </ul>
+                        </div>
                     </div>
-                {% endfor %}
+                </div>
             </div>
-        </div>
-        {% endblock %}
-        <div class="pure-g content moreinfo">
-            <div class="pure-u-1 pure-u-md-1-8">
-            </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice">
-                <h2><a href="https://github.com/phodal" target="_blank" title="GitHub">GitHub › </a></h2>
-                <p>
-                   也许，你会遇到心仪的项目
-                </p>
-                <ul>
-                    <li><a href="https://github.com/phodal/growth" target="_blank" rel="nofollow">Growth:</a>带你成为顶尖开发者</li>
-                    <li><a href="https://github.com/phodal/growth-ebook" target="_blank" rel="nofollow">全栈增长工程师指南</a></li>
-                    <li><a href="https://github.com/phodal/growth-in-action" target="_blank" rel="nofollow">全栈增长工程师实战</a></li>
-                    <li><a href="https://github.com/phodal/ideabook" target="_blank" rel="nofollow">一个全栈增长工程师的练手项目集</a></li>
-                    <li><a href="https://github.com/phodal/echoesworks" target="_blank" rel="nofollow">Echoesworks: </a> Slider Framework</li>
-                </ul>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice slice-margin">
-                <h2><a href="/support" title="Tech Support">技术支持 › </a> </h2>
-                <p>在技术上遇到问题?</p>
-                <ul>
-                    <li><span>硬件</span>:物联网、IoT</li>
-                    <li><span>前端</span>:HTML5、Cordova、Ionic</li>
-                    <li><span>后台</span>:Django、Search Engine、MicroServices</li>
-                    <li><span>运营</span>: SEO、SEM</li>
-                </ul>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-4 slice-margin">
-                <h2>专栏</h2>
-                <p>在下面的地方关注我</p>
-                <ul>
-                    <li><a href="http://www.infoq.com/cn/author/%E9%BB%84%E5%B3%B0%E8%BE%BE" rel="nofollow" target="_blank">InfoQ</a></li>
-                    <li><a href="http://blog.csdn.net/phodal" rel="nofollow" target="_blank">CSDN</a></li>
-                    <li><a href="http://segmentfault.com/u/phodal" rel="nofollow" target="_blank">SegmentFault</a></li>
-                    <li><a href="https://zhuanlan.zhihu.com/phodal" rel="nofollow" target="_blank">知乎</a></li>
-                    <li><a href="http://gold.xitu.io/#/user/5567e339e4b0349d3313190b" rel="nofollow" target="_blank">稀土掘金</a></li>
-                </ul>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-8">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bottomgradient"></div>
-<footer>
-    <div class="pure-g">
-        <div class="pure-u-5-6 margin-center">
-        {% page_menu "pages/menus/homepage_footer.html" %}
-        </div>
-        <div class="is-center pure-u-1-1 copy">
-            Powered by Mezzanine & Django & Material Design Lite
-                <br />
-            Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
-        </div>
-    </div>
-</footer>
+            <div class="l-content">
+                <div class="pure-g">
+                    <div class="pure-u-1 is-center">
+                        <div class="pure-u-1 pure-u-md-1-1 is-center social">
+                            <span class="follow">follow me</span>
+                            <a href="https://www.zhihu.com/people/phodal" rel="nofollow">知乎</a>、
+                            <a href="http://weibo.com/phodal" rel="nofollow">微博</a>、
+                            <a href="https://github.com/phodal" rel="nofollow">GitHub</a>、
+                            <a href="https://v2ex.com/member/phodal" rel="nofollow">V2EX</a>、
+                            <a href="http://segmentfault.com/u/phodal" rel="nofollow">SegmentFault</a>、
+                            <a href="http://www.jianshu.com/users/e64ad9fba4da" rel="nofollow">简书</a>、
+                            <a href="http://blog.csdn.net/phodal" rel="nofollow">CSDN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g about">
+                    <div class="pure-u-1 is-center">
+                        {% about %}
+                        {% if about %}
+                        {{ about.content |richtext_filters|safe }}
+                        {% endif %}
+                    </div>
+                </div>
+                {% block blogposts %}
+                <div class="pure-g l-content recently-blog">
+                    <div class="pure-u-1 pure-u-md-1-1 is-center">
+                        <a href="/blog/" title="Recently Blog"><h2>最新博文 › </h2></a>
+                    </div>
+                    <div class="blog-posts">
+                        {% for blog_post in blog_posts.object_list %}
+                        <div class="pure-u-1-1 pure-u-md-1-3">
+                            {% block blog_post_list_post_title %}
+                            <a href="{{ blog_post.get_absolute_url }}" itemprop="name"><h3>{{ blog_post.title }}</h3></a>
+                            {% endblock %}
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "name": "Phodal's Blog",
-  "alternateName": "A Growth Engineer",
-  "url": "https://www.phodal.com"
-}
-</script>
-<script>
-{% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                            {% block blog_post_list_post_content %}
+                            {{ blog_post.description_from_content|safe }}
+                            {% endblock %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endblock %}
+                <div class="pure-g content moreinfo">
+                    <div class="pure-u-1 pure-u-md-1-8">
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4 slice">
+                        <h2><a href="https://github.com/phodal" target="_blank" title="GitHub">GitHub › </a></h2>
+                        <p>
+                            也许，你会遇到心仪的项目
+                        </p>
+                        <ul>
+                            <li><a href="https://github.com/phodal/growth" target="_blank" rel="nofollow">Growth:</a>带你成为顶尖开发者</li>
+                            <li><a href="https://github.com/phodal/growth-ebook" target="_blank" rel="nofollow">全栈增长工程师指南</a></li>
+                            <li><a href="https://github.com/phodal/growth-in-action" target="_blank" rel="nofollow">全栈增长工程师实战</a></li>
+                            <li><a href="https://github.com/phodal/ideabook" target="_blank" rel="nofollow">一个全栈增长工程师的练手项目集</a></li>
+                            <li><a href="https://github.com/phodal/echoesworks" target="_blank" rel="nofollow">Echoesworks: </a> Slider Framework</li>
+                        </ul>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4 slice slice-margin">
+                        <h2><a href="/support" title="Tech Support">技术咨询 › </a> </h2>
+                        <p>在技术上遇到问题?</p>
+                        <ul>
+                            <li><span>硬件</span>:物联网、IoT</li>
+                            <li><span>前端</span>:HTML5、Cordova、Ionic</li>
+                            <li><span>后台</span>:Django、Search Engine、MicroServices</li>
+                            <li><span>运营</span>: SEO、SEM</li>
+                        </ul>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-4 slice-margin">
+                        <h2>专栏</h2>
+                        <p>在下面的地方关注我</p>
+                        <ul>
+                            <li><a href="http://www.infoq.com/cn/author/%E9%BB%84%E5%B3%B0%E8%BE%BE" rel="nofollow" target="_blank">InfoQ</a></li>
+                            <li><a href="http://blog.csdn.net/phodal" rel="nofollow" target="_blank">CSDN</a></li>
+                            <li><a href="http://segmentfault.com/u/phodal" rel="nofollow" target="_blank">SegmentFault</a></li>
+                            <li><a href="https://zhuanlan.zhihu.com/phodal" rel="nofollow" target="_blank">知乎</a></li>
+                        </ul>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomgradient"></div>
+        <footer>
+            <div class="pure-g">
+                <div class="pure-u-5-6 margin-center">
+                    {% page_menu "pages/menus/homepage_footer.html" %}
+                </div>
+                <div class="is-center pure-u-1-1 copy">
+                    Powered by Mezzanine & Django & Material Design Lite
+                    <br />
+                    Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
+                </div>
+            </div>
+        </footer>
 
-ga('create', '{{ settings.GOOGLE_ANALYTICS_ID }}', 'auto');  // Replace with your property ID.
-ga('send', 'pageview');
-{% endif %}
-</script>
-</body>
+        <script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Phodal's Blog",
+    "alternateName": "A Growth Engineer",
+    "url": "https://www.phodal.com"
+    }
+        </script>
+        <script>
+         {% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', '{{ settings.GOOGLE_ANALYTICS_ID }}', 'auto');  // Replace with your property ID.
+         ga('send', 'pageview');
+         {% endif %}
+        </script>
+    </body>
 </html>

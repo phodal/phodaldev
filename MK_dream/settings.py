@@ -274,8 +274,8 @@ INSTALLED_APPS = (
     "feed",
     "rest_framework",
     "corsheaders",
-    "blogapi",
-    "amp"
+    "amp",
+    "api"
 )
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
@@ -424,5 +424,3 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
-
-
