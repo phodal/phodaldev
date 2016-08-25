@@ -39,7 +39,7 @@ class DisplayableSitemap(Sitemap):
         if isinstance(obj, BlogCategory):
             return "Weekly"
         if isinstance(obj, Page):
-            return "Weekly"
+            return "Monthly"
         return "Daily"
 
     @staticmethod
