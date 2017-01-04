@@ -505,7 +505,7 @@ pre {
 }
 
 .android-header {
-  overflow: visible;
+  overflow: hidden;
 }
 
   .android-header .material-icons {
@@ -936,7 +936,7 @@ section.richtext ul li a {
 .mdl-textfield.is-invalid .mdl-textfield__input,
 .mdl-textfield.is-input .mdl-textfield__input,
 .mdl-textfield.is-focused .mdl-textfield__input {
-    width: 350px;
-    border-color: #fff;
+    width: 240px;
+    border: #5e6772;
     color: #fff;
 }
