@@ -1,14 +1,14 @@
 {% load mezzanine_tags i18n future %}
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
     <div class="mdl-textfield__expandable-holder">
-        <input class="mdl-textfield__input autocomplete" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
+        <input class="mdl-textfield__input" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
     </div>
     <button style="top: 20px" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" data-upgraded=",MaterialButton,MaterialRipple">
         <i class="material-icons" role="presentation">search</i>
         <span class="visuallyhidden">Search</span>
         <span class="mdl-button__ripple-container">
             <span class="mdl-ripple is-animating"
-                  style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(45px, 21px);">
+                  style="width: 80px; height: 80px; transform: translate(-50%, -50%) translate(45px, 21px);">
             </span>
           </span>
     </button>

@@ -36,23 +36,6 @@ $(function() {
   appendToSelector: 'body'
  })
 });
-$('.autocomplete').autocomplete({
-    minChars: 2,
-    width: 350,
-    serviceUrl: '/api/v1/app/?limit=20&format=json&',
-    paramName: 'title__contains',
-    transformResult: function(response) {
-        var result = [];
-        $.each(JSON.parse(response).objects, function(index, dataItem) {
-            result.push({value: dataItem.title, data: dataItem.slug});
-        });
-
-        return { suggestions: result }
-    },
-    onSelect: function (suggestion) {
-        window.location.href = "{% url "blog_post_list" %}" + suggestion.data;
-    }
-});
 $( document ).ready(function() {
     $('.middle.mdl-layout__content').css('z-index', 'initial');
     $('.android-content.mdl-layout__content').css('z-index', 'initial');
