@@ -946,3 +946,12 @@ section.richtext ul li a {
     border: #5e6772;
     color: #fff;
 }
+
+.mdl-card__supporting-text.author {
+  text-align: center;
+  font-size: 14px;
+}
+
+.mdl-card__supporting-text.author  p {
+  text-align: left;
+}
