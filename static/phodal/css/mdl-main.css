@@ -517,6 +517,10 @@ pre {
     color: #767777;
   }
 
+  .mdl-layout__drawer .mdl-navigation {
+    padding-top: 8px;
+  }
+
   .android-header .mdl-navigation__link {
     font-weight: 700;
     font-size: 14px;
@@ -762,8 +766,10 @@ pre {
 }
 
 span.mdl-layout-title.left-menu {
-  height: 88px;
+  height: 56px;
   color: rgb(33,150,243);
+  line-height; 56px;
+  background-color: #fff;
 }
 
 .tag-cloud li,

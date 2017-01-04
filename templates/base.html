@@ -80,15 +80,12 @@
     <span class="mdl-layout-title left-menu">
       <span class="android-logo-image">PHODAL</span>
     </span>
-        {% nevercache %}
-            {% include "includes/user_panel.html" %}
-        {% endnevercache %}
-        <nav class="mdl-navigation">
-            {% spaceless %}
-   	      <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
-            {% page_menu "pages/menus/tree.html" %}
-            {% endspaceless %}
-        </nav>
+    <nav class="mdl-navigation">
+        {% spaceless %}
+      <a href="{% url "home" %}" class="mdl-navigation__link mdl-typography--text-uppercase home">Home</a>
+        {% page_menu "pages/menus/tree.html" %}
+        {% endspaceless %}
+    </nav>
     </div>
 
     <div class="android-content mdl-layout__content">
