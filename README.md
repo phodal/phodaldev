@@ -1,8 +1,8 @@
-#Phodal's Blog
+# Phodal's Blog
 
 Powered by Mezzanine CMS & Django & Material Design Lite
 
-##More Than Mezzanine
+## More Than Mezzanine
 
 - Sitemap with Category & Date
 - More SEO Optional
@@ -16,7 +16,7 @@ Powered by Mezzanine CMS & Django & Material Design Lite
 - Google AMP Support (Blog Page)
 - Google Micro Data
 
-##APP 
+## APP 
 
 项目代码: [https://github.com/phodal/app](https://github.com/phodal/app)
 
@@ -27,7 +27,7 @@ Powered by Mezzanine CMS & Django & Material Design Lite
        src="https://developer.android.com/images/brand/zh-cn_generic_rgb_wo_60.png" />
 </a>
 
-##Run
+## Run
 
 Python 2.7
 
@@ -49,7 +49,7 @@ Server
 
     gunicorn MK_dream.wsgi
 
-##License
+## License
 
 © 2014~2016 [Phodal Huang][phodal]. This code is distributed under the MIT license.
 [phodal]:http://www.phodal.com/
