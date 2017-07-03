@@ -37,6 +37,7 @@
 **InfoQ**
 
  - [《ESP8266和NodeMCU：高性价比的物联网解决方案》](http://www.infoq.com/cn/articles/esp8266-nodemcu)
+ - [《解读2016之物联网：巨头割据、安全问题凸显》](http://www.infoq.com/cn/articles/2016-review-iot)
  - [《物联网技术周报》](http://www.infoq.com/cn/adf) [第4期~第94期+]
 
 **CSDN**
