@@ -18,6 +18,7 @@
  - [《Smart Internet of Things》 ](https://www.packtpub.com/hardware-and-creative/smart-internet-things-projects)(英文版，PACKT出版社)
  - [《Angular Services》](https://www.packtpub.com/web-development/angular-services)(英文版，PACKT出版社)
  - [《Getting Started with Angular - Second Edition》](https://www.packtpub.com/web-development/getting-started-angular-second-edition)(英文版，PACKT出版社)
+ - [《Building Modern Web Applications Using Angular》](https://www.packtpub.com/web-development/building-modern-web-applications-using-angular)(英文版，PACKT出版社)
 
 电子书
 ---
