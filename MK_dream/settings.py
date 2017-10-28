@@ -163,6 +163,7 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # The numeric mode to set newly-uploaded files to. The value should be
@@ -272,6 +273,7 @@ INSTALLED_APPS = (
     "tastypie",
     "macros",
     "feed",
+    "compressor",
     "rest_framework",
     "corsheaders",
     "amp",
