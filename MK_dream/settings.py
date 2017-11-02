@@ -270,7 +270,6 @@ INSTALLED_APPS = (
     "widget_tweaks",
     "homepage",
     "mezzanine_pagedown",
-    "tastypie",
     "macros",
     "feed",
     "compressor",
