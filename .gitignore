@@ -8,3 +8,4 @@ nohup.out
 local_settings.py
 mezzanine/.idea/
 static/CACHE
+db.sqlite3
