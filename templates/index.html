@@ -126,9 +126,8 @@
                 </div>
                 <div class="pure-g about">
                     <div class="pure-u-1 is-center">
-                        {% about %}
                         {% if about %}
-                        {{ about.content |richtext_filters|safe }}
+                          {{ about.content |richtext_filters|safe }}
                         {% endif %}
                     </div>
                 </div>
