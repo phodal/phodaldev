@@ -12,7 +12,7 @@
 <div class="mdl-textfield mdl-js-textfield input_{{ field.id_for_label }} {{ field.field.type }} {% if field.errors %} has-error{% endif %}">
     {% if field.label %}
     {{ field|add_class:"mdl-textfield__input" }}
-    <label class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
+    <label class="mdl-textfield__label control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
     {% if field.errors %}
     <p class="mdl-textfield__error help-block">
         {% for e in field.errors %}

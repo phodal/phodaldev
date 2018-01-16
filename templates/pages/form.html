@@ -3,37 +3,42 @@
 {% load mezzanine_tags %}
 
 {% block main %}
-{{ block.super }}
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
-{% if request.GET.sent %}
-    {% editable page.form.response %}
-    {{ page.form.response|richtext_filters|safe }}
-    {% endeditable %}
-{% else %}
-    {% with page.form as page_form %}
-    <div class="mdl-card__title mdl-card--expand">
-    {% editable page_form.content %}
-    {{ page_form.content|richtext_filters|safe }}
-    {% endeditable %}
-    </div>
-    {% endwith %}
+  {{ block.super }}
+  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col">
+    {% if request.GET.sent %}
+      {% editable page.form.response %}
+        {{ page.form.response|richtext_filters|safe }}
+      {% endeditable %}
+    {% else %}
+      {% with page.form as page_form %}
+        <div class="mdl-card__title  mdl-cell--12-col">
+          {% editable page_form.content %}
+            {{ page_form.content|richtext_filters|safe }}
+          {% endeditable %}
+        </div>
+      {% endwith %}
 
-    {% errors_for form %}
+      {% errors_for form %}
 
-    <form class="mezzanine-form" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+      <div class="mdl-cell--1-col"></div>
+      <form class="mezzanine-form mdl-cell--10-col" method="post"{% if form.is_multipart %}
+            enctype="multipart/form-data"{% endif %}>
         {% fields_for form %}
         <div class="mdl-card__actions mdl-card--mdl-card--expand">
-            <input class="right mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="{{ page.form.button_text }}">
+          <input class="right mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit"
+                 value="{{ page.form.button_text }}">
         </div>
-    </form>
-{% endif %}
-</section>
+      </form>
+    {% endif %}
+  </section>
 {% endblock %}
 
 
 {% block extra_js %}
-{{ block.super }}
-<script>
-$(function() {$('.mezzanine-form :input:visible:enabled:first').focus();});
-</script>
+  {{ block.super }}
+  <script>
+    $(function () {
+      $('.mezzanine-form :input:visible:enabled:first').focus();
+    });
+  </script>
 {% endblock %}

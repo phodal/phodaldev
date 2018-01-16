@@ -1352,7 +1352,7 @@ section.richtext ul li a {
 .mdl-textfield.is-focused .mdl-textfield__input {
   width: 240px;
   border: #384452;
-  color: #fff;
+  color: #384452;
 }
 
 .mdl-card__supporting-text {
@@ -1384,4 +1384,8 @@ section.richtext ul li a {
 
 #related-posts {
   padding-top: 1.6rem;
+}
+
+.mezzanine-form div.mdl-textfield {
+  display: block;
 }
