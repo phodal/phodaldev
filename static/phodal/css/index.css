@@ -149,6 +149,14 @@ footer .pure-menu-active > .pure-menu-link, .pure-menu-link:hover, .pure-menu-li
   border-bottom: 1px solid #fdfdfd;
 }
 
+footer .pure-menu-link:hover {
+  color: #8bc34a;
+}
+
+footer .pure-menu-link:hover {
+  border-bottom: none;
+}
+
 footer .copy {
   background: #384452;
   padding: 10px 0 10px 0;
@@ -175,15 +183,37 @@ footer .margin-center {
 }
 
 .literature {
-  background: #EEF1F5;
+  background: #5e6772;
+}
+
+.design p,
+.design ul li,
+.literature p,
+.literature ul li {
+  color: #fff;
+}
+
+.design ul li,
+.code ul li,
+.literature ul li {
+  font-weight: 400;
 }
 
 .code {
-  background: #D1D8DF;
+  background: #FFF;
+}
+
+.code p,
+.code ul li {
+  color: #5e6772;
 }
 
 .design {
-  background: #EEF1F5;
+  background: #5e6772;
+}
+
+.design a {
+  color: #fff;
 }
 
 .pwd {
@@ -195,9 +225,8 @@ footer .margin-center {
   padding: 0;
 }
 
-.pwd h3 {
-  text-align: center;
-  color: #384452;
+.pwd p {
+  padding: 16px;
 }
 
 .social {
