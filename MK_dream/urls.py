@@ -14,36 +14,36 @@ from rest_framework_jwt.views import verify_jwt_token, obtain_jwt_token, refresh
 
 admin.autodiscover()
 
-urlpatterns = i18n_patterns("",
-    ("^admin/", include(admin.site.urls)),
+urlpatterns = i18n_patterns(
+  url("^admin/", include(admin.site.urls)),
 )
 
 sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
 mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
 
-urlpatterns += ["sitemaps.views",
-    ("^sitemap\.xml$", "index", sitemaps),
-    ("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
+urlpatterns += [
+  url("^sitemap\.xml$", "index", sitemaps),
+  url("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
 ]
 
-urlpatterns += ["feed.view",
-   url("feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed"),
-   url("^blog/feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed")
+urlpatterns += [
+  url("feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed"),
+  url("^blog/feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed")
 ]
 
-urlpatterns += ["",
-        ("^events/", include("events.urls")),
-    ]
+urlpatterns += [
+  url("^events/", include("events.urls")),
+]
 
-urlpatterns += ['',
-    url("^$", homepage_view.homepage, name="home"),
-    url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
-    url("^pagedown/", include(playdown.urls)),
-    url(r'^api/app/$', include("api.urls")),
-    url(r'^api-token-auth/', obtain_jwt_token),
-    url(r'^api-token-refresh/', refresh_jwt_token),
-    url(r'^api-token-verify/', verify_jwt_token),
-    url("^", include("mezzanine.urls")),
+urlpatterns += [
+  url("^$", homepage_view.homepage, name="home"),
+  url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
+  url("^pagedown/", include(playdown.urls)),
+  url(r'^api/app/$', include("api.urls")),
+  url(r'^api-token-auth/', obtain_jwt_token),
+  url(r'^api-token-refresh/', refresh_jwt_token),
+  url(r'^api-token-verify/', verify_jwt_token),
+  url("^", include("mezzanine.urls")),
 ]
 
 handler404 = "mezzanine.core.views.page_not_found"
