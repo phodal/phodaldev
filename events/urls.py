@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
 
-from django.conf.urls import patterns, url
+from django.conf.urls import include, url
+from events import views as events_view
 
-urlpatterns = patterns("events.views",
-    url("^", "events_list", name="events_list"),
-)
+urlpatterns = [
+    url("^", events_view.events_list, name="events_list"),
+]
