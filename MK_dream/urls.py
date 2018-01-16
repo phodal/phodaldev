@@ -8,6 +8,7 @@ from django.contrib import admin
 from homepage import views as homepage_view
 from feed import view as feed_view
 from amp import views as amp_views
+from sitemaps import views as sitemap
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
 from rest_framework_jwt.views import verify_jwt_token, obtain_jwt_token, refresh_jwt_token
@@ -22,8 +23,8 @@ sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
 mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
 
 urlpatterns += [
-  url("^sitemap\.xml$", "index", sitemaps),
-  url("^sitemap_mobile\.xml$", "sitemap", mobile_sitemaps)
+  url("^sitemap\.xml$", sitemap.sitemap, sitemaps),
+  url("^sitemap_mobile\.xml$", sitemap.mobile, sitemaps),
 ]
 
 urlpatterns += [

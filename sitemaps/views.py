@@ -16,9 +16,9 @@ def x_robots_tag(func):
     return inner
 
 @x_robots_tag
-def index(request, sitemaps, section=None,
-            template_name='sitemap.xml', content_type='application/xml',
-            mimetype=None):
+def mobile(request, sitemaps, section=None,
+           template_name='sitemap.xml', content_type='application/xml',
+           mimetype=None):
 
     if mimetype:
         warnings.warn("The mimetype keyword argument is deprecated, use "
