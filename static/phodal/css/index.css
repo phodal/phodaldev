@@ -217,15 +217,16 @@ footer .margin-center {
 }
 
 .background {
-    background: transparent url('../images/bg.svg') 0 0 no-repeat;
-    text-align: center;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
-    width: 100%;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background: transparent url('../images/bg.svg') 0 0 no-repeat;
+  text-align: center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.svg', sizingMethod='scale');
+  width: 100%;
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 62em) {
