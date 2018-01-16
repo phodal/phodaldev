@@ -33,17 +33,12 @@
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "最近文章" %}</h3>
     </div>
-<div class="mdl-card__supporting-text">
+<div class="recent-posts-list mdl-card__supporting-text">
 <ul class="list-unstyled">
 {% for recent_post in recent_posts %}
 <li>
     {% spaceless %}
-    <a href="{{ recent_post.get_absolute_url }}">
-        {% if settings.BLOG_USE_FEATURED_IMAGE and recent_post.featured_image %}
-        <img src="{{ MEDIA_URL }}{% thumbnail recent_post.featured_image 24 24 %}">
-        {% endif %}
-    {{ recent_post.title }}
-    </a>
+    <a href="{{ recent_post.get_absolute_url }}">{{ recent_post.title }}</a>
     {% endspaceless %}
 </li>
 {% endfor %}
@@ -63,7 +58,7 @@
 <div class="mdl-card__title mdl-card--border mdl-card--expand">
     <h3 class="mdl-card__title-text">{% trans "存档" %}</h3>
 </div>
-<ul class="mdl-card__supporting-text list-unstyled">
+<ul class="mdl-card__supporting-text list-unstyled archive-list">
 {% for month in months %}
     {% ifchanged month.date.year %}
         {% if not forloop.first %}</ul>{% endif %}
@@ -84,7 +79,7 @@
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "分类" %}</h3>
     </div>
-<ul class="mdl-card__supporting-text list-unstyled">
+<ul class="mdl-card__supporting-text list-unstyled category-list">
 {% for category in categories %}
     {% if category.post_count >= 5 %}
 <li><a href="{% url "blog_post_list_category" category.slug %}"

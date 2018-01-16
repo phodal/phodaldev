@@ -92,7 +92,7 @@
 {% editable blog_post.title %}
 <div class="mdl-card__title mdl-card--border mdl-card--expand">
     <h2 class="mdl-card__title-text">
-        <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }} › </a>
+        <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
     </h2>
 </div>
 {% endeditable %}
@@ -101,7 +101,7 @@
 <div class="mdl-card__supporting-text">
 {% block blog_post_list_post_metainfo %}
 {% editable blog_post.publish_date %}
-<h6 class="post-meta">
+<p class="post-meta">
     {% trans "Posted by" %}:
     {% with blog_post.user as author %}
     <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
@@ -115,7 +115,7 @@
     {% endif %}
     {% endwith %}
     <span >{{ blog_post.publish_date }}</span>
-</h6>
+</p>
 {% endeditable %}
 {% endblock %}
 
@@ -151,7 +151,7 @@
     </div>
 </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a href="{{ blog_post.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{% trans "read more" %}</a>
+        <a href="{{ blog_post.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect more-button">更多</a>
         <a href="{{ blog_post.get_absolute_url }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
             <i class="material-icons" role="presentation">arrow_forward</i>
                 <span class="mdl-button__ripple-container">
@@ -160,19 +160,6 @@
                   </span>
               </span>
         </a>
-        {% if blog_post.allow_comments %}
-        /
-            {% if settings.COMMENTS_DISQUS_SHORTNAME %}
-            <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
-            data-disqus-identifier="{% disqus_id_for blog_post %}">
-            {% trans "Comments" %}
-            </a>
-            {% else %}
-            <a href="{{ blog_post.get_absolute_url }}#comments">
-                {% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} comments{% endblocktrans %}
-            </a>
-            {% endif %}
-        {% endif %}
     </div>
 {% endblock %}
 </section>
