@@ -41,23 +41,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
-<div class="pure-g">
-  <div class="super-header pure-u-1">
-    <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
-      <div class="supernav">
-
-        <form action="{% url "search" %}" class="navbar-form navbar-right" role="search" itemprop="potentialAction"
-              itemscope itemtype="http://schema.org/SearchAction">
-          <input type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q"
-                 value="{{ request.REQUEST.q }}" itemprop="query-input" type="text" name="search_term_string" required/>
-          <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-
 <div id="layout">
   <div class="pure-g-r splash">
     <div class="pure-u-1 is-center background">
@@ -65,9 +48,10 @@
         <div class="pure-menu pure-menu-horizontal nav pure-u-md-1-1">
           <span><a href="/" class="logo">PHODAL</a></span>
           <ul class="pure-menu-list menunav">
-            <li class="pure-menu-item"><a href="/blog/" class="pure-menu-link">BLOG</a></li>
-            <li class="pure-menu-item"><a href="/works/" class="pure-menu-link">CODE</a></li>
-            <li class="pure-menu-item"><a href="/literature/" class="pure-menu-link">LITERATURE</a></li>
+            <li class="pure-menu-item"><a href="/blog/" class="pure-menu-link">博客</a></li>
+            <li class="pure-menu-item"><a href="/works/" class="pure-menu-link">代码</a></li>
+            <li class="pure-menu-item"><a href="/literature/" class="pure-menu-link">文字</a></li>
+            <li class="pure-menu-item"><a href="https://github.com/phodal/mifa" class="pure-menu-link">设计</a></li>
           </ul>
         </div>
       </div>
@@ -202,7 +186,7 @@
       {% page_menu "pages/menus/homepage_footer.html" %}
     </div>
     <div class="is-center pure-u-1-1 copy">
-      Powered by Mezzanine & Django & Material Design Lite
+      Powered by Mezzanine & Django & <a href="https://phodal.github.io/mifa/">Mifa Design</a>
       <br/>
       Source Code: PhodalDev(Github: https://github.com/phodal/phodaldev)
     </div>
