@@ -275,20 +275,33 @@ RICHTEXT_FILTERS = (
     "mezzanine_pagedown.filters.extra",
     "mezzanine_pagedown.filters.plain")
 
-TEMPLATES = [{'APP_DIRS': True,
-              'BACKEND': 'django.template.backends.django.DjangoTemplates',
-              'DIRS': ('/Users/phodal/test/MK_dream/templates',),
-              'OPTIONS': {'builtins': ['mezzanine.template.loader_tags'],
-                          'context_processors': ('django.contrib.auth.context_processors.auth',
-                                                 'django.contrib.messages.context_processors.messages',
-                                                 'django.core.context_processors.debug',
-                                                 'django.core.context_processors.i18n',
-                                                 'django.core.context_processors.static',
-                                                 'django.core.context_processors.media',
-                                                 'django.core.context_processors.request',
-                                                 'django.core.context_processors.tz',
-                                                 'mezzanine.conf.context_processors.settings',
-                                                 'mezzanine.pages.context_processors.page')}}]
+TEMPLATES = [{
+  'BACKEND': 'django.template.backends.django.DjangoTemplates',
+  'DIRS': [
+    os.path.join(PROJECT_ROOT, "templates")
+  ],
+  "APP_DIRS": True,
+  'OPTIONS': {
+    'builtins': ['mezzanine.template.loader_tags'],
+    'context_processors': [
+      "django.contrib.auth.context_processors.auth",
+      "django.contrib.messages.context_processors.messages",
+      "django.template.context_processors.debug",
+      "django.template.context_processors.i18n",
+      "django.template.context_processors.static",
+      "django.template.context_processors.media",
+      "django.template.context_processors.request",
+      "django.template.context_processors.tz",
+      'social_django.context_processors.backends',
+      'social_django.context_processors.login_redirect',
+      "mezzanine.conf.context_processors.settings",
+      "mezzanine.pages.context_processors.page",
+    ]
+  },
+  "builtins": [
+    "mezzanine.template.loader_tags",
+  ],
+}]
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
