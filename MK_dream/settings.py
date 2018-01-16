@@ -298,9 +298,6 @@ TEMPLATES = [{
       "mezzanine.pages.context_processors.page",
     ]
   },
-  "builtins": [
-    "mezzanine.template.loader_tags",
-  ],
 }]
 
 # List of middleware classes to use. Order is important; in the request phase,
