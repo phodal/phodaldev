@@ -92,7 +92,7 @@ body {
 .pwd h2,
 .pwd h2 a,
 .pwd p {
-  color: #5090CC;
+  color: #1abc9c;
   text-align: center;
 }
 
@@ -119,7 +119,7 @@ body {
 .l-content a,
 .moreinfo h2,
 .moreinfo a {
-  color: #23B7F3;
+  color: #384452;
 }
 
 .moreinfo p,
@@ -132,7 +132,7 @@ body {
 }
 
 footer {
-  background-color: #5e6772;
+  background-color: #384452;
 }
 
 footer .pure-menu {
@@ -144,13 +144,13 @@ footer .pure-menu-link {
 }
 
 footer .pure-menu-active > .pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
-  color: #eee;
+  color: #fff;
   background: none;
-  border-bottom: 2px solid #fdfdfd;
+  border-bottom: 1px solid #fdfdfd;
 }
 
 footer .copy {
-  background: #222;
+  background: #333;
   padding: 10px 0 10px 0;
   line-height: 200%;
   color: #fff;
@@ -175,11 +175,15 @@ footer .margin-center {
 }
 
 .literature {
-  background: #EEEEEE;
+  background: #EEF1F5;
 }
 
 .code {
-  background: #FAF9F9;
+  background: #D1D8DF;
+}
+
+.design {
+  background: #EEF1F5;
 }
 
 .pwd {
@@ -193,15 +197,12 @@ footer .margin-center {
 
 .pwd h3 {
   text-align: center;
-  color: #5e6772;
-}
-
-.design {
-  background: #eee;
+  color: #384452;
 }
 
 .social {
-  color: #23B7F3;
+  color: #384452;
+  font-weight: 500;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -213,7 +214,7 @@ footer .margin-center {
 
 .about {
   color: #fff;
-  background: #5e6772;
+  background: #384452;
 }
 
 .bottomgradient {
@@ -264,8 +265,12 @@ footer .margin-center {
 
 .blog-posts h3 {
   text-align: center;
-  -webkit-margin-before: 0.1em;
-  -webkit-margin-after: 0.1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 1em;
+  -webkit-margin-end: 1em;
+}
+
+a {
+  color: #1abc9c;
 }
