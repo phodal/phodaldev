@@ -1364,14 +1364,18 @@ section.richtext ul li a {
   font-size: 14px;
 }
 
-.mdl-card__supporting-text.author p {
-  text-align: left;
-}
-
 .phodal-information {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.6rem;
+}
+
+.phodal-name {
+  padding: 16px;
+}
+
+.phodal-name a {
+  text-align: center;
 }
 
 .more-button {
