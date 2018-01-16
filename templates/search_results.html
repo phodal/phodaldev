@@ -34,10 +34,19 @@
 
 <div id="search-results" class="mdl-card__supporting-text">
     {% for result in results.object_list %}
-    <h5>{{ forloop.counter0|add:results.start_index }})
-        <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{ result }}</a></h5>
+    <h5>{{ forloop.counter0|add:results.start_index }}) &nbsp; <a href="{{ result.get_absolute_url }}">{{ result }}</a></h5>
     <p>{{ result.description|truncatewords_html:20|safe }}</p>
-    <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect more-button">更多</a>
+    <div class="mdl-card__actions mdl-card--border">
+      <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect more-button">更多</a>
+      <a href="{{ result.get_absolute_url }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons" role="presentation">arrow_forward</i>
+        <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple is-animating" style="width: 92.5096679918781px; height: 92.5096679918781px; -webkit-transform: translate(-50%, -50%) translate(22px, 23px); transform: translate(-50%, -50%) translate(22px, 23px);">
+
+                </span>
+            </span>
+      </a>
+    </div>
     {% endfor %}
 </div>
 
