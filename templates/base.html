@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load pages_tags mezzanine_tags i18n future staticfiles macros %}
+{% load pages_tags mezzanine_tags i18n staticfiles macros %}
 
 <head>
 <title>{% block meta_title %}{% endblock %}  - Phodal {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
@@ -41,7 +41,7 @@
 <link rel="stylesheet" type="text/css" href="{% static "mdl/material.min.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "phodal/css/mdl-main.css" %}">
 {% endcompress %}
-    
+
 {% block extra_head %}{% endblock %}
 </head>
 

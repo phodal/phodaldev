@@ -1,4 +1,4 @@
-{% load mezzanine_tags i18n future %}
+{% load mezzanine_tags i18n %}
 <form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
     <div class="mdl-textfield__expandable-holder">
         <input class="mdl-textfield__input" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
