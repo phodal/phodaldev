@@ -9,7 +9,7 @@ body {
   letter-spacing: .01em;
   line-height: 1.6;
   font-size: 1.6em;
-  background: #eef1f5;
+  background: url(../images/bg_body.jpg);
 }
 
 h1,
