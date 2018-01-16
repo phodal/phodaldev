@@ -254,7 +254,7 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
     "widget_tweaks",
     "homepage",
-    "mezzanine_pagedown",
+    "playdown",
     "macros",
     "feed",
     "compressor",

@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-import mezzanine_pagedown.urls
+import playdown.urls
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
@@ -47,7 +47,7 @@ urlpatterns += patterns("",
 
 urlpatterns += patterns('',
    url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
-    url("^pagedown/", include(mezzanine_pagedown.urls)),
+    url("^pagedown/", include(playdown.urls)),
     url(r"^api/app/", include("api.urls")),
     url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),

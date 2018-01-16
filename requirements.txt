@@ -1,10 +1,11 @@
-Mezzanine==4.1.0
-django==1.9.6
-mezzanine-pagedown
+django==1.10.7
+Mezzanine==4.2.3
+bleach==1.5
 django-compressor
-newrelic==2.50.0.39
-django-macros==0.4.0
-djangorestframework==3.3.3
+newrelic
+django-macros
+djangorestframework
+django-uuslug
 django-cors-headers
 djangorestframework-jwt
 django-widget-tweaks==1.4.1
