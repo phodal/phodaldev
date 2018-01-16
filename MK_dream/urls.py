@@ -10,6 +10,7 @@ from feed import view as feed_view
 from amp import views as amp_views
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
+from rest_framework_jwt.views import verify_jwt_token, obtain_jwt_token, refresh_jwt_token
 
 admin.autodiscover()
 
@@ -39,9 +40,9 @@ urlpatterns += ['',
     url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
     url("^pagedown/", include(playdown.urls)),
     url(r'^api/app/$', include("api.urls")),
-    url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
-    url(r'^api-token-refresh/', 'rest_framework_jwt.views.refresh_jwt_token'),
-    url(r'^api-token-verify/', 'rest_framework_jwt.views.verify_jwt_token'),
+    url(r'^api-token-auth/', obtain_jwt_token),
+    url(r'^api-token-refresh/', refresh_jwt_token),
+    url(r'^api-token-verify/', verify_jwt_token),
     url("^", include("mezzanine.urls")),
 ]
 
