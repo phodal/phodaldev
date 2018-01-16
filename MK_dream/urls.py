@@ -38,7 +38,7 @@ urlpatterns += [
 
 urlpatterns += [
   url("^$", homepage_view.homepage, name="home"),
-  url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
+  url("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   url("^pagedown/", include(playdown.urls)),
   url(r'^api/app/', include("api.urls")),
   url(r'^api-token-auth/', obtain_jwt_token),
