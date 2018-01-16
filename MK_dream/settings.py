@@ -18,7 +18,7 @@ from django.utils.translation import ugettext_lazy as _
 #
 ADMIN_MENU_ORDER = (
     (_("内容"), ("pages.Page", "blog.BlogPost",
-       "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
+               "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
     (_("站点"), ("sites.Site", "redirects.Redirect", "conf.Setting", "events.Event", "events.Ad", "homepage.Info",)),
     (_("用户"), ("auth.User", "auth.Group")),
 )
@@ -147,13 +147,7 @@ USE_I18N = False
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("0.0.0.0","127.0.0.1")
-
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    "django.template.loaders.filesystem.Loader",
-    "django.template.loaders.app_directories.Loader",
-)
+INTERNAL_IPS = ("0.0.0.0", "127.0.0.1")
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -192,13 +186,11 @@ DATABASES = {
     }
 }
 
-
 #########
 # PATHS #
 #########
 
 import os
-
 
 # Full filesystem path to the project.
 PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -235,13 +227,6 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 
-# Put strings here, like "/home/html/django_templates"
-# or "C:/www/django/templates".
-# Always use forward slashes, even on Windows.
-# Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
-
-
 ################
 # APPLICATIONS #
 ################
@@ -264,7 +249,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
-    #"mezzanine.twitter",
+    # "mezzanine.twitter",
     "mezzanine.accounts",
     # "mezzanine.mobile",
     "widget_tweaks",
@@ -281,7 +266,7 @@ INSTALLED_APPS = (
 
 RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
 # RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
-PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','toc')
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'toc')
 RICHTEXT_FILTER_LEVEL = 3
 PAGEDOWN_SERVER_SIDE_PREVIEW = True
 RICHTEXT_FILTERS = (
@@ -289,21 +274,20 @@ RICHTEXT_FILTERS = (
     "mezzanine_pagedown.filters.extra",
     "mezzanine_pagedown.filters.plain")
 
-# List of processors used by RequestContext to populate the context.
-# Each one should be a callable that takes the request object as its
-# only parameter and returns a dictionary to add to the context.
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.contrib.messages.context_processors.messages",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.static",
-    "django.core.context_processors.media",
-    "django.core.context_processors.request",
-    "django.core.context_processors.tz",
-    "mezzanine.conf.context_processors.settings",
-    "mezzanine.pages.context_processors.page",
-)
+TEMPLATES = [{'APP_DIRS': True,
+              'BACKEND': 'django.template.backends.django.DjangoTemplates',
+              'DIRS': ('/Users/phodal/test/MK_dream/templates',),
+              'OPTIONS': {'builtins': ['mezzanine.template.loader_tags'],
+                          'context_processors': ('django.contrib.auth.context_processors.auth',
+                                                 'django.contrib.messages.context_processors.messages',
+                                                 'django.core.context_processors.debug',
+                                                 'django.core.context_processors.i18n',
+                                                 'django.core.context_processors.static',
+                                                 'django.core.context_processors.media',
+                                                 'django.core.context_processors.request',
+                                                 'django.core.context_processors.tz',
+                                                 'mezzanine.conf.context_processors.settings',
+                                                 'mezzanine.pages.context_processors.page')}}]
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
@@ -377,7 +361,7 @@ CORS_ORIGIN_WHITELIST = (
     '*.phodal.com'
 )
 
-#REST_FRAMEWORK = {
+# REST_FRAMEWORK = {
 #    'DEFAULT_PERMISSION_CLASSES': (
 #        'rest_framework.permissions.IsAuthenticated',
 #    ),
@@ -386,12 +370,11 @@ CORS_ORIGIN_WHITELIST = (
 #        'rest_framework.authentication.BasicAuthentication',
 #        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
 #    ),
-#}
+# }
 
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=14)
 }
-
 
 ##################
 # LOCAL SETTINGS #
@@ -406,8 +389,7 @@ JWT_AUTH = {
 
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
-    exec(open(f, "rb").read())
-
+    exec (open(f, "rb").read())
 
 ####################
 # DYNAMIC SETTINGS #
