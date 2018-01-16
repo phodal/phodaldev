@@ -118,7 +118,7 @@ p,
 pre,
 table,
 ul {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .clearfix:after {
@@ -148,7 +148,7 @@ h1, h2, h3, p {
 .list-unstyled li a,
 .mdl-card__supporting-text a,
 a {
-  color: #1c2022;
+  color: #1abc9c;
 }
 
 .right ul li a {
@@ -200,10 +200,6 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   color: #333
 }
 
-.list-unstyled li a {
-  color: rgb(0, 118, 213);
-}
-
 footer ul li a {
   color: #fff;
   text-decoration: none;
@@ -216,6 +212,11 @@ footer ul li {
 
 footer .center {
   margin: 0 auto;
+  color: #fff;
+}
+
+footer .center.mdl-mega-footer--bottom-section a {
+  color: #1abc9c;
 }
 
 footer .mdl-logo {
@@ -288,6 +289,11 @@ blockquote:before, blockquote:after {
 
 .post_detail {
   background-color: #fff;
+}
+
+.post_detail ul,
+.post_detail ol {
+  padding-left: 16px;
 }
 
 .list-unstyled li a {
@@ -1370,4 +1376,8 @@ section.richtext ul li a {
 
 .more-button {
   font-size: 1.6rem;
+}
+
+#related-posts {
+  padding-top: 1.6rem;
 }
