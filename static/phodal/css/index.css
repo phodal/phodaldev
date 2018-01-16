@@ -10,7 +10,9 @@ h1, h2, h3, h4, body, p, a {
 .header {
   height: 36px;
   color: #fff;
-  padding: 0.5em;;
+  padding: 0.5em;
+  background-color: #384452;
+  background-color: rgba(56, 68, 82, 0.8);
 }
 
 .header a {
@@ -24,6 +26,8 @@ h1, h2, h3, h4, body, p, a {
 
 .header span {
   line-height: 200%;
+  float: left;
+  padding-left: 44px;
 }
 
 .super-header {
