@@ -40,7 +40,7 @@ urlpatterns += [
   url("^$", homepage_view.homepage, name="home"),
   url("^amp/(?P<slug>.*)%s$" % '/', amp_views.amp_blog_post_detail, name="blog_post_detail"),
   url("^pagedown/", include(playdown.urls)),
-  url(r'^api/app/$', include("api.urls")),
+  url(r'^api/app/', include("api.urls")),
   url(r'^api-token-auth/', obtain_jwt_token),
   url(r'^api-token-refresh/', refresh_jwt_token),
   url(r'^api-token-verify/', verify_jwt_token),
