@@ -217,7 +217,7 @@ footer .margin-center {
 }
 
 .background {
-    background: transparent url('../images/bg.jpg') 0 0 no-repeat;
+    background: transparent url('../images/bg.svg') 0 0 no-repeat;
     text-align: center;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bg.jpg', sizingMethod='scale');
