@@ -292,8 +292,6 @@ TEMPLATES = [{
       "django.template.context_processors.media",
       "django.template.context_processors.request",
       "django.template.context_processors.tz",
-      'social_django.context_processors.backends',
-      'social_django.context_processors.login_redirect',
       "mezzanine.conf.context_processors.settings",
       "mezzanine.pages.context_processors.page",
     ]
