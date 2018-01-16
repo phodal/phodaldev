@@ -1,13 +1,11 @@
 # Phodal's Blog
 
-Powered by Mezzanine CMS & Django & Material Design Lite
+Powered by Mezzanine CMS & Django & [Mifa](https://github.com/phodal/mifa) & Material Design Lite
 
 ## More Than Mezzanine
 
 - Sitemap with Category & Date
-- More SEO Optional
 - Limit  RSS feed articles length
-- AutoSuggest For Search
 - Blogposts Search API
 - Mobile APP API
 - Event & Ads Module
@@ -29,28 +27,37 @@ Powered by Mezzanine CMS & Django & Material Design Lite
 
 ## Run
 
-Python 2.7
+Python 3.5
 
 1.VirtualEnv 
 
 2.Install Deps
 
-    pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 3.Createdb
 
-    python manage.py createdb
+````
+python manage.py createdb
+```
 
 4.Run
 
-    python manage.py runserver
+```
+python manage.py runserver
+```
 
 Server
 
-    gunicorn MK_dream.wsgi
+```
+gunicorn MK_dream.wsgi
+```
 
-## License
+License
+---
 
-© 2014~2016 [Phodal Huang][phodal]. This code is distributed under the MIT license.
+© 2014~2018 [Phodal Huang][phodal]. This code is distributed under the MIT license.
 
 [phodal]:http://www.phodal.com/
