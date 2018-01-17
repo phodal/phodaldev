@@ -701,7 +701,7 @@ pre > code {
 }
 
 .android-search-box .mdl-textfield__input {
-  color: rgba(0, 0, 0, 0.87);
+  color: #fff;
 }
 
 .android-header .mdl-menu__container {
@@ -1347,6 +1347,19 @@ section.richtext ul li a {
   width: 240px;
   border: #384452;
   color: #384452;
+}
+
+.navbar-form .mdl-textfield__input {
+  border-bottom: 1px solid #fff;
+}
+
+.mdl-textfield.is-focused .navbar-form .mdl-textfield__input {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar-form .mdl-textfield__input::placeholder {
+  color: #fff;
 }
 
 .mdl-card__supporting-text {
