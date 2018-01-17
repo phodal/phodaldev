@@ -1881,3 +1881,7 @@ img.mfp-img {
   right: 0;
   padding-top: 0;
 }
+
+.github-widget .mdl-card__title {
+  background-color: #fdfdfd;
+}
