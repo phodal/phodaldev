@@ -757,6 +757,10 @@ pre > code {
   font-size: 14px;
 }
 
+.android-drawer.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  color: #384452;
+}
+
 .android-navigation-container {
   /* Simple hack to make the overflow happen to the left instead... */
   direction: rtl;
@@ -1003,7 +1007,8 @@ pre > code {
 
 span.mdl-layout-title.left-menu {
   height: 56px;
-  color: rgb(33, 150, 243);
+  padding-bottom: 40px;
+  color: #384452;
   line-height: 56px;
   background-color: #fff;
 }
