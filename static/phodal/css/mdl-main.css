@@ -316,53 +316,41 @@ blockquote:before, blockquote:after {
   margin-bottom: 48px;
 }
 
+
 table {
-  margin-bottom: 10px;
+  border-spacing: 0;
+  width: 100%;
 }
 
-thead {
-  font-size: 120%;
-  font-weight: 800;
-  cursor: pointer;
-  background: #c9dff0;
-}
-
-thead tr th {
-  text-align: center;
-  font-weight: bold;
-  padding: 12px 30px;
-  padding-left: 42px;
-}
-
-thead tr th span {
-  padding-right: 20px;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-}
-
-tbody tr td {
-  padding: 15px 10px;
-}
-
-tbody tr td.lalign {
-  text-align: left;
+table thead th,
+thead th {
+  border-top: 0.1rem solid #d1d8df;
+  background: #fdfdfd;
 }
 
 tbody tr:nth-child(even) {
-  background: #fff;
+  background: #fdfdfd;
 }
 
 tbody tr:nth-child(odd) {
-  background: #eee;
+  background: #eef1f5;
 }
 
-td, th {
-  border-left: 1px solid #cbcbcb;
-  border-width: 0 0 0 1px;
-  font-size: inherit;
-  margin: 0;
-  overflow: visible;
-  padding: .5em 1em;
+td,
+th {
+  border-bottom: 0.1rem solid #d1d8df;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
 }
 
 code {
