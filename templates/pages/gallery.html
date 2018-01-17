@@ -7,14 +7,15 @@
 {% endblock extra_css %}
 
 {% block main %}
-  {{ block.super }}
-
-  {% editable page.gallery.content %}
-    {{ page.gallery.content|richtext_filters|safe }}
-  {% endeditable %}
-
   <div
-    class="gallery mdl-card__supporting-text mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col mdl-grid post_detail">
+    class="gallery mdl-card__supporting-text mdl-grid--no-spacing mdl-cell--11-col mdl-grid post_detail">
+    <div class="mdl-grid mdl-cell--12-col">
+      {{ block.super }}
+
+      {% editable page.gallery.content %}
+        {{ page.gallery.content|richtext_filters|safe }}
+      {% endeditable %}
+    </div>
 
     {% with page.gallery.images.all as images %}
       {% for image in images %}
