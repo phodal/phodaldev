@@ -792,6 +792,7 @@ pre > code {
   line-height: 68px;
   background-color: transparent !important;
   border-bottom: 4px solid transparent;
+  opacity: 1.0;
 }
 
 .android-navigation .mdl-navigation__link:hover {
