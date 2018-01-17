@@ -961,7 +961,8 @@ pre > code {
   }
 
   .middle img {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   .mdl-card__supporting-text {
