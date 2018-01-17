@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 
-import playdown.urls
 from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
@@ -39,7 +38,6 @@ urlpatterns += [
 urlpatterns += [
   url("^$", homepage_view.homepage, name="home"),
   url("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
-  url("^pagedown/", include(playdown.urls), name="preview"),
   url(r'^api/app/', include("api.urls")),
   url(r'^api-token-auth/', obtain_jwt_token),
   url(r'^api-token-refresh/', refresh_jwt_token),
