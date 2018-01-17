@@ -147,7 +147,9 @@ h1, h2, h3, p {
 .list-unstyled li a,
 .mdl-card__supporting-text a,
 a {
+  text-decoration: none;
   color: #1abc9c;
+  letter-spacing: 0.01rem;
 }
 
 .right ul li a {
