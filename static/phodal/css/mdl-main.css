@@ -120,6 +120,30 @@ ul {
   margin-bottom: 1rem;
 }
 
+blockquote {
+  border-left: 0.3rem solid #1abc9c;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote:after,
+blockquote:before {
+  content: ''
+}
+
+blockquote:after {
+  margin-left: 0;
+}
+
+.post_detail blockquote p {
+  margin-bottom: 0;
+}
+
 .clearfix:after {
   clear: both;
   content: ' ';
@@ -261,31 +285,6 @@ footer .mdl-logo {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box
-}
-
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: .5em 10px;
-  quotes: "\201C" "\201D" "\2018" "\2019"
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: .1em;
-  margin-right: .25em;
-  vertical-align: -.4em
-}
-
-blockquote p {
-  display: inline
-}
-
-blockquote:before, blockquote:after {
-  content: ""
 }
 
 .post_detail {
