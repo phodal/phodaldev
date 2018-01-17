@@ -1349,9 +1349,13 @@ section.richtext ul li a {
 .mdl-textfield.is-invalid .mdl-textfield__input,
 .mdl-textfield.is-input .mdl-textfield__input,
 .mdl-textfield.is-focused .mdl-textfield__input {
-  width: 240px;
   border-color: #384452;
   color: #384452;
+}
+
+.mdl-button--raised.mdl-button--colored {
+  background: #384452;
+  color: #fff;
 }
 
 .navbar-form .mdl-textfield__input {
