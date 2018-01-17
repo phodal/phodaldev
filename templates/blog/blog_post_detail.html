@@ -1,5 +1,5 @@
 {% extends "blog/blog_post_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n disqus_tags staticfiles event_tags %}
+{% load playdown_tags mezzanine_tags comment_tags keyword_tags rating_tags i18n disqus_tags staticfiles event_tags %}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -61,7 +61,8 @@
 {% block blog_post_detail_content %}
 
 {% editable blog_post.content %}
-{{ blog_post.content|richtext_filters|safe }}
+{% markit blog_post.content as content %}
+{{ content|safe }}
 {% endeditable %}
 </div>
 {% endblock %}
