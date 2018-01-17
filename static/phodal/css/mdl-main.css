@@ -357,9 +357,13 @@ code {
   background: #eef1f5;
   border-radius: .4rem;
   font-size: 14px;
-  margin: 0 .2rem;
+  margin: 0;
   padding: .2rem .5rem;
   white-space: nowrap;
+}
+
+code.hljs {
+  background: #384452;
 }
 
 pre {
@@ -432,7 +436,7 @@ pre > code {
   overflow-x: auto;
   padding: 0.5em;
   background: #474949;
-  color: #d1d9e1;
+  color: #fff;
   -webkit-text-size-adjust: none
 }
 
