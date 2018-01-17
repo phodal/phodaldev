@@ -126,6 +126,10 @@ ul {
   display: table;
 }
 
+.post_detail p {
+  margin-bottom: 2rem;
+}
+
 .mdl-layout__header {
   background-color: #384452;
 }
@@ -784,12 +788,12 @@ pre > code {
   height: 60px;
   line-height: 68px;
   background-color: transparent !important;
-  border-bottom: 4px solid transparent;
+  border-bottom: 2px solid transparent;
   opacity: 1.0;
 }
 
 .android-navigation .mdl-navigation__link:hover {
-  border-bottom: 4px solid #8bc34a;
+  border-bottom: 2px solid #8bc34a;
 }
 
 .android-search-box {
