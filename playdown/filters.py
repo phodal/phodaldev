@@ -14,7 +14,7 @@ def _clean(html):
                  strip_comments=False, styles=styles)
 
 
-def toc(content):
+def playdown(content):
     """
     Renders content using markdown extra.
     """

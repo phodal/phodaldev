@@ -272,7 +272,7 @@ RICHTEXT_FILTER_LEVEL = 3
 # PAGEDOWN_SERVER_SIDE_PREVIEW = True
 RICHTEXT_FILTERS = (
     "mezzanine.utils.html.thumbnails",
-    "playdown.filters.toc")
+    "playdown.filters.playdown")
 
 TEMPLATES = [{
   'BACKEND': 'django.template.backends.django.DjangoTemplates',
