@@ -2,7 +2,7 @@ import bleach
 from bleach import clean
 from markdown import markdown
 from mezzanine.conf import settings
-from playdown.progressiveimage import ProgressiveImageExtension
+from playdown.plugins.progressiveimage import ProgressiveImageExtension
 
 
 def _clean(html):
