@@ -3,6 +3,7 @@ from bleach import clean
 from markdown import markdown
 from mezzanine.conf import settings
 from playdown.plugins.progressiveimage import ProgressiveImageExtension
+from playdown.plugins.tables import TableExtension
 
 
 def _clean(html):
@@ -19,4 +20,4 @@ def toc(content):
     """
     # return _clean(markdown(content, ['codehilite', 'extra', 'meta']))
     # return _clean(markdown(content, [ProgressiveImageExtension(), 'codehilite', 'extra', 'meta']))
-    return markdown(content, [ProgressiveImageExtension(), 'codehilite', 'extra', 'meta'])
+    return markdown(content, [ProgressiveImageExtension(), 'codehilite', 'extra', 'meta', TableExtension()])
