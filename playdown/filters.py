@@ -20,4 +20,4 @@ def playdown(content):
     """
     # return _clean(markdown(content, ['codehilite', 'extra', 'meta']))
     # return _clean(markdown(content, [ProgressiveImageExtension(), 'codehilite', 'extra', 'meta']))
-    return markdown(content, [ProgressiveImageExtension(), 'codehilite', 'extra', 'meta', TableExtension()])
+    return markdown(content, [ProgressiveImageExtension(), 'headerid', 'codehilite', 'extra', 'meta', TableExtension()])
