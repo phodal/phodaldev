@@ -315,8 +315,7 @@ ul.date_hierarchy {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #e0e0e0;
 }
-#changelist-filter ul li:last-child, 
-#changelist-filter ul li:last-child *, 
+#changelist-filter ul li:last-child,
 #changelist-filter .filterset:last-child ul {
     border-bottom: none;
     -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;

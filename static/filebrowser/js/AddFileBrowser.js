@@ -31,7 +31,7 @@ var FileBrowser = {
         jQuery('#help_'+id+', #clear_'+id).hide();
         jQuery('#'+id).val('');
     }
-}
+};
 
 if (!addEvent){
     function addEvent(obj, evType, fn) {

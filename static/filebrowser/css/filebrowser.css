@@ -27,3 +27,104 @@ table .fb_selectlink:link, table .fb_selectlink:visited { background-image: url(
 table .fb_selectlink:hover, table .fb_selectlink:active { background-image: url('../img/filebrowser_icon_select_hover.gif'); }
 table .fb_showversionslink:link, table .fb_showversionslink:visited { background-image: url('../img/filebrowser_icon_showversions.gif'); }
 table .fb_showversionslink:hover, table .fb_showversionslink:active { background-image: url('../img/filebrowser_icon_showversions_hover.gif'); }
+
+.file-input-wrapper{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.file-input-wrapper:last-of-type{
+    margin: 0;
+}
+
+/*
+    these had to be copied from grapelli, because theirs are
+    limited to buttons and input[type="submit"]
+*/
+.file-input-wrapper .button{
+    padding: 7px 15px;
+    font-size: 15px !important;
+    background: #309bbf;
+    color:#fff;
+    margin: 0;
+    width: auto;
+    border-radius: 5px;
+    float: none;
+    display: inline-block;
+    line-height: 1;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.file-input-wrapper .button-error{
+    background: #bf3030;
+}
+
+.file-input-wrapper .button:hover{
+    background: #444;
+}
+
+.file-input-wrapper span{
+    margin-left: 10px;
+}
+
+.file-input-wrapper .progress{
+    background: #b3b3b3;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.file-input-wrapper .progress-inner, .file-input-wrapper .progress-inner:before{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.file-input-wrapper .progress-inner{
+    width: 0;
+    color:#fff;
+    background: #309bbf;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.file-input-wrapper .progress-inner:before{
+    width: 100%;
+    content: attr(data-percentage);
+}
+
+.file-input-wrapper .error{
+    color: #f00;
+}
+.file-input-result {
+    margin: .5em 0;
+}
+/*
+    note that some browsers don't allow
+    input[type="file"] to be display:none
+*/
+.file-input-wrapper input[type="file"],
+.file-input-wrapper .hide,
+.file-input-result.selected .hide-selected,
+.file-input-result.in-progress .hide-in-progress,
+.file-input-result.done .hide-done{
+    position: absolute;
+    top: 0;
+    left: -9999em;
+}
+
+.file-input-result.selected .show-selected,
+.file-input-result.in-progress .show-in-progress,
+.file-input-result.done .show-done{
+    position: relative;
+    top: auto;
+    left: auto;
+}

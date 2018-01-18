@@ -61,7 +61,9 @@ fieldset > div:last-child {
     border-bottom: 1px solid #d4d4d4 !important;
 }
 
-
+.hidden {
+    display: none;
+}
 
 
 /* Labels & Other Typographic Elements in Forms
@@ -100,13 +102,13 @@ form .aligned p, form .aligned ul {
 form .aligned table p {
     margin-left: 0; padding-left: 0;
 }
-form .aligned p.help {
+form .aligned .help {
     margin: 2px 0 0 131px; padding: 0;
 }
-form .aligned input + label + p.help {
+form .aligned input + label + .help {
     margin: 0 0 0 154px; padding: 0;
 }
-td p.help {
+td .help {
     margin-bottom: 3px; padding: 0;
 }
 fieldset .field-box {
@@ -163,16 +165,6 @@ input[type=text], input[type=password], input[type=email], input[type=url] {
     padding: 5px 3px 4px;
     height: 14px;
 }
-/*  Webkit browser hack: apply same horizontal padding as in moz browsers
-    Moz Browsers have a default horizontal padding of 3px in input[type=submit] */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type=text], input[type=password], input[type=email], input[type=url] {
-        padding: 0 3px 4px;
-        height: 19px;
-        line-height: 25px !important;
-    }
-}
-
 
 /*  URL .................................................... */
 
@@ -258,24 +250,27 @@ table input[type=checkbox], table input[type=radio] {
 
 /*  Radiolists & Checkboxlists ................................................... */
 
-#content ul.radiolist, #content ul.checkboxlist {
-    position: relative; display: inline-block; float: none;
+#content .form-row ul {
+    position: relative; display: inline-flex; float: none;
     margin: 4px 0 5px; padding: 0;
     line-height: 14px; font-weight: normal;
 }
 #changelist ul.radiolist {
     margin: 0;
 }
-ul.inline li {
+.result-list-container td li {
     float: left;
     white-space: nowrap;
     padding-right: 10px;
+    font-weight: normal;
 }
-ul.radiolist label, ul.checkboxlist label {
-    float: none; display: inline;
-    padding-right: 0;
+.form-row li label {
+    float: none;
+    display: inline;
+    padding-right: 10px;
+    font-weight: normal;
 }
-ul.radiolist label input, ul.checkboxlist label input {
+.form-row li label input {
     position: relative;
     margin: 0 2px 0 0;
     vertical-align: top;
@@ -542,3 +537,22 @@ td ul.errorlist li {
 }
 
 
+/* Dynamic Form Templates
+------------------------------------------------------------------------------------------------------ */
+
+.empty-form {
+    display: none;
+}
+.inline-tabular .inline-related.empty-form {
+    display: none;
+}
+.add-row {
+    height: 3em;
+}
+.add-row a {
+    position: absolute;
+    line-height: 3em;
+    font-weight: bold;
+    right: 0;
+    padding: 0 1em;
+}

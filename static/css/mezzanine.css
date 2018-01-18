@@ -94,6 +94,9 @@ img.pull-left {
   margin-right: 10px;
   margin-bottom: 5px;
 }
+.middle img {
+  max-width: 100%;
+}
 .user-panel p {
   margin-bottom:3px;
 }
@@ -199,7 +202,7 @@ img.pull-left {
   background-color: #00A3D4;
 }
 .tag-cloud li {
-  padding-left: 0;
+  padding-right: 0;
 }
 .tag-weight-1 {
   font-size: 90%;

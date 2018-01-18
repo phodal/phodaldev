@@ -6,7 +6,7 @@ jQuery(function($) {
         $(this).addClass("collapsed");
         $(this).find('h3:first').attr("class", "collapse-toggle");
     });
-    $('div.inline-stacked div.inline-related h3.collapse-toggle').bind("click", function(){
+    $('div.inline-stacked').on("click", 'div.inline-related h3.collapse-toggle', function(){
         $(this).parent().toggleClass('collapsed');
         $(this).parent().toggleClass('collapse-closed');
         $(this).parent().toggleClass('collapse-open');

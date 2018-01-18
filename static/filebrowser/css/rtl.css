@@ -12,3 +12,18 @@
     font-size: 14px;
     line-height: 17px;
 }
+
+.filebrowser thead th.sorted a:after {
+    padding-right: 8px;
+}
+
+/* filebrowser popup */
+
+.filebrowser.popup #content {
+    margin: 35px 0px 15px !important;
+    padding: 0px 20px;
+}
+
+.filebrowser.popup.change-form div.submit-row {
+    right: 0px;
+}

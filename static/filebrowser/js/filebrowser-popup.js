@@ -28,72 +28,81 @@
  * always correctly calculated so it might need to be manually overridden
  * in the CSS. This happens with Mezzanine's inline editing for instance,
  * where exposeMask has bigger z-index than the dialog.
-**/
+ **/
 
 var mediaLibrary = {
-	iframe: null,
-	gallery: null,
+    iframe: null,
+    gallery: null,
 
-	init: function() {
-		this.iframe = jQuery('<iframe frameborder="0" marginwidth="0" marginheight="0" width="900" height="500" allowfullscreen></iframe>');
-		this.gallery = jQuery('<div></div>').append(this.iframe).appendTo('body')
-			.dialog({
-				autoOpen: false,
-				title: 'Media Library',
-				width: 900,
-				dialogClass: 'media-library',
-				resizable: false,
-				create: function(event, ui) {
-					jQuery(this).css('padding', 0);
-				}
-			});
-	},
+    init: function() {
+        this.iframe = jQuery('<iframe frameborder="0" marginwidth="0" marginheight="0" width="900" height="700" allowfullscreen></iframe>');
+        this.gallery = jQuery('<div></div>').append(this.iframe).appendTo('body')
+            .dialog({
+                autoOpen: false,
+                title: function() {
+                    if ($('html').attr('lang') == 'ar') {
+                        return 'مكتبة الوسائط';
+                    }
 
-	open: function(callback, type) {
-		var url = null,
-			iframe = mediaLibrary.iframe,
-			gallery = mediaLibrary.gallery;
+                    return 'Media Library';
+                },
+                width: 916,
+                dialogClass: 'media-library',
+                resizable: false,
+                create: function(event, ui) {
+                    jQuery(this).css('padding', 0);
+                }
+            });
+    },
 
-		// type defaults to image
-		type = (typeof type !== 'undefined') ? type : 'image';
-		iframe.attr('src', window.__filebrowser_url + '?pop=4&type=' + type);
+    open: function(callback, type) {
+        var url = null,
+            iframe = mediaLibrary.iframe,
+            gallery = mediaLibrary.gallery;
 
-		gallery.dialog('open');
+        // type defaults to image
+        type = (typeof type !== 'undefined') ? type : 'image';
+        iframe.attr('src', window.__filebrowser_url + '?pop=4&type=' + type);
+        if ($('html').attr('dir') == 'rtl') {
+            $('.ui-dialog-title').css('float','right');
+        }
 
-		gallery.on('dialogclose', function() {
-			// Make sure to unload the iframe
-			iframe.attr('src', '');
-			// Certain editors (e.g. pagedown) require this callback to be
-			// asynchronous.
-			setTimeout(function() {
-				callback(url);
-			}, 1);
+        gallery.dialog('open');
 
-			// Clean-up the events so they don't get triggered more than once
-			iframe.off('load');
-			gallery.off('dialogclose');
-		});
+        gallery.on('dialogclose', function() {
+            // Make sure to unload the iframe
+            iframe.attr('src', '');
+            // Certain editors (e.g. pagedown) require this callback to be
+            // asynchronous.
+            setTimeout(function() {
+                callback(url);
+            }, 1);
 
-		// Binding must wait until iframe's content is completely loaded.
-		iframe.on('load', function() {
-			// This will work as long as both parent window and
-			// iframe src are on the same domain.
-			jQuery(iframe.get(0).contentWindow.document)
-				.find('.fb_selectlink')
-				.click(function(e) {
-					e.preventDefault();
-					url = jQuery(this).attr('rel');
-					gallery.dialog('close');
-			});
-		});
+            // Clean-up the events so they don't get triggered more than once
+            iframe.off('load');
+            gallery.off('dialogclose');
+        });
 
-		return true; // tell the editor that we'll take care of getting the image url
-	}
+        // Binding must wait until iframe's content is completely loaded.
+        iframe.on('load', function() {
+            // This will work as long as both parent window and
+            // iframe src are on the same domain.
+            jQuery(iframe.get(0).contentWindow.document)
+                .find('.fb_selectlink')
+                .click(function(e) {
+                    e.preventDefault();
+                    url = jQuery(this).attr('rel');
+                    gallery.dialog('close');
+                });
+        });
+
+        return true; // tell the editor that we'll take care of getting the image url
+    }
 };
 
 // Compatibility for libraries that depend on old non-namespaced function
 var browseMediaLibrary = mediaLibrary.open;
 
 jQuery(function() {
-	mediaLibrary.init();
+    mediaLibrary.init();
 });

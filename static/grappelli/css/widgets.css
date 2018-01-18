@@ -241,7 +241,8 @@ a[id^="clocklink"]:hover, a[id^="clocklink"]:active {
     background: #fff;
 }
 
-.calendar td.selected a {
+.calendar td.selected a, .calendar td.today.selected a {
+    color: #fff;
     background: #444;
 }
 .calendar td.nonday {
