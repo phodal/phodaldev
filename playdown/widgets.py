@@ -21,7 +21,7 @@ class PageDownWidget(forms.Textarea):
     class Media:
         css = {'all': (
                 'mezzanine_pagedown/css/pagedown.css',
-                'mezzanine/css/smoothness/jquery-ui-1.9.1.custom.min.css',)}
+                'mezzanine/css/smoothness/jquery-ui.min.css',)}
         js = ('mezzanine_pagedown/pagedown/Markdown.Converter.js',
               'mezzanine_pagedown/pagedown/Markdown.Sanitizer.js',
               'mezzanine_pagedown/pagedown/Markdown.Editor.js',
