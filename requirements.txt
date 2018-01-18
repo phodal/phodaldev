@@ -11,3 +11,4 @@ djangorestframework-jwt
 django-widget-tweaks==1.4.1
 markdown==2.6.11
 python-memcached
+gunicorn
