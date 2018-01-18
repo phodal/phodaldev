@@ -1893,6 +1893,18 @@ img.mfp-img {
   background-color: #fdfdfd;
 }
 
+.github-widget .mdl-card__title h3 {
+  margin: 0;
+}
+
+.github-widget .mdl-card__supporting-text {
+  padding: 0 16px;
+}
+
+.github-widget .mdl-card__menu span {
+  padding: 0 4px;
+}
+
 footer.mdl-mega-footer a.mifa-link {
   color: #fff;
   text-decoration: underline;
