@@ -265,7 +265,7 @@ INSTALLED_APPS = (
     "api"
 )
 
-RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_WIDGET_CLASS = 'playdown.widgets.PageDownWidget'
 # RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
 PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
 RICHTEXT_FILTER_LEVEL = 3
