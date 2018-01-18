@@ -1892,3 +1892,8 @@ img.mfp-img {
 .github-widget .mdl-card__title {
   background-color: #fdfdfd;
 }
+
+footer.mdl-mega-footer a.mifa-link {
+  color: #fff;
+  text-decoration: underline;
+}
