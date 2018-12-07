@@ -8,10 +8,12 @@
 <script src="{% static "phodal/js/highlight.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
 <script src="{% static "phodal/js/jquery.smartbanner.js" %}"></script>
+<script src="{% static "phodal/js/progressively.min.js" %}"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
 $(function() {
- function choiceSystem () {
+  progressively.init();
+  function choiceSystem () {
     if( /(android)/i.test(navigator.userAgent) ) {
         return 'android';
     } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
