@@ -1,4 +1,4 @@
-django==1.10.7
+django==1.11.28
 Mezzanine==4.2.3
 bleach==1.5
 django-compressor
