@@ -4,12 +4,12 @@ bleach==1.5
 django-compressor
 newrelic
 django-macros
-djangorestframework==3.12.4
+djangorestframework==3.9.1
 django-uuslug
-django-cors-headers==3.7.0
+django-cors-headers
 djangorestframework-jwt
-django-widget-tweaks==1.4.8
-markdown==3.3.4
+django-widget-tweaks==1.4.1
+markdown==2.6.11
 python-memcached
 gunicorn==20.1.0
 mezzanine_pagedown
