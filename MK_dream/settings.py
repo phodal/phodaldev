@@ -365,8 +365,9 @@ OPTIONAL_APPS = (
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost',
-    '*.phodal.com'
+    'http://localhost',
+    'http://*.phodal.com',
+    'https://*.phodal.com'
 )
 
 # REST_FRAMEWORK = {

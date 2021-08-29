@@ -1,12 +1,12 @@
 django==1.11.29
 Mezzanine==4.3.1
-bleach==1.5
+bleach==2.1.4
 django-compressor
 newrelic
 django-macros
 djangorestframework==3.9.1
 django-uuslug
-django-cors-headers
+django-cors-headers=3.2.1
 djangorestframework-jwt
 django-widget-tweaks==1.4.1
 markdown==2.6.11
