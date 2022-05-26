@@ -125,10 +125,7 @@ USE_TZ = True
 LANGUAGE_CODE = "en"
 
 # Supported languages
-_ = lambda s: s
-LANGUAGES = (
-    ('en', _('English')),
-)
+LANGUAGES = (("en", _("English")),)
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
@@ -164,6 +161,7 @@ STATICFILES_FINDERS = (
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
 
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #############
 # DATABASES #
@@ -264,56 +262,37 @@ RICHTEXT_FILTER_LEVEL = 3
 RICHTEXT_FILTERS = (
     "mezzanine.utils.html.thumbnails")
 
-TEMPLATES = [{
-  'BACKEND': 'django.template.backends.django.DjangoTemplates',
-  "DIRS": [os.path.join(PROJECT_ROOT, "templates")],
-  "OPTIONS": {
-    "context_processors": [
-      "django.contrib.auth.context_processors.auth",
-      "django.contrib.messages.context_processors.messages",
-      "django.template.context_processors.debug",
-      "django.template.context_processors.i18n",
-      "django.template.context_processors.static",
-      "django.template.context_processors.media",
-      "django.template.context_processors.request",
-      "django.template.context_processors.tz",
-      "mezzanine.conf.context_processors.settings",
-      "mezzanine.pages.context_processors.page",
-    ],
-    "loaders": [
-      "mezzanine.template.loaders.host_themes.Loader",
-      "django.template.loaders.filesystem.Loader",
-      "django.template.loaders.app_directories.Loader",
-    ],
-  },
-}]
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [os.path.join(PROJECT_ROOT, "templates")],
+        "OPTIONS": {
+            "context_processors": [
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.static",
+                "django.template.context_processors.media",
+                "django.template.context_processors.request",
+                "django.template.context_processors.tz",
+                "mezzanine.conf.context_processors.settings",
+                "mezzanine.pages.context_processors.page",
+            ],
+            "loaders": [
+                "mezzanine.template.loaders.host_themes.Loader",
+                "django.template.loaders.filesystem.Loader",
+                "django.template.loaders.app_directories.Loader",
+            ],
+        },
+    },
+]
 
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE = (
-    "mezzanine.core.middleware.UpdateCacheMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    # Uncomment if using internationalisation or localisation
-    # 'django.middleware.locale.LocaleMiddleware',
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "mezzanine.core.request.CurrentRequestMiddleware",
-    "mezzanine.core.middleware.RedirectFallbackMiddleware",
-    "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
-    "mezzanine.core.middleware.SitePermissionMiddleware",
-    "mezzanine.pages.middleware.PageMiddleware",
-    "mezzanine.core.middleware.FetchFromCacheMiddleware",
-)
-
-# List of middleware classes to use. Order is important; in the request phase,
-# these middleware classes will be applied in the order given, and in the
-# response phase the middleware will be applied in reverse order.
-MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     # Uncomment if using internationalisation or localisation
