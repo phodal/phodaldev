@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils.feedgenerator import Atom1Feed
 from django.utils.html import strip_tags
+from django.utils.safestring import mark_safe
 
 from mezzanine.core.templatetags.mezzanine_tags import richtext_filters
 from mezzanine.blog.models import BlogPost, BlogCategory
@@ -78,10 +79,7 @@ class PostsRSS(Feed):
         return blog_posts
 
     def item_description(self, item):
-        copy_info = "\n原文:[" + \
-                    super(PostsRSS, self).item_title(item) + "](" + \
-                    super(PostsRSS, self).item_link(item) + ")" + "<br />更多精彩内容，欢迎搜索并关注我的微信公众号: Phodal"
-        return richtext_filters(item.content[0:600]) + richtext_filters(copy_info)
+        return item.description
 
     def categories(self):
         if not self._public:
