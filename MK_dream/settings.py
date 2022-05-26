@@ -254,7 +254,7 @@ INSTALLED_APPS = [
 RICHTEXT_WIDGET_CLASS = 'playdown.widgets.PageDownWidget'
 PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
 RICHTEXT_FILTER_LEVEL = 3
-# PAGEDOWN_SERVER_SIDE_PREVIEW = True
+PAGEDOWN_SERVER_SIDE_PREVIEW = True
 RICHTEXT_FILTERS = (
     "mezzanine.utils.html.thumbnails")
 
