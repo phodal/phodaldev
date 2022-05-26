@@ -11,7 +11,6 @@ from amp import views as amp_views
 from sitemaps import views as sitemap
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
-from rest_framework_jwt.views import verify_jwt_token, obtain_jwt_token, refresh_jwt_token
 
 admin.autodiscover()
 
@@ -39,10 +38,6 @@ urlpatterns += [
 urlpatterns += [
   path("^$", homepage_view.homepage, name="home"),
   path("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
-  path(r'^api/app/', include("api.urls")),
-  path(r'^api-token-auth/', obtain_jwt_token),
-  path(r'^api-token-refresh/', refresh_jwt_token),
-  path(r'^api-token-verify/', verify_jwt_token),
   path("^", include("mezzanine.urls")),
 ]
 

@@ -105,7 +105,6 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '0.0.0.0',
-    'weixin2.phodal.com',
     'www.phodal.com',
 ]
 
@@ -366,21 +365,6 @@ CORS_ORIGIN_WHITELIST = (
     'http://*.phodal.com',
     'https://*.phodal.com'
 )
-
-# REST_FRAMEWORK = {
-#    'DEFAULT_PERMISSION_CLASSES': (
-#        'rest_framework.permissions.IsAuthenticated',
-#    ),
-#    'DEFAULT_AUTHENTICATION_CLASSES': (
-#        'rest_framework.authentication.SessionAuthentication',
-#        'rest_framework.authentication.BasicAuthentication',
-#        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-#    ),
-# }
-
-JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=14)
-}
 
 ##################
 # LOCAL SETTINGS #
