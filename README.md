@@ -52,6 +52,6 @@ gunicorn MK_dream.wsgi
 License
 ---
 
-© 2014~2018 [Phodal Huang][phodal]. This code is distributed under the MIT license.
+© 2014~2022 [Phodal Huang][phodal]. This code is distributed under the MIT license.
 
 [phodal]:http://www.phodal.com/
