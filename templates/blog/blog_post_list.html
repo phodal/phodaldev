@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags playdown_tags %}
 
 {% block meta_title %}{% if tag %}{{ tag }}{% elif month %}{{ month }}'s Blog{% elif author %} {{ author.get_full_name|default:author.username }}{% elif page %}{{ page.meta_title }}
 {% else %}{% trans "博客" %}
@@ -130,7 +130,9 @@
 {% block blog_post_list_post_content %}
 
 {% editable blog_post.content %}
-{{ blog_post.description }}
+
+{% markit blog_post.description as description %}
+{{ description|safe }}
 {% endeditable %}
 
 {% endblock %}

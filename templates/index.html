@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
-{% load i18n mezzanine_tags pages_tags blog_tags static %}
+{% load i18n mezzanine_tags pages_tags blog_tags static playdown_tags %}
 
 <head>
   <title> Phodal - 狼和凤凰 | Growth Engineer</title>
@@ -134,7 +134,8 @@
               {% endblock %}
 
               {% block blog_post_list_post_content %}
-                {{ blog_post.description|safe }}
+                {% markit blog_post.description as description %}
+                {{ description|safe }}
               {% endblock %}
             </div>
           {% endfor %}
