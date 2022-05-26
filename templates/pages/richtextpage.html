@@ -1,6 +1,6 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags %}
+{% load mezzanine_tags playdown_tags %}
 
 {% block main %}
 
@@ -8,7 +8,8 @@
 {{ block.super }}
 <div class="mdl-card__supporting-text post_detail">
 {% editable page.richtextpage.content %}
-{{ page.richtextpage.content|richtext_filters|safe }}
+{% markit page.richtextpage.content as content %}
+{{ content|safe }}
 {% endeditable %}
 </div>
 {% endblock %}
