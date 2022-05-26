@@ -4,7 +4,7 @@ bleach==2.1.4
 django-compressor
 newrelic
 django-macros
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 django-uuslug
 django-cors-headers==3.2.1
 djangorestframework-jwt
