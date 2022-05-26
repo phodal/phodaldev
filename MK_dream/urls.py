@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 import playdown.urls
 from homepage import views as homepage_view
@@ -28,8 +28,8 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-  path("feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed"),
-  path("blog/feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed")
+  re_path("feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed"),
+  re_path("blog/feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed")
 ]
 
 urlpatterns += [
@@ -38,9 +38,9 @@ urlpatterns += [
 
 urlpatterns += [
   path("", homepage_view.homepage, name="home"),
-  path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
+  re_path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   path("", include("mezzanine.urls")),
-  path("^pagedown/", include(playdown.urls)),
+  path("pagedown/", include(playdown.urls)),
 ]
 
 handler404 = "mezzanine.core.views.page_not_found"

@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.views.generic import View
 
-from mezzanine.core.templatetags.mezzanine_tags import richtext_filters
+from playdown.templatetags.playdown_tags import markit
 
 
 class MarkupPreview(View):
@@ -13,4 +13,4 @@ class MarkupPreview(View):
 
     def post(self, request, *args, **kwargs):
         text = self.request.POST.get('text', u"")
-        return HttpResponse(richtext_filters(text), content_type='text/html')
+        return HttpResponse(markit(text), content_type='text/html')

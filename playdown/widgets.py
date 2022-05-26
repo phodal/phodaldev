@@ -19,12 +19,12 @@ class PageDownWidget(forms.Textarea):
     class Media:
         css = {'all': (
             'playdown/css/pagedown.css',
-            'mezzanine/css/smoothness/jquery-ui.min.css',)}
+            'mezzanine/css/smoothness/jquery-ui.css')}
         js = ('playdown/pagedown/Markdown.Converter.js',
               'playdown/pagedown/Markdown.Sanitizer.js',
               'playdown/pagedown/Markdown.Editor.js',
-              'mezzanine/js/%s' % settings.JQUERY_FILENAME,
-              'mezzanine/js/%s' % settings.JQUERY_UI_FILENAME,
+              'mezzanine/js/jquery-1.8.3.min.js',
+              'mezzanine/js/jquery-ui-1.8.24.min.js',
               'filebrowser/js/filebrowser-popup.js',
               'playdown/js/jquery.ba-throttle-debounce.min.js',
               'playdown/js/jquery.cookie.js')
@@ -41,6 +41,7 @@ class PageDownWidget(forms.Textarea):
 
         return mark_safe(render_to_string(self.template, {
             'final_attrs': flatatt(final_attrs),
+            'id': '1',
             'value': conditional_escape(force_str(value)),
             'server_side_preview': settings.PAGEDOWN_SERVER_SIDE_PREVIEW,
         }))
