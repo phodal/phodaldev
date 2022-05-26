@@ -49,6 +49,13 @@ Server
 gunicorn MK_dream.wsgi
 ```
 
+?
+
+``
+pip3 install pysqlite3
+pip3 install pysqlite3-binary
+``
+
 License
 ---
 
