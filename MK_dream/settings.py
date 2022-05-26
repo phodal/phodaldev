@@ -1,6 +1,5 @@
-# coding=utf-8
-from __future__ import absolute_import, unicode_literals
 import os
+
 from django.utils.translation import gettext_lazy as _
 
 ######################
@@ -9,28 +8,28 @@ from django.utils.translation import gettext_lazy as _
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
-# common enough to be put here, commented out, for convenient
+# common enough to be put here, commented out, for conveniently
 # overriding. Please consult the settings documentation for a full list
 # of settings Mezzanine implements:
 # http://mezzanine.jupo.org/docs/configuration.html#default-settings
 
 # Controls the ordering and grouping of the admin menu.
 #
-ADMIN_MENU_ORDER = (
-    (_("内容"), ("pages.Page", "blog.BlogPost",
-               "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
-    (_("站点"), ("sites.Site", "redirects.Redirect", "conf.Setting", "events.Event", "events.Ad", "homepage.Info",)),
-    (_("用户"), ("auth.User", "auth.Group")),
-)
+# ADMIN_MENU_ORDER = (
+#     ("Content", ("pages.Page", "blog.BlogPost",
+#        "generic.ThreadedComment", (_("Media Library"), "media-library"),)),
+#     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
+#     ("Users", ("auth.User", "auth.Group",)),
+# )
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
 #
-DASHBOARD_TAGS = (
-    ("event_tags.admin_ads", "mezzanine_tags.app_list",),
-    ("comment_tags.recent_comments",),
-    ("mezzanine_tags.recent_actions",),
-)
+# DASHBOARD_TAGS = (
+#     ("blog_tags.quick_blog", "mezzanine_tags.app_list"),
+#     ("comment_tags.recent_comments",),
+#     ("mezzanine_tags.recent_actions",),
+# )
 
 # A sequence of templates used by the ``page_menu`` template tag. Each
 # item in the sequence is a three item sequence, containing a unique ID
@@ -40,9 +39,9 @@ DASHBOARD_TAGS = (
 # that doesn't appear in this setting, all pages will appear in it.
 
 # PAGE_MENU_TEMPLATES = (
-#     (1, "Top navigation bar", "pages/menus/dropdown.html"),
-#     (2, "Left-hand tree", "pages/menus/tree.html"),
-#     (3, "Footer", "pages/menus/footer.html"),
+#     (1, _("Top navigation bar"), "pages/menus/dropdown.html"),
+#     (2, _("Left-hand tree"), "pages/menus/tree.html"),
+#     (3, _("Footer"), "pages/menus/footer.html"),
 # )
 
 # A sequence of fields that will be injected into Mezzanine's (or any
@@ -61,7 +60,7 @@ DASHBOARD_TAGS = (
 #         # Dotted path to field class.
 #         "somelib.fields.ImageField",
 #         # Positional args for field class.
-#         ("Image",),
+#         (_("Image"),),
 #         # Keyword args for field class.
 #         {"blank": True, "upload_to": "blog"},
 #     ),
@@ -69,7 +68,7 @@ DASHBOARD_TAGS = (
 #     (
 #         "mezzanine.pages.models.Page.another_field",
 #         "IntegerField", # 'django.db.models.' is implied if path is omitted.
-#         ("Another name",),
+#         (_("Another name"),),
 #         {"blank": True, "default": 1},
 #     ),
 # )
@@ -78,35 +77,18 @@ DASHBOARD_TAGS = (
 #
 # BLOG_USE_FEATURED_IMAGE = True
 
-# If True, the south application will be automatically added to the
+# If True, the django-modeltranslation will be added to the
 # INSTALLED_APPS setting.
-import datetime
+USE_MODELTRANSLATION = False
 
-USE_SOUTH = True
-BLOG_RSS_LIMIT = 7
 
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
 
-# People who get code error notifications.
-# In the format (('Full Name', 'email@example.com'),
-#                ('Full Name', 'anotheremail@example.com'))
-ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
-    ('Phodal Huang' 'h@phodal.com'),
-)
-
-MANAGERS = ADMINS
-
 # Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '0.0.0.0',
-    'www.phodal.com',
-]
+# See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -115,7 +97,7 @@ ALLOWED_HOSTS = [
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = "UTC"
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
@@ -130,7 +112,7 @@ LANGUAGES = (("en", _("English")),)
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = True
+DEBUG = False
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -141,27 +123,14 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = False
 
-# Tuple of IP addresses, as strings, that:
-#   * See debug comments, when DEBUG is true
-#   * Receive x-headers
-INTERNAL_IPS = ("0.0.0.0", "127.0.0.1")
-
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
-
-# List of finder classes that know how to find static files in
-# various locations.
-STATICFILES_FINDERS = (
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-    'compressor.finders.CompressorFinder',
-)
 
 # The numeric mode to set newly-uploaded files to. The value should be
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 
 #############
 # DATABASES #
@@ -183,6 +152,7 @@ DATABASES = {
         "PORT": "",
     }
 }
+
 
 #########
 # PATHS #
@@ -220,48 +190,6 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip("/"))
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_APP
 
-################
-# APPLICATIONS #
-################
-
-INSTALLED_APPS = (
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.redirects",
-    "django.contrib.sessions",
-    "django.contrib.sites",
-    "django.contrib.sitemaps",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "mezzanine.boot",
-    "mezzanine.conf",
-    "mezzanine.core",
-    "mezzanine.generic",
-    "mezzanine.blog",
-    "mezzanine.forms",
-    "mezzanine.pages",
-    "mezzanine.galleries",
-    # "mezzanine.twitter",
-    "mezzanine.accounts",
-    # "mezzanine.mobile",
-    "events",
-    "widget_tweaks",
-    "homepage",
-    "macros",
-    "feed",
-    "compressor",
-    "amp",
-    "api"
-)
-
-# RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
-PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
-RICHTEXT_FILTER_LEVEL = 3
-# PAGEDOWN_SERVER_SIDE_PREVIEW = True
-RICHTEXT_FILTERS = (
-    "mezzanine.utils.html.thumbnails")
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -288,6 +216,47 @@ TEMPLATES = [
     },
 ]
 
+################
+# APPLICATIONS #
+################
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.redirects",
+    "django.contrib.sessions",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "mezzanine.boot",
+    "mezzanine.conf",
+    "mezzanine.core",
+    "mezzanine.generic",
+    "mezzanine.pages",
+    "mezzanine.blog",
+    "mezzanine.forms",
+    "mezzanine.galleries",
+    # "mezzanine.twitter",
+    # 'mezzanine.accounts',
+    "playdown",
+    "events",
+    "widget_tweaks",
+    "homepage",
+    "macros",
+    "feed",
+    "compressor",
+    "amp",
+    "api"
+]
+
+RICHTEXT_WIDGET_CLASS = 'playdown.widgets.PageDownWidget'
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
+RICHTEXT_FILTER_LEVEL = 3
+# PAGEDOWN_SERVER_SIDE_PREVIEW = True
+RICHTEXT_FILTERS = (
+    "mezzanine.utils.html.thumbnails")
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
@@ -321,42 +290,11 @@ PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
 
 # These will be added to ``INSTALLED_APPS``, only if available.
 OPTIONAL_APPS = (
+    "debug_toolbar",
+    "django_extensions",
+    "compressor",
     PACKAGE_NAME_FILEBROWSER,
     PACKAGE_NAME_GRAPPELLI,
-)
-
-###################
-# DEPLOY SETTINGS #
-###################
-
-# These settings are used by the default fabfile.py provided.
-# Check fabfile.py for defaults.
-
-# FABRIC = {
-#     "SSH_USER": "", # SSH username
-#     "SSH_PASS":  "", # SSH password (consider key-based authentication)
-#     "SSH_KEY_PATH":  "", # Local path to SSH key file, for key-based auth
-#     "HOSTS": [], # List of hosts to deploy to
-#     "VIRTUALENV_HOME":  "", # Absolute remote path for virtualenvs
-#     "PROJECT_NAME": "", # Unique identifier for project
-#     "REQUIREMENTS_PATH": "", # Path to pip requirements, relative to project
-#     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
-#     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
-#     "LIVE_HOSTNAME": "www.example.com", # Host for public site.
-#     "REPO_URL": "", # Git or Mercurial remote repo URL for the project
-#     "DB_PASS": "", # Live database password
-#     "ADMIN_PASS": "", # Live admin user password
-#     "SECRET_KEY": SECRET_KEY,
-#     "NEVERCACHE_KEY": NEVERCACHE_KEY,
-# }
-
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost',
-    'http://*.phodal.com',
-    'https://*.phodal.com'
 )
 
 ##################

@@ -1,0 +1,73 @@
+<div class="wmd-wrapper">
+  <div class="wmd-panel">
+    <div id="wmd-button-bar-{{ id }}"></div>
+    <textarea id="wmd-input-{{ id }}" class="wmd-input" {{ final_attrs|safe }}>{{ value }}</textarea>
+  </div>
+  {% if server_side_preview %}
+  <div id="server-preview-{{ id }}" class="wmd-preview"></div>
+  {% else %}
+  <div id="wmd-preview-{{ id }}" class="wmd-panel wmd-preview typo"></div>
+  {% endif %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var converter_{{ id }} = Markdown.getSanitizingConverter();
+      var editor_{{ id }} = new Markdown.Editor(converter_{{ id }}, "-{{ id }}");
+      editor_{{ id }}.hooks.set("insertImageDialog", browseMediaLibrary);
+      editor_{{ id }}.run();
+
+      {% if server_side_preview %}
+      preview_{{ id }} = '#server-preview-{{ id }}';
+      {% else %}
+      preview_{{ id }} = '#wmd-preview-{{ id }}';
+      {% endif %}
+
+      // resize preview along with textarea
+      $('#wmd-input-{{ id }}').on('mouseup', function() {
+        $(preview_{{ id }}).outerHeight($('#wmd-input-{{ id }}').outerHeight());
+      });
+
+      // scroll preview along with textarea
+      $('#wmd-input-{{ id }}').on('scroll', function() {
+        $(preview_{{ id }}).scrollTop(
+          $('#wmd-input-{{ id }}').scrollTop() / $('#wmd-input-{{ id }}')[0].scrollHeight *
+            $(preview_{{ id }})[0].scrollHeight);
+      });
+
+      {% if server_side_preview %}
+
+      // We need to submit our csrftoken with the request
+      // otherwise Django will not permit us to post.
+      // See https://docs.djangoproject.com/en/dev/ref/contrib/csrf/#ajax .
+      var csrftoken = $.cookie('csrftoken');
+
+      function csrfSafeMethod(method) {
+          // these HTTP methods do not require CSRF protection
+          return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+
+      $.ajaxSetup({
+          beforeSend: function(xhr, settings) {
+              if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                  xhr.setRequestHeader("X-CSRFToken", csrftoken);
+              }
+          }
+      });
+
+      // server-side preview
+      preview = function() {
+        $.post('{% url 'preview' %}',
+          {text:$('#wmd-input-{{ id }}').val()},
+          function(data,status) {
+            $('#server-preview-{{ id }}').html(data);
+        });
+      };
+      // update the preview on textarea input
+      $('#wmd-input-{{ id }}').on('input onpropertychange', $.debounce(250,preview));
+      // update the preview on pagedown editor button clicks
+      $('#wmd-button-bar-{{ id }}').on('click', preview);
+      // initial preview on loading the page
+      $(document).ready(preview);
+      {% endif %}
+    });
+  </script>
+</div>
