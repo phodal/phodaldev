@@ -190,20 +190,15 @@ DATABASES = {
 # PATHS #
 #########
 
-import os
-
 # Full filesystem path to the project.
 PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
 PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
 PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
 
-# Name of the directory for the project.
-PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
-
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
 # project specific.
-CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_DIRNAME
+CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -218,14 +213,14 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = STATIC_URL + "media/"
+MEDIA_URL = "/media/"
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip("/"))
 
 # Package/module name to import the root urlpatterns from for the project.
-ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
+ROOT_URLCONF = "%s.urls" % PROJECT_APP
 
 ################
 # APPLICATIONS #
@@ -240,6 +235,7 @@ INSTALLED_APPS = (
     "django.contrib.sessions",
     "django.contrib.sites",
     "django.contrib.sitemaps",
+    "django.contrib.messages",
     "django.contrib.staticfiles",
     "mezzanine.boot",
     "mezzanine.conf",
@@ -272,13 +268,9 @@ RICHTEXT_FILTERS = (
 
 TEMPLATES = [{
   'BACKEND': 'django.template.backends.django.DjangoTemplates',
-  'DIRS': [
-    os.path.join(PROJECT_ROOT, "templates")
-  ],
-  "APP_DIRS": True,
-  'OPTIONS': {
-    'builtins': ['mezzanine.template.loader_tags'],
-    'context_processors': [
+  "DIRS": [os.path.join(PROJECT_ROOT, "templates")],
+  "OPTIONS": {
+    "context_processors": [
       "django.contrib.auth.context_processors.auth",
       "django.contrib.messages.context_processors.messages",
       "django.template.context_processors.debug",
@@ -289,9 +281,36 @@ TEMPLATES = [{
       "django.template.context_processors.tz",
       "mezzanine.conf.context_processors.settings",
       "mezzanine.pages.context_processors.page",
-    ]
+    ],
+    "loaders": [
+      "mezzanine.template.loaders.host_themes.Loader",
+      "django.template.loaders.filesystem.Loader",
+      "django.template.loaders.app_directories.Loader",
+    ],
   },
 }]
+
+
+# List of middleware classes to use. Order is important; in the request phase,
+# these middleware classes will be applied in the order given, and in the
+# response phase the middleware will be applied in reverse order.
+MIDDLEWARE = (
+    "mezzanine.core.middleware.UpdateCacheMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    # Uncomment if using internationalisation or localisation
+    # 'django.middleware.locale.LocaleMiddleware',
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "mezzanine.core.request.CurrentRequestMiddleware",
+    "mezzanine.core.middleware.RedirectFallbackMiddleware",
+    "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
+    "mezzanine.core.middleware.SitePermissionMiddleware",
+    "mezzanine.pages.middleware.PageMiddleware",
+    "mezzanine.core.middleware.FetchFromCacheMiddleware",
+)
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
@@ -299,20 +318,17 @@ TEMPLATES = [{
 MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
+    # Uncomment if using internationalisation or localisation
+    # 'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "mezzanine.core.request.CurrentRequestMiddleware",
     "mezzanine.core.middleware.RedirectFallbackMiddleware",
-    "mezzanine.core.middleware.TemplateForDeviceMiddleware",
-    "mezzanine.core.middleware.TemplateForHostMiddleware",
     "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
     "mezzanine.core.middleware.SitePermissionMiddleware",
-    # Uncomment the following if using any of the SSL settings:
-    # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
 )
