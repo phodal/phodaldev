@@ -10,3 +10,4 @@ mezzanine/.idea/
 static/CACHE
 db.sqlite3
 venv
+mezzanine_app

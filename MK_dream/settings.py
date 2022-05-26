@@ -1,7 +1,7 @@
 # coding=utf-8
 from __future__ import absolute_import, unicode_literals
 import os
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 ######################
 # MEZZANINE SETTINGS #
