@@ -5,10 +5,10 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, re_path
 
-import playdown.urls
 from homepage import views as homepage_view
 from feed import view as feed_view
 from amp import views as amp_views
+from playdown.views import MarkupPreview
 from sitemaps import views as sitemap
 from sitemaps.mobile_sitemaps import DisplayableSitemap as DisplayableMobileSitemap
 from sitemaps.sitemaps import DisplayableSitemap
@@ -40,7 +40,7 @@ urlpatterns += [
   path("", homepage_view.homepage, name="home"),
   re_path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   path("", include("mezzanine.urls")),
-  path("pagedown/", include(playdown.urls)),
+  path("pagedown/preview", MarkupPreview.as_view(), name='preview'),
 ]
 
 handler404 = "mezzanine.core.views.page_not_found"

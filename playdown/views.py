@@ -2,6 +2,10 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from playdown.templatetags.playdown_tags import markit
+from markdown import markdown
+
+from playdown.plugins.progressiveimage import ProgressiveImageExtension
+from playdown.plugins.tables import BlockQuoteExtension
 
 
 class MarkupPreview(View):
@@ -13,4 +17,8 @@ class MarkupPreview(View):
 
     def post(self, request, *args, **kwargs):
         text = self.request.POST.get('text', u"")
-        return HttpResponse(markit(text), content_type='text/html')
+        content = markdown(text,
+                           [ProgressiveImageExtension(), 'headerid', 'codehilite', 'extra', 'meta',
+                            BlockQuoteExtension()])
+
+        return HttpResponse(content, content_type='text/html')
