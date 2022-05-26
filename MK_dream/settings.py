@@ -227,7 +227,6 @@ ROOT_URLCONF = "%s.urls" % PROJECT_APP
 ################
 
 INSTALLED_APPS = (
-    "events",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -248,13 +247,12 @@ INSTALLED_APPS = (
     # "mezzanine.twitter",
     "mezzanine.accounts",
     # "mezzanine.mobile",
+    "events",
     "widget_tweaks",
     "homepage",
     "macros",
     "feed",
     "compressor",
-    "rest_framework",
-    "corsheaders",
     "amp",
     "api"
 )
