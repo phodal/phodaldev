@@ -15,30 +15,30 @@ from sitemaps.sitemaps import DisplayableSitemap
 admin.autodiscover()
 
 urlpatterns = i18n_patterns(
-  path("^admin/", include(admin.site.urls)),
+  path("admin/", include(admin.site.urls)),
 )
 
 sitemaps = {"sitemaps": {"all": DisplayableSitemap}}
 mobile_sitemaps = {"sitemaps": {"all": DisplayableMobileSitemap}}
 
 urlpatterns += [
-  path("^sitemap\.xml$", sitemap.sitemap, sitemaps),
-  path("^sitemap_mobile\.xml$", sitemap.mobile, sitemaps),
+  path("sitemap\.xml", sitemap.sitemap, sitemaps),
+  path("sitemap_mobile\.xml", sitemap.mobile, sitemaps),
 ]
 
 urlpatterns += [
-  path("feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed"),
-  path("^blog/feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed")
+  path("feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed"),
+  path("blog/feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed")
 ]
 
 urlpatterns += [
-  path("^events/", include("events.urls")),
+  path("events/", include("events.urls")),
 ]
 
 urlpatterns += [
-  path("^$", homepage_view.homepage, name="home"),
-  path("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
-  path("^", include("mezzanine.urls")),
+  path("", homepage_view.homepage, name="home"),
+  path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
+  path("", include("mezzanine.urls")),
 ]
 
 handler404 = "mezzanine.core.views.page_not_found"
