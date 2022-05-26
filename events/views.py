@@ -1,14 +1,13 @@
 from __future__ import unicode_literals
 
-from mezzanine.utils.models import get_user_model
-from mezzanine.utils.views import render
+from django.http import HttpResponse
+from django.template import loader
 
 from events.models import Event
 
-User = get_user_model()
 
-
-def events_list(request, template="events/event_list.html"):
+def events_list(request):
     events = Event.objects.published()
     context = {"events": events}
-    return render(request, template, context)
+    template = loader.get_template("events/event_list.html")
+    return HttpResponse(template.render(context, request))

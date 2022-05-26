@@ -1,4 +1,4 @@
-{% load mezzanine_tags i18n event_tags %}
+{% load mezzanine_tags i18n event_tags playdown_tags %}
 
 {% block events %}
   {% events %}
@@ -10,7 +10,8 @@
     <ul class="mdl-card__supporting-text list-unstyled">
       {% for event in events %}
         <li>
-          <div>{{ event.content |richtext_filters|safe }}</div>
+          {% markit event.content as content %}
+          <div>{{ content |safe }}</div>
           <span class="meta">
               <span content="{{ event.date }}">{{ event.pub_date }}</span>  |
               <span>{{ event.location }}</span>
