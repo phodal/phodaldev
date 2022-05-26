@@ -1,5 +1,5 @@
 {% extends "base_amp.html" %}
-{% load  mezzanine_tags comment_tags keyword_tags rating_tags i18n disqus_tags static event_tags amp_tags%}
+{% load  mezzanine_tags comment_tags keyword_tags rating_tags i18n disqus_tags static event_tags amp_tags playdown_tags %}
 
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
@@ -48,7 +48,8 @@
 
 {% block blog_post_detail_content %}
 <div>
-{{ blog_post.content|richtext_filters|replace:"/<img/<amp-img height=400 layout='fixed-height'" | replace:"/img>/amp-img>"  |safe }}
+{% markit blog_post.content as content %}
+{{ content|replace:"/<img/<amp-img height=400 layout='fixed-height'" | replace:"/img>/amp-img>"  |safe }}
 </div>
 {% endblock %}
 </div>

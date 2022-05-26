@@ -28,8 +28,8 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-  re_path("feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed"),
-  re_path("blog/feeds/(?P<format>.*)/", feed_view.blog_post_feed, name="blog_post_feed")
+  re_path("^feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed"),
+  re_path("^blog/feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed")
 ]
 
 urlpatterns += [
@@ -38,7 +38,7 @@ urlpatterns += [
 
 urlpatterns += [
   path("", homepage_view.homepage, name="home"),
-  re_path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
+  re_path("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   path("", include("mezzanine.urls")),
   path("pagedown/preview", MarkupPreview.as_view(), name='preview'),
 ]
