@@ -392,21 +392,26 @@ CORS_ORIGIN_WHITELIST = (
 
 # Instead of doing "from .local_settings import *", we use exec so that
 # local_settings has full access to everything defined in this module.
+# Also force into sys.modules so it's visible to Django's autoreload.
 
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
-    exec (open(f, "rb").read())
+    import imp
+    import sys
+
+    module_name = "%s.local_settings" % PROJECT_APP
+    module = imp.new_module(module_name)
+    module.__file__ = f
+    sys.modules[module_name] = module
+    exec(open(f, "rb").read())
+
 
 ####################
 # DYNAMIC SETTINGS #
 ####################
 
-# set_dynamic_settings() will rewrite globals based on what has been
-# defined so far, in order to provide some better defaults where
-# applicable. We also allow this settings module to be imported
-# without Mezzanine installed, as the case may be when using the
-# fabfile, where setting the dynamic settings below isn't strictly
-# required.
+# set_dynamic_settings() will rewrite globals based on what has been defined so far, in
+# order to provide some better defaults where applicable.
 try:
     from mezzanine.utils.conf import set_dynamic_settings
 except ImportError:
