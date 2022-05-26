@@ -1,6 +1,6 @@
 django==1.11.29
 Mezzanine==4.3.1
-bleach==2.1.4
+bleach==3.3.0
 django-compressor
 newrelic
 django-macros
