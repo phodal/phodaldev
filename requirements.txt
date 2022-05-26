@@ -6,7 +6,7 @@ newrelic
 django-macros
 djangorestframework==3.9.1
 django-uuslug
-django-cors-headers=3.2.1
+django-cors-headers==3.2.1
 djangorestframework-jwt
 django-widget-tweaks==1.4.1
 markdown==2.6.11
