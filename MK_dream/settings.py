@@ -255,7 +255,6 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
     "widget_tweaks",
     "homepage",
-    "playdown",
     "macros",
     "feed",
     "compressor",
@@ -265,14 +264,12 @@ INSTALLED_APPS = (
     "api"
 )
 
-RICHTEXT_WIDGET_CLASS = 'playdown.widgets.PageDownWidget'
 # RICHTEXT_FILTER = 'mezzanine_pagedown.filters.custom'
 PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
 RICHTEXT_FILTER_LEVEL = 3
 # PAGEDOWN_SERVER_SIDE_PREVIEW = True
 RICHTEXT_FILTERS = (
-    "mezzanine.utils.html.thumbnails",
-    "playdown.filters.playdown")
+    "mezzanine.utils.html.thumbnails")
 
 TEMPLATES = [{
   'BACKEND': 'django.template.backends.django.DjangoTemplates',
