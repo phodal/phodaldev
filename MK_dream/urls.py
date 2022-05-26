@@ -5,6 +5,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path
 
+import playdown.urls
 from homepage import views as homepage_view
 from feed import view as feed_view
 from amp import views as amp_views
@@ -39,6 +40,7 @@ urlpatterns += [
   path("", homepage_view.homepage, name="home"),
   path("amp/(?P<slug>.*)/", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   path("", include("mezzanine.urls")),
+  path("^pagedown/", include(playdown.urls)),
 ]
 
 handler404 = "mezzanine.core.views.page_not_found"
