@@ -7,10 +7,13 @@ django-macros
 djangorestframework==3.13.1
 django-uuslug==2.0.0
 django-cors-headers==3.12.0
-djangorestframework-jwt
+djangorestframework-jwt~=1.11.0
 django-widget-tweaks==1.4.12
 markdown==3.3.7
 python-memcached
 gunicorn==20.1.0
 mezzanine_pagedown==1.4.0
 pypandoc==1.8.1
+
+six~=1.16.0
+future~=0.18.2
