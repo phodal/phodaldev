@@ -28,8 +28,10 @@ var FileBrowser = {
         }
     },
     clear: function(id) {
-        jQuery('#help_'+id+', #clear_'+id).hide();
-        jQuery('#'+id).val('');
+        document.querySelectorAll('#help_'+id+', #clear_'+id).forEach(function(el) {
+            el.style.display = 'none'
+        });
+        document.getElementById(id).value = '';
     }
 };
 

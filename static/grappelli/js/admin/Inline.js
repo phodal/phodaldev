@@ -69,6 +69,7 @@ jQuery(function($) {
             }
             if ($(this).attr('href')) {
                 $(this).attr('href', $(this).attr('href').replace(/-\d+-/g, "-" + parseInt(items - 1) + "-"));
+                $(this).attr('href', $(this).attr('href').replace(/__prefix__/g,  "" + parseInt(items - 1) ));
             }
         });
         /// remove calendars and clocks, re-init

@@ -3,6 +3,7 @@
 .filebrowser thead th.sorted a { padding-right: 13px; }
 .filebrowser td { padding: 9px 10px 7px 10px !important; }
 .filebrowser td.fb_icon { padding: 6px 5px 5px 5px !important; }
+.filebrowser td.fb_icon img { max-width: 100px; }
 
 table a.fb_deletelink, table a.fb_renamelink, table a.fb_selectlink, table a.fb_showversionslink {
     cursor: pointer;

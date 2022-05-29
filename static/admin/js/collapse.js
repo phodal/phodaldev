@@ -1,26 +1,29 @@
-/*global gettext*/
-(function($) {
-    'use strict';
-    $(document).ready(function() {
-        // Add anchor tag for Show/Hide link
-        $("fieldset.collapse").each(function(i, elem) {
-            // Don't hide if fields in this fieldset have errors
-            if ($(elem).find("div.errors").length === 0) {
-                $(elem).addClass("collapsed").find("h2").first().append(' (<a id="fieldsetcollapser' +
-                    i + '" class="collapse-toggle" href="#">' + gettext("Show") +
-                    '</a>)');
-            }
-        });
-        // Add toggle to anchor tag
-        $("fieldset.collapse a.collapse-toggle").click(function(ev) {
-            if ($(this).closest("fieldset").hasClass("collapsed")) {
-                // Show
-                $(this).text(gettext("Hide")).closest("fieldset").removeClass("collapsed").trigger("show.fieldset", [$(this).attr("id")]);
-            } else {
-                // Hide
-                $(this).text(gettext("Show")).closest("fieldset").addClass("collapsed").trigger("hide.fieldset", [$(this).attr("id")]);
-            }
-            return false;
-        });
+
+jQuery(function($) {
+
+    /// FIELDSETS
+    $('fieldset.collapse').each(function() {
+        $(this).addClass("collapse-open");
+        $(this).removeClass("collapse");
     });
-})(django.jQuery);
+    $('fieldset.collapse-closed').each(function() {
+        $(this).addClass("collapsed");
+        $(this).find('h2:first').addClass("collapse-toggle");
+    });
+    $('fieldset.collapse-open').each(function() {
+        $(this).find('h2:first').addClass("collapse-toggle");
+    });
+    $('h2.collapse-toggle').bind("click", function(e){
+        $(this).parent().toggleClass('collapsed');
+        $(this).parent().toggleClass('collapse-closed');
+        $(this).parent().toggleClass('collapse-open');
+    });
+
+    /// OPEN FIELDSETS WITH ERRORS
+    $('fieldset.collapse-closed').children('div[class*="errors"]').each(function(i) {
+        $(this).parent().toggleClass("collapsed");
+        $(this).parent().toggleClass('collapse-closed');
+        $(this).parent().toggleClass('collapse-open');
+    });
+
+});

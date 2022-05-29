@@ -69,6 +69,9 @@ h4.collapse-toggle {
     background-repeat: no-repeat;
     cursor: pointer;
 }
+.collapse-toggle .inline-deletelink {
+    display: none;
+}
 .collapse-closed > .collapse-toggle {
     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
     background-position: 0 100%;

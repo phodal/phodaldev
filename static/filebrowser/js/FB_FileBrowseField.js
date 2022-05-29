@@ -16,7 +16,7 @@ function FileSubmit(FilePath, FileURL, ThumbURL, FileType) {
     input.value = FilePath;
 
     // enable the clear "button"
-    jQuery(clear).css("display", "inline");
+    if (clear) clear.style.display = 'inline';
 
     if (ThumbURL && FileType !== "") {
         // selected file is an image and thumbnail is available:
@@ -27,7 +27,7 @@ function FileSubmit(FilePath, FileURL, ThumbURL, FileType) {
         link.setAttribute("style", "display:inline");
         preview.setAttribute("src", ThumbURL);
         help.setAttribute("style", "display:inline");
-        jQuery(help).addClass("mezz-fb-thumbnail");
+        help.classList.add("mezz-fb-thumbnail");
     } else {
         // hide preview elements
         link.setAttribute("href", "");

@@ -111,7 +111,7 @@ form .aligned input + label + .help {
 td .help {
     margin-bottom: 3px; padding: 0;
 }
-fieldset .field-box {
+fieldset .fieldBox {
     float: left;
     margin-right: 45px;
     white-space: nowrap;
@@ -158,10 +158,19 @@ input:focus, textarea:focus, select:focus {
     border-color: #999 #bbb #bbb #999;
 }
 
+textarea[readonly],
+input[readonly] {
+    background: #ddd;
+    color: #888;
+}
 
-/*  Text, Password ................................................... */
+/*  Text inputs ................................................... */
 
-input[type=text], input[type=password], input[type=email], input[type=url] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"] {
     padding: 5px 3px 4px;
     height: 14px;
 }
@@ -214,7 +223,7 @@ select {
     padding: 4px 3px 4px 0;
     height: 25px;
 }
-select[multiple=multiple] {
+select[multiple] {
     padding-left: 1px;
     height: 160px;
 }
@@ -250,13 +259,15 @@ table input[type=checkbox], table input[type=radio] {
 
 /*  Radiolists & Checkboxlists ................................................... */
 
-#content .form-row ul {
-    position: relative; display: inline-flex; float: none;
-    margin: 4px 0 5px; padding: 0;
-    line-height: 14px; font-weight: normal;
-}
-#changelist ul.radiolist {
-    margin: 0;
+#content .form-row div.radiolist,
+#content .form-row ul.radiolist {
+    position: relative;
+    display: inline-flex;
+    float: none;
+    margin: 4px 0 5px;
+    padding: 0;
+    line-height: 14px;
+    font-weight: normal;
 }
 .result-list-container td li {
     float: left;
@@ -264,13 +275,13 @@ table input[type=checkbox], table input[type=radio] {
     padding-right: 10px;
     font-weight: normal;
 }
-.form-row li label {
+.form-row .radiolist label {
     float: none;
     display: inline;
-    padding-right: 10px;
+    padding-right: 15px;
     font-weight: normal;
 }
-.form-row li label input {
+.form-row input.radiolist {
     position: relative;
     margin: 0 2px 0 0;
     vertical-align: top;
@@ -350,6 +361,7 @@ input.vManyToManyRawIdAdminField,
 }
 
 .inline-tabular input.vTextField,
+.inline-tabular input.vURLField,
 .inline-tabular textarea.vLargeTextField,
 .inline-tabular input.vFileBrowseField {
     width: 230px;
