@@ -29,22 +29,36 @@ class PageDownWidget(forms.Textarea):
               'playdown/js/jquery.ba-throttle-debounce.min.js',
               'playdown/js/jquery.cookie.js')
 
-    def __init__(self, template=None, *args, **kwargs):
-        self.template = template or 'playdown/editor.html'
-        super(PageDownWidget, self).__init__(*args, **kwargs)
+    # def __init__(self, template=None, *args, **kwargs):
+    #     self.template = template or 'playdown/editor.html'
+    #     super(PageDownWidget, self).__init__(*args, **kwargs)
 
     def render(self, name, value, renderer=None, attrs=None):
         if value is None:
             value = ''
 
-        final_attrs = self.build_attrs(attrs)
+        final_attrs = self.build_attrs(self.attrs, attrs, name=name)
 
-        return mark_safe(render_to_string(self.template, {
+        final_id = final_attrs['id'].replace('-', '_')
+        del final_attrs['id']
+
+        return mark_safe(render_to_string('playdown/editor.html', {
             'final_attrs': flatatt(final_attrs),
-            'id': '1',
+            'field_name': name,
+            'id': final_id,
             'value': conditional_escape(force_str(value)),
             'server_side_preview': settings.PAGEDOWN_SERVER_SIDE_PREVIEW,
         }))
+
+    def build_attrs(self, base_attrs, extra_attrs=None, **kwargs):
+        """
+        Helper function for building an attribute dictionary.
+        This is combination of the same method from Django<=1.10 and Django1.11+
+        """
+        attrs = dict(base_attrs, **kwargs)
+        if extra_attrs:
+            attrs.update(extra_attrs)
+        return attrs
 
 
 class PlainWidget(forms.Textarea):

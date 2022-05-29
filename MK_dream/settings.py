@@ -260,8 +260,7 @@ RICHTEXT_WIDGET_CLASS = 'playdown.widgets.PageDownWidget'
 PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra', 'codehilite', 'toc')
 RICHTEXT_FILTER_LEVEL = 3
 PAGEDOWN_SERVER_SIDE_PREVIEW = True
-RICHTEXT_FILTERS = (
-    "mezzanine.utils.html.thumbnails")
+# RICHTEXT_FILTERS = ("mezzanine.utils.html.thumbnails")
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the

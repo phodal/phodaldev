@@ -4,7 +4,9 @@ from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, re_path
+from django.views.i18n import set_language
 
+from MK_dream import settings
 from homepage import views as homepage_view
 from feed import view as feed_view
 from amp import views as amp_views

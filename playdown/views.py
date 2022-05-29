@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django.views.generic import View
 
-from playdown.templatetags.playdown_tags import markit
 from markdown import markdown
 
 from playdown.plugins.progressiveimage import ProgressiveImageExtension
