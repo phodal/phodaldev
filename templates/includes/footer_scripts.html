@@ -1,34 +1,15 @@
-{% load mezzanine_tags static %}
+{% load mezzanine_tags %}
 
 {% editable_loader %}
 
-{% compress js %}
-<script src="{% static "mdl/material.min.js" %}"></script>
-<script src="{% static "mdl/jquery.2.1.4.min.js" %}"></script>
-<script src="{% static "phodal/js/highlight.min.js" %}"></script>
-<script src="{% static "phodal/js/jquery.autocomplete.min.js" %}"></script>
-<script src="{% static "phodal/js/progressively.min.js" %}"></script>
-<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
-<script type="text/javascript">
-$(function() {
-  progressively.init();
-});
-$( document ).ready(function() {
-    $('.middle.mdl-layout__content').css('z-index', 'initial');
-    $('.android-content.mdl-layout__content').css('z-index', 'initial');
-});
-</script>
-{% endcompress %}
-
-
-<script>
 {% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
+<script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', '{{ settings.GOOGLE_ANALYTICS_ID }}', 'auto');  // Replace with your property ID.
+ga('create', '{{ settings.GOOGLE_ANALYTICS_ID }}', 'auto');
 ga('send', 'pageview');
-{% endif %}
 </script>
+{% endif %}

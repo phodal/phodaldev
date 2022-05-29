@@ -1,16 +1,28 @@
 {% load mezzanine_tags i18n %}
-<form action="{% url "search" %}" class="navbar-form navbar-right" role="search"  itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-    <div class="mdl-textfield__expandable-holder">
-        <input class="mdl-textfield__input" type="text" id="search-field" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.REQUEST.q }}"  itemprop="query-input" type="text" name="search_term_string" required/>
-    </div>
-    <button style="top: 20px" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons" role="presentation">search</i>
-        <span class="visuallyhidden">Search</span>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple is-animating"
-                  style="width: 80px; height: 80px; transform: translate(-50%, -50%) translate(45px, 21px);">
-            span n>
-          </span>
-    </button>
+<form action="{% url "search" %}" class="navbar-form navbar-right" role="search">
+
+<div class="form-group">
+    <input class="form-control" placeholder="{% trans "Search" %}" type="text" name="q" value="{{ request.GET.q }}">
+</div>
+
+{% if search_model_choices %}
+    {% if search_model_choices|length == 1 %}
     <input type="hidden" name="type" value="{{ search_model_choices.0.1 }}">
+    {% else %}
+    <div class="form-group">
+    <select class="form-control" name="type">
+        <option value="">{% trans "Everything" %}</option>
+        {% for verbose_name, model in search_model_choices %}
+        <option value="{{ model }}"
+            {% if model == request.GET.type  %}selected{% endif %}>
+            {{ verbose_name }}
+        </option>
+        {% endfor %}
+    </select>
+    </div>
+    {% endif %}
+{% endif %}
+
+<input type="submit" class="btn btn-default" value="{% trans "Go" %}">
+
 </form>

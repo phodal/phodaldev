@@ -6,16 +6,16 @@
 {% for page in page_branch %}
     {% if page.is_primary %}
         {% if forloop.first %}
-            <div class="">
+            <div class="nav-footer">
         {% endif %}
         {% if page.in_menu %}
-            <ul class="mdl-mega-footer--drop-down-section">
+            <ul class="list-unstyled">
         {% endif %}
     {% endif %}
 
     {% if page.in_menu %}
         {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-            <ul class="mdl-mega-footer--link-list">
+            <ul class="list-unstyled">
         {% endif %}
         <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
             id="footer-menu-{{ page.html_id }}">

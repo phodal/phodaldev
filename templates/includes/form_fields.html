@@ -1,4 +1,5 @@
-{% load mezzanine_tags widget_tweaks %}
+{% load i18n %}
+{% load mezzanine_tags %}
 
 {% nevercache %}
 <input type="hidden" name="referrer" value="{{ request.META.HTTP_REFERER }}">
@@ -9,18 +10,20 @@
 {% if field.is_hidden %}
 {{ field }}
 {% else %}
-<div class="mdl-textfield mdl-js-textfield input_{{ field.id_for_label }} {{ field.field.type }} {% if field.errors %} has-error{% endif %}">
-    {% if field.label %}
-    {{ field|add_class:"mdl-textfield__input" }}
-    <label class="mdl-textfield__label control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
+<div class="form-group input_{{ field.id_for_label }} {{ field.field.type }}
+    {% if field.errors %} has-error{% endif %}">
+    {% if field.label %}<label class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
+    {{ field }}
     {% if field.errors %}
-    <p class="mdl-textfield__error help-block">
+    <p class="help-block">
         {% for e in field.errors %}
         {% if not forloop.first %} / {% endif %}{{ e }}
         {% endfor %}
     </p>
     {% elif field.help_text %}
     <p class="help-block">{{ field.help_text }}</p>
+    {% elif field.field.required %}
+    <p class="help-block">{% trans "required" %}</p>
     {% endif %}
 </div>
 {% endif %}
