@@ -1,12 +1,16 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags %}
+{% load mezzanine_tags playdown_tags %}
 
-{% block main %}{{ block.super }}
+{% block main %}
 
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp mdl-cell--11-col richtext">
+{{ block.super }}
+<div class="mdl-card__supporting-text post_detail">
 {% editable page.richtextpage.content %}
 {% markit page.richtextpage.content as content %}
 {{ content|safe }}
 {% endeditable %}
-
+</div>
 {% endblock %}
+</section>

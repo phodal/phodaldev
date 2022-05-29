@@ -3,41 +3,44 @@
 {% load mezzanine_tags static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static "mezzanine/css/magnific-popup.css" %}">
+  <link rel="stylesheet" href="{% static "mezzanine/css/magnific-popup.css" %}">
 {% endblock extra_css %}
 
 {% block main %}
-{{ block.super }}
+  <div
+    class="gallery mdl-card__supporting-text mdl-grid--no-spacing mdl-cell--11-col mdl-grid post_detail">
+    <div class="mdl-grid mdl-cell--12-col">
+      {{ block.super }}
 
-{% editable page.gallery.content %}
-{{ page.gallery.content|richtext_filters }}
-{% endeditable %}
+      {% editable page.gallery.content %}
+        {{ page.gallery.content|richtext_filters|safe }}
+      {% endeditable %}
+    </div>
 
-<div class="gallery row">
-{% with page.gallery.images.all as images %}
-{% for image in images %}
-<div class="col-xs-4 col-sm-3">
-    <a class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}" href="{{ image.file.url }}">
-        <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail image.file 131 75 %}">
-    </a>
-</div>
-{% endfor %}
-{% endwith %}
-</div>
+    {% with page.gallery.images.all as images %}
+      {% for image in images %}
+        <div class="mdl-cell--4-col">
+          <a class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}" href="{{ image.file.url }}">
+            <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail image.file 131 75 %}">
+          </a>
+        </div>
+      {% endfor %}
+    {% endwith %}
+  </div>
 {% endblock %}
 
 {% block extra_js %}
-{{ block.super }}
-<script src="{% static "mezzanine/js/magnific-popup.js" %}"></script>
-<script>
-$(document).ready(function() {
-    $('.gallery').magnificPopup({
+  {{ block.super }}
+  <script src="{% static "mezzanine/js/magnific-popup.js" %}"></script>
+  <script>
+    $(document).ready(function () {
+      $('.gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
         gallery: {
-            enabled: true,
+          enabled: true,
         }
+      });
     });
-});
-</script>
+  </script>
 {% endblock %}
