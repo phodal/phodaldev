@@ -109,17 +109,12 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "zh-hans"
 
 # Supported languages
 LANGUAGES = (
     ("zh-hans", _("简体中文")),
     ("en", _("English")),
-)
-
-# Path to locale files
-LOCALE_PATHS = (
-    os.path.join(PROJECT_APP_PATH, "locale"),
 )
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
@@ -134,7 +129,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -175,6 +170,11 @@ DATABASES = {
 PROJECT_APP_PATH = os.path.dirname(os.path.abspath(__file__))
 PROJECT_APP = os.path.basename(PROJECT_APP_PATH)
 PROJECT_ROOT = BASE_DIR = os.path.dirname(PROJECT_APP_PATH)
+
+# Path to locale files for i18n
+LOCALE_PATHS = (
+    os.path.join(PROJECT_APP_PATH, "locale"),
+)
 
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
@@ -323,11 +323,12 @@ OPTIONAL_APPS = (
 
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
-    import imp
+    import importlib.util
     import sys
+    from types import ModuleType
 
     module_name = "%s.local_settings" % PROJECT_APP
-    module = imp.new_module(module_name)
+    module = ModuleType(module_name)
     module.__file__ = f
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
