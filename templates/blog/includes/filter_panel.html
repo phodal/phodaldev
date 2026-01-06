@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="mdl-card__title mdl-card--border mdl-card--expand">
         <h3 class="mdl-card__title-text">{% trans "分类" %}</h3>
     </div>
-<ul class="mdl-card__supporting-text list-unstyled category-list">
+<ul class="mdl-card__supporting-text list-unstyled category-cloud">
 {% for category in categories %}
     {% if category.post_count >= 5 %}
 <li><a href="{% url "blog_post_list_category" category.slug %}"
-    >{{ category }}</a> ({{ category.post_count }})</li>
+    >{{ category }}</a> <span class="category-count">({{ category.post_count }})</span></li>
     {% endif %}
 {% endfor %}
 </ul></section>

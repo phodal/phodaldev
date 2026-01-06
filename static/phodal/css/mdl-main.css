@@ -256,9 +256,44 @@ footer .mdl-logo {
   text-decoration: none;
 }
 
-.tag-cloud,
-.category-list {
+.tag-cloud {
   padding-left: 16px;
+}
+
+/* 分类云样式 - 类似标签云 */
+.category-cloud {
+  padding-left: 16px;
+  width: 100%;
+}
+
+.category-cloud li {
+  display: inline-block;
+  padding-left: 0;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.category-cloud li a {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #e3f2fd;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.category-cloud li a:hover {
+  background-color: #1976d2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.category-cloud .category-count {
+  color: #666;
+  font-size: 12px;
+  margin-left: 2px;
 }
 
 .archive-list {
