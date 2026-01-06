@@ -58,16 +58,73 @@
 <div class="mdl-card__title mdl-card--border mdl-card--expand">
     <h3 class="mdl-card__title-text">{% trans "存档" %}</h3>
 </div>
-<ul class="mdl-card__supporting-text list-unstyled archive-list">
-{% for month in months %}
-    {% ifchanged month.date.year %}
-        {% if not forloop.first %}</ul>{% endif %}
-        <h6>{{ month.date.year }}</h6><ul class="list-unstyled">
-    {% endifchanged %}
-    <li><a href="{% url "blog_post_list_month" year=month.date.year month=month.date.month %}"
-        >{{ month.date|date:"F" }}</a> ({{ month.post_count }})</li>
+<div class="mdl-card__supporting-text archive-list">
+{% regroup months by date.year as years_list %}
+{% for year_group in years_list %}
+    <div class="archive-year-group">
+        <div class="archive-year-header" onclick="toggleArchiveYear(this)">
+            <span class="archive-toggle-icon">▶</span>
+            <strong>{{ year_group.grouper }}</strong>
+            <span class="archive-year-count">({% widthratio year_group.list|length 1 1 %} {% if year_group.list|length == 1 %}{% trans "月" %}{% else %}{% trans "个月" %}{% endif %})</span>
+        </div>
+        <ul class="list-unstyled archive-months" style="display: none;">
+        {% for month in year_group.list %}
+            <li><a href="{% url "blog_post_list_month" year=month.date.year month=month.date.month %}"
+                >{{ month.date|date:"F" }}</a> <span class="month-count">({{ month.post_count }})</span></li>
+        {% endfor %}
+        </ul>
+    </div>
 {% endfor %}
-</ul>
+<div class="archive-expand-all">
+    <a href="javascript:void(0)" onclick="toggleAllArchives(this)">{% trans "展开全部" %}</a>
+</div>
+</div>
+
+<script>
+function toggleArchiveYear(element) {
+    var monthsList = element.nextElementSibling;
+    var icon = element.querySelector('.archive-toggle-icon');
+
+    if (monthsList.style.display === 'none') {
+        monthsList.style.display = 'block';
+        icon.textContent = '▼';
+        element.classList.add('expanded');
+    } else {
+        monthsList.style.display = 'none';
+        icon.textContent = '▶';
+        element.classList.remove('expanded');
+    }
+}
+
+function toggleAllArchives(element) {
+    var allMonthsLists = document.querySelectorAll('.archive-months');
+    var allIcons = document.querySelectorAll('.archive-toggle-icon');
+    var allHeaders = document.querySelectorAll('.archive-year-header');
+    var isExpanding = element.textContent.trim() === '{% trans "展开全部" %}';
+
+    allMonthsLists.forEach(function(list, index) {
+        if (isExpanding) {
+            list.style.display = 'block';
+            allIcons[index].textContent = '▼';
+            allHeaders[index].classList.add('expanded');
+        } else {
+            list.style.display = 'none';
+            allIcons[index].textContent = '▶';
+            allHeaders[index].classList.remove('expanded');
+        }
+    });
+
+    element.textContent = isExpanding ? '{% trans "收起全部" %}' : '{% trans "展开全部" %}';
+}
+
+// 默认展开最近一年
+document.addEventListener('DOMContentLoaded', function() {
+    var firstYearHeader = document.querySelector('.archive-year-header');
+    if (firstYearHeader) {
+        toggleArchiveYear(firstYearHeader);
+    }
+});
+</script>
 </section>
 {% endif %}
 {% endblock %}

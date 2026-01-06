@@ -257,9 +257,101 @@ footer .mdl-logo {
 }
 
 .tag-cloud,
-.category-list,
+.category-list {
+  padding-left: 16px;
+}
+
 .archive-list {
   padding-left: 16px;
+  width: 100%;
+}
+
+/* 存档折叠样式 */
+.archive-year-group {
+  margin-bottom: 8px;
+}
+
+.archive-year-header {
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.archive-year-header:hover {
+  background-color: #e8e8e8;
+}
+
+.archive-year-header.expanded {
+  background-color: #e0e0e0;
+}
+
+.archive-toggle-icon {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  min-width: 12px;
+}
+
+.archive-year-count {
+  color: #666;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.archive-months {
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-left: 28px;
+  transition: all 0.3s ease;
+}
+
+.archive-months li {
+  padding: 4px 0;
+  line-height: 1.6;
+}
+
+.archive-months li a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.archive-months li a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+.archive-months .month-count {
+  color: #999;
+  font-size: 13px;
+}
+
+.archive-expand-all {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.archive-expand-all a {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.archive-expand-all a:hover {
+  background-color: #f5f5f5;
+  text-decoration: none;
 }
 
 .mdl-card__supporting-text.tag-cloud {
