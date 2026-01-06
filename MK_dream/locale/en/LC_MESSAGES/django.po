@@ -1,0 +1,165 @@
+# English translations for phodaldev.
+# Copyright (C) 2024 Phodal
+# This file is distributed under the same license as the phodaldev project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phodaldev 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0800\n"
+"PO-Revision-Date: 2024-01-01 00:00+0800\n"
+"Last-Translator: Phodal <h@phodal.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Phodal - 狼和凤凰 | Growth Engineer"
+msgstr "Phodal - Wolf & Phoenix | Growth Engineer"
+
+msgid "博客"
+msgstr "Blog"
+
+msgid "代码"
+msgstr "Code"
+
+msgid "文字"
+msgstr "Writing"
+
+msgid "设计"
+msgstr "Design"
+
+msgid "著有《自己动手设计物联网》"
+msgstr "Author of \"Design IoT System by Yourself\""
+
+msgid "著有《全栈应用开发：精益实践》"
+msgstr "Author of \"Full Stack Development: Lean Practice\""
+
+msgid "著有《前端架构：从基础到微前端》"
+msgstr "Author of \"Frontend Architecture: from Basic to Micro-Frontend\""
+
+msgid "合译有《物联网实战指南》、《Arduino编程:实现梦想的工具和技术》 等书"
+msgstr "Co-translated \"IoT Practical Guide\", \"Arduino Programming\" and more"
+
+msgid "审阅有《Expert Angular》、《Smart IoT》等书"
+msgstr "Reviewed \"Expert Angular\", \"Smart IoT\" and more"
+
+msgid "作为一个知名的 markdown 专家，撰写了超过 1000 篇的博客。在技术社区有各式的称号：知乎编程、程序员话题优秀答主、阿里云 MVP、CSDN 博客专家等"
+msgstr "As a well-known markdown expert, I have written over 1000 blog posts. I have various titles in the tech community: Zhihu Programming Expert, Alibaba Cloud MVP, CSDN Blog Expert, etc."
+
+msgid "智能体语言：Shire"
+msgstr "Agent Language: Shire"
+
+msgid "多语言语法解析器：Chapi"
+msgstr "Multi-language Parser: Chapi"
+
+msgid "遗留系统重构工具：Coca"
+msgstr "Legacy System Refactoring Tool: Coca"
+
+msgid "DevOps 知识平台：Ledge"
+msgstr "DevOps Knowledge Platform: Ledge"
+
+msgid "微前端框架：Mooa"
+msgstr "Micro-Frontend Framework: Mooa"
+
+msgid "作为一个开到填不完的知名开源挖坑选手，我经常在 IDE、编译器和图形引擎相关的领域游荡。"
+msgstr "As a well-known open source contributor who starts more projects than I can finish, I often wander in the fields of IDE, compilers, and graphics engines."
+
+msgid "Mifa CSS 框架"
+msgstr "Mifa CSS Framework"
+
+msgid "板绘"
+msgstr "Digital Painting"
+
+msgid "摄影"
+msgstr "Photography"
+
+msgid "插画"
+msgstr "Illustration"
+
+msgid "UI 设计"
+msgstr "UI Design"
+
+msgid "作为一个不间断地绘画的设计学徒，我将数据可视化与信息技术相结合来展示数据，将 UI 与前端相结合来创建更好的用户体验，将设计引入技术来创建价值。"
+msgstr "As a design apprentice who paints continuously, I combine data visualization with information technology to display data, combine UI with frontend to create better user experience, and introduce design into technology to create value."
+
+msgid "知乎"
+msgstr "Zhihu"
+
+msgid "微博"
+msgstr "Weibo"
+
+msgid "编程 - 写作 - 设计"
+msgstr "Programming - Writing - Design"
+
+msgid "一个文艺控。喜欢读书，喜欢纸的质感，喜欢用笔铭刻记忆和思想。"
+msgstr "A literature lover. Love reading, love the texture of paper, love to inscribe memories and thoughts with a pen."
+
+msgid "一个设计控。喜欢自行设计小东西，相比理论而言更喜欢动手实践。"
+msgstr "A design enthusiast. Love to design small things, prefer hands-on practice over theory."
+
+msgid "一个程序员。热爱分享、创建与开源，努力去改变自己，改变世界。"
+msgstr "A programmer. Love sharing, creating and open source, striving to change myself and change the world."
+
+msgid "最新博文"
+msgstr "Recent Posts"
+
+msgid "也许，你会遇到心仪的项目"
+msgstr "Maybe you'll find a project you like"
+
+msgid "开源 AI 编程助手 AutoDev"
+msgstr "Open Source AI Coding Assistant AutoDev"
+
+msgid "架构治理工具 ArchGuard"
+msgstr "Architecture Governance Tool ArchGuard"
+
+msgid "代码数据库 CodeDB"
+msgstr "Code Database CodeDB"
+
+msgid "Prompt 工具：ClickPrompt"
+msgstr "Prompt Tool: ClickPrompt"
+
+msgid "技术咨询"
+msgstr "Tech Consulting"
+
+msgid "在技术上遇到问题?"
+msgstr "Having technical problems?"
+
+msgid "AI"
+msgstr "AI"
+
+msgid "AI 原生应用、AI 辅助编程"
+msgstr "AI Native Apps, AI-Assisted Programming"
+
+msgid "硬件"
+msgstr "Hardware"
+
+msgid "物联网、IoT"
+msgstr "Internet of Things, IoT"
+
+msgid "前端"
+msgstr "Frontend"
+
+msgid "IDE、小程序、桌面应用、Web 应用、移动应用（混合）"
+msgstr "IDE, Mini Programs, Desktop Apps, Web Apps, Mobile Apps (Hybrid)"
+
+msgid "后台"
+msgstr "Backend"
+
+msgid "微服务、云原生、领域驱动设计、遗留系统迁移"
+msgstr "Microservices, Cloud Native, Domain-Driven Design, Legacy System Migration"
+
+msgid "战略"
+msgstr "Strategy"
+
+msgid "技术战略、内容策略、SEO、SEM"
+msgstr "Tech Strategy, Content Strategy, SEO, SEM"
+
+msgid "专栏"
+msgstr "Columns"
+
+msgid "在下面的地方关注我"
+msgstr "Follow me on"
+

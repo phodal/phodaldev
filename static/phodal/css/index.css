@@ -306,3 +306,20 @@ a {
 footer .copy a {
   color: #fff;
 }
+
+.lang-switch {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 10px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+  background: #fff;
+  color: #384452;
+}

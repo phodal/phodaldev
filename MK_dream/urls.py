@@ -39,6 +39,10 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+  path("i18n/", include("django.conf.urls.i18n")),
+]
+
+urlpatterns += [
   path("", homepage_view.homepage, name="home"),
   re_path("^amp/(?P<slug>.*)/$", amp_views.amp_blog_post_detail, name="blog_post_detail"),
   path("", include("mezzanine.urls")),
