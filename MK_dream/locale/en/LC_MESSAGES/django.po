@@ -49,6 +49,9 @@ msgstr "Reviewed \"Expert Angular\", \"Smart IoT\" and more"
 msgid "作为一个知名的 markdown 专家，撰写了超过 1000 篇的博客。在技术社区有各式的称号：知乎编程、程序员话题优秀答主、阿里云 MVP、CSDN 博客专家等"
 msgstr "As a well-known markdown expert, I have written over 1000 blog posts. I have various titles in the tech community: Zhihu Programming Expert, Alibaba Cloud MVP, CSDN Blog Expert, etc."
 
+msgid "多智能体编码：AutoDev"
+msgstr "Multi-Agent Coding: AutoDev"
+
 msgid "智能体语言：Shire"
 msgstr "Agent Language: Shire"
 
