@@ -163,3 +163,60 @@ msgstr "Columns"
 msgid "在下面的地方关注我"
 msgstr "Follow me on"
 
+#: templates/includes/user_info.html
+msgid "关于作者"
+msgstr "About the Author"
+
+msgid "Engineer, Consultant, Writer, Designer"
+msgstr "Engineer, Consultant, Writer, Designer"
+
+msgid "ThoughtWorks 技术专家"
+msgstr "ThoughtWorks Tech Lead"
+
+msgid "工程师 / 咨询师 / 作家 / 设计学徒"
+msgstr "Engineer / Consultant / Writer / Design Apprentice"
+
+msgid "开源深度爱好者"
+msgstr "Deep Open Source Enthusiast"
+
+msgid "出版有《前端架构：从入门到微前端》、《自己动手设计物联网》、《全栈应用开发：精益实践》"
+msgstr "Author of \"Frontend Architecture: from Basic to Micro-Frontend\", \"Design IoT System by Yourself\", \"Full Stack Development: Lean Practice\""
+
+msgid "联系我"
+msgstr "Contact me"
+
+msgid "微信公众号"
+msgstr "WeChat Official Account"
+
+msgid "最新技术分享"
+msgstr "Latest Tech Sharing"
+
+#: templates/blog/includes/events.html
+msgid "最近的一些事"
+msgstr "Recent Events"
+
+#: templates/blog/includes/filter_panel.html
+msgid "Feeds"
+msgstr "Feeds"
+
+msgid "RSS"
+msgstr "RSS"
+
+msgid "Atom"
+msgstr "Atom"
+
+msgid "最近文章"
+msgstr "Recent Posts"
+
+msgid "存档"
+msgstr "Archives"
+
+msgid "分类"
+msgstr "Categories"
+
+msgid "标签"
+msgstr "Tags"
+
+msgid "作者"
+msgstr "Authors"
+

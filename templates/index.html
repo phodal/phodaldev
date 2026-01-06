@@ -59,9 +59,13 @@
                   {% csrf_token %}
                   <input name="next" type="hidden" value="{{ request.path }}">
                   {% if LANGUAGE_CODE == 'zh-hans' %}
-                    <button type="submit" name="language" value="en" class="pure-menu-link lang-switch">EN</button>
+                    <button type="submit" name="language" value="en" class="pure-menu-link lang-switch-icon" title="Switch to English">
+                      <i class="material-icons">language</i>
+                    </button>
                   {% else %}
-                    <button type="submit" name="language" value="zh-hans" class="pure-menu-link lang-switch">中文</button>
+                    <button type="submit" name="language" value="zh-hans" class="pure-menu-link lang-switch-icon" title="切换到中文">
+                      <i class="material-icons">language</i>
+                    </button>
                   {% endif %}
                 </form>
               </li>

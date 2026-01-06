@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="zh-cmn-Hans">
 {% load pages_tags mezzanine_tags i18n static macros %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}"
 
 <head>
 <title>{% block meta_title %}{% endblock %}  - Phodal {% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
@@ -60,6 +61,19 @@
             <div class="android-navigation-container">
                 <nav class="android-navigation mdl-navigation">
                     {% page_menu "pages/menus/nav_menu.html" %}
+                    <form method="post" action="{% url 'set_language' %}" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.path }}">
+                        {% if LANGUAGE_CODE == 'zh-hans' %}
+                            <button type="submit" name="language" value="en" class="mdl-navigation__link lang-switch-icon" title="Switch to English">
+                                <i class="material-icons">language</i>
+                            </button>
+                        {% else %}
+                            <button type="submit" name="language" value="zh-hans" class="mdl-navigation__link lang-switch-icon" title="切换到中文">
+                                <i class="material-icons">language</i>
+                            </button>
+                        {% endif %}
+                    </form>
                 </nav>
             </div>
           <span class="android-mobile-title mdl-layout-title">

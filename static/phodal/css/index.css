@@ -323,3 +323,24 @@ footer .copy a {
   background: #fff;
   color: #384452;
 }
+
+.lang-switch-icon {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-switch-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.lang-switch-icon .material-icons {
+  font-size: 24px;
+}

@@ -1909,3 +1909,34 @@ footer.mdl-mega-footer a.mifa-link {
   color: #fff;
   text-decoration: underline;
 }
+
+/* Language switch icon button */
+.lang-switch-icon {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.lang-switch-icon:hover {
+  background: rgba(158, 158, 158, 0.2);
+  border-radius: 50%;
+}
+
+.lang-switch-icon .material-icons {
+  font-size: 24px;
+}
+
+.mdl-navigation .lang-switch-icon {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.android-navigation .lang-switch-icon {
+  color: #fff;
+}

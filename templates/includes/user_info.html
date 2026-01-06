@@ -1,7 +1,7 @@
-{% load mezzanine_tags static %}
+{% load mezzanine_tags static i18n %}
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp recent-post">
   <div class="mdl-card__title mdl-card--border mdl-card--expand">
-    <h3 class="mdl-card__title-text">关于作者</h3>
+    <h3 class="mdl-card__title-text">{% trans "关于作者" %}</h3>
   </div>
   <div itemscope itemtype="http://schema.org/Person" class="mdl-card__supporting-text author">
     <img style="border-radius: 3px;" itemprop="image" width="178" height="178"
@@ -10,25 +10,25 @@
       <a href="https://www.phodal.com/" rel="publisher">Phodal Huang</a>
     </p>
     <span itemprop="affiliation" class="phodal-information">
-            Engineer, Consultant, Writer, Designer
+            {% trans "Engineer, Consultant, Writer, Designer" %}
         </span>
     <p></p>
-    <p itemprop="jobTitle">ThoughtWorks 技术专家</p>
+    <p itemprop="jobTitle">{% trans "ThoughtWorks 技术专家" %}</p>
     <div class="intro">
-      <p>工程师 / 咨询师 / 作家 / 设计学徒</p>
-      <p>开源深度爱好者</p>
-      <p>出版有《前端架构：从入门到微前端》、《自己动手设计物联网》、《全栈应用开发：精益实践》</p>
+      <p>{% trans "工程师 / 咨询师 / 作家 / 设计学徒" %}</p>
+      <p>{% trans "开源深度爱好者" %}</p>
+      <p>{% trans "出版有《前端架构：从入门到微前端》、《自己动手设计物联网》、《全栈应用开发：精益实践》" %}</p>
     </div>
     <p>
-      联系我: <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a>
+      {% trans "联系我" %}: <a href="mailto:h@phodal.com" itemprop="email">h@phodal.com</a>
     </p>
 
-    <p>微信公众号: 最新技术分享</p>
+    <p>{% trans "微信公众号" %}: {% trans "最新技术分享" %}</p>
     <img style="border-radius: 3px;" width="178" height="178" src="{% static "phodal/images/qrcode.jpg" %}"/>
     <ul class="mdl-card__supporting-text list-unstyled">
       <li>Github: <a rel="nofollow" href="https://github.com/phodal" target="_blank">@phodal</a></li>
-      <li>微博:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a></li>
-      <li>知乎:<a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">@phodal</a></li>
+      <li>{% trans "微博" %}:<a rel="nofollow" href="http://weibo.com/phodal" target="_blank">@phodal</a></li>
+      <li>{% trans "知乎" %}:<a rel="nofollow" href="http://www.zhihu.com/people/phodal" target="_blank">@phodal</a></li>
       <li>SegmentFault:<a rel="nofollow" href="http://segmentfault.com/u/phodal" target="_blank">@phodal</a></li>
     </ul>
   </div>
