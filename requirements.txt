@@ -1,6 +1,5 @@
 Mezzanine==6.1.1
 django==4.2.24
-Mezzanine==6.0.0
 bleach==5.0.0
 django-compressor==4.0
 newrelic==7.10.0.175
