@@ -173,8 +173,8 @@ msgstr "About the Author"
 msgid "Engineer, Consultant, Writer, Designer"
 msgstr "Engineer, Consultant, Writer, Designer"
 
-msgid "ThoughtWorks 技术专家"
-msgstr "ThoughtWorks Tech Lead"
+msgid "独立开发者 / Qoder 创始人"
+msgstr "Independent Developer / Founder of Qoder"
 
 msgid "工程师 / 咨询师 / 作家 / 设计学徒"
 msgstr "Engineer / Consultant / Writer / Design Apprentice"
