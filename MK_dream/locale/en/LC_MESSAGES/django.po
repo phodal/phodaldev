@@ -223,3 +223,30 @@ msgstr "Tags"
 msgid "作者"
 msgstr "Authors"
 
+msgid "月"
+msgstr "month"
+
+msgid "个月"
+msgstr "months"
+
+msgid "展开全部"
+msgstr "Expand All"
+
+msgid "收起全部"
+msgstr "Collapse All"
+
+msgid "作者:"
+msgstr "Author:"
+
+msgid "当前评分"
+msgstr "Current Rating"
+
+msgid "评分数"
+msgstr "Rating Count"
+
+msgid "未评分"
+msgstr "Not Rated"
+
+msgid "Rate"
+msgstr "Rate"
+
