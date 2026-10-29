@@ -30,6 +30,9 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+  path("blog/tag/<tag>/feeds/<format>/", feed_view.blog_post_feed, name="blog_post_feed_tag"),
+  path("blog/category/<category>/feeds/<format>/", feed_view.blog_post_feed, name="blog_post_feed_category"),
+  path("blog/author/<username>/feeds/<format>/", feed_view.blog_post_feed, name="blog_post_feed_author"),
   re_path("^feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed"),
   re_path("^blog/feeds/(?P<format>.*)/$", feed_view.blog_post_feed, name="blog_post_feed")
 ]

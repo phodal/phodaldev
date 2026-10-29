@@ -9,7 +9,8 @@ def blog_post_feed(request, format, **kwargs):
     """
     Blog posts feeds - maps format to the correct feed view.
     """
-    try:
-        return {"rss": feeds.PostsRSS, "atom": feeds.PostsAtom}[format](**kwargs)(request)
-    except KeyError:
+    rss, atom = (feeds.FilteredPostsRSS, feeds.FilteredPostsAtom) if kwargs else (feeds.PostsRSS, feeds.PostsAtom)
+    feed_class = {"rss": rss, "atom": atom}.get(format)
+    if feed_class is None:
         raise Http404()
+    return feed_class(**kwargs)(request)

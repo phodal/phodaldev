@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import re
+
 from django.contrib.syndication.views import Feed
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
@@ -9,6 +11,7 @@ from django.utils.html import strip_tags
 from django.utils.safestring import mark_safe
 
 from mezzanine.core.templatetags.mezzanine_tags import richtext_filters
+from mezzanine.blog.feeds import PostsRSS as FullPostsRSS
 from mezzanine.blog.models import BlogPost, BlogCategory
 from mezzanine.generic.models import Keyword
 from mezzanine.pages.models import Page
@@ -18,8 +21,41 @@ from mezzanine.utils.models import get_user_model
 
 User = get_user_model()
 
+_XML_CONTROL_CHARACTERS = re.compile(r"[\x00-\x08\x0B-\x0C\x0E-\x1F]")
 
-class PostsRSS(Feed):
+
+def xml_text(value):
+    """Clean the generated Feed values without changing stored content."""
+    if isinstance(value, str):
+        return _XML_CONTROL_CHARACTERS.sub("", value)
+    if isinstance(value, dict):
+        return {key: xml_text(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return type(value)(xml_text(item) for item in value)
+    return value
+
+
+class XMLTextFeed:
+    def get_feed(self, obj, request):
+        generated = super().get_feed(obj, request)
+        generated.feed = xml_text(generated.feed)
+        generated.items = xml_text(generated.items)
+        return generated
+
+
+class FilteredPostsRSS(XMLTextFeed, FullPostsRSS):
+    pass
+
+
+class FilteredPostsAtom(FilteredPostsRSS):
+    feed_type = Atom1Feed
+
+    def subtitle(self):
+        return self.description()
+
+
+
+class PostsRSS(XMLTextFeed, Feed):
     """
     RSS feed for all blog posts.
     """
