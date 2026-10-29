@@ -1,0 +1,12 @@
+--- a/mezzanine/generic/templatetags/keyword_tags.py
++++ b/mezzanine/generic/templatetags/keyword_tags.py
+@@ -38,8 +38,7 @@
+         return []
+ 
+     content_type = ContentType.objects.get(app_label=app_label, model=model)
+-    assigned = AssignedKeyword.objects.filter(content_type=content_type)
+-    keywords = Keyword.objects.filter(assignments__in=assigned)
++    keywords = Keyword.objects.filter(assignments__content_type=content_type)
+     keywords = keywords.annotate(item_count=Count("assignments"))
+     if not keywords:
+         return []
