@@ -1,4 +1,7 @@
+from hashlib import sha256
+
 from django import template
+from django.core.cache import cache
 from mezzanine.blog.models import BlogPost
 from mezzanine.core.models import CONTENT_STATUS_DRAFT
 from markdown import markdown
@@ -27,5 +30,9 @@ def draft_blog_post_for(context, user):
 
 @register.simple_tag(takes_context=True)
 def markit(context, content):
-    content = markdown(content, ['headerid', 'codehilite', 'extra', 'meta', BlockQuoteExtension()])
-    return content
+    cache_key = "markdown:v1:" + sha256(content.encode("utf-8")).hexdigest()
+    rendered = cache.get(cache_key)
+    if rendered is None:
+        rendered = markdown(content, ['headerid', 'codehilite', 'extra', 'meta', BlockQuoteExtension()])
+        cache.set(cache_key, rendered, 3600)
+    return rendered
